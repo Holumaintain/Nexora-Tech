@@ -1,0 +1,55 @@
+/*======================================
+                FORMS
+======================================*/
+
+input,
+textarea,
+select{
+
+    width:100%;
+
+    padding:1rem 1.2rem;
+
+    border:1px solid var(--border);
+
+    border-radius:14px;
+
+    background:var(--white);
+
+    transition:var(--transition);
+
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+
+    border-color:var(--primary);
+
+}
+
+.newsletter-form{
+
+    display:flex;
+
+    gap:1rem;
+
+    align-items:center;
+
+}
+
+.newsletter-form button{
+
+    flex-shrink:0;
+
+}
+
+@media(max-width:768px){
+
+    .newsletter-form{
+
+        flex-direction:column;
+
+    }
+
+}

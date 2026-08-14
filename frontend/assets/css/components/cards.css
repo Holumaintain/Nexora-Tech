@@ -1,0 +1,33 @@
+/*======================================
+                CARDS
+======================================*/
+
+.service-card,
+.team-card,
+.blog-card,
+.testimonial-card,
+.stat-card,
+.why-card{
+
+    background:var(--white);
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow-sm);
+
+    transition:var(--transition);
+
+}
+
+.service-card:hover,
+.team-card:hover,
+.blog-card:hover,
+.testimonial-card:hover,
+.stat-card:hover,
+.why-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:var(--shadow-md);
+
+}

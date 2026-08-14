@@ -1,0 +1,188 @@
+/*======================================
+            TYPOGRAPHY
+======================================*/
+
+/* Body */
+
+body {
+    font-family: var(--font);
+    font-size: var(--fs-body);
+    font-weight: 400;
+    color: var(--secondary);
+    line-height: 1.7;
+}
+
+/*==============================
+        Headings
+===============================*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--secondary);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -.02em;
+}
+
+h1 {
+    font-size: clamp(2.8rem, 6vw, var(--fs-hero));
+    font-weight: 800;
+}
+
+h2 {
+    font-size: clamp(2rem, 4vw, var(--fs-section));
+}
+
+h3 {
+    font-size: clamp(1.35rem, 2vw, var(--fs-title));
+}
+
+h4 {
+    font-size: 1.125rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+h6 {
+    font-size: .9rem;
+}
+
+/*==============================
+        Paragraph
+===============================*/
+
+p {
+    font-size: var(--fs-body);
+    color: var(--gray);
+    line-height: 1.8;
+}
+
+/*==============================
+        Section Title
+===============================*/
+
+.section-title {
+    max-width: 750px;
+    margin: 0 auto 1.25rem;
+    text-align: center;
+    font-size: clamp(2rem, 4vw, var(--fs-section));
+    font-weight: 800;
+    color: var(--secondary);
+    line-height: 1.2;
+}
+
+/*==============================
+    Section Description
+===============================*/
+
+.section-description {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--gray);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+/*==============================
+        Section Badge
+===============================*/
+
+.section-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+
+    padding: .6rem 1.2rem;
+    margin-bottom: 1rem;
+
+    background: rgba(37, 99, 235, .08);
+    border: 1px solid rgba(37, 99, 235, .15);
+
+    color: var(--primary);
+
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+
+    border-radius: 999px;
+}
+
+/*==============================
+        Hero Badge
+===============================*/
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+
+    padding: .75rem 1.4rem;
+    margin-bottom: 1.8rem;
+
+    background: rgba(37, 99, 235, .08);
+    border: 1px solid rgba(37, 99, 235, .15);
+
+    color: var(--primary);
+
+    font-size: .95rem;
+    font-weight: 600;
+
+    border-radius: 999px;
+}
+
+/*==============================
+        Utility Classes
+===============================*/
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-primary {
+    color: var(--primary);
+}
+
+.text-gray {
+    color: var(--gray);
+}
+
+.text-white {
+    color: var(--white);
+}
+
+.fw-400 {
+    font-weight: 400;
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.fw-700 {
+    font-weight: 700;
+}
+
+.fw-800 {
+    font-weight: 800;
+}

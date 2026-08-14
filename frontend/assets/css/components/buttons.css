@@ -1,0 +1,66 @@
+/*======================================
+            BUTTONS
+======================================*/
+
+.cta-button,
+.primary-button,
+.secondary-button,
+.nav-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:.6rem;
+
+    padding:1rem 2rem;
+
+    border-radius:999px;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+    cursor:pointer;
+
+}
+
+.cta-button,
+.primary-button,
+.nav-btn{
+
+    background:var(--primary);
+
+    color:var(--white);
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+.cta-button:hover,
+.primary-button:hover,
+.nav-btn:hover{
+
+    background:var(--primary-dark);
+
+    transform:translateY(-3px);
+
+}
+
+.secondary-button{
+
+    background:transparent;
+
+    border:1px solid var(--border);
+
+    color:var(--secondary);
+
+}
+
+.secondary-button:hover{
+
+    background:var(--light);
+
+}

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nexora Tech</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/style.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+
+<!--=====================
+NAVBAR
+======================-->
+
+<div id="navbar-container"></div>
+
+
+
+<!--=====================
+MAIN
+======================-->
+
+<main>
+
+<div id="hero"></div>
+
+<div id="technologies"></div>
+
+<div id="services"></div>
+
+<div id="about"></div>
+
+<div id="stats"></div>
+
+<div id="why-us"></div>
+
+<div id="team"></div>
+
+<div id="testimonials"></div>
+
+<div id="blog"></div>
+
+<div id="cta"></div>
+
+<div id="newsletter"></div>
+
+</main>
+
+
+
+<!--=====================
+FOOTER
+======================-->
+
+<div id="footer-container"></div>
+
+
+
+
+<!--=====================
+JS
+======================-->
+
+<script>
+async function loadSection(id,file){
+
+try{
+
+const response = await fetch(file);
+
+if(!response.ok){
+
+throw new Error(`Cannot load ${file}`);
+
+}
+
+const element=document.getElementById(id);
+
+if(element){
+
+element.innerHTML = await response.text();
+
+}
+
+
+}catch(error){
+
+console.error(error);
+
+}
+
+}
+
+
+
+async function loadSections(){
+
+await Promise.all([
+
+loadSection("hero","sections/hero.html"),
+
+loadSection("technologies","sections/technologies.html"),
+
+loadSection("services","sections/services.html"),
+
+loadSection("about","sections/about.html"),
+
+loadSection("stats","sections/stats.html"),
+
+loadSection("why-us","sections/why-us.html"),
+
+loadSection("team","sections/team.html"),
+
+loadSection("testimonials","sections/testimonials.html"),
+
+loadSection("blog","sections/blog.html"),
+
+loadSection("cta","sections/cta.html"),
+
+loadSection("newsletter","sections/newsletter.html")
+
+]);
+
+
+}
+
+
+
+document.addEventListener(
+"DOMContentLoaded",
+()=>{
+
+loadSections();
+
+}
+);
+
+</script>
+
+
+
+<script src="assets/js/navbar.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/slider.js"></script>
+<script src="assets/js/counter.js"></script>
+<script src="assets/js/dropdown.js"></script>
+<script src="assets/js/form.js"></script>
+<script src="assets/js/animations.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,926 @@
+/*======================================
+  MONITOR HERO
+======================================*/
+
+.monitor-hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background: #000;
+}
+
+.monitor-hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.monitor-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        rgba(15, 23, 42, 0.72),
+        rgba(15, 23, 42, 0.58)
+    );
+    z-index: 1;
+}
+
+.monitor-hero-overlay {
+    position: relative;
+    z-index: 2;
+    width: min(900px, 90%);
+    text-align: center;
+}
+
+.monitor-hero-overlay .section-badge {
+    margin-bottom: 1.5rem;
+}
+
+.monitor-hero-overlay h1 {
+    font-size: clamp(2.6rem, 5vw, 4.4rem);
+    color: #fff;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+.monitor-hero-overlay p {
+    max-width: 760px;
+    margin: 0 auto 2.5rem;
+    color: #e2e8f0;
+    font-size: 1.15rem;
+    line-height: 1.8;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/*======================================
+  GLOBAL SECTIONS
+======================================*/
+
+.pulse-section,
+.ai-section,
+.insights-section,
+.dashboards-section,
+.workflow-section,
+.audio-section,
+.testimonials-section,
+.cta-section {
+    padding: 110px 0;
+}
+
+.ai-section,
+.workflow-section,
+.cta-section {
+    background: var(--light);
+}
+
+.section-heading {
+    max-width: 760px;
+    margin: 0 auto 4rem;
+    text-align: center;
+}
+
+.section-heading h2 {
+    margin: 1rem 0;
+}
+
+.section-heading p {
+    margin: 0 auto;
+}
+
+/*======================================
+  PULSE NAVIGATION
+======================================*/
+
+.pulse-tabs {
+    margin-bottom: 3rem;
+}
+
+.pulse-tabs ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.pulse-tabs a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: #fff;
+    color: var(--secondary);
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.pulse-tabs a:hover,
+.pulse-tabs a.active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: #fff;
+}
+
+/*======================================
+  PULSE GRID
+======================================*/
+
+.pulse-dashboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.pulse-card {
+    padding: 2rem;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.pulse-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary);
+    box-shadow: var(--shadow-md);
+}
+
+.pulse-card h3 {
+    margin-bottom: 1rem;
+}
+
+.pulse-card p {
+    margin-bottom: 1.5rem;
+}
+
+/*======================================
+  STATUS BADGES
+======================================*/
+
+.status {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.55rem 1rem;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.status.on-track {
+    background: rgba(16, 185, 129, 0.12);
+    color: #10b981;
+}
+
+.status.at-risk {
+    background: rgba(239, 68, 68, 0.12);
+    color: #ef4444;
+}
+
+/*======================================
+  COMMON GRID LAYOUTS
+======================================*/
+
+.insights-grid,
+.dashboard-grid,
+.workflow-grid,
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+}
+
+/*======================================
+  COMMON CARDS
+======================================*/
+
+.insight-chart,
+.dashboard-card,
+.workflow-card,
+.testimonial {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 2rem;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.insight-chart:hover,
+.dashboard-card:hover,
+.workflow-card:hover,
+.testimonial:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary);
+    box-shadow: var(--shadow-md);
+}
+
+/*======================================
+  IMAGES
+======================================*/
+
+.insight-chart img,
+.dashboard-card img,
+.testimonial img {
+    display: block;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    border-radius: 18px;
+}
+
+/*======================================
+  AI SUMMARIES
+======================================*/
+
+.ai-section .insights-grid {
+    align-items: center;
+}
+
+.ai-section .insight-chart:first-child {
+    padding: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.ai-section .insight-chart:first-child img {
+    width: 100%;
+    margin: 0;
+    border-radius: 24px;
+    box-shadow: var(--shadow-lg);
+}
+
+.ai-section .insight-chart:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ai-section h3 {
+    margin-bottom: 1rem;
+}
+
+.ai-section p {
+    margin-bottom: 1.5rem;
+}
+
+.ai-section .btn {
+    align-self: flex-start;
+    margin-top: 1rem;
+}
+
+/*======================================
+  INSIGHTS
+======================================*/
+
+.insights-grid {
+    margin-top: 4rem;
+}
+
+.insight-chart {
+    overflow: hidden;
+}
+
+.insight-chart img {
+    transition: transform 0.5s ease;
+}
+
+.insight-chart:hover img {
+    transform: scale(1.04);
+}
+
+.insight-chart h3 {
+    margin-bottom: 1rem;
+}
+
+.insight-chart p {
+    margin: 0;
+}
+
+.insight-chart::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 4px;
+    margin-top: 2rem;
+    background: var(--primary);
+    border-radius: 999px;
+}
+
+/*======================================
+  DASHBOARDS
+======================================*/
+
+.dashboard-grid {
+    margin-top: 4rem;
+}
+
+.dashboard-card {
+    overflow: hidden;
+}
+
+.dashboard-card img {
+    transition: transform 0.5s ease;
+}
+
+.dashboard-card:hover img {
+    transform: scale(1.05);
+}
+
+.dashboard-card h3 {
+    margin-bottom: 1rem;
+}
+
+.dashboard-card p {
+    margin-bottom: 1.5rem;
+}
+
+.dashboard-card ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.dashboard-card ul li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--secondary);
+    font-weight: 500;
+}
+
+.dashboard-card ul li::before {
+    content: "✓";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: rgba(37, 99, 235, 0.12);
+    color: var(--primary);
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+/*======================================
+  METRIC CARDS
+======================================*/
+
+.metric-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.metric-card {
+    padding: 2rem;
+    text-align: center;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.metric-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--primary);
+    box-shadow: var(--shadow-md);
+}
+
+.metric-card h3 {
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+    font-size: 2.5rem;
+}
+
+.metric-card span {
+    display: block;
+    color: var(--gray);
+    font-weight: 600;
+}
+
+/*======================================
+  CHART PANEL
+======================================*/
+
+.chart-panel {
+    margin-top: 4rem;
+    padding: 2.5rem;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 28px;
+    box-shadow: var(--shadow-sm);
+}
+
+.chart-panel img {
+    display: block;
+    width: 100%;
+    border-radius: 18px;
+}
+
+.chart-panel h3 {
+    margin-bottom: 1rem;
+}
+
+.chart-panel p {
+    margin-bottom: 2rem;
+}
+
+/*======================================
+  WORKFLOW
+======================================*/
+
+.workflow-grid {
+    margin-top: 4rem;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.workflow-card {
+    position: relative;
+    padding: 2.5rem 2rem;
+    text-align: center;
+}
+
+.workflow-card::before {
+    content: "";
+    position: absolute;
+    top: 36px;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    background: rgba(37, 99, 235, 0.08);
+    border-radius: 50%;
+    transform: translateX(-50%);
+}
+
+.workflow-card h3 {
+    position: relative;
+    z-index: 1;
+    margin: 1.5rem 0 1rem;
+    color: var(--primary);
+}
+
+.workflow-card p {
+    margin: 0;
+    color: var(--gray);
+}
+
+.workflow-card::after {
+    content: "";
+    position: absolute;
+    top: 70px;
+    right: -1rem;
+    width: 2rem;
+    height: 2px;
+    background: var(--border);
+}
+
+.workflow-card:last-child::after {
+    display: none;
+}
+
+/*======================================
+  AUDIO SECTION
+======================================*/
+
+.audio-section .dashboard-grid {
+    align-items: stretch;
+}
+
+.audio-section .dashboard-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.audio-section .dashboard-card:first-child {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    border: none;
+    color: #fff;
+}
+
+.audio-section .dashboard-card:first-child h3,
+.audio-section .dashboard-card:first-child p {
+    color: #fff;
+}
+
+.audio-section .dashboard-card h3 {
+    margin-bottom: 1rem;
+}
+
+.audio-section .dashboard-card p {
+    margin-bottom: 1.5rem;
+}
+
+.audio-section audio {
+    width: 100%;
+    margin-top: 1.5rem;
+    border-radius: 12px;
+}
+
+/*======================================
+  TESTIMONIALS
+======================================*/
+
+.testimonial-grid {
+    margin-top: 4rem;
+}
+
+.testimonial {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.testimonial::before {
+    content: "\201C";
+    display: block;
+    margin-bottom: 1rem;
+    color: rgba(37, 99, 235, 0.15);
+    font-size: 4rem;
+    line-height: 1;
+    font-weight: 700;
+}
+
+.testimonial blockquote {
+    margin: 0 0 2rem;
+    color: var(--secondary);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    font-style: italic;
+}
+
+.testimonial cite {
+    display: block;
+    margin-bottom: 2rem;
+    color: var(--primary);
+    font-style: normal;
+    font-weight: 600;
+}
+
+.testimonial img {
+    width: 140px;
+    height: auto;
+    margin-top: auto;
+    transition: transform 0.4s ease;
+}
+
+.testimonial:hover img {
+    transform: scale(1.05);
+}
+
+/*======================================
+  CUSTOMER STATS
+======================================*/
+
+.customer-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 5rem;
+}
+
+.customer-stat {
+    padding: 2rem;
+    text-align: center;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    box-shadow: var(--shadow-sm);
+}
+
+.customer-stat h2 {
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+    font-size: 2.8rem;
+}
+
+.customer-stat p {
+    margin: 0;
+    color: var(--gray);
+    font-weight: 600;
+}
+
+/*======================================
+  LOGO STRIP
+======================================*/
+
+.logo-strip {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1.5rem;
+    margin-top: 5rem;
+}
+
+.logo-strip img {
+    width: 100%;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.logo-strip img:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+/*======================================
+  CTA
+======================================*/
+
+.cta-section {
+    text-align: center;
+    background: linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+    color: #fff;
+}
+
+.cta-section .section-heading {
+    margin-bottom: 3rem;
+}
+
+.cta-section .section-badge {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+}
+
+.cta-section h2 {
+    color: #fff;
+}
+
+.cta-section p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.cta-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2.5rem;
+}
+
+.cta-buttons .btn-primary {
+    background: #fff;
+    color: var(--primary);
+}
+
+.cta-buttons .btn-primary:hover {
+    background: #f8fafc;
+}
+
+.cta-buttons .btn-secondary {
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    color: #fff;
+}
+
+.cta-buttons .btn-secondary:hover {
+    background: #fff;
+    color: var(--primary);
+}
+
+/*======================================
+  ANIMATIONS
+======================================*/
+
+.monitor-hero-overlay,
+.pulse-card,
+.insight-chart,
+.dashboard-card,
+.workflow-card,
+.testimonial {
+    animation: fadeUp 0.8s ease both;
+}
+
+@keyframes fadeUp {
+
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.monitor-hero-video {
+    animation: float 12s ease-in-out infinite;
+}
+
+/*======================================
+  SCROLLBAR
+======================================*/
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #edf2f7;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary);
+}
+
+/*======================================
+  RESPONSIVE
+======================================*/
+
+/*------------------------------
+  Large Devices (≤1200px)
+------------------------------*/
+
+@media (max-width: 1200px) {
+
+    .workflow-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .metric-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .customer-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .logo-strip {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/*------------------------------
+  Tablets (≤992px)
+------------------------------*/
+
+@media (max-width: 992px) {
+
+    .monitor-hero {
+        min-height: 90vh;
+    }
+
+    .monitor-hero-overlay h1 {
+        font-size: 3rem;
+    }
+
+    .insights-grid,
+    .dashboard-grid,
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ai-section .insight-chart:first-child {
+        margin-bottom: 2rem;
+    }
+}
+
+/*------------------------------
+  Mobile Landscape (≤768px)
+------------------------------*/
+
+@media (max-width: 768px) {
+
+    .monitor-hero {
+        min-height: 80vh;
+    }
+
+    .monitor-hero-overlay h1 {
+        font-size: 2.5rem;
+    }
+
+    .monitor-hero-overlay p {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-buttons a {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .pulse-dashboard,
+    .workflow-grid,
+    .metric-grid,
+    .customer-stats,
+    .logo-strip {
+        grid-template-columns: 1fr;
+    }
+
+    .workflow-card::after {
+        display: none;
+    }
+
+    .pulse-tabs ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pulse-tabs a {
+        width: 220px;
+    }
+
+    .section-heading {
+        margin-bottom: 3rem;
+    }
+}
+
+/*------------------------------
+  Mobile Portrait (≤576px)
+------------------------------*/
+
+@media (max-width: 576px) {
+
+    .monitor-hero-overlay {
+        width: 92%;
+    }
+
+    .monitor-hero-overlay h1 {
+        font-size: 2rem;
+    }
+
+    .monitor-hero-overlay p {
+        font-size: 0.95rem;
+    }
+
+    .pulse-section,
+    .ai-section,
+    .insights-section,
+    .dashboards-section,
+    .workflow-section,
+    .audio-section,
+    .testimonials-section,
+    .cta-section {
+        padding: 80px 0;
+    }
+
+    .pulse-card,
+    .insight-chart,
+    .dashboard-card,
+    .workflow-card,
+    .testimonial {
+        padding: 1.5rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .cta-buttons a {
+        width: 100%;
+        max-width: 320px;
+    }
+}
