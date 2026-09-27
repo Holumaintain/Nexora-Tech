@@ -1,8 +1,12 @@
-<header class="navbar">
+<header class="navbar navbar-pages">
   <div class="container nav-container">
-    <a href="index.html" class="logo">
+    <!-- ==========================================
+         NEXORA LOGO
+    =========================================== -->
+
+    <a href="index.html" class="logo" aria-label="Nexora Technologies Home">
       <div class="logo-icon">
-        <i class="fa-solid fa-layer-group"></i>
+        <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
       </div>
 
       <div class="logo-text">
@@ -11,105 +15,154 @@
       </div>
     </a>
 
-    <nav class="nav">
+    <!-- ==========================================
+         MAIN NAVIGATION
+    =========================================== -->
+
+    <nav class="nav" id="main-navigation" aria-label="Main navigation">
       <ul class="nav-links">
-        <!--===========================
-PRODUCT
-============================-->
+        <!-- ==========================================
+             PRODUCT
+        =========================================== -->
 
         <li class="dropdown">
-          <button class="dropdown-trigger" type="button" aria-expanded="false">
+          <button
+            class="dropdown-trigger"
+            type="button"
+            aria-expanded="false"
+            aria-haspopup="true"
+          >
             <span>Product</span>
-            <i class="fa-solid fa-chevron-down"></i>
+
+            <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
           </button>
+
+          <!-- PRODUCT MEGA MENU -->
 
           <div class="mega-menu product-menu">
             <div class="mega-grid">
+              <!-- ==================================
+                   PRODUCT COLUMN 1
+              =================================== -->
+
               <div class="mega-column">
+                <!-- INTAKE -->
+
                 <a href="pages/product/intake.html" class="mega-card">
                   <div class="mega-icon">
-                    <i class="fa-solid fa-inbox"></i>
+                    <i class="fa-solid fa-inbox" aria-hidden="true"></i>
                   </div>
 
                   <div class="mega-content">
                     <h4>Intake</h4>
+
                     <p>Make your product operations self-driving.</p>
                   </div>
                 </a>
 
+                <!-- PLAN -->
+
                 <a href="pages/product/plan.html" class="mega-card">
                   <div class="mega-icon">
-                    <i class="fa-solid fa-compass"></i>
+                    <i class="fa-solid fa-compass" aria-hidden="true"></i>
                   </div>
 
                   <div class="mega-content">
                     <h4>Plan</h4>
+
                     <p>Plan and navigate from idea to launch.</p>
                   </div>
                 </a>
 
+                <!-- BUILD -->
+
                 <a href="pages/product/build.html" class="mega-card">
                   <div class="mega-icon">
-                    <i class="fa-solid fa-code"></i>
+                    <i class="fa-solid fa-code" aria-hidden="true"></i>
                   </div>
 
                   <div class="mega-content">
                     <h4>Build</h4>
+
                     <p>Coordinate engineering teams effortlessly.</p>
                   </div>
                 </a>
               </div>
 
+              <!-- ==================================
+                   PRODUCT COLUMN 2
+              =================================== -->
+
               <div class="mega-column">
+                <!-- DIFFS -->
+
                 <a href="pages/product/diffs.html" class="mega-card">
                   <div class="mega-icon">
-                    <i class="fa-solid fa-code-compare"></i>
+                    <i class="fa-solid fa-code-compare" aria-hidden="true"></i>
                   </div>
 
                   <div class="mega-content">
                     <h4>Diffs</h4>
+
                     <p>Review changes faster and collaborate efficiently.</p>
                   </div>
                 </a>
 
+                <!-- MONITOR -->
+
                 <a href="pages/product/monitor.html" class="mega-card">
                   <div class="mega-icon">
-                    <i class="fa-solid fa-chart-line"></i>
+                    <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
                   </div>
 
                   <div class="mega-content">
                     <h4>Monitor</h4>
+
                     <p>Track product delivery and performance.</p>
                   </div>
                 </a>
-                                <a href="pages/product/integrations.html" class="mega-card">
+
+                <!-- INTEGRATIONS -->
+
+                <a href="pages/product/integrations.html" class="mega-card">
                   <div class="mega-icon">
-                    <i class="fa-solid fa-plug"></i>
+                    <i class="fa-solid fa-plug" aria-hidden="true"></i>
                   </div>
 
                   <div class="mega-content">
                     <h4>Integrations</h4>
+
                     <p>Connect your favourite development tools.</p>
                   </div>
                 </a>
               </div>
             </div>
 
+            <!-- ==================================
+                 PRODUCT FOOTER
+            =================================== -->
+
             <div class="mega-footer">
+              <!-- INITIATIVE -->
+
               <a href="pages/product/initiative.html" class="footer-card">
                 <span class="badge">NEW</span>
 
                 <div>
                   <h5>Initiative Properties</h5>
+
                   <p>Organize strategic initiatives with confidence.</p>
                 </div>
               </a>
 
+              <!-- CHANGELOG -->
+
               <a href="pages/product/changelog.html" class="footer-card">
-                <i class="fa-solid fa-circle-info"></i>
+                <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
 
                 <div>
                   <h5>Changelog</h5>
+
                   <p>See what's new in every Nexora release.</p>
                 </div>
               </a>
@@ -117,161 +170,227 @@ PRODUCT
           </div>
         </li>
 
-        <!--===========================
-RESOURCES
-============================-->
+        <!-- ==========================================
+             RESOURCES
+        =========================================== -->
 
         <li class="dropdown">
-          <button class="dropdown-trigger" type="button" aria-expanded="false">
+          <button
+            class="dropdown-trigger"
+            type="button"
+            aria-expanded="false"
+            aria-haspopup="true"
+          >
             <span>Resources</span>
-            <i class="fa-solid fa-chevron-down"></i>
+
+            <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
           </button>
+
+          <!-- RESOURCES MEGA MENU -->
 
           <div class="mega-menu resources-menu">
             <div class="mega-grid">
-                              <div class="mega-column">
+              <!-- ==================================
+                   RESOURCES COLUMN 1
+              =================================== -->
+
+              <div class="mega-column">
+                <!-- ABOUT -->
+
                 <a href="pages/resources/about.html" class="mega-card">
                   <div class="mega-icon">
-                    <i class="fa-solid fa-building"></i>
+                    <i class="fa-solid fa-building" aria-hidden="true"></i>
                   </div>
 
                   <div class="mega-content">
                     <h4>About Nexora</h4>
+
                     <p>Learn more about our mission, vision and company.</p>
                   </div>
                 </a>
 
+                <!-- TEAM -->
+
                 <a href="pages/resources/team.html" class="mega-card">
                   <div class="mega-icon">
-                    <i class="fa-solid fa-users"></i>
+                    <i class="fa-solid fa-users" aria-hidden="true"></i>
                   </div>
 
                   <div class="mega-content">
                     <h4>Meet Our Team</h4>
+
                     <p>Meet the talented people behind Nexora.</p>
                   </div>
                 </a>
 
+                <!-- DEVELOPERS -->
+
                 <a href="pages/resources/developers.html" class="mega-card">
                   <div class="mega-icon">
-                    <i class="fa-solid fa-laptop-code"></i>
+                    <i class="fa-solid fa-laptop-code" aria-hidden="true"></i>
                   </div>
 
                   <div class="mega-content">
                     <h4>Developers</h4>
+
                     <p>Everything developers need to build with Nexora.</p>
                   </div>
                 </a>
 
+                <!-- API -->
+
                 <a href="pages/resources/api.html" class="mega-card">
                   <div class="mega-icon">
-                    <i class="fa-solid fa-code"></i>
+                    <i class="fa-solid fa-code" aria-hidden="true"></i>
                   </div>
 
                   <div class="mega-content">
                     <h4>Developer API</h4>
+
                     <p>Build powerful integrations using our APIs.</p>
                   </div>
                 </a>
 
+                <!-- DOCUMENTATION -->
+
                 <a href="pages/resources/docs.html" class="mega-card">
                   <div class="mega-icon">
-                    <i class="fa-solid fa-book"></i>
+                    <i class="fa-solid fa-book" aria-hidden="true"></i>
                   </div>
 
                   <div class="mega-content">
                     <h4>Documentation</h4>
+
                     <p>Comprehensive guides and API references.</p>
                   </div>
                 </a>
               </div>
 
+              <!-- ==================================
+                   RESOURCES COLUMN 2
+              =================================== -->
+
               <div class="mega-column">
+                <!-- SWITCH -->
+
                 <a href="pages/resources/switch.html" class="mega-card">
                   <div class="mega-icon">
-                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                    <i
+                      class="fa-solid fa-arrow-right-arrow-left"
+                      aria-hidden="true"
+                    ></i>
                   </div>
 
                   <div class="mega-content">
                     <h4>Switch to Nexora</h4>
+
                     <p>Move your existing workflows with ease.</p>
                   </div>
                 </a>
 
+                <!-- MIGRATION -->
+
                 <a href="pages/resources/migration.html" class="mega-card">
                   <div class="mega-icon">
-                    <i class="fa-solid fa-database"></i>
+                    <i class="fa-solid fa-database" aria-hidden="true"></i>
                   </div>
 
                   <div class="mega-content">
                     <h4>Migration Guide</h4>
+
                     <p>Step-by-step migration resources.</p>
                   </div>
                 </a>
 
+                <!-- CAREERS -->
+
                 <a href="pages/resources/careers.html" class="mega-card">
                   <div class="mega-icon">
-                    <i class="fa-solid fa-briefcase"></i>
+                    <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
                   </div>
 
                   <div class="mega-content">
                     <h4>Careers</h4>
+
                     <p>Join our growing team and build amazing products.</p>
                   </div>
                 </a>
 
+                <!-- HIRING -->
+
                 <a href="pages/resources/hiring.html" class="mega-card">
                   <div class="mega-icon">
-                    <i class="fa-solid fa-user-plus"></i>
+                    <i class="fa-solid fa-user-plus" aria-hidden="true"></i>
                   </div>
 
                   <div class="mega-content">
                     <h4>We're Hiring</h4>
+
                     <p>See our latest openings and opportunities.</p>
                   </div>
                 </a>
 
+                <!-- SECURITY -->
+
                 <a href="pages/resources/security.html" class="mega-card">
                   <div class="mega-icon">
-                    <i class="fa-solid fa-shield-halved"></i>
+                    <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
                   </div>
 
                   <div class="mega-content">
                     <h4>Security</h4>
+
                     <p>Learn how we keep your data secure.</p>
                   </div>
                 </a>
               </div>
-                            <div class="mega-column">
+
+              <!-- ==================================
+                   RESOURCES COLUMN 3
+              =================================== -->
+
+              <div class="mega-column">
+                <!-- PRIVACY -->
+
                 <a href="pages/resources/privacy.html" class="mega-card">
                   <div class="mega-icon">
-                    <i class="fa-solid fa-user-shield"></i>
+                    <i class="fa-solid fa-user-shield" aria-hidden="true"></i>
                   </div>
 
                   <div class="mega-content">
                     <h4>Privacy</h4>
+
                     <p>Understand how your information is protected.</p>
                   </div>
                 </a>
 
+                <!-- ENTERPRISE -->
+
                 <a href="pages/resources/enterprise.html" class="mega-card">
                   <div class="mega-icon">
-                    <i class="fa-solid fa-building-lock"></i>
+                    <i class="fa-solid fa-building-lock" aria-hidden="true"></i>
                   </div>
 
                   <div class="mega-content">
                     <h4>Enterprise</h4>
+
                     <p>Enterprise-grade security and scalability.</p>
                   </div>
                 </a>
 
+                <!-- MOBILE -->
+
                 <a href="pages/resources/mobile.html" class="mega-card">
                   <div class="mega-icon">
-                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <i
+                      class="fa-solid fa-mobile-screen-button"
+                      aria-hidden="true"
+                    ></i>
                   </div>
 
                   <div class="mega-content">
                     <h4>Mobile Apps</h4>
+
                     <p>Manage projects from anywhere.</p>
                   </div>
                 </a>
@@ -280,44 +399,76 @@ RESOURCES
           </div>
         </li>
 
-        <li>
-          <a href="pages/customers.html">Customers</a>
-        </li>
+        <!-- ==========================================
+             CUSTOMERS
+        =========================================== -->
 
         <li>
-          <a href="pages/pricing.html">Pricing</a>
+          <a href="pages/customers.html"> Customers </a>
         </li>
 
-        <li>
-          <a href="pages/now.html">What's New</a>
-        </li>
+        <!-- ==========================================
+             PRICING
+        =========================================== -->
 
         <li>
-          <a href="pages/contact.html">Contact</a>
+          <a href="pages/pricing.html"> Pricing </a>
+        </li>
+
+        <!-- ==========================================
+             WHAT'S NEW
+        =========================================== -->
+
+        <li>
+          <a href="pages/now.html"> What's New </a>
+        </li>
+
+        <!-- ==========================================
+             CONTACT
+        =========================================== -->
+
+        <li>
+          <a href="pages/contact.html"> Contact </a>
         </li>
       </ul>
     </nav>
 
+    <!-- ==========================================
+         NAVIGATION ACTIONS
+    =========================================== -->
+
     <div class="nav-actions">
-      <a href="pages/login.html" class="nav-login">
-        Log in
-      </a>
+      <!-- LOG IN -->
 
-      <a href="pages/contact.html" class="nav-btn">
-        Start Free
-      </a>
+      <a href="pages/login.html" class="nav-login"> Log in </a>
 
-      <a href="index.html" class="nav-home">
-        <i class="fa-solid fa-arrow-left"></i>
-        Home
+      <!-- START FREE -->
+
+      <a href="pages/contact.html" class="nav-btn"> Start Free </a>
+
+      <!-- HOME -->
+
+      <a
+        href="index.html"
+        class="nav-home"
+        aria-label="Return to Nexora Technologies homepage"
+      >
+        <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+
+        <span> Home </span>
       </a>
     </div>
+
+    <!-- ==========================================
+         MOBILE MENU TOGGLE
+    =========================================== -->
 
     <button
       class="mobile-toggle"
       type="button"
       aria-label="Toggle navigation"
       aria-expanded="false"
+      aria-controls="main-navigation"
     >
       <span></span>
       <span></span>

@@ -1,41 +1,936 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <!-- =========================================
+         META
+    ========================================== -->
+    <meta charset="UTF-8" />
 
-<head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="Explore the Nexora API for building integrations, automating workflows, accessing product data, and extending your team's workspace."
+    />
 
-<title>Developer API | Nexora Technologies</title>
+    <meta
+      name="keywords"
+      content="Nexora API, API documentation, integrations, developer API, automation, webhooks, REST API"
+    />
 
-<link rel="stylesheet" href="../../assets/css/style.css">
+    <meta name="author" content="Nexora Technologies" />
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>API | Nexora Technologies</title>
 
-</head>
+    <!-- =========================================
+         MAIN STYLES
+    ========================================== -->
+    <link rel="stylesheet" href="../../assets/css/style.css" />
 
-<body>
+    <!-- =========================================
+         FONT AWESOME
+    ========================================== -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
 
-<div id="navbar-container"></div>
+  <body class="api-page">
 
-<main>
+    <!-- =========================================
+         NAVBAR
+    ========================================== -->
+    <div id="navbar-container"></div>
 
-<!-- API page content goes here -->
 
-</main>
+    <!-- =========================================
+         MAIN
+    ========================================== -->
+    <main>
 
-<div id="footer-container"></div>
+      <!-- =========================================
+           HERO
+      ========================================== -->
+      <section class="api-hero">
+        <div class="container api-hero-container">
 
-<script src="../../assets/js/navbar.js"></script>
-<script src="../../assets/js/app.js"></script>
+          <div class="api-hero-content">
 
-<script src="../../assets/js/slider.js"></script>
-<script src="../../assets/js/counter.js"></script>
-<script src="../../assets/js/dropdown.js"></script>
-<script src="../../assets/js/form.js"></script>
-<script src="../../assets/js/animations.js"></script>
+            <span class="section-badge">
+              <i class="fa-solid fa-code"></i>
+              Developer API
+            </span>
 
-</body>
+            <h1>
+              Build with the
+              <span>Nexora API.</span>
+            </h1>
 
+            <p>
+              Connect Nexora to your existing tools, build custom workflows,
+              automate repetitive tasks, and create powerful experiences
+              around your team's product data.
+            </p>
+
+            <div class="hero-buttons">
+
+              <a href="docs.html" class="btn btn-primary">
+                Read the docs
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+              <a href="../../pages/contact.html" class="btn btn-secondary">
+                Talk to our team
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <!-- =====================================
+               API CODE PREVIEW
+          ====================================== -->
+          <div class="api-hero-visual">
+
+            <div class="api-window">
+
+              <div class="api-window-header">
+
+                <div class="window-dots">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+
+                <div class="window-title">
+                  nexora-api
+                </div>
+
+              </div>
+
+
+              <div class="api-code">
+
+                <div>
+                  <span class="code-muted">1</span>
+                  <span class="code-keyword">const</span>
+                  <span class="code-variable">response</span>
+                  <span class="code-symbol">=</span>
+                </div>
+
+                <div>
+                  <span class="code-muted">2</span>
+                  <span class="code-keyword">await</span>
+                  <span class="code-variable">nexora</span>
+                  <span class="code-symbol">.</span>
+                  <span class="code-function">issues</span>
+                  <span class="code-symbol">.</span>
+                  <span class="code-function">list</span>
+                  <span class="code-symbol">(</span>
+                  <span class="code-symbol">{</span>
+                </div>
+
+                <div>
+                  <span class="code-muted">3</span>
+                  <span class="code-property">teamId</span>
+                  <span class="code-symbol">:</span>
+                  <span class="code-string">"engineering"</span>
+                  <span class="code-symbol">,</span>
+                </div>
+
+                <div>
+                  <span class="code-muted">4</span>
+                  <span class="code-property">status</span>
+                  <span class="code-symbol">:</span>
+                  <span class="code-string">"started"</span>
+                </div>
+
+                <div>
+                  <span class="code-muted">5</span>
+                  <span class="code-symbol">});</span>
+                </div>
+
+                <div class="code-spacer"></div>
+
+                <div>
+                  <span class="code-muted">6</span>
+                  <span class="code-comment">
+                    // Build your workflow around Nexora
+                  </span>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- =========================================
+           INTRO
+      ========================================== -->
+      <section class="api-intro">
+        <div class="container">
+
+          <div class="section-heading">
+
+            <span class="section-badge">
+              One API. Endless possibilities.
+            </span>
+
+            <h2>
+              Extend Nexora around the way your team works.
+            </h2>
+
+            <p>
+              The Nexora API gives developers programmatic access to the
+              platform so they can connect product workflows, automate
+              operations, synchronize information, and build custom
+              integrations.
+            </p>
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- =========================================
+           CAPABILITIES
+      ========================================== -->
+      <section class="api-capabilities">
+
+        <div class="container">
+
+          <div class="api-grid">
+
+            <!-- Issues -->
+            <article class="api-card">
+
+              <div class="api-card-icon">
+                <i class="fa-solid fa-list-check"></i>
+              </div>
+
+              <h3>Issues</h3>
+
+              <p>
+                Create, update, search, and organize issues programmatically
+                across your Nexora workspace.
+              </p>
+
+              <a href="docs.html" class="api-card-link">
+                Explore issues
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+            </article>
+
+
+            <!-- Projects -->
+            <article class="api-card">
+
+              <div class="api-card-icon">
+                <i class="fa-solid fa-layer-group"></i>
+              </div>
+
+              <h3>Projects</h3>
+
+              <p>
+                Access projects, milestones, initiatives, and delivery
+                information from your applications.
+              </p>
+
+              <a href="docs.html" class="api-card-link">
+                Explore projects
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+            </article>
+
+
+            <!-- Teams -->
+            <article class="api-card">
+
+              <div class="api-card-icon">
+                <i class="fa-solid fa-users"></i>
+              </div>
+
+              <h3>Teams</h3>
+
+              <p>
+                Connect team structures, members, assignments, and
+                organizational workflows.
+              </p>
+
+              <a href="docs.html" class="api-card-link">
+                Explore teams
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+            </article>
+
+
+            <!-- Comments -->
+            <article class="api-card">
+
+              <div class="api-card-icon">
+                <i class="fa-solid fa-comments"></i>
+              </div>
+
+              <h3>Comments</h3>
+
+              <p>
+                Read and create comments so conversations can remain connected
+                to the work they belong to.
+              </p>
+
+              <a href="docs.html" class="api-card-link">
+                Explore comments
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+            </article>
+
+
+            <!-- Cycles -->
+            <article class="api-card">
+
+              <div class="api-card-icon">
+                <i class="fa-solid fa-arrows-spin"></i>
+              </div>
+
+              <h3>Cycles</h3>
+
+              <p>
+                Work with cycles, sprint information, progress, and
+                engineering delivery data.
+              </p>
+
+              <a href="docs.html" class="api-card-link">
+                Explore cycles
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+            </article>
+
+
+            <!-- Automations -->
+            <article class="api-card">
+
+              <div class="api-card-icon">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+              </div>
+
+              <h3>Automations</h3>
+
+              <p>
+                Trigger actions and connect Nexora workflows to external
+                systems and services.
+              </p>
+
+              <a href="docs.html" class="api-card-link">
+                Explore automations
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+            </article>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =========================================
+           API WORKFLOW
+      ========================================== -->
+      <section class="api-workflow">
+
+        <div class="container">
+
+          <div class="section-heading">
+
+            <span class="section-badge">
+              How it works
+            </span>
+
+            <h2>
+              From request to workflow.
+            </h2>
+
+            <p>
+              Connect your application to Nexora in a few simple steps and
+              start building workflows around the data your teams already use.
+            </p>
+
+          </div>
+
+
+          <div class="api-steps">
+
+            <!-- Step 01 -->
+            <article class="api-step">
+
+              <div class="api-step-number">
+                01
+              </div>
+
+              <div class="api-step-icon">
+                <i class="fa-solid fa-key"></i>
+              </div>
+
+              <h3>Authenticate</h3>
+
+              <p>
+                Secure your application using Nexora API credentials and
+                establish an authenticated connection.
+              </p>
+
+            </article>
+
+
+            <!-- Step 02 -->
+            <article class="api-step">
+
+              <div class="api-step-number">
+                02
+              </div>
+
+              <div class="api-step-icon">
+                <i class="fa-solid fa-code"></i>
+              </div>
+
+              <h3>Make a request</h3>
+
+              <p>
+                Use the API to retrieve information or perform actions inside
+                your Nexora workspace.
+              </p>
+
+            </article>
+
+
+            <!-- Step 03 -->
+            <article class="api-step">
+
+              <div class="api-step-number">
+                03
+              </div>
+
+              <div class="api-step-icon">
+                <i class="fa-solid fa-arrows-rotate"></i>
+              </div>
+
+              <h3>Connect systems</h3>
+
+              <p>
+                Synchronize Nexora with your existing applications,
+                services, and internal tools.
+              </p>
+
+            </article>
+
+
+            <!-- Step 04 -->
+            <article class="api-step">
+
+              <div class="api-step-number">
+                04
+              </div>
+
+              <div class="api-step-icon">
+                <i class="fa-solid fa-rocket"></i>
+              </div>
+
+              <h3>Automate</h3>
+
+              <p>
+                Turn API requests into reliable workflows that reduce manual
+                work and keep teams connected.
+              </p>
+
+            </article>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =========================================
+           CODE EXAMPLE
+      ========================================== -->
+      <section class="api-example">
+
+        <div class="container">
+
+          <div class="api-example-grid">
+
+            <div class="api-example-content">
+
+              <span class="section-badge">
+                Developer friendly
+              </span>
+
+              <h2>
+                Simple APIs for powerful workflows.
+              </h2>
+
+              <p>
+                Build integrations using familiar HTTP requests and
+                structured responses. Keep your existing systems connected
+                without rebuilding the way your team works.
+              </p>
+
+              <ul class="api-feature-list">
+
+                <li>
+                  <i class="fa-solid fa-circle-check"></i>
+                  Structured API responses
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-circle-check"></i>
+                  Secure authentication
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-circle-check"></i>
+                  Webhook-ready workflows
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-circle-check"></i>
+                  Flexible integrations
+                </li>
+
+              </ul>
+
+              <a href="docs.html" class="btn btn-primary">
+                View API documentation
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+            </div>
+
+
+            <div class="api-code-example">
+
+              <div class="code-header">
+
+                <span>
+                  GET
+                </span>
+
+                <code>/api/v1/issues</code>
+
+              </div>
+
+              <div class="code-body">
+
+                <div>
+                  <span class="code-comment">
+                    // Fetch active issues
+                  </span>
+                </div>
+
+                <div>
+                  <span class="code-keyword">fetch</span>
+                  <span class="code-symbol">(</span>
+                  <span class="code-string">
+                    "/api/v1/issues?status=started"
+                  </span>
+                  <span class="code-symbol">)</span>
+                </div>
+
+                <div>
+                  <span class="code-symbol">.</span>
+                  <span class="code-function">then</span>
+                  <span class="code-symbol">(</span>
+                  <span class="code-variable">response</span>
+                  <span class="code-symbol"> =&gt; </span>
+                  <span class="code-variable">response</span>
+                  <span class="code-symbol">.</span>
+                  <span class="code-function">json</span>
+                  <span class="code-symbol">())</span>
+                </div>
+
+                <div>
+                  <span class="code-symbol">.</span>
+                  <span class="code-function">then</span>
+                  <span class="code-symbol">(</span>
+                  <span class="code-variable">data</span>
+                  <span class="code-symbol"> =&gt; </span>
+                  <span class="code-variable">console</span>
+                  <span class="code-symbol">.</span>
+                  <span class="code-function">log</span>
+                  <span class="code-symbol">(</span>
+                  <span class="code-variable">data</span>
+                  <span class="code-symbol">));</span>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =========================================
+           WEBHOOKS
+      ========================================== -->
+      <section class="api-webhooks">
+
+        <div class="container">
+
+          <div class="webhooks-grid">
+
+            <div class="webhooks-visual">
+
+              <div class="webhook-card">
+
+                <div class="webhook-card-header">
+
+                  <span class="webhook-status">
+                    <i class="fa-solid fa-circle"></i>
+                    Event received
+                  </span>
+
+                  <span>
+                    200 OK
+                  </span>
+
+                </div>
+
+                <div class="webhook-line">
+                  <span>event</span>
+                  <strong>issue.updated</strong>
+                </div>
+
+                <div class="webhook-line">
+                  <span>issue</span>
+                  <strong>NX-248</strong>
+                </div>
+
+                <div class="webhook-line">
+                  <span>team</span>
+                  <strong>Engineering</strong>
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div class="webhooks-content">
+
+              <span class="section-badge">
+                Events &amp; Webhooks
+              </span>
+
+              <h2>
+                React to changes as they happen.
+              </h2>
+
+              <p>
+                Keep external systems synchronized with important activity
+                inside Nexora. Webhook events allow your applications to
+                respond when work changes.
+              </p>
+
+              <div class="webhook-features">
+
+                <div>
+                  <i class="fa-solid fa-bolt"></i>
+                  <span>Real-time events</span>
+                </div>
+
+                <div>
+                  <i class="fa-solid fa-link"></i>
+                  <span>Connected workflows</span>
+                </div>
+
+                <div>
+                  <i class="fa-solid fa-arrows-rotate"></i>
+                  <span>Automatic synchronization</span>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =========================================
+           SECURITY
+      ========================================== -->
+      <section class="api-security">
+
+        <div class="container">
+
+          <div class="section-heading">
+
+            <span class="section-badge">
+              <i class="fa-solid fa-shield-halved"></i>
+              Security
+            </span>
+
+            <h2>
+              Designed with security in mind.
+            </h2>
+
+            <p>
+              Build integrations while keeping authentication, access, and
+              application data protected.
+            </p>
+
+          </div>
+
+
+          <div class="security-grid">
+
+            <article class="security-card">
+
+              <div class="security-icon">
+                <i class="fa-solid fa-lock"></i>
+              </div>
+
+              <h3>Authentication</h3>
+
+              <p>
+                Secure API access using authenticated requests and controlled
+                credentials.
+              </p>
+
+            </article>
+
+
+            <article class="security-card">
+
+              <div class="security-icon">
+                <i class="fa-solid fa-user-shield"></i>
+              </div>
+
+              <h3>Access control</h3>
+
+              <p>
+                Keep application access aligned with the permissions and
+                resources your workflows require.
+              </p>
+
+            </article>
+
+
+            <article class="security-card">
+
+              <div class="security-icon">
+                <i class="fa-solid fa-eye"></i>
+              </div>
+
+              <h3>Visibility</h3>
+
+              <p>
+                Build connected systems while maintaining visibility into
+                activity across your workspace.
+              </p>
+
+            </article>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =========================================
+           RESOURCES
+      ========================================== -->
+      <section class="api-resources">
+
+        <div class="container">
+
+          <div class="section-heading">
+
+            <span class="section-badge">
+              Developer resources
+            </span>
+
+            <h2>
+              Everything you need to build.
+            </h2>
+
+            <p>
+              Start with the documentation, explore integrations, and learn
+              how to connect Nexora to the rest of your stack.
+            </p>
+
+          </div>
+
+
+          <div class="resources-grid">
+
+            <a href="docs.html" class="resource-card">
+
+              <div class="resource-icon">
+                <i class="fa-solid fa-book-open"></i>
+              </div>
+
+              <div>
+
+                <h3>Documentation</h3>
+
+                <p>
+                  Learn how Nexora APIs work and start building integrations.
+                </p>
+
+                <span>
+                  Read the docs
+                  <i class="fa-solid fa-arrow-right"></i>
+                </span>
+
+              </div>
+
+            </a>
+
+
+            <a href="developers.html" class="resource-card">
+
+              <div class="resource-icon">
+                <i class="fa-solid fa-terminal"></i>
+              </div>
+
+              <div>
+
+                <h3>Developer Center</h3>
+
+                <p>
+                  Find developer resources, guides, examples, and technical
+                  information.
+                </p>
+
+                <span>
+                  Explore developers
+                  <i class="fa-solid fa-arrow-right"></i>
+                </span>
+
+              </div>
+
+            </a>
+
+
+            <a href="../../pages/product/integrations.html" class="resource-card">
+
+              <div class="resource-icon">
+                <i class="fa-solid fa-plug"></i>
+              </div>
+
+              <div>
+
+                <h3>Integrations</h3>
+
+                <p>
+                  Connect Nexora with the tools your team already depends on.
+                </p>
+
+                <span>
+                  Explore integrations
+                  <i class="fa-solid fa-arrow-right"></i>
+                </span>
+
+              </div>
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =========================================
+           CTA
+      ========================================== -->
+      <section class="api-cta">
+
+        <div class="container">
+
+          <div class="api-cta-inner">
+
+            <span class="section-badge">
+              Start building
+            </span>
+
+            <h2>
+              Make Nexora part of your stack.
+            </h2>
+
+            <p>
+              Connect your tools, automate your workflows, and build
+              experiences that work around the way your team operates.
+            </p>
+
+            <div class="cta-buttons">
+
+              <a href="docs.html" class="btn btn-primary">
+                Read the documentation
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+              <a
+                href="../../pages/contact.html"
+                class="btn btn-secondary"
+              >
+                Contact our team
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+    <div id="footer-container"></div>
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+    <script src="../../assets/js/navbar.js"></script>
+    <script src="../../assets/js/app.js"></script>
+    <script src="../../assets/js/slider.js"></script>
+    <script src="../../assets/js/counter.js"></script>
+    <script src="../../assets/js/dropdown.js"></script>
+    <script src="../../assets/js/form.js"></script>
+    <script src="../../assets/js/animations.js"></script>
+
+  </body>
 </html>

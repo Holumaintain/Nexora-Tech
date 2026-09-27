@@ -1,0 +1,623 @@
+/* =========================================================
+NEXORA TECHNOLOGIES
+LOGIN PAGE
+Linear-inspired dark authentication interface
+========================================================= */
+
+/* =========================================================
+PAGE VARIABLES
+========================================================= */
+
+.login-page {
+  --login-bg: #050505;
+  --login-bg-soft: #080808;
+
+  --login-surface: #0b0b0c;
+  --login-surface-hover: #111112;
+
+  --login-border: rgba(255, 255, 255, 0.1);
+  --login-border-hover: rgba(255, 255, 255, 0.18);
+
+  --login-text: #f5f5f5;
+  --login-text-secondary: #a1a1a6;
+  --login-text-muted: #707078;
+
+  --login-accent: #5e6ad2;
+  --login-accent-hover: #6875df;
+
+  --login-radius: 7px;
+}
+
+/* =========================================================
+PAGE RESET / BASE
+========================================================= */
+
+.login-page {
+  margin: 0;
+  padding: 0;
+
+  min-height: 100vh;
+  min-height: 100svh;
+
+  background:
+    radial-gradient(
+      circle at 50% 35%,
+      rgba(255, 255, 255, 0.025),
+      transparent 38%
+    ),
+    var(--login-bg);
+
+  color: var(--login-text);
+
+  overflow-x: hidden;
+}
+
+/* Prevent inherited layout issues from main stylesheet */
+
+.login-page *,
+.login-page *::before,
+.login-page *::after {
+  box-sizing: border-box;
+}
+
+/* =========================================================
+LOGIN MAIN
+========================================================= */
+
+.login-main {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px 24px;
+
+  z-index: 1;
+}
+
+/* =========================================================
+SUBTLE BACKGROUND GLOW
+========================================================= */
+
+.login-page::before {
+  content: "";
+
+  position: fixed;
+
+  top: -180px;
+  left: 50%;
+
+  width: 650px;
+  height: 420px;
+
+  transform: translateX(-50%);
+
+  pointer-events: none;
+
+  background: radial-gradient(
+    ellipse at center,
+    rgba(94, 106, 210, 0.055),
+    transparent 68%
+  );
+
+  filter: blur(25px);
+
+  z-index: 0;
+}
+
+/* =========================================================
+LOGIN CONTAINER
+========================================================= */
+
+.login-container {
+  position: relative;
+
+  width: 100%;
+  max-width: 400px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  z-index: 2;
+}
+
+/* =========================================================
+NEXORA LOGO
+========================================================= */
+
+.login-logo {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 24px;
+
+  text-decoration: none;
+
+  border-radius: 10px;
+
+  background: linear-gradient(145deg, #171719 0%, #0c0c0d 100%);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.035);
+
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.login-logo:hover {
+  border-color: rgba(255, 255, 255, 0.17);
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.045);
+}
+
+.login-logo img {
+  display: block;
+
+  width: 24px;
+  height: 24px;
+
+  object-fit: contain;
+}
+
+/* =========================================================
+LOGIN TITLE
+========================================================= */
+
+.login-title {
+  margin: 0;
+
+  color: var(--login-text);
+
+  font-size: 25px;
+  line-height: 1.2;
+
+  font-weight: 600;
+
+  letter-spacing: -0.035em;
+
+  text-align: center;
+}
+
+/* =========================================================
+LOGIN OPTIONS
+========================================================= */
+
+.login-options {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+
+  margin-top: 28px;
+}
+
+/* =========================================================
+LOGIN BUTTON
+========================================================= */
+
+.login-button {
+  position: relative;
+
+  width: 100%;
+  min-height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 18px;
+
+  border: 1px solid var(--login-border);
+  border-radius: var(--login-radius);
+
+  outline: none;
+
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.028),
+    rgba(255, 255, 255, 0.012)
+  );
+
+  color: #e7e7e9;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.018);
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.18s ease,
+    box-shadow 0.2s ease;
+}
+
+.login-button:hover {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.055),
+    rgba(255, 255, 255, 0.022)
+  );
+
+  border-color: var(--login-border-hover);
+
+  color: #ffffff;
+
+  box-shadow:
+    0 5px 20px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.025);
+}
+
+.login-button:active {
+  transform: translateY(1px);
+}
+
+.login-button:focus-visible {
+  border-color: rgba(94, 106, 210, 0.75);
+
+  box-shadow: 0 0 0 3px rgba(94, 106, 210, 0.14);
+}
+
+/* =========================================================
+BUTTON ICON
+========================================================= */
+
+.login-button-icon {
+  position: absolute;
+
+  left: 17px;
+
+  width: 20px;
+  height: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #b8b8bd;
+
+  font-size: 15px;
+
+  transition: color 0.2s ease;
+}
+
+.login-button:hover .login-button-icon {
+  color: #ffffff;
+}
+
+/* =========================================================
+BUTTON TEXT
+========================================================= */
+
+.login-button-text {
+  display: block;
+
+  line-height: 1;
+}
+
+/* =========================================================
+GOOGLE BUTTON
+========================================================= */
+
+.login-google .login-button-icon {
+  color: #d8d8dc;
+}
+
+/* =========================================================
+EMAIL BUTTON
+========================================================= */
+
+.login-email .login-button-icon {
+  color: #b9bbc2;
+}
+
+/* =========================================================
+SAML SSO BUTTON
+========================================================= */
+
+.login-sso .login-button-icon {
+  color: #b9bbc2;
+}
+
+/* =========================================================
+PASSKEY BUTTON
+========================================================= */
+
+.login-passkey .login-button-icon {
+  color: #b9bbc2;
+}
+
+/* =========================================================
+ACCOUNT MESSAGE
+========================================================= */
+
+.login-account {
+  width: 100%;
+
+  margin: 24px 0 0;
+
+  color: var(--login-text-muted);
+
+  font-size: 13px;
+  line-height: 1.5;
+
+  text-align: center;
+}
+
+.login-account span {
+  color: var(--login-text-muted);
+}
+
+.login-account a {
+  color: #c7c8cd;
+
+  font-weight: 500;
+
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+.login-account a:hover {
+  color: #ffffff;
+}
+
+/* =========================================================
+OPTIONAL DIVIDER SUPPORT
+Kept here in case form.js later introduces a divider.
+========================================================= */
+
+.login-divider {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin: 22px 0;
+
+  color: #66666d;
+
+  font-size: 11px;
+}
+
+.login-divider::before,
+.login-divider::after {
+  content: "";
+
+  flex: 1;
+
+  height: 1px;
+
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.login-divider span {
+  white-space: nowrap;
+}
+
+/* =========================================================
+OPTIONAL ERROR MESSAGE
+========================================================= */
+
+.login-error {
+  display: none;
+
+  width: 100%;
+
+  margin: 0 0 16px;
+
+  padding: 10px 12px;
+
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: 6px;
+
+  background: rgba(239, 68, 68, 0.055);
+
+  color: #fca5a5;
+
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.login-error.is-visible {
+  display: block;
+}
+
+/* =========================================================
+OPTIONAL SUCCESS MESSAGE
+========================================================= */
+
+.login-success {
+  display: none;
+
+  width: 100%;
+
+  margin: 0 0 16px;
+
+  padding: 10px 12px;
+
+  border: 1px solid rgba(85, 201, 138, 0.18);
+  border-radius: 6px;
+
+  background: rgba(85, 201, 138, 0.05);
+
+  color: #8ee0b1;
+
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.login-success.is-visible {
+  display: block;
+}
+
+/* =========================================================
+OPTIONAL LOADING STATE
+========================================================= */
+
+.login-button.is-loading {
+  pointer-events: none;
+
+  opacity: 0.65;
+}
+
+.login-button.is-loading i {
+  animation: login-spin 0.8s linear infinite;
+}
+
+@keyframes login-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================================
+MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .login-main {
+    min-height: 100svh;
+
+    align-items: flex-start;
+
+    padding: 70px 20px 40px;
+  }
+
+  .login-container {
+    max-width: 100%;
+  }
+
+  .login-logo {
+    width: 40px;
+    height: 40px;
+
+    margin-bottom: 22px;
+  }
+
+  .login-logo img {
+    width: 23px;
+    height: 23px;
+  }
+
+  .login-title {
+    font-size: 23px;
+  }
+
+  .login-options {
+    margin-top: 25px;
+
+    gap: 9px;
+  }
+
+  .login-button {
+    min-height: 45px;
+
+    font-size: 13px;
+  }
+
+  .login-account {
+    margin-top: 22px;
+
+    font-size: 12px;
+  }
+}
+
+/* =========================================================
+SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+  .login-main {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .login-title {
+    font-size: 22px;
+  }
+
+  .login-options {
+    margin-top: 23px;
+  }
+
+  .login-button {
+    min-height: 44px;
+
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .login-button-icon {
+    left: 15px;
+  }
+}
+
+/* =========================================================
+REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .login-logo,
+  .login-button,
+  .login-button-icon,
+  .login-account a {
+    transition: none;
+  }
+
+  .login-button.is-loading i {
+    animation: none;
+  }
+}
+
+/* =========================================================
+LIGHT SYSTEM PROTECTION
+Keep authentication page permanently dark.
+========================================================= */
+
+@media (prefers-color-scheme: light) {
+  .login-page {
+    background:
+      radial-gradient(
+        circle at 50% 35%,
+        rgba(255, 255, 255, 0.025),
+        transparent 38%
+      ),
+      #050505;
+
+    color: #f5f5f5;
+  }
+}

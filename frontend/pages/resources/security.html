@@ -1,41 +1,867 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
+    <title>Security | Nexora Technologies</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="Learn how Nexora protects your team's work with secure infrastructure, access controls, connected workflows, and enterprise-ready security practices."
+    />
 
-<title>Security | Nexora Technologies</title>
+    <meta
+      name="keywords"
+      content="Nexora security, application security, data security, enterprise security, access control, secure collaboration"
+    />
 
-<link rel="stylesheet" href="../../assets/css/style.css">
+    <meta name="author" content="Nexora Technologies" />
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- =========================================================
+         GLOBAL STYLES
+    ========================================================== -->
+    <link rel="stylesheet" href="../../assets/css/style.css" />
 
-</head>
+    <!-- =========================================================
+         FONT AWESOME
+    ========================================================== -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
 
-<body>
+  <body class="security-page">
+    <!-- =========================================================
+         NAVBAR
+    ========================================================== -->
+    <header class="site-header">
+      <div id="navbar-container"></div>
+    </header>
 
-<div id="navbar-container"></div>
+    <!-- =========================================================
+         MAIN CONTENT
+    ========================================================== -->
+    <main>
+      <!-- =======================================================
+           HERO
+      ======================================================== -->
+      <section class="security-hero">
+        <div class="security-container">
+          <div class="security-hero-content">
+            <span class="security-eyebrow">
+              <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+              SECURITY
+            </span>
 
-<main>
+            <h1>
+              Security built into
+              <span>every layer of Nexora.</span>
+            </h1>
 
-<!-- Security page content goes here -->
+            <p>
+              Protect your team's work with secure infrastructure, controlled
+              access, connected workflows, and enterprise-ready security
+              practices designed to keep your information protected.
+            </p>
 
-</main>
+            <div class="security-hero-actions">
+              <a href="../../pages/contact.html" class="btn btn-primary">
+                Talk to our team
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </a>
 
-<div id="footer-container"></div>
+              <a href="#security-controls" class="btn btn-secondary">
+                Explore security
+              </a>
+            </div>
+          </div>
 
-<script src="../../assets/js/navbar.js"></script>
-<script src="../../assets/js/app.js"></script>
+          <!-- ===================================================
+               HERO VISUAL
+          ==================================================== -->
+          <div class="security-hero-visual">
+            <div class="security-hero-glow"></div>
 
-<script src="../../assets/js/slider.js"></script>
-<script src="../../assets/js/counter.js"></script>
-<script src="../../assets/js/dropdown.js"></script>
-<script src="../../assets/js/form.js"></script>
-<script src="../../assets/js/animations.js"></script>
+            <div class="security-visual-card">
+              <div class="security-visual-header">
+                <div class="security-brand-mark">
+                  <img src="../../assets/images/nexora-mark.png" alt="Nexora" />
+                </div>
 
-</body>
+                <div class="security-status">
+                  <span class="security-status-dot"></span>
+                  Protected
+                </div>
+              </div>
 
+              <div class="security-visual-content">
+                <div class="security-shield">
+                  <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                </div>
+
+                <h2>Workspace Security</h2>
+
+                <p>
+                  Security controls protect your workspace, users, integrations,
+                  and connected workflows.
+                </p>
+              </div>
+
+              <div class="security-visual-grid">
+                <div class="security-visual-item">
+                  <i class="fa-solid fa-lock" aria-hidden="true"></i>
+
+                  <span>Access Control</span>
+                </div>
+
+                <div class="security-visual-item">
+                  <i class="fa-solid fa-user-shield" aria-hidden="true"></i>
+
+                  <span>Identity</span>
+                </div>
+
+                <div class="security-visual-item">
+                  <i class="fa-solid fa-network-wired" aria-hidden="true"></i>
+
+                  <span>Infrastructure</span>
+                </div>
+
+                <div class="security-visual-item">
+                  <i class="fa-solid fa-eye" aria-hidden="true"></i>
+
+                  <span>Monitoring</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =======================================================
+           SECURITY INTRO
+      ======================================================== -->
+      <section class="security-intro">
+        <div class="security-container">
+          <div class="security-section-heading">
+            <span class="security-eyebrow">
+              <i class="fa-solid fa-lock" aria-hidden="true"></i>
+              TRUST BY DESIGN
+            </span>
+
+            <h2>
+              Your work deserves
+              <span>strong protection.</span>
+            </h2>
+
+            <p>
+              Nexora is designed around the principle that security should be
+              part of the product from the beginning, not something added after
+              the fact.
+            </p>
+          </div>
+
+          <div class="security-intro-grid">
+            <article class="security-intro-card">
+              <div class="security-card-icon">
+                <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+              </div>
+
+              <h3>Secure by design</h3>
+
+              <p>
+                Security considerations are incorporated throughout the
+                platform, from application workflows to infrastructure and
+                access management.
+              </p>
+            </article>
+
+            <article class="security-intro-card">
+              <div class="security-card-icon">
+                <i class="fa-solid fa-user-lock" aria-hidden="true"></i>
+              </div>
+
+              <h3>Controlled access</h3>
+
+              <p>
+                Give the right people access to the right work while keeping
+                sensitive workspace information protected.
+              </p>
+            </article>
+
+            <article class="security-intro-card">
+              <div class="security-card-icon">
+                <i class="fa-solid fa-server" aria-hidden="true"></i>
+              </div>
+
+              <h3>Protected infrastructure</h3>
+
+              <p>
+                Nexora's connected workflows are designed to operate across
+                secure application and infrastructure environments.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =======================================================
+           SECURITY CONTROLS
+      ======================================================== -->
+      <section class="security-controls" id="security-controls">
+        <div class="security-container">
+          <div class="security-section-heading">
+            <span class="security-eyebrow">
+              <i class="fa-solid fa-sliders" aria-hidden="true"></i>
+              SECURITY CONTROLS
+            </span>
+
+            <h2>
+              Protection across
+              <span>your workspace.</span>
+            </h2>
+
+            <p>
+              Nexora provides a security-focused foundation for teams that need
+              to manage access, integrations, infrastructure, and operational
+              activity.
+            </p>
+          </div>
+
+          <div class="security-controls-grid">
+            <!-- Access -->
+            <article class="security-control-card">
+              <div class="security-control-icon">
+                <i class="fa-solid fa-key" aria-hidden="true"></i>
+              </div>
+
+              <div class="security-control-content">
+                <span class="security-card-label"> ACCESS </span>
+
+                <h3>Access control</h3>
+
+                <p>
+                  Manage who can access your workspace and keep permissions
+                  aligned with organizational requirements.
+                </p>
+
+                <ul>
+                  <li>
+                    <i class="fa-solid fa-check" aria-hidden="true"></i>
+                    Controlled workspace access
+                  </li>
+
+                  <li>
+                    <i class="fa-solid fa-check" aria-hidden="true"></i>
+                    Permission-aware workflows
+                  </li>
+
+                  <li>
+                    <i class="fa-solid fa-check" aria-hidden="true"></i>
+                    Organization-level controls
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- Identity -->
+            <article class="security-control-card">
+              <div class="security-control-icon">
+                <i class="fa-solid fa-user-shield" aria-hidden="true"></i>
+              </div>
+
+              <div class="security-control-content">
+                <span class="security-card-label"> IDENTITY </span>
+
+                <h3>Identity & authentication</h3>
+
+                <p>
+                  Connect secure authentication and identity workflows with the
+                  systems your organization already uses.
+                </p>
+
+                <ul>
+                  <li>
+                    <i class="fa-solid fa-check" aria-hidden="true"></i>
+                    Secure authentication
+                  </li>
+
+                  <li>
+                    <i class="fa-solid fa-check" aria-hidden="true"></i>
+                    Identity-aware access
+                  </li>
+
+                  <li>
+                    <i class="fa-solid fa-check" aria-hidden="true"></i>
+                    Enterprise-ready workflows
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- Infrastructure -->
+            <article class="security-control-card">
+              <div class="security-control-icon">
+                <i class="fa-solid fa-server" aria-hidden="true"></i>
+              </div>
+
+              <div class="security-control-content">
+                <span class="security-card-label"> INFRASTRUCTURE </span>
+
+                <h3>Infrastructure security</h3>
+
+                <p>
+                  Build connected workflows on infrastructure designed to
+                  support secure applications and business operations.
+                </p>
+
+                <ul>
+                  <li>
+                    <i class="fa-solid fa-check" aria-hidden="true"></i>
+                    Protected infrastructure
+                  </li>
+
+                  <li>
+                    <i class="fa-solid fa-check" aria-hidden="true"></i>
+                    Cloud-aware architecture
+                  </li>
+
+                  <li>
+                    <i class="fa-solid fa-check" aria-hidden="true"></i>
+                    Operational visibility
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- Monitoring -->
+            <article class="security-control-card">
+              <div class="security-control-icon">
+                <i class="fa-solid fa-eye" aria-hidden="true"></i>
+              </div>
+
+              <div class="security-control-content">
+                <span class="security-card-label"> MONITORING </span>
+
+                <h3>Security monitoring</h3>
+
+                <p>
+                  Keep visibility across important activity and identify changes
+                  across connected services and workflows.
+                </p>
+
+                <ul>
+                  <li>
+                    <i class="fa-solid fa-check" aria-hidden="true"></i>
+                    Activity visibility
+                  </li>
+
+                  <li>
+                    <i class="fa-solid fa-check" aria-hidden="true"></i>
+                    Connected service monitoring
+                  </li>
+
+                  <li>
+                    <i class="fa-solid fa-check" aria-hidden="true"></i>
+                    Operational awareness
+                  </li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =======================================================
+           SECURE WORKFLOWS
+      ======================================================== -->
+      <section class="security-workflows">
+        <div class="security-container">
+          <div class="security-workflow-grid">
+            <div class="security-workflow-content">
+              <span class="security-eyebrow">
+                <i class="fa-solid fa-network-wired" aria-hidden="true"></i>
+                CONNECTED SECURITY
+              </span>
+
+              <h2>
+                Keep your tools
+                <span>connected and controlled.</span>
+              </h2>
+
+              <p>
+                Modern teams depend on many services. Nexora helps bring those
+                systems together while keeping access, workflows, and
+                operational activity organized.
+              </p>
+
+              <div class="security-workflow-points">
+                <div class="security-workflow-point">
+                  <div class="security-point-icon">
+                    <i class="fa-solid fa-plug" aria-hidden="true"></i>
+                  </div>
+
+                  <div>
+                    <h3>Connected integrations</h3>
+
+                    <p>
+                      Bring development, communication, analytics, and
+                      infrastructure tools into one connected workflow.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="security-workflow-point">
+                  <div class="security-point-icon">
+                    <i class="fa-solid fa-lock" aria-hidden="true"></i>
+                  </div>
+
+                  <div>
+                    <h3>Controlled workflows</h3>
+
+                    <p>
+                      Keep sensitive operations within the appropriate teams,
+                      permissions, and organizational boundaries.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="security-workflow-point">
+                  <div class="security-point-icon">
+                    <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+                  </div>
+
+                  <div>
+                    <h3>Operational visibility</h3>
+
+                    <p>
+                      Understand what is happening across the systems your teams
+                      depend on.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- =================================================
+                 EXISTING PROJECT IMAGE
+            ================================================== -->
+            <div class="security-workflow-visual">
+              <div class="security-image-frame">
+                <img
+                  src="../../assets/images/integrations.png"
+                  alt="Nexora connected integrations and secure workflow environment"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =======================================================
+           SECURITY ARCHITECTURE
+      ======================================================== -->
+      <section class="security-architecture">
+        <div class="security-container">
+          <div class="security-section-heading">
+            <span class="security-eyebrow">
+              <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
+              SECURITY ARCHITECTURE
+            </span>
+
+            <h2>
+              Security across
+              <span>every workflow.</span>
+            </h2>
+
+            <p>
+              From identity and access to infrastructure and integrations,
+              security controls should work together rather than operate as
+              isolated systems.
+            </p>
+          </div>
+
+          <div class="security-architecture-visual">
+            <div class="security-architecture-card">
+              <div class="architecture-logo">
+                <img
+                  src="../../assets/images/nexora-mark.png"
+                  alt="Nexora"
+                  loading="lazy"
+                />
+              </div>
+
+              <span class="architecture-label"> NEXORA WORKSPACE </span>
+
+              <h3>Secure connected work</h3>
+
+              <p>
+                A centralized environment for teams, projects, issues,
+                integrations, and operational workflows.
+              </p>
+            </div>
+
+            <div class="architecture-connections">
+              <div class="architecture-line"></div>
+
+              <div class="architecture-node">
+                <i class="fa-solid fa-user-shield" aria-hidden="true"></i>
+                <span>Identity</span>
+              </div>
+
+              <div class="architecture-line"></div>
+
+              <div class="architecture-node">
+                <i class="fa-solid fa-lock" aria-hidden="true"></i>
+                <span>Access</span>
+              </div>
+
+              <div class="architecture-line"></div>
+
+              <div class="architecture-node">
+                <i class="fa-solid fa-server" aria-hidden="true"></i>
+                <span>Infrastructure</span>
+              </div>
+
+              <div class="architecture-line"></div>
+
+              <div class="architecture-node">
+                <i class="fa-solid fa-plug" aria-hidden="true"></i>
+                <span>Integrations</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =======================================================
+           ENTERPRISE SECURITY
+      ======================================================== -->
+      <section class="security-enterprise">
+        <div class="security-container">
+          <div class="security-enterprise-grid">
+            <div class="security-enterprise-content">
+              <span class="security-eyebrow">
+                <i class="fa-solid fa-building-shield" aria-hidden="true"></i>
+                ENTERPRISE
+              </span>
+
+              <h2>
+                Security for teams
+                <span>operating at scale.</span>
+              </h2>
+
+              <p>
+                As organizations grow, security requirements become more
+                complex. Nexora provides a foundation for teams that need
+                controlled access, connected systems, and visibility across
+                their work.
+              </p>
+
+              <a href="../../pages/enterprise.html" class="security-text-link">
+                Explore Enterprise
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+
+            <div class="security-enterprise-cards">
+              <article class="security-enterprise-card">
+                <div class="security-enterprise-icon">
+                  <i class="fa-solid fa-users-gear" aria-hidden="true"></i>
+                </div>
+
+                <h3>Team controls</h3>
+
+                <p>
+                  Organize access and responsibilities across teams and
+                  projects.
+                </p>
+              </article>
+
+              <article class="security-enterprise-card">
+                <div class="security-enterprise-icon">
+                  <i class="fa-solid fa-diagram-project" aria-hidden="true"></i>
+                </div>
+
+                <h3>Connected systems</h3>
+
+                <p>
+                  Bring the tools your organization depends on into a
+                  coordinated workflow.
+                </p>
+              </article>
+
+              <article class="security-enterprise-card">
+                <div class="security-enterprise-icon">
+                  <i class="fa-solid fa-chart-simple" aria-hidden="true"></i>
+                </div>
+
+                <h3>Visibility</h3>
+
+                <p>
+                  Maintain awareness of important activity across your connected
+                  environment.
+                </p>
+              </article>
+
+              <article class="security-enterprise-card">
+                <div class="security-enterprise-icon">
+                  <i class="fa-solid fa-shield" aria-hidden="true"></i>
+                </div>
+
+                <h3>Security foundation</h3>
+
+                <p>
+                  Establish security practices that support your team's
+                  operational requirements.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =======================================================
+           TRUSTED TECHNOLOGY
+      ======================================================== -->
+      <section class="security-trusted">
+        <div class="security-container">
+          <div class="security-section-heading security-heading-center">
+            <span class="security-eyebrow">
+              <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+              CONNECTED ECOSYSTEM
+            </span>
+
+            <h2>
+              Built for the tools
+              <span>your team already uses.</span>
+            </h2>
+
+            <p>
+              Nexora connects with modern development, collaboration, analytics,
+              and infrastructure tools so your security workflow can extend
+              across your technology stack.
+            </p>
+          </div>
+
+          <div class="security-logo-grid">
+            <div class="security-logo-card">
+              <img
+                src="../../assets/images/openai.png"
+                alt="OpenAI"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="security-logo-card">
+              <img
+                src="../../assets/images/vercel.png"
+                alt="Vercel"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="security-logo-card">
+              <img
+                src="../../assets/images/salesforce.png"
+                alt="Salesforce"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="security-logo-card">
+              <img
+                src="../../assets/images/figma.png"
+                alt="Figma"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="security-logo-card">
+              <img
+                src="../../assets/images/cursor.png"
+                alt="Cursor"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="security-logo-card">
+              <img
+                src="../../assets/images/coinbase.png"
+                alt="Coinbase"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="security-logo-card">
+              <img
+                src="../../assets/images/ramp.png"
+                alt="Ramp"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =======================================================
+           SECURITY RESOURCES
+      ======================================================== -->
+      <section class="security-resources">
+        <div class="security-container">
+          <div class="security-section-heading">
+            <span class="security-eyebrow">
+              <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+              SECURITY RESOURCES
+            </span>
+
+            <h2>
+              Learn more about
+              <span>Nexora security.</span>
+            </h2>
+
+            <p>
+              Explore additional resources covering privacy, enterprise
+              controls, documentation, and how Nexora works with your
+              organization.
+            </p>
+          </div>
+
+          <div class="security-resource-grid">
+            <a href="../privacy.html" class="security-resource-card">
+              <div class="security-resource-icon">
+                <i class="fa-solid fa-user-shield" aria-hidden="true"></i>
+              </div>
+
+              <div>
+                <span>RESOURCE</span>
+
+                <h3>Privacy</h3>
+
+                <p>
+                  Learn how Nexora approaches privacy and information
+                  protection.
+                </p>
+              </div>
+
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+
+            <a href="../enterprise.html" class="security-resource-card">
+              <div class="security-resource-icon">
+                <i class="fa-solid fa-building-shield" aria-hidden="true"></i>
+              </div>
+
+              <div>
+                <span>RESOURCE</span>
+
+                <h3>Enterprise</h3>
+
+                <p>
+                  Explore controls and capabilities designed for growing
+                  organizations.
+                </p>
+              </div>
+
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+
+            <a href="../docs.html" class="security-resource-card">
+              <div class="security-resource-icon">
+                <i class="fa-solid fa-file-lines" aria-hidden="true"></i>
+              </div>
+
+              <div>
+                <span>RESOURCE</span>
+
+                <h3>Documentation</h3>
+
+                <p>Explore product documentation and technical resources.</p>
+              </div>
+
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+
+            <a href="../api.html" class="security-resource-card">
+              <div class="security-resource-icon">
+                <i class="fa-solid fa-code" aria-hidden="true"></i>
+              </div>
+
+              <div>
+                <span>RESOURCE</span>
+
+                <h3>API</h3>
+
+                <p>
+                  Connect Nexora with your applications and internal systems.
+                </p>
+              </div>
+
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- =======================================================
+           CTA
+      ======================================================== -->
+      <section class="security-cta">
+        <div class="security-container">
+          <div class="security-cta-inner">
+            <div class="security-cta-mark">
+              <img
+                src="../../assets/images/nexora-mark.png"
+                alt="Nexora"
+                loading="lazy"
+              />
+            </div>
+
+            <span class="security-eyebrow">
+              <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+              SECURITY AT NEXORA
+            </span>
+
+            <h2>Build with confidence.</h2>
+
+            <p>
+              Bring your teams, tools, and workflows together on a platform
+              designed with security and control in mind.
+            </p>
+
+            <div class="security-cta-actions">
+              <a href="../../pages/contact.html" class="btn btn-primary">
+                Talk to our team
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </a>
+
+              <a href="../../pages/pricing.html" class="btn btn-secondary">
+                Explore pricing
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================== -->
+    <footer class="site-footer">
+      <div id="footer-container"></div>
+    </footer>
+
+    <!-- =========================================================
+         JAVASCRIPT
+    ========================================================== -->
+    <script src="../../assets/js/navbar.js"></script>
+    <script src="../../assets/js/app.js"></script>
+    <script src="../../assets/js/slider.js"></script>
+    <script src="../../assets/js/counter.js"></script>
+    <script src="../../assets/js/dropdown.js"></script>
+    <script src="../../assets/js/form.js"></script>
+    <script src="../../assets/js/animations.js"></script>
+  </body>
 </html>

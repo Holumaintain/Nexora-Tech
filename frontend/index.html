@@ -1,164 +1,252 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
 
-<title>Nexora Tech</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>
+      Nexora Technologies | Software Engineering, Cloud &amp; AI Solutions
+    </title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta
+      name="description"
+      content="Nexora Technologies builds modern digital products, full-stack applications, cloud infrastructure, DevOps systems, automation workflows, and AI-powered solutions."
+    />
 
-<link rel="stylesheet" href="assets/css/style.css">
+    <meta
+      name="keywords"
+      content="Nexora Technologies, software development, web development, full-stack development, cloud engineering, DevOps, AI automation, digital products"
+    />
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <meta name="author" content="Nexora Technologies" />
 
-</head>
+    <!-- =====================================================
+     FONTS
+====================================================== -->
 
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-<!--=====================
-NAVBAR
-======================-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-<div id="navbar-container"></div>
+    <!-- =====================================================
+     GLOBAL STYLES
+====================================================== -->
 
+    <link rel="stylesheet" href="assets/css/style.css" />
 
+    <!-- =====================================================
+     FONT AWESOME
+====================================================== -->
 
-<!--=====================
-MAIN
-======================-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
 
-<main>
+    <!-- =====================================================
+     FAVICON
+====================================================== -->
 
-<div id="hero"></div>
+    <link rel="icon" type="image/png" href="assets/images/nexora-mark.png" />
+  </head>
 
-<div id="technologies"></div>
+  <body class="home-page">
+    <!-- =====================================================
+     NAVBAR
+====================================================== -->
 
-<div id="services"></div>
+    <header id="navbar-container"></header>
 
-<div id="about"></div>
+    <!-- =====================================================
+     MAIN CONTENT
+====================================================== -->
 
-<div id="stats"></div>
+    <main id="main-content">
+      <!-- Hero -->
+      <div id="hero"></div>
 
-<div id="why-us"></div>
+      <!-- Technologies -->
+      <div id="technologies"></div>
 
-<div id="team"></div>
+      <!-- Services -->
+      <div id="services"></div>
 
-<div id="testimonials"></div>
+      <!-- About -->
+      <div id="about"></div>
 
-<div id="blog"></div>
+      <!-- Capabilities -->
+      <div id="stats"></div>
 
-<div id="cta"></div>
+      <!-- Why Nexora -->
+      <div id="why-us"></div>
 
-<div id="newsletter"></div>
+      <!-- Team -->
+      <div id="team"></div>
 
-</main>
+      <!-- Testimonials -->
+      <div id="testimonials"></div>
 
+      <!-- Blog / Insights -->
+      <div id="blog"></div>
 
+      <!-- Call to Action -->
+      <div id="cta"></div>
 
-<!--=====================
-FOOTER
-======================-->
-
-<div id="footer-container"></div>
-
-
-
-
-<!--=====================
-JS
-======================-->
-
-<script>
-async function loadSection(id,file){
-
-try{
-
-const response = await fetch(file);
-
-if(!response.ok){
-
-throw new Error(`Cannot load ${file}`);
-
-}
-
-const element=document.getElementById(id);
-
-if(element){
-
-element.innerHTML = await response.text();
-
-}
-
-
-}catch(error){
-
-console.error(error);
-
-}
-
-}
-
-
-
-async function loadSections(){
-
-await Promise.all([
-
-loadSection("hero","sections/hero.html"),
-
-loadSection("technologies","sections/technologies.html"),
-
-loadSection("services","sections/services.html"),
-
-loadSection("about","sections/about.html"),
-
-loadSection("stats","sections/stats.html"),
-
-loadSection("why-us","sections/why-us.html"),
-
-loadSection("team","sections/team.html"),
-
-loadSection("testimonials","sections/testimonials.html"),
-
-loadSection("blog","sections/blog.html"),
-
-loadSection("cta","sections/cta.html"),
-
-loadSection("newsletter","sections/newsletter.html")
-
-]);
-
-
-}
-
-
-
-document.addEventListener(
-"DOMContentLoaded",
-()=>{
-
-loadSections();
-
-}
-);
-
-</script>
-
-
-
-<script src="assets/js/navbar.js"></script>
-<script src="assets/js/app.js"></script>
-<script src="assets/js/slider.js"></script>
-<script src="assets/js/counter.js"></script>
-<script src="assets/js/dropdown.js"></script>
-<script src="assets/js/form.js"></script>
-<script src="assets/js/animations.js"></script>
-
-
-</body>
+      <!-- Newsletter -->
+      <div id="newsletter"></div>
+    </main>
+
+    <!-- =====================================================
+     FOOTER
+====================================================== -->
+
+    <footer id="footer-container"></footer>
+
+    <!-- =====================================================
+     SECTION LOADER
+====================================================== -->
+
+    <script>
+      /**
+       * Load an individual homepage section.
+       *
+       * @param {string} id
+       * @param {string} file
+       */
+      async function loadSection(id, file) {
+        const element = document.getElementById(id);
+
+        if (!element) {
+          console.error(`Nexora: Section container "#${id}" was not found.`);
+
+          return;
+        }
+
+        try {
+          const response = await fetch(file);
+
+          if (!response.ok) {
+            throw new Error(`HTTP ${response.status} while loading ${file}`);
+          }
+
+          const html = await response.text();
+
+          element.innerHTML = html;
+        } catch (error) {
+          console.error(`Nexora: Failed to load section "${id}".`, error);
+
+          element.innerHTML = "";
+        }
+      }
+
+      /**
+       * Homepage sections.
+       *
+       * Keep section markup inside the /sections directory.
+       */
+      const homepageSections = [
+        {
+          id: "hero",
+          file: "sections/hero.html",
+        },
+
+        {
+          id: "technologies",
+          file: "sections/technologies.html",
+        },
+
+        {
+          id: "services",
+          file: "sections/services.html",
+        },
+
+        {
+          id: "about",
+          file: "sections/about.html",
+        },
+
+        {
+          id: "stats",
+          file: "sections/stats.html",
+        },
+
+        {
+          id: "why-us",
+          file: "sections/why-us.html",
+        },
+
+        {
+          id: "team",
+          file: "sections/team.html",
+        },
+
+        {
+          id: "testimonials",
+          file: "sections/testimonials.html",
+        },
+
+        {
+          id: "blog",
+          file: "sections/blog.html",
+        },
+
+        {
+          id: "cta",
+          file: "sections/cta.html",
+        },
+
+        {
+          id: "newsletter",
+          file: "sections/newsletter.html",
+        },
+      ];
+
+      /**
+       * Load all homepage sections.
+       */
+      async function loadSections() {
+        await Promise.all(
+          homepageSections.map(({ id, file }) => loadSection(id, file)),
+        );
+
+        /**
+         * Notify other scripts that all homepage sections
+         * have been inserted into the DOM.
+         */
+        document.dispatchEvent(new CustomEvent("nexora:sections-loaded"));
+      }
+
+      /**
+       * Start homepage initialization.
+       */
+      document.addEventListener("DOMContentLoaded", () => {
+        loadSections();
+      });
+    </script>
+
+    <!-- =====================================================
+     JAVASCRIPT
+====================================================== -->
+
+    <script src="assets/js/navbar.js" defer></script>
+
+    <script src="assets/js/app.js" defer></script>
+
+    <script src="assets/js/slider.js" defer></script>
+
+    <script src="assets/js/counter.js" defer></script>
+
+    <script src="assets/js/dropdown.js" defer></script>
+
+    <script src="assets/js/form.js" defer></script>
+
+    <script src="assets/js/animations.js" defer></script>
+  </body>
 </html>

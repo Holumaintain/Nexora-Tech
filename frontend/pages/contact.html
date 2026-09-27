@@ -1,52 +1,448 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <!-- ======================================
+              META
+  ======================================= -->
 
-<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="Contact Nexora Technologies for sales, support, onboarding, product questions, and technical assistance."
+    />
 
-<title>Contact | Nexora Technologies</title>
+    <meta name="theme-color" content="#08090a" />
 
-<link rel="stylesheet" href="../assets/css/style.css">
+    <!-- ======================================
+              PAGE TITLE
+  ======================================= -->
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Contact | Nexora Technologies</title>
 
-</head>
+    <!-- ======================================
+              GLOBAL STYLES
+  ======================================= -->
 
+    <link rel="stylesheet" href="../assets/css/style.css" />
 
-<body>
+    <!-- ======================================
+              FONT AWESOME
+  ======================================= -->
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
 
-<div id="navbar-container"></div>
+    <!-- ======================================
+              CONTACT PAGE STYLES
+  ======================================= -->
 
+    <link rel="stylesheet" href="../assets/css/pages/contact.css" />
+  </head>
 
+  <body class="contact-page">
+    <!-- ======================================
+              NAVBAR
+  ======================================= -->
 
-<main>
+    <div id="navbar-container"></div>
 
+    <!-- ======================================
+              MAIN
+  ======================================= -->
 
-<!-- existing contact page content stays here -->
+    <main class="contact-main">
+      <!-- ======================================
+              CONTACT HERO
+    ======================================= -->
 
+      <section class="contact-hero" aria-labelledby="contact-title">
+        <!-- LEFT CONTENT -->
 
-</main>
+        <div class="contact-hero-left">
+          <div class="contact-kicker">
+            <span class="contact-kicker-dot" aria-hidden="true"></span>
 
+            Get in touch
+          </div>
 
+          <h1 id="contact-title" class="contact-title">How can we help?</h1>
 
-<div id="footer-container"></div>
+          <p class="contact-description">
+            Get in touch with our sales and support teams for demos, onboarding
+            support, product questions, or technical assistance.
+          </p>
+        </div>
 
+        <!-- RIGHT CONTENT -->
 
+        <div class="contact-hero-right">
+          <div class="contact-card-grid">
+            <!-- SALES -->
 
-<script src="../assets/js/navbar.js"></script>
-<script src="../assets/js/app.js"></script>
+            <article class="contact-card">
+              <div class="contact-card-top">
+                <div class="contact-card-icon">
+                  <i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i>
+                </div>
 
-<script src="../assets/js/slider.js"></script>
-<script src="../assets/js/counter.js"></script>
-<script src="../assets/js/dropdown.js"></script>
-<script src="../assets/js/form.js"></script>
-<script src="../assets/js/animations.js"></script>
+                <h2 class="contact-card-title">Sales</h2>
+              </div>
 
+              <div>
+                <p class="contact-card-text">
+                  Speak to our sales team about plans, pricing, enterprise
+                  contracts, or request a demo.
+                </p>
 
-</body>
+                <a href="mailto:sales@nexora.tech" class="contact-card-link">
+                  Contact sales
 
+                  <i
+                    class="fa-solid fa-arrow-up-right-from-square"
+                    aria-hidden="true"
+                  ></i>
+                </a>
+              </div>
+            </article>
+
+            <!-- SUPPORT -->
+
+            <article class="contact-card">
+              <div class="contact-card-top">
+                <div class="contact-card-icon">
+                  <i class="fa-solid fa-life-ring" aria-hidden="true"></i>
+                </div>
+
+                <h2 class="contact-card-title">Support</h2>
+              </div>
+
+              <div>
+                <p class="contact-card-text">
+                  We are here to help. Ask us product questions, report
+                  problems, or leave feedback.
+                </p>
+
+                <a href="mailto:support@nexora.tech" class="contact-card-link">
+                  Contact support
+
+                  <i
+                    class="fa-solid fa-arrow-up-right-from-square"
+                    aria-hidden="true"
+                  ></i>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================
+              CONTACT FORM
+    ======================================= -->
+
+      <section
+        class="contact-form-section"
+        aria-labelledby="contact-form-title"
+      >
+        <!-- FORM INTRO -->
+
+        <div class="contact-form-intro">
+          <span class="contact-section-label"> Contact us </span>
+
+          <h2 id="contact-form-title" class="contact-form-title">
+            Tell us what you need.
+          </h2>
+
+          <p class="contact-form-description">
+            Whether you have a question, need technical assistance, or want to
+            learn more about Nexora, send us a message.
+          </p>
+        </div>
+
+        <!-- FORM -->
+
+        <div class="contact-form-wrapper">
+          <form
+            id="contact-form"
+            class="contact-form"
+            action="#"
+            method="post"
+            novalidate
+          >
+            <!-- FORM STATUS -->
+
+            <div
+              id="contact-form-error"
+              class="contact-form-message contact-form-error"
+              role="alert"
+              aria-live="polite"
+            ></div>
+
+            <div
+              id="contact-form-success"
+              class="contact-form-message contact-form-success"
+              role="status"
+              aria-live="polite"
+            ></div>
+
+            <!-- NAME + EMAIL -->
+
+            <div class="contact-form-grid">
+              <div class="contact-form-group">
+                <label class="contact-form-label" for="contact-name">
+                  Name
+                </label>
+
+                <input
+                  id="contact-name"
+                  class="contact-form-input"
+                  type="text"
+                  name="name"
+                  placeholder="Your name"
+                  autocomplete="name"
+                  required
+                />
+              </div>
+
+              <div class="contact-form-group">
+                <label class="contact-form-label" for="contact-email">
+                  Email
+                </label>
+
+                <input
+                  id="contact-email"
+                  class="contact-form-input"
+                  type="email"
+                  name="email"
+                  placeholder="you@example.com"
+                  autocomplete="email"
+                  required
+                />
+              </div>
+            </div>
+
+            <!-- COMPANY + SUBJECT -->
+
+            <div class="contact-form-grid">
+              <div class="contact-form-group">
+                <label class="contact-form-label" for="contact-company">
+                  Company
+                  <span class="contact-form-optional"> Optional </span>
+                </label>
+
+                <input
+                  id="contact-company"
+                  class="contact-form-input"
+                  type="text"
+                  name="company"
+                  placeholder="Company name"
+                  autocomplete="organization"
+                />
+              </div>
+
+              <div class="contact-form-group">
+                <label class="contact-form-label" for="contact-subject">
+                  Subject
+                </label>
+
+                <select
+                  id="contact-subject"
+                  class="contact-form-input contact-form-select"
+                  name="subject"
+                  required
+                >
+                  <option value="" selected disabled>Select a topic</option>
+
+                  <option value="sales">Sales</option>
+
+                  <option value="support">Support</option>
+
+                  <option value="demo">Request a demo</option>
+
+                  <option value="partnership">Partnership</option>
+
+                  <option value="general">General question</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- MESSAGE -->
+
+            <div class="contact-form-group">
+              <label class="contact-form-label" for="contact-message">
+                Message
+              </label>
+
+              <textarea
+                id="contact-message"
+                class="contact-form-input contact-form-textarea"
+                name="message"
+                placeholder="Tell us how we can help..."
+                rows="7"
+                required
+              ></textarea>
+            </div>
+
+            <!-- SUBMIT -->
+
+            <div class="contact-form-submit-row">
+              <p class="contact-form-note">
+                We typically respond within one business day.
+              </p>
+
+              <button type="submit" class="contact-submit">
+                <span class="contact-submit-text"> Send message </span>
+
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- ======================================
+              CONTACT INFORMATION
+    ======================================= -->
+
+      <section class="contact-information" aria-label="Contact information">
+        <!-- LEFT LABEL -->
+
+        <div class="contact-info-label">Get in touch</div>
+
+        <!-- RIGHT DETAILS -->
+
+        <div class="contact-details">
+          <!-- COMMUNITY -->
+
+          <div class="contact-detail-row">
+            <div class="contact-detail-heading">Community</div>
+
+            <div class="contact-detail-content">
+              <h3 class="contact-detail-title">Connect with Nexora users</h3>
+
+              <p class="contact-detail-text">
+                Join the conversation with other Nexora users and product teams.
+              </p>
+
+              <a href="#" class="contact-detail-link">
+                Join community
+
+                <i
+                  class="fa-solid fa-arrow-up-right-from-square"
+                  aria-hidden="true"
+                ></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- GENERAL COMMUNICATION -->
+
+          <div class="contact-detail-row">
+            <div class="contact-detail-heading">General communication</div>
+
+            <div class="contact-detail-content">
+              <h3 class="contact-detail-title">For other questions</h3>
+
+              <p class="contact-detail-text">
+                Email us at
+                <a href="mailto:hello@nexora.tech" class="contact-detail-link">
+                  hello@nexora.tech
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <!-- DOCUMENTATION -->
+
+          <div class="contact-detail-row">
+            <div class="contact-detail-heading">Documentation</div>
+
+            <div class="contact-detail-content">
+              <h3 class="contact-detail-title">
+                Features, integrations, and usage
+              </h3>
+
+              <p class="contact-detail-text">
+                Explore Nexora documentation, guides, and technical resources.
+              </p>
+
+              <a href="#" class="contact-detail-link">
+                Nexora Docs
+
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- API -->
+
+          <div class="contact-detail-row">
+            <div class="contact-detail-heading">API &amp; SDK</div>
+
+            <div class="contact-detail-content">
+              <h3 class="contact-detail-title">Build with Nexora</h3>
+
+              <p class="contact-detail-text">
+                Explore our API and SDK resources for developers and
+                integrations.
+              </p>
+
+              <a href="#" class="contact-detail-link">
+                Nexora API
+
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- SYSTEM STATUS -->
+
+          <div class="contact-detail-row">
+            <div class="contact-detail-heading">System</div>
+
+            <div class="contact-detail-content">
+              <h3 class="contact-detail-title system-status">
+                <span class="system-status-dot" aria-hidden="true"></span>
+
+                All systems operational
+              </h3>
+
+              <a href="#" class="contact-detail-link">
+                Check status
+
+                <i
+                  class="fa-solid fa-arrow-up-right-from-square"
+                  aria-hidden="true"
+                ></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="contact-bottom-space" aria-hidden="true"></div>
+    </main>
+
+    <!-- ======================================
+              FOOTER
+  ======================================= -->
+
+    <div id="footer-container"></div>
+
+    <!-- ======================================
+              JAVASCRIPT
+  ======================================= -->
+
+    <script src="../assets/js/navbar.js"></script>
+    <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/slider.js"></script>
+    <script src="../assets/js/counter.js"></script>
+    <script src="../assets/js/dropdown.js"></script>
+    <script src="../assets/js/form.js"></script>
+    <script src="../assets/js/animations.js"></script>
+  </body>
 </html>

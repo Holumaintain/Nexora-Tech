@@ -2,30 +2,325 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <title>Diffs | Nexora Technologies</title>
-
     <link rel="stylesheet" href="../../assets/css/style.css" />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
   </head>
-
-  <body>
+  <body class="diffs-page">
     <div id="navbar-container"></div>
 
     <main>
-      <!-- Diffs page content goes here -->
+      <!-- Hero Section -->
+      <section class="hero" aria-labelledby="diffs-hero-title">
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          class="hero-video"
+          aria-hidden="true"
+        >
+          <source src="../../assets/images/diffs-hero.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div class="hero-overlay">
+          <h1 id="diffs-hero-title">Automate Diffs &amp; Reviews</h1>
+          <p>
+            Agents that follow work from conversation to code, streamlining
+            collaboration and automation.
+          </p>
+        </div>
+      </section>
+
+      <!-- AI and Automations -->
+      <section class="ai-automations">
+        <div class="container">
+          <h2><i class="fa-solid fa-robot"></i> AI and Automations</h2>
+          <p>
+            Artificial colleagues that understand your projects, issues,
+            customer requests, docs, and code.
+          </p>
+          <img
+            src="../../assets/images/ai-automations.png"
+            alt="AI and Automations Overview"
+            loading="lazy"
+          />
+        </div>
+      </section>
+
+      <!-- Linear Agent -->
+      <section class="linear-agent">
+        <div class="container">
+          <h2><i class="fa-solid fa-user-gear"></i> Linear Agent</h2>
+          <p>
+            Natural collaboration with AI that grounds every decision in full
+            context.
+          </p>
+          <img
+            src="../../assets/images/linear-agent.png"
+            alt="Linear Agent Collaboration"
+            loading="lazy"
+          />
+        </div>
+      </section>
+
+      <!-- Slack Integration -->
+      <section class="slack-integration">
+        <div class="container">
+          <h2><i class="fa-brands fa-slack"></i> Slack & Teams Integration</h2>
+          <p>Turn conversations into scoped issues with surrounding context.</p>
+          <img
+            src="../../assets/images/slack-integration.png"
+            alt="Slack Integration with Linear"
+            loading="lazy"
+          />
+        </div>
+      </section>
+
+      <!-- Draft Updates -->
+      <section class="draft-updates">
+        <div class="container">
+          <h2>
+            <i class="fa-solid fa-pen-to-square"></i> Draft Project Updates
+          </h2>
+          <p>
+            Summarize progress, risks, blockers, and recent changes into updates
+            your team can review.
+          </p>
+          <img
+            src="../../assets/images/draft-updates.png"
+            alt="Draft Project Updates and Risk Identification"
+            loading="lazy"
+          />
+        </div>
+      </section>
+
+      <!-- Workflow Automation -->
+      <section class="workflow-automation">
+        <div class="container">
+          <h2>
+            <i class="fa-solid fa-diagram-project"></i> Workflow Automation
+          </h2>
+          <p>
+            Check project status, save reusable skills, and let triage run
+            itself with agent workflows.
+          </p>
+          <img
+            src="../../assets/images/workflow-automation.png"
+            alt="Workflow Automation Features"
+            loading="lazy"
+          />
+        </div>
+      </section>
+
+      <!-- Triage Flow -->
+      <section class="triage-flow">
+        <div class="container">
+          <h2><i class="fa-solid fa-list-check"></i> Triage Flow</h2>
+          <p>
+            Triggered triage checks, weekly reviews, and daily summaries feed
+            into structured pipelines.
+          </p>
+          <img
+            src="../../assets/images/triage-flow.png"
+            alt="Triage Flow Diagram"
+            loading="lazy"
+          />
+        </div>
+      </section>
+
+      <!-- Recurring Work -->
+      <section class="recurring-work">
+        <div class="container">
+          <h2><i class="fa-solid fa-repeat"></i> Recurring Work</h2>
+          <p>
+            Put recurring work on a loop. Run agents on a schedule or when work
+            matches your criteria.
+          </p>
+          <img
+            src="../../assets/images/recurring-work.png"
+            alt="Recurring Work Automation"
+            loading="lazy"
+          />
+        </div>
+      </section>
+
+      <!-- Automate Overhead -->
+      <section class="automate-overhead">
+        <div class="container">
+          <h2><i class="fa-solid fa-gears"></i> Automate the Overhead</h2>
+          <p>
+            Triage Intelligence suggests assignees, teams, projects, labels, and
+            related issues automatically.
+          </p>
+          <img
+            src="../../assets/images/automate-overhead.png"
+            alt="Automate Overhead and Code Diffs"
+            loading="lazy"
+          />
+        </div>
+      </section>
+
+      <!-- Code Review Diffs -->
+      <section class="code-review">
+        <div class="container">
+          <h2><i class="fa-solid fa-code"></i> Code Review Diffs</h2>
+          <p>
+            Stream diffs across the org. Review changes inline and track
+            collaborative development.
+          </p>
+          <img
+            src="../../assets/images/code-review-diffs.png"
+            alt="Code Review Diffs Example"
+            loading="lazy"
+          />
+        </div>
+      </section>
+
+      <!-- Issue Management -->
+      <section class="issue-management">
+        <div class="container">
+          <h2><i class="fa-solid fa-bug"></i> Issue Management</h2>
+          <p>
+            Assign issues directly, integrate with Datadog, and track automated
+            updates in real-time.
+          </p>
+          <img
+            src="../../assets/images/issue-management.png"
+            alt="Issue Management Integration"
+            loading="lazy"
+          />
+        </div>
+      </section>
+
+      <!-- Background Automation -->
+      <section class="background-automation">
+        <div class="container">
+          <h2>
+            <i class="fa-solid fa-circle-nodes"></i> Background Automation
+          </h2>
+          <p>
+            Assign issues directly or let Linear pick them up the moment they
+            land in triage.
+          </p>
+          <img
+            src="../../assets/images/background-automation.png"
+            alt="Background Automation and Code Insights"
+            loading="lazy"
+          />
+        </div>
+      </section>
+
+      <!-- Guided Reviews -->
+      <section class="guided-reviews">
+        <div class="container">
+          <h2><i class="fa-solid fa-eye"></i> Guided Reviews</h2>
+          <p>
+            Iterate with agents, organize diffs, and see everything your agents
+            are doing.
+          </p>
+          <img
+            src="../../assets/images/guided-reviews.png"
+            alt="Guided Reviews and Agent Actions"
+            loading="lazy"
+          />
+        </div>
+      </section>
+
+      <!-- Task Dashboard -->
+      <section class="task-dashboard">
+        <div class="container">
+          <h2><i class="fa-solid fa-table-columns"></i> Task Dashboard</h2>
+          <p>
+            Track tasks across Offline Mode, Core Performance, and UI Refresh
+            categories.
+          </p>
+          <img
+            src="../../assets/images/task-dashboard.png"
+            alt="Task Dashboard Example"
+            loading="lazy"
+          />
+        </div>
+      </section>
+
+      <!-- Work in Motion -->
+      <section class="work-motion">
+        <div class="container">
+          <h2><i class="fa-solid fa-arrows-spin"></i> Work in Motion</h2>
+          <p>
+            See what’s running, what shipped, and what needs a human across
+            every team and agent.
+          </p>
+          <img
+            src="../../assets/images/work-motion.png"
+            alt="Work in Motion Overview"
+            loading="lazy"
+          />
+        </div>
+      </section>
+
+      <!-- Integrations -->
+      <section class="integrations">
+        <div class="container">
+          <h2><i class="fa-solid fa-plug"></i> Integrations</h2>
+          <p>
+            Bring more context in with tools like Notion, Slack, and PostHog.
+            Take your context anywhere with MCP.
+          </p>
+          <img
+            src="../../assets/images/integrations.png"
+            alt="Integrations and Context Sharing"
+            loading="lazy"
+          />
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section class="testimonials">
+        <div class="container">
+          <h2><i class="fa-solid fa-users"></i> Customer Testimonials</h2>
+          <div class="testimonial-grid">
+            <img
+              src="../../assets/images/testimonial-sam.png"
+              alt="Sam Sipe testimonial"
+              loading="lazy"
+            />
+            <img
+              src="../../assets/images/testimonial-nik.png"
+              alt="Nik Koblov testimonial"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="cta">
+        <div class="container">
+          <h2>Built for the Future. Available Today.</h2>
+          <p>
+            Linear powers over 40,000 product teams. From ambitious startups to
+            major enterprises.
+          </p>
+          <div class="cta-buttons">
+            <a href="../pricing.html" class="btn btn-light">Get Started</a>
+            <a href="../contact.html" class="btn btn-dark">Contact Sales</a>
+          </div>
+        </div>
+      </section>
     </main>
 
     <div id="footer-container"></div>
 
+    <!-- Scripts -->
     <script src="../../assets/js/navbar.js"></script>
     <script src="../../assets/js/app.js"></script>
-
     <script src="../../assets/js/slider.js"></script>
     <script src="../../assets/js/counter.js"></script>
     <script src="../../assets/js/dropdown.js"></script>

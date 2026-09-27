@@ -1,41 +1,774 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <!-- =========================================
+         META
+    ========================================== -->
+    <meta charset="UTF-8" />
 
-<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="Explore the Nexora Technologies documentation. Learn how to set up your workspace, manage projects, automate workflows, connect integrations, and build with Nexora."
+    />
 
-<title>Documentation | Nexora Technologies</title>
+    <meta name="theme-color" content="#08090b" />
 
-<link rel="stylesheet" href="../../assets/css/style.css">
+    <title>Documentation | Nexora Technologies</title>
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- =========================================
+         MAIN STYLES
+    ========================================== -->
+    <link rel="stylesheet" href="../../assets/css/style.css" />
 
-</head>
+    <!-- =========================================
+         PAGE STYLES
+    ========================================== -->
+    <link rel="stylesheet" href="../../assets/css/pages/docs.css" />
 
-<body>
+    <!-- =========================================
+         FONT AWESOME
+    ========================================== -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
 
-<div id="navbar-container"></div>
+  <body class="docs-page">
+    <!-- =========================================
+         NAVBAR
+    ========================================== -->
+    <div id="navbar-container"></div>
 
-<main>
+    <!-- =========================================
+         MAIN CONTENT
+    ========================================== -->
+    <main>
+      <!-- =========================================
+           HERO
+      ========================================== -->
+      <section class="docs-hero">
+        <div class="container">
+          <div class="docs-hero-content">
+            <span class="section-badge">
+              <i class="fa-solid fa-book-open"></i>
+              Documentation
+            </span>
 
-<!-- Documentation page content goes here -->
+            <h1>Everything you need to build with Nexora.</h1>
 
-</main>
+            <p>
+              Learn how to get started, configure your workspace, manage
+              projects, automate workflows, connect your tools, and get the most
+              from Nexora.
+            </p>
 
-<div id="footer-container"></div>
+            <div class="docs-search">
+              <i class="fa-solid fa-magnifying-glass"></i>
 
-<script src="../../assets/js/navbar.js"></script>
-<script src="../../assets/js/app.js"></script>
+              <input
+                type="search"
+                id="docs-search"
+                placeholder="Search documentation..."
+                aria-label="Search documentation"
+              />
 
-<script src="../../assets/js/slider.js"></script>
-<script src="../../assets/js/counter.js"></script>
-<script src="../../assets/js/dropdown.js"></script>
-<script src="../../assets/js/form.js"></script>
-<script src="../../assets/js/animations.js"></script>
+              <span class="search-shortcut"> / </span>
+            </div>
+          </div>
+        </div>
+      </section>
 
-</body>
+      <!-- =========================================
+           DOCUMENTATION CATEGORIES
+      ========================================== -->
+      <section class="docs-categories">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-badge"> Explore </span>
 
+            <h2>Find what you need.</h2>
+
+            <p>
+              Explore guides and references for every part of the Nexora
+              platform.
+            </p>
+          </div>
+
+          <div class="docs-grid">
+            <!-- =====================================
+                 GETTING STARTED
+            ====================================== -->
+            <article class="docs-card">
+              <div class="docs-card-icon">
+                <i class="fa-solid fa-rocket"></i>
+              </div>
+
+              <div class="docs-card-content">
+                <span class="docs-card-label"> Start here </span>
+
+                <h3>Getting Started</h3>
+
+                <p>
+                  Set up your Nexora workspace, invite your team, and start
+                  organizing your work in minutes.
+                </p>
+
+                <a href="#getting-started" class="docs-card-link">
+                  Explore guides
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </article>
+
+            <!-- =====================================
+                 WORKSPACE
+            ====================================== -->
+            <article class="docs-card">
+              <div class="docs-card-icon">
+                <i class="fa-solid fa-layer-group"></i>
+              </div>
+
+              <div class="docs-card-content">
+                <span class="docs-card-label"> Workspace </span>
+
+                <h3>Workspace &amp; Projects</h3>
+
+                <p>
+                  Learn how teams, projects, issues, initiatives, cycles, and
+                  roadmaps work together.
+                </p>
+
+                <a href="#workspace" class="docs-card-link">
+                  View workspace docs
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </article>
+
+            <!-- =====================================
+                 AUTOMATIONS
+            ====================================== -->
+            <article class="docs-card">
+              <div class="docs-card-icon">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+              </div>
+
+              <div class="docs-card-content">
+                <span class="docs-card-label"> Automation </span>
+
+                <h3>Automations &amp; AI</h3>
+
+                <p>
+                  Configure automated workflows, AI agents, summaries, triggers,
+                  and intelligent actions.
+                </p>
+
+                <a href="#automations" class="docs-card-link">
+                  Explore automation
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </article>
+
+            <!-- =====================================
+                 INTEGRATIONS
+            ====================================== -->
+            <article class="docs-card">
+              <div class="docs-card-icon">
+                <i class="fa-solid fa-plug"></i>
+              </div>
+
+              <div class="docs-card-content">
+                <span class="docs-card-label"> Integrations </span>
+
+                <h3>Integrations</h3>
+
+                <p>
+                  Connect Nexora with the tools your team already uses across
+                  communication, development, cloud, analytics, and
+                  productivity.
+                </p>
+
+                <a href="../product/integrations.html" class="docs-card-link">
+                  Browse integrations
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </article>
+
+            <!-- =====================================
+                 API
+            ====================================== -->
+            <article class="docs-card">
+              <div class="docs-card-icon">
+                <i class="fa-solid fa-code"></i>
+              </div>
+
+              <div class="docs-card-content">
+                <span class="docs-card-label"> Developers </span>
+
+                <h3>API Reference</h3>
+
+                <p>
+                  Build custom applications and integrations with the Nexora API
+                  and developer tools.
+                </p>
+
+                <a href="api.html" class="docs-card-link">
+                  View API docs
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </article>
+
+            <!-- =====================================
+                 SECURITY
+            ====================================== -->
+            <article class="docs-card">
+              <div class="docs-card-icon">
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+
+              <div class="docs-card-content">
+                <span class="docs-card-label"> Trust </span>
+
+                <h3>Security &amp; Compliance</h3>
+
+                <p>
+                  Understand how Nexora protects workspace data, manages access,
+                  and supports secure organizations.
+                </p>
+
+                <a href="security.html" class="docs-card-link">
+                  Learn about security
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================
+           QUICK START
+      ========================================== -->
+      <section class="docs-feature" id="getting-started">
+        <div class="container">
+          <div class="docs-feature-grid">
+            <div class="docs-feature-content">
+              <span class="section-badge"> Quick start </span>
+
+              <h2>Go from setup to shipping faster.</h2>
+
+              <p>
+                Start with the fundamentals and progressively build your
+                workspace around the way your team works. Nexora brings product,
+                engineering, operations, and customer workflows into one
+                connected system.
+              </p>
+
+              <div class="docs-feature-links">
+                <a href="#workspace" class="docs-feature-link">
+                  <span class="feature-link-icon">
+                    <i class="fa-solid fa-circle-play"></i>
+                  </span>
+
+                  <span>
+                    <strong>Set up your workspace</strong>
+                    <small> Create teams, projects, and workflows. </small>
+                  </span>
+
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <a href="#issues" class="docs-feature-link">
+                  <span class="feature-link-icon">
+                    <i class="fa-solid fa-list-check"></i>
+                  </span>
+
+                  <span>
+                    <strong>Manage your work</strong>
+                    <small> Organize issues, cycles, and priorities. </small>
+                  </span>
+
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <a href="#automations" class="docs-feature-link">
+                  <span class="feature-link-icon">
+                    <i class="fa-solid fa-bolt"></i>
+                  </span>
+
+                  <span>
+                    <strong>Automate repetitive work</strong>
+                    <small> Connect events, actions, and AI workflows. </small>
+                  </span>
+
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="docs-feature-visual">
+              <div class="docs-dashboard">
+                <div class="dashboard-topbar">
+                  <div class="dashboard-dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+
+                  <span class="dashboard-title"> Nexora Workspace </span>
+                </div>
+
+                <div class="dashboard-body">
+                  <aside class="dashboard-sidebar">
+                    <span class="sidebar-label"> Workspace </span>
+
+                    <div class="sidebar-item active">
+                      <i class="fa-solid fa-house"></i>
+                      Overview
+                    </div>
+
+                    <div class="sidebar-item">
+                      <i class="fa-solid fa-list-check"></i>
+                      Issues
+                    </div>
+
+                    <div class="sidebar-item">
+                      <i class="fa-solid fa-road"></i>
+                      Roadmap
+                    </div>
+
+                    <div class="sidebar-item">
+                      <i class="fa-solid fa-chart-line"></i>
+                      Insights
+                    </div>
+                  </aside>
+
+                  <div class="dashboard-main">
+                    <div class="dashboard-heading">
+                      <div>
+                        <span> Workspace </span>
+
+                        <h4>Product Overview</h4>
+                      </div>
+
+                      <span class="dashboard-status">
+                        <i class="fa-solid fa-circle"></i>
+                        On track
+                      </span>
+                    </div>
+
+                    <div class="dashboard-metrics">
+                      <div class="metric-card">
+                        <span>Active issues</span>
+                        <strong>128</strong>
+                      </div>
+
+                      <div class="metric-card">
+                        <span>Projects</span>
+                        <strong>24</strong>
+                      </div>
+
+                      <div class="metric-card">
+                        <span>Completed</span>
+                        <strong>86%</strong>
+                      </div>
+                    </div>
+
+                    <div class="dashboard-list">
+                      <div class="dashboard-list-heading">
+                        <span>Recent activity</span>
+                        <span>Today</span>
+                      </div>
+
+                      <div class="dashboard-row">
+                        <span class="row-icon">
+                          <i class="fa-solid fa-check"></i>
+                        </span>
+
+                        <span> Mobile workflow completed </span>
+
+                        <small> 12m </small>
+                      </div>
+
+                      <div class="dashboard-row">
+                        <span class="row-icon">
+                          <i class="fa-solid fa-bolt"></i>
+                        </span>
+
+                        <span> AI automation triggered </span>
+
+                        <small> 28m </small>
+                      </div>
+
+                      <div class="dashboard-row">
+                        <span class="row-icon">
+                          <i class="fa-solid fa-code"></i>
+                        </span>
+
+                        <span> Pull request connected </span>
+
+                        <small> 42m </small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================
+           DOCUMENTATION TOPICS
+      ========================================== -->
+      <section class="docs-topics">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-badge"> Guides </span>
+
+            <h2>Explore the platform.</h2>
+
+            <p>
+              Dive deeper into the capabilities that power your team's workflow.
+            </p>
+          </div>
+
+          <div class="topics-grid">
+            <!-- WORK MANAGEMENT -->
+            <article class="topic-card" id="workspace">
+              <div class="topic-icon">
+                <i class="fa-solid fa-table-columns"></i>
+              </div>
+
+              <h3>Work Management</h3>
+
+              <p>
+                Organize projects, issues, cycles, initiatives, roadmaps, and
+                team priorities.
+              </p>
+
+              <ul>
+                <li>Projects &amp; teams</li>
+                <li>Issues &amp; workflows</li>
+                <li>Cycles &amp; planning</li>
+                <li>Initiatives &amp; roadmaps</li>
+              </ul>
+
+              <a href="#workspace">
+                Read the guide
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </article>
+
+            <!-- ISSUES -->
+            <article class="topic-card" id="issues">
+              <div class="topic-icon">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+
+              <h3>Issues &amp; Intake</h3>
+
+              <p>
+                Capture requests and turn incoming work into structured,
+                actionable issues.
+              </p>
+
+              <ul>
+                <li>Issue creation</li>
+                <li>Customer requests</li>
+                <li>Triage workflows</li>
+                <li>AI-assisted intake</li>
+              </ul>
+
+              <a href="../product/intake.html">
+                Learn about intake
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </article>
+
+            <!-- AUTOMATION -->
+            <article class="topic-card" id="automations">
+              <div class="topic-icon">
+                <i class="fa-solid fa-gears"></i>
+              </div>
+
+              <h3>Automation</h3>
+
+              <p>
+                Reduce manual work by connecting triggers, actions,
+                integrations, and intelligent agents.
+              </p>
+
+              <ul>
+                <li>Workflow triggers</li>
+                <li>Automated actions</li>
+                <li>AI agents</li>
+                <li>Connected workflows</li>
+              </ul>
+
+              <a href="../product/build.html">
+                Explore automation
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </article>
+
+            <!-- ANALYTICS -->
+            <article class="topic-card">
+              <div class="topic-icon">
+                <i class="fa-solid fa-chart-simple"></i>
+              </div>
+
+              <h3>Analytics &amp; Monitoring</h3>
+
+              <p>
+                Understand delivery performance and product progress with
+                real-time insights.
+              </p>
+
+              <ul>
+                <li>Product analytics</li>
+                <li>Cycle time</li>
+                <li>Custom dashboards</li>
+                <li>AI summaries</li>
+              </ul>
+
+              <a href="../product/monitor.html">
+                Explore monitoring
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </article>
+
+            <!-- DEVELOPERS -->
+            <article class="topic-card">
+              <div class="topic-icon">
+                <i class="fa-solid fa-terminal"></i>
+              </div>
+
+              <h3>Developer Tools</h3>
+
+              <p>
+                Connect your development workflow and build custom experiences
+                on top of Nexora.
+              </p>
+
+              <ul>
+                <li>API access</li>
+                <li>Git integrations</li>
+                <li>Code reviews</li>
+                <li>Developer workflows</li>
+              </ul>
+
+              <a href="developers.html">
+                Developer resources
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </article>
+
+            <!-- SECURITY -->
+            <article class="topic-card">
+              <div class="topic-icon">
+                <i class="fa-solid fa-lock"></i>
+              </div>
+
+              <h3>Security</h3>
+
+              <p>
+                Configure identity, access, permissions, and security controls
+                for your organization.
+              </p>
+
+              <ul>
+                <li>Authentication</li>
+                <li>Access control</li>
+                <li>Workspace security</li>
+                <li>Compliance</li>
+              </ul>
+
+              <a href="security.html">
+                Security resources
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================
+           DOCUMENTATION RESOURCES
+      ========================================== -->
+      <section class="docs-resources">
+        <div class="container">
+          <div class="resource-panel">
+            <div class="resource-content">
+              <span class="section-badge"> Resources </span>
+
+              <h2>More ways to learn.</h2>
+
+              <p>
+                Whether you're building integrations, managing a growing team,
+                or evaluating Nexora for your organization, explore the
+                resources available across the platform.
+              </p>
+            </div>
+
+            <div class="resource-links">
+              <a href="api.html" class="resource-link">
+                <span class="resource-link-icon">
+                  <i class="fa-solid fa-code"></i>
+                </span>
+
+                <span>
+                  <strong>API Reference</strong>
+                  <small> Build and extend Nexora. </small>
+                </span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+              <a href="developers.html" class="resource-link">
+                <span class="resource-link-icon">
+                  <i class="fa-solid fa-laptop-code"></i>
+                </span>
+
+                <span>
+                  <strong>Developer Resources</strong>
+                  <small> Tools and guides for developers. </small>
+                </span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+              <a href="../product/integrations.html" class="resource-link">
+                <span class="resource-link-icon">
+                  <i class="fa-solid fa-plug"></i>
+                </span>
+
+                <span>
+                  <strong>Integrations</strong>
+                  <small> Connect your existing tools. </small>
+                </span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+              <a href="enterprise.html" class="resource-link">
+                <span class="resource-link-icon">
+                  <i class="fa-solid fa-building"></i>
+                </span>
+
+                <span>
+                  <strong>Enterprise</strong>
+                  <small> Nexora for large organizations. </small>
+                </span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================
+           FINAL CTA
+      ========================================== -->
+      <section class="docs-cta">
+        <div class="container">
+          <div class="docs-cta-content">
+            <span class="section-badge">
+              <i class="fa-solid fa-book"></i>
+              Nexora Docs
+            </span>
+
+            <h2>Ready to build with Nexora?</h2>
+
+            <p>
+              Start organizing your team's work, connect your tools, and build
+              workflows that move your organization forward.
+            </p>
+
+            <div class="cta-buttons">
+              <a href="../pricing.html" class="btn btn-primary">
+                Get started
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+              <a href="../contact.html" class="btn btn-secondary">
+                Talk to our team
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+    <div id="footer-container"></div>
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+    <script src="../../assets/js/navbar.js"></script>
+    <script src="../../assets/js/app.js"></script>
+    <script src="../../assets/js/slider.js"></script>
+    <script src="../../assets/js/counter.js"></script>
+    <script src="../../assets/js/dropdown.js"></script>
+    <script src="../../assets/js/form.js"></script>
+    <script src="../../assets/js/animations.js"></script>
+
+    <!-- =========================================
+         DOCUMENTATION SEARCH
+    ========================================== -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const searchInput = document.getElementById("docs-search");
+        const cards = document.querySelectorAll(
+          ".docs-card, .topic-card, .resource-link",
+        );
+
+        if (!searchInput) return;
+
+        searchInput.addEventListener("input", () => {
+          const query = searchInput.value.trim().toLowerCase();
+
+          cards.forEach((card) => {
+            const content = card.textContent.toLowerCase();
+
+            card.style.display =
+              !query || content.includes(query) ? "" : "none";
+          });
+        });
+
+        document.addEventListener("keydown", (event) => {
+          const target = event.target;
+
+          const isTyping =
+            target instanceof HTMLInputElement ||
+            target instanceof HTMLTextAreaElement ||
+            target instanceof HTMLSelectElement;
+
+          if (event.key === "/" && !isTyping) {
+            event.preventDefault();
+            searchInput.focus();
+          }
+
+          if (
+            event.key === "Escape" &&
+            document.activeElement === searchInput
+          ) {
+            searchInput.value = "";
+            searchInput.dispatchEvent(new Event("input"));
+            searchInput.blur();
+          }
+        });
+      });
+    </script>
+  </body>
 </html>

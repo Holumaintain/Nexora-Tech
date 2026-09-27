@@ -1,0 +1,1354 @@
+/* =========================================================
+   NEXORA TECHNOLOGIES
+   API PAGE
+   frontend/assets/css/pages/api.css
+========================================================= */
+
+/* =========================================================
+   PAGE FOUNDATION
+========================================================= */
+
+.api-page {
+  background: var(--color-bg, #08090b);
+  color: var(--color-text, #f5f5f7);
+  overflow-x: hidden;
+}
+
+.api-page main {
+  position: relative;
+}
+
+.api-page .container {
+  width: min(1180px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+/* =========================================================
+   SHARED SECTION ELEMENTS
+========================================================= */
+
+.api-page .section-heading {
+  max-width: 760px;
+  margin: 0 auto 72px;
+  text-align: center;
+}
+
+.api-page .section-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  margin-bottom: 22px;
+  padding: 7px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.045);
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.api-page .section-heading h2 {
+  margin: 0;
+  color: #f5f5f7;
+  font-size: clamp(34px, 4vw, 52px);
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+.api-page .section-heading p {
+  max-width: 680px;
+  margin: 22px auto 0;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.api-hero {
+  position: relative;
+  padding: 130px 0 120px;
+  isolation: isolate;
+  background:
+    radial-gradient(
+      circle at 22% 20%,
+      rgba(124, 92, 255, 0.13),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 82% 30%,
+      rgba(72, 110, 255, 0.08),
+      transparent 30%
+    );
+}
+
+.api-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 80px 80px;
+  mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    rgba(0, 0, 0, 0.55) 55%,
+    transparent 100%
+  );
+}
+
+.api-hero-container {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(440px, 1.05fr);
+  align-items: center;
+  gap: 80px;
+}
+
+.api-hero-content {
+  max-width: 620px;
+}
+
+.api-hero-content .section-badge {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.api-hero-content .section-badge i {
+  font-size: 12px;
+}
+
+.api-hero-content h1 {
+  margin: 0;
+  max-width: 680px;
+  color: #ffffff;
+  font-size: clamp(52px, 6vw, 82px);
+  font-weight: 600;
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+}
+
+.api-hero-content h1 span {
+  display: block;
+  background: linear-gradient(135deg, #ffffff 0%, #c9c2ff 45%, #8f7cff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.api-hero-content p {
+  max-width: 600px;
+  margin: 28px 0 0;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+.api-hero-content .hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 36px;
+}
+
+.api-hero-content .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+}
+
+/* =========================================================
+   HERO API WINDOW
+========================================================= */
+
+.api-hero-visual {
+  position: relative;
+  width: 100%;
+}
+
+.api-window {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 18px;
+  background: rgba(13, 14, 18, 0.92);
+  box-shadow:
+    0 30px 90px rgba(0, 0, 0, 0.5),
+    0 0 80px rgba(112, 91, 255, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.035);
+  transform: perspective(1200px) rotateY(-3deg) rotateX(1deg);
+  transition:
+    transform 0.45s ease,
+    box-shadow 0.45s ease;
+}
+
+.api-window:hover {
+  transform: perspective(1200px) rotateY(0) rotateX(0) translateY(-4px);
+  box-shadow:
+    0 36px 100px rgba(0, 0, 0, 0.58),
+    0 0 100px rgba(112, 91, 255, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.api-window-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 52px;
+  padding: 0 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.window-dots {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.window-dots span {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.window-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255, 255, 255, 0.42);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 12px;
+}
+
+.api-code {
+  min-height: 310px;
+  padding: 30px 28px;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.api-code > div {
+  display: block;
+  white-space: nowrap;
+}
+
+.code-muted {
+  display: inline-block;
+  width: 28px;
+  margin-right: 8px;
+  color: rgba(255, 255, 255, 0.2);
+  text-align: right;
+  user-select: none;
+}
+
+.code-keyword {
+  color: #c9a7ff;
+}
+
+.code-variable {
+  color: #e7e7ec;
+}
+
+.code-symbol {
+  color: rgba(255, 255, 255, 0.42);
+}
+
+.code-function {
+  color: #9fd5ff;
+}
+
+.code-property {
+  color: #d8b4fe;
+}
+
+.code-string {
+  color: #a9d8a0;
+}
+
+.code-comment {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.code-spacer {
+  height: 14px;
+}
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.api-intro {
+  padding: 120px 0 90px;
+  border-top: 1px solid rgba(255, 255, 255, 0.055);
+}
+
+.api-intro .section-heading {
+  margin-bottom: 0;
+}
+
+/* =========================================================
+   CAPABILITIES
+========================================================= */
+
+.api-capabilities {
+  padding: 80px 0 130px;
+}
+
+.api-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.api-card {
+  position: relative;
+  min-height: 285px;
+  padding: 30px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.045),
+    rgba(255, 255, 255, 0.018)
+  );
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+.api-card::before {
+  content: "";
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  top: -80px;
+  right: -70px;
+  border-radius: 50%;
+  background: rgba(126, 100, 255, 0.08);
+  filter: blur(25px);
+  pointer-events: none;
+}
+
+.api-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(151, 131, 255, 0.25);
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.065),
+    rgba(255, 255, 255, 0.022)
+  );
+}
+
+.api-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 26px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.045);
+  color: #b7a7ff;
+  font-size: 17px;
+}
+
+.api-card h3 {
+  margin: 0;
+  color: #f3f3f5;
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.api-card p {
+  margin: 13px 0 0;
+  color: rgba(255, 255, 255, 0.53);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.api-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 25px;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    color 0.25s ease,
+    gap 0.25s ease;
+}
+
+.api-card-link i {
+  font-size: 11px;
+}
+
+.api-card-link:hover {
+  gap: 11px;
+  color: #ffffff;
+}
+
+/* =========================================================
+   API WORKFLOW
+========================================================= */
+
+.api-workflow {
+  position: relative;
+  padding: 130px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.055);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.055);
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(111, 88, 255, 0.07),
+    transparent 40%
+  );
+}
+
+.api-steps {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.api-steps::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 12%;
+  right: 12%;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.13),
+    transparent
+  );
+}
+
+.api-step {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.api-step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 22px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+  background: #0b0c0f;
+  color: rgba(255, 255, 255, 0.38);
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.api-step-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  margin: 0 auto 20px;
+  border-radius: 11px;
+  background: rgba(125, 104, 255, 0.09);
+  color: #aa98ff;
+  font-size: 15px;
+}
+
+.api-step h3 {
+  margin: 0;
+  color: #f4f4f6;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.api-step p {
+  max-width: 230px;
+  margin: 12px auto 0;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   CODE EXAMPLE
+========================================================= */
+
+.api-example {
+  padding: 140px 0;
+}
+
+.api-example-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  align-items: center;
+  gap: 90px;
+}
+
+.api-example-content {
+  max-width: 520px;
+}
+
+.api-example-content .section-badge {
+  margin-bottom: 22px;
+}
+
+.api-example-content h2 {
+  margin: 0;
+  color: #f5f5f7;
+  font-size: clamp(36px, 4vw, 55px);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+}
+
+.api-example-content > p {
+  margin: 22px 0 0;
+  color: rgba(255, 255, 255, 0.56);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.api-feature-list {
+  display: grid;
+  gap: 13px;
+  margin: 28px 0 34px;
+  padding: 0;
+  list-style: none;
+}
+
+.api-feature-list li {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+}
+
+.api-feature-list i {
+  color: #9f8cff;
+  font-size: 13px;
+}
+
+.api-example-content .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+}
+
+/* =========================================================
+   CODE BLOCK
+========================================================= */
+
+.api-code-example {
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  background: #0c0d10;
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.025);
+}
+
+.code-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 56px;
+  padding: 0 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.code-header > span {
+  padding: 5px 8px;
+  border-radius: 5px;
+  background: rgba(109, 221, 153, 0.1);
+  color: #8ed8aa;
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.code-header code {
+  color: rgba(255, 255, 255, 0.58);
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 12px;
+}
+
+.code-body {
+  padding: 30px;
+  overflow-x: auto;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 13px;
+  line-height: 2.1;
+}
+
+.code-body > div {
+  white-space: nowrap;
+}
+
+/* =========================================================
+   WEBHOOKS
+========================================================= */
+
+.api-webhooks {
+  padding: 130px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.055);
+  background: radial-gradient(
+    circle at 15% 50%,
+    rgba(104, 87, 255, 0.08),
+    transparent 32%
+  );
+}
+
+.webhooks-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  align-items: center;
+  gap: 100px;
+}
+
+.webhooks-visual {
+  position: relative;
+}
+
+.webhooks-visual::before {
+  content: "";
+  position: absolute;
+  inset: 15% 10%;
+  z-index: -1;
+  border-radius: 50%;
+  background: rgba(108, 87, 255, 0.1);
+  filter: blur(80px);
+}
+
+.webhook-card {
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 17px;
+  background: rgba(13, 14, 18, 0.92);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+}
+
+.webhook-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 58px;
+  padding: 0 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.075);
+  color: rgba(255, 255, 255, 0.35);
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 11px;
+}
+
+.webhook-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.webhook-status i {
+  color: #70c58d;
+  font-size: 7px;
+}
+
+.webhook-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.055);
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 12px;
+}
+
+.webhook-line:last-child {
+  border-bottom: 0;
+}
+
+.webhook-line span {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.webhook-line strong {
+  color: rgba(255, 255, 255, 0.76);
+  font-weight: 500;
+}
+
+.webhooks-content {
+  max-width: 510px;
+}
+
+.webhooks-content h2 {
+  margin: 0;
+  color: #f5f5f7;
+  font-size: clamp(36px, 4vw, 54px);
+  font-weight: 600;
+  line-height: 1.06;
+  letter-spacing: -0.045em;
+}
+
+.webhooks-content > p {
+  margin: 22px 0 0;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.webhook-features {
+  display: grid;
+  gap: 13px;
+  margin-top: 30px;
+}
+
+.webhook-features div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 14px;
+}
+
+.webhook-features i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: rgba(125, 104, 255, 0.09);
+  color: #aa98ff;
+  font-size: 12px;
+}
+
+/* =========================================================
+   SECURITY
+========================================================= */
+
+.api-security {
+  padding: 140px 0;
+}
+
+.security-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.security-card {
+  padding: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.025);
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.security-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(151, 131, 255, 0.2);
+}
+
+.security-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 24px;
+  border-radius: 11px;
+  background: rgba(125, 104, 255, 0.08);
+  color: #a99aff;
+}
+
+.security-card h3 {
+  margin: 0;
+  color: #f3f3f5;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.security-card p {
+  margin: 13px 0 0;
+  color: rgba(255, 255, 255, 0.51);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   DEVELOPER RESOURCES
+========================================================= */
+
+.api-resources {
+  padding: 130px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.055);
+}
+
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.resource-card {
+  display: flex;
+  gap: 20px;
+  min-height: 190px;
+  padding: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.04),
+    rgba(255, 255, 255, 0.015)
+  );
+  text-decoration: none;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+.resource-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(151, 131, 255, 0.22);
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.055),
+    rgba(255, 255, 255, 0.02)
+  );
+}
+
+.resource-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+  border-radius: 11px;
+  background: rgba(125, 104, 255, 0.09);
+  color: #aa98ff;
+  font-size: 15px;
+}
+
+.resource-card h3 {
+  margin: 0;
+  color: #f1f1f3;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.resource-card p {
+  margin: 11px 0 18px;
+  color: rgba(255, 255, 255, 0.49);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.resource-card span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 12px;
+  font-weight: 600;
+  transition:
+    color 0.25s ease,
+    gap 0.25s ease;
+}
+
+.resource-card span i {
+  font-size: 10px;
+}
+
+.resource-card:hover span {
+  gap: 11px;
+  color: #ffffff;
+}
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.api-cta {
+  padding: 80px 0 140px;
+}
+
+.api-cta-inner {
+  position: relative;
+  overflow: hidden;
+  padding: 90px 60px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 22px;
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(128, 103, 255, 0.14),
+      transparent 50%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.045),
+      rgba(255, 255, 255, 0.018)
+    );
+  text-align: center;
+  box-shadow:
+    0 30px 90px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.035);
+}
+
+.api-cta-inner::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: -220px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: rgba(132, 106, 255, 0.15);
+  filter: blur(70px);
+  pointer-events: none;
+}
+
+.api-cta-inner .section-badge {
+  position: relative;
+}
+
+.api-cta-inner h2 {
+  position: relative;
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(38px, 5vw, 62px);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.05em;
+}
+
+.api-cta-inner > p {
+  position: relative;
+  max-width: 650px;
+  margin: 22px auto 0;
+  color: rgba(255, 255, 255, 0.56);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.api-cta-inner .cta-buttons {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 34px;
+}
+
+.api-cta-inner .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+}
+
+/* =========================================================
+   BUTTON FALLBACKS
+   Keeps the API page visually consistent even if
+   component/button styles change elsewhere.
+========================================================= */
+
+.api-page .btn-primary {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: #f5f5f5;
+  color: #090a0c;
+}
+
+.api-page .btn-primary:hover {
+  background: #ffffff;
+  color: #050506;
+}
+
+.api-page .btn-secondary {
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  background: rgba(255, 255, 255, 0.045);
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.api-page .btn-secondary:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+}
+
+/* =========================================================
+   RESPONSIVE — LARGE TABLETS
+========================================================= */
+
+@media (max-width: 1100px) {
+  .api-hero-container {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .api-hero-content {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .api-hero-content .section-badge {
+    margin-inline: auto;
+  }
+
+  .api-hero-content p {
+    margin-inline: auto;
+  }
+
+  .api-hero-content .hero-buttons {
+    justify-content: center;
+  }
+
+  .api-hero-visual {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .api-grid,
+  .security-grid,
+  .resources-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .api-example-grid,
+  .webhooks-grid {
+    gap: 55px;
+  }
+
+  .api-example-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .api-example-content {
+    max-width: 720px;
+  }
+
+  .webhooks-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .webhooks-content {
+    max-width: 720px;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE — TABLETS
+========================================================= */
+
+@media (max-width: 800px) {
+  .api-page .container {
+    width: min(100% - 36px, 680px);
+  }
+
+  .api-hero {
+    padding: 100px 0 90px;
+  }
+
+  .api-hero-content h1 {
+    font-size: clamp(48px, 11vw, 68px);
+  }
+
+  .api-intro,
+  .api-workflow,
+  .api-example,
+  .api-webhooks,
+  .api-security,
+  .api-resources {
+    padding: 95px 0;
+  }
+
+  .api-capabilities {
+    padding: 55px 0 95px;
+  }
+
+  .api-page .section-heading {
+    margin-bottom: 55px;
+  }
+
+  .api-page .section-heading h2 {
+    font-size: clamp(34px, 7vw, 46px);
+  }
+
+  .api-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 50px 25px;
+  }
+
+  .api-steps::before {
+    display: none;
+  }
+
+  .api-cta {
+    padding: 60px 0 95px;
+  }
+
+  .api-cta-inner {
+    padding: 70px 35px;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .api-page .container {
+    width: calc(100% - 30px);
+  }
+
+  .api-hero {
+    padding: 80px 0 70px;
+  }
+
+  .api-hero-container {
+    gap: 45px;
+  }
+
+  .api-hero-content h1 {
+    font-size: clamp(42px, 13vw, 58px);
+    letter-spacing: -0.06em;
+  }
+
+  .api-hero-content p {
+    margin-top: 22px;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .api-hero-content .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 28px;
+  }
+
+  .api-hero-content .btn {
+    width: 100%;
+  }
+
+  .api-window {
+    transform: none;
+    border-radius: 13px;
+  }
+
+  .api-window:hover {
+    transform: none;
+  }
+
+  .api-window-header {
+    min-height: 46px;
+    padding-inline: 13px;
+  }
+
+  .api-code {
+    min-height: 275px;
+    padding: 22px 12px;
+    font-size: 11px;
+    line-height: 2;
+  }
+
+  .code-muted {
+    width: 18px;
+    margin-right: 4px;
+  }
+
+  .window-title {
+    font-size: 10px;
+  }
+
+  .api-page .section-heading {
+    margin-bottom: 42px;
+  }
+
+  .api-page .section-heading h2 {
+    font-size: 34px;
+  }
+
+  .api-page .section-heading p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .api-grid,
+  .security-grid,
+  .resources-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .api-card {
+    min-height: auto;
+    padding: 26px;
+  }
+
+  .api-workflow {
+    padding: 90px 0;
+  }
+
+  .api-steps {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .api-step p {
+    max-width: 290px;
+  }
+
+  .api-example-grid {
+    gap: 45px;
+  }
+
+  .api-example-content h2,
+  .webhooks-content h2 {
+    font-size: 36px;
+  }
+
+  .api-code-example {
+    border-radius: 13px;
+  }
+
+  .code-header {
+    min-height: 50px;
+    padding-inline: 14px;
+  }
+
+  .code-body {
+    padding: 22px 16px;
+    font-size: 10px;
+  }
+
+  .webhooks-grid {
+    gap: 45px;
+  }
+
+  .webhook-card {
+    border-radius: 13px;
+  }
+
+  .webhook-card-header {
+    padding-inline: 14px;
+  }
+
+  .webhook-line {
+    padding: 17px 14px;
+    font-size: 10px;
+  }
+
+  .security-card {
+    padding: 26px;
+  }
+
+  .resource-card {
+    min-height: auto;
+    padding: 24px;
+  }
+
+  .api-cta {
+    padding: 45px 0 75px;
+  }
+
+  .api-cta-inner {
+    padding: 60px 22px;
+    border-radius: 17px;
+  }
+
+  .api-cta-inner h2 {
+    font-size: 38px;
+  }
+
+  .api-cta-inner > p {
+    font-size: 14px;
+  }
+
+  .api-cta-inner .cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .api-cta-inner .btn {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+  .api-page .container {
+    width: calc(100% - 24px);
+  }
+
+  .api-hero-content h1 {
+    font-size: 40px;
+  }
+
+  .api-page .section-heading h2 {
+    font-size: 30px;
+  }
+
+  .api-example-content h2,
+  .webhooks-content h2 {
+    font-size: 31px;
+  }
+
+  .api-cta-inner h2 {
+    font-size: 32px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .api-window,
+  .api-card,
+  .security-card,
+  .resource-card,
+  .api-card-link,
+  .resource-card span {
+    transition: none;
+  }
+
+  .api-window:hover,
+  .api-card:hover,
+  .security-card:hover,
+  .resource-card:hover {
+    transform: none;
+  }
+}

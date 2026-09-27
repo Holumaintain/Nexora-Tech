@@ -1,13 +1,35 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- ==========================================
+         META
+    =========================================== -->
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Explore the latest product updates, improvements, engineering releases, and new capabilities from Nexora Technologies."
+    />
+
+    <meta name="author" content="Nexora Technologies" />
 
     <title>Changelog | Nexora Technologies</title>
 
+    <!-- ==========================================
+         GLOBAL CSS
+    =========================================== -->
     <link rel="stylesheet" href="../../assets/css/style.css" />
 
+    <!-- ==========================================
+         CHANGELOG PAGE CSS
+    =========================================== -->
+    <link rel="stylesheet" href="../../assets/css/changelog.css" />
+
+    <!-- ==========================================
+         FONT AWESOME
+    =========================================== -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -15,21 +37,1293 @@
   </head>
 
   <body>
-    <div id="navbar-container"></div>
+    <!-- ==========================================
+         NAVBAR
+    =========================================== -->
 
-    <main>
-      <!-- Changelog page content goes here -->
+    <header class="site-header">
+      <div id="navbar-container"></div>
+    </header>
+
+    <!-- ==========================================
+         MAIN CONTENT
+    =========================================== -->
+
+    <main class="changelog-page">
+      <!-- ==========================================
+             PAGE HEADER
+        =========================================== -->
+
+      <section class="changelog-header">
+        <div class="changelog-header-inner">
+          <div class="changelog-header-top">
+            <!-- ==========================================
+                         HEADER CONTENT
+                    =========================================== -->
+
+            <div class="changelog-intro">
+              <span class="page-label"> NOW </span>
+
+              <h1>Changelog</h1>
+
+              <p>
+                Product updates, improvements, and new capabilities from the
+                Nexora Technologies team.
+              </p>
+            </div>
+
+            <!-- ==========================================
+                         SEARCH
+                    =========================================== -->
+
+            <div class="changelog-search">
+              <label for="changelog-search-input" class="sr-only">
+                Search changelog
+              </label>
+
+              <input
+                type="search"
+                id="changelog-search-input"
+                placeholder="Search..."
+                autocomplete="off"
+                aria-label="Search changelog"
+              />
+
+              <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+            </div>
+          </div>
+
+          <!-- ==========================================
+                     CHANGELOG FILTER NAVIGATION
+                =========================================== -->
+
+          <nav class="changelog-nav" aria-label="Changelog navigation">
+            <a href="#all" class="active"> All </a>
+
+            <a href="#changelog"> Changelog </a>
+
+            <a href="#product-launches"> Product launches </a>
+
+            <a href="#from-team"> From the team </a>
+
+            <a href="#community"> From the community </a>
+
+            <a href="#press"> Press </a>
+          </nav>
+        </div>
+      </section>
+
+      <!-- ==========================================
+             CHANGELOG CONTENT
+        =========================================== -->
+
+      <section class="changelog-content" id="all">
+        <div class="changelog-container">
+          <!-- =====================================================
+                     SEPTEMBER 14, 2026
+                ====================================================== -->
+
+          <article
+            class="changelog-entry"
+            id="loops-product-management"
+            data-category="changelog"
+          >
+            <aside class="changelog-date">
+              <time datetime="2026-09-14"> September 14, 2026 </time>
+            </aside>
+
+            <div class="changelog-entry-content">
+              <!-- ==========================================
+                             ENTRY HEADER
+                        =========================================== -->
+
+              <header class="entry-header">
+                <span class="entry-category"> Product update </span>
+
+                <h2>Loops for product management</h2>
+              </header>
+
+              <!-- ==========================================
+                             FEATURE IMAGE
+                        =========================================== -->
+
+              <figure class="entry-media">
+                <img
+                  src="../../assets/images/changelog/loops-product-management.png"
+                  alt="Nexora Loops workflow interface"
+                  loading="lazy"
+                />
+              </figure>
+
+              <!-- ==========================================
+                             ENTRY BODY
+                        =========================================== -->
+
+              <div class="entry-body">
+                <p class="entry-lead">
+                  Loops are recurring agent workflows for teams. They now
+                  respond to more workspace activity, including changes to
+                  initiatives, projects, and cycles. They can also edit
+                  documents and post updates to connected communication
+                  channels.
+                </p>
+
+                <p>
+                  Teams change project plans all the time. It is not the change
+                  itself that is hard, but the follow-through: updating
+                  documents, creating issues, and keeping everyone informed.
+                </p>
+
+                <p>
+                  Loops can now handle that coordination for you. For example,
+                  when a project's target date changes, a loop can automatically
+                  update the launch plan and post an update explaining what
+                  changed, why it changed, and who needs to act.
+                </p>
+
+                <!-- ==========================================
+                                 TRIGGER FROM WORKSPACE
+                            =========================================== -->
+
+                <section class="entry-section">
+                  <h3>Trigger from across your workspace</h3>
+
+                  <p>
+                    New triggers allow automated workflows to respond to changes
+                    throughout your workspace.
+                  </p>
+
+                  <ul>
+                    <li>
+                      Project and initiative changes to status, ownership,
+                      target dates, milestones, membership, and labels.
+                    </li>
+
+                    <li>New project and initiative updates and comments.</li>
+
+                    <li>Cycles being created, started, or completed.</li>
+
+                    <li>
+                      Issue changes to status, priority, assignee, cycle,
+                      project, or labels.
+                    </li>
+                  </ul>
+                </section>
+
+                <!-- ==========================================
+                                 EDIT DOCUMENTS
+                            =========================================== -->
+
+                <section class="entry-section">
+                  <h3>Edit documents</h3>
+
+                  <p>
+                    In addition to creating issues and updating projects and
+                    initiatives, Loops can now edit documents. When scope or
+                    timing changes, automated workflows can update the relevant
+                    document so plans stay aligned.
+                  </p>
+                </section>
+
+                <!-- ==========================================
+                                 SHARE UPDATES
+                            =========================================== -->
+
+                <section class="entry-section">
+                  <h3>Share updates</h3>
+
+                  <p>
+                    Loops can draft and post tailored updates using context from
+                    your workspace and connected tools, helping teams stay
+                    informed about what changed and what happens next.
+                  </p>
+                </section>
+
+                <!-- ==========================================
+                                 CONTINUE RUN
+                            =========================================== -->
+
+                <section class="entry-section">
+                  <h3>Continue any run</h3>
+
+                  <p>
+                    Each loop run starts a conversation with the AI agent. Once
+                    it finishes, you can continue that conversation to review
+                    the work, add context, or direct what happens next.
+                  </p>
+                </section>
+
+                <!-- ==========================================
+                                 CREDITS
+                            =========================================== -->
+
+                <section class="entry-section">
+                  <h3>Loops credits available through the end of the year</h3>
+
+                  <p>
+                    Introductory Loops credits have been extended, giving teams
+                    more time to test recurring workflows and explore how
+                    automated coordination can fit into their processes.
+                  </p>
+                </section>
+
+                <!-- ==========================================
+                                 CALLOUT COMPONENTS
+                            =========================================== -->
+
+                <section class="entry-section">
+                  <h3>Callout components</h3>
+
+                  <p>
+                    Use callout components to draw attention to important
+                    information in issue and project descriptions, as well as
+                    documents. Choose a color, icon, or emoji to match the
+                    context.
+                  </p>
+
+                  <p>
+                    In PR descriptions, callouts can carry their emphasis across
+                    to the connected development workflow.
+                  </p>
+
+                  <div class="command-callout">
+                    <i class="fa-solid fa-terminal" aria-hidden="true"></i>
+
+                    <span>
+                      Type
+                      <code>/callout</code>
+                      to get started.
+                    </span>
+                  </div>
+                </section>
+              </div>
+
+              <!-- ==========================================
+                             FIXES
+                        =========================================== -->
+
+              <section class="release-notes">
+                <h3 class="release-heading">
+                  <i class="fa-solid fa-wrench" aria-hidden="true"></i>
+
+                  Fixes
+                </h3>
+
+                <ul class="release-list">
+                  <li>
+                    <strong>Diffs</strong>
+                    Reduced false positives for issue suggestions.
+                  </li>
+
+                  <li>
+                    <strong>Imports</strong>
+                    Preserved archive status in GitHub imports.
+                  </li>
+
+                  <li>
+                    <strong>iOS</strong>
+                    Improved issue list delegation confirmations.
+                  </li>
+
+                  <li>
+                    <strong>Issues</strong>
+                    Fixed issue copies omitting nested sub-issues.
+                  </li>
+
+                  <li>
+                    <strong>MCP</strong>
+                    Updated Datadog MCP connections to supported endpoints.
+                  </li>
+
+                  <li>
+                    <strong>Settings</strong>
+                    Fixed SCIM-managed team member labeling.
+                  </li>
+
+                  <li>
+                    <strong>Slack</strong>
+                    Fixed duplicate linkbacks in certain messages.
+                  </li>
+
+                  <li>
+                    <strong>Templates</strong>
+                    Form-created issues now preserve board-column status and
+                    labels.
+                  </li>
+                </ul>
+              </section>
+
+              <!-- ==========================================
+                             IMPROVEMENTS
+                        =========================================== -->
+
+              <section class="release-notes">
+                <h3 class="release-heading">
+                  <i
+                    class="fa-solid fa-wand-magic-sparkles"
+                    aria-hidden="true"
+                  ></i>
+
+                  Improvements
+                </h3>
+
+                <ul class="release-list">
+                  <li>
+                    <strong>Diffs</strong>
+                    Added a copy-filename action to the file tree.
+                  </li>
+
+                  <li>
+                    <strong>Diffs</strong>
+                    Added clearer explanations to pull-request status badges.
+                  </li>
+
+                  <li>
+                    <strong>Diffs</strong>
+                    Added dismissal controls for issue suggestions.
+                  </li>
+
+                  <li>
+                    <strong>Editor</strong>
+                    Added support for commenting on links.
+                  </li>
+
+                  <li>
+                    <strong>Filters</strong>
+                    Improved default behavior for grouped label filters.
+                  </li>
+
+                  <li>
+                    <strong>Search</strong>
+                    Projects can now be searched by synced Jira Epic key.
+                  </li>
+
+                  <li>
+                    <strong>Loops</strong>
+                    Added more workspace activity triggers.
+                  </li>
+                </ul>
+              </section>
+            </div>
+          </article>
+
+          <!-- =====================================================
+                     SEPTEMBER 3, 2026
+                ====================================================== -->
+
+          <article
+            class="changelog-entry"
+            id="priority-inbox"
+            data-category="product-launches"
+          >
+            <aside class="changelog-date">
+              <time datetime="2026-09-03"> September 3, 2026 </time>
+            </aside>
+
+            <div class="changelog-entry-content">
+              <header class="entry-header">
+                <span class="entry-category"> Product update </span>
+
+                <h2>Priority inbox</h2>
+              </header>
+
+              <figure class="entry-media">
+                <img
+                  src="../../assets/images/changelog/priority-inbox.png"
+                  alt="Nexora priority inbox interface"
+                  loading="lazy"
+                />
+              </figure>
+
+              <div class="entry-body">
+                <p class="entry-lead">
+                  An active workspace can create a significant amount of
+                  notifications each day. The new Priority inbox separates what
+                  needs your attention from what can wait.
+                </p>
+
+                <p>
+                  Important work can now be surfaced without requiring teams to
+                  treat every notification with the same urgency.
+                </p>
+
+                <p>
+                  Priority can be customized by choosing notification sources or
+                  creating a filter, while the standard inbox experience remains
+                  available.
+                </p>
+
+                <section class="entry-section">
+                  <h3>Draft projects with Nexora Agent</h3>
+
+                  <p>
+                    The project composer lets you develop ideas with an AI
+                    assistant before creating a live project.
+                  </p>
+
+                  <p>
+                    The assistant can pull relevant context from your workspace
+                    and connected tools to sharpen the brief and build an
+                    initial plan.
+                  </p>
+
+                  <p>
+                    Drafts save automatically, allowing you to return to
+                    unfinished project ideas without losing progress.
+                  </p>
+                </section>
+
+                <figure class="entry-media entry-media-small">
+                  <img
+                    src="../../assets/images/changelog/project-drafting-agent.png"
+                    alt="AI project drafting interface"
+                    loading="lazy"
+                  />
+                </figure>
+
+                <section class="entry-section">
+                  <h3>Document editing on mobile</h3>
+
+                  <p>
+                    Document creation and editing are now available on mobile,
+                    allowing teams to start documents while context is fresh and
+                    update plans without waiting until they return to their
+                    desks.
+                  </p>
+                </section>
+
+                <section class="entry-section">
+                  <h3>Rich previews in diffs</h3>
+
+                  <p>
+                    Images, fonts, Markdown, and PDFs can render directly inside
+                    code-review diffs, allowing reviewers to see the resulting
+                    output alongside the code.
+                  </p>
+
+                  <p>
+                    Symlinks are also supported and displayed as file-based
+                    changes.
+                  </p>
+                </section>
+
+                <figure class="entry-media">
+                  <img
+                    src="../../assets/images/changelog/rich-diff-previews.png"
+                    alt="Rich previews inside a code review diff"
+                    loading="lazy"
+                  />
+                </figure>
+
+                <section class="entry-section">
+                  <h3>Third-party app approvals</h3>
+
+                  <p>
+                    As more apps and agents connect to a workspace,
+                    administrators can review and approve applications before
+                    they are installed.
+                  </p>
+                </section>
+              </div>
+
+              <section class="release-notes">
+                <h3 class="release-heading">
+                  <i class="fa-solid fa-wrench" aria-hidden="true"></i>
+
+                  Fixes
+                </h3>
+
+                <ul class="release-list">
+                  <li>
+                    <strong>Agents</strong>
+                    Improved triage suggestions and issue linking.
+                  </li>
+
+                  <li>
+                    <strong>Asks</strong>
+                    Improved processing for large inbound emails.
+                  </li>
+
+                  <li>
+                    <strong>Desktop</strong>
+                    Fixed document navigation issues.
+                  </li>
+
+                  <li>
+                    <strong>Diffs</strong>
+                    Reduced request spikes when opening large pull requests.
+                  </li>
+
+                  <li>
+                    <strong>Notifications</strong>
+                    Improved bulk notification actions.
+                  </li>
+
+                  <li>
+                    <strong>Projects</strong>
+                    Fixed project overview scroll behavior.
+                  </li>
+
+                  <li>
+                    <strong>Slack</strong>
+                    Fixed issue creation and synchronization edge cases.
+                  </li>
+                </ul>
+              </section>
+
+              <section class="release-notes">
+                <h3 class="release-heading">
+                  <i
+                    class="fa-solid fa-wand-magic-sparkles"
+                    aria-hidden="true"
+                  ></i>
+
+                  Improvements
+                </h3>
+
+                <ul class="release-list">
+                  <li>
+                    <strong>Accessibility</strong>
+                    Improved accessibility of display controls.
+                  </li>
+
+                  <li>
+                    <strong>Command Menu</strong>
+                    Added fuzzy search.
+                  </li>
+
+                  <li>
+                    <strong>Favorites</strong>
+                    Added more ways to manage favorite items.
+                  </li>
+
+                  <li>
+                    <strong>Filters</strong>
+                    Added a "No labels" filter.
+                  </li>
+
+                  <li>
+                    <strong>Loops</strong>
+                    Added more scheduling controls.
+                  </li>
+
+                  <li>
+                    <strong>Settings</strong>
+                    Added additional workspace management tools.
+                  </li>
+                </ul>
+              </section>
+            </div>
+          </article>
+
+          <!-- =====================================================
+                     AUGUST 20, 2026
+                ====================================================== -->
+
+          <article
+            class="changelog-entry"
+            id="coding-sessions-environments"
+            data-category="changelog"
+          >
+            <aside class="changelog-date">
+              <time datetime="2026-08-20"> August 20, 2026 </time>
+            </aside>
+
+            <div class="changelog-entry-content">
+              <header class="entry-header">
+                <span class="entry-category"> Engineering </span>
+
+                <h2>
+                  Coding sessions: environments, browser use, and updated
+                  pricing
+                </h2>
+              </header>
+
+              <figure class="entry-media">
+                <img
+                  src="../../assets/images/changelog/coding-sessions-environments.png"
+                  alt="Coding session environment and browser testing interface"
+                  loading="lazy"
+                />
+              </figure>
+
+              <div class="entry-body">
+                <p class="entry-lead">
+                  Nexora Agent can now set up, run, and test your code before
+                  returning its work. This reduces handoffs and allows coding
+                  sessions to return work that has already been validated.
+                </p>
+
+                <p>
+                  We are also introducing clearer pricing so teams can better
+                  understand and control AI credit usage.
+                </p>
+
+                <section class="entry-section">
+                  <h3>Configurable environments</h3>
+
+                  <p>
+                    Coding sessions automatically adapt to each codebase's
+                    configuration, with support for common development
+                    environments and languages.
+                  </p>
+
+                  <p>
+                    During a session, the agent can detect and install required
+                    toolchains and dependencies.
+                  </p>
+
+                  <ul>
+                    <li>Runtime version configuration</li>
+
+                    <li>Setup scripts</li>
+
+                    <li>Environment variables</li>
+
+                    <li>Project-specific dependencies</li>
+                  </ul>
+                </section>
+
+                <section class="entry-section">
+                  <h3>Browser testing</h3>
+
+                  <p>
+                    Once an application is running, the coding agent can test
+                    the work directly in the browser.
+                  </p>
+
+                  <p>
+                    It can navigate through a flow, verify implementation, and
+                    capture before-and-after screenshots so visual changes can
+                    be reviewed alongside the code.
+                  </p>
+
+                  <p>
+                    If a problem is discovered, the agent can make a fix, rerun
+                    the test, and return the work with validation completed.
+                  </p>
+                </section>
+
+                <figure class="entry-media">
+                  <img
+                    src="../../assets/images/changelog/browser-testing.png"
+                    alt="Browser testing during an AI coding session"
+                    loading="lazy"
+                  />
+                </figure>
+
+                <section class="entry-section">
+                  <h3>Transparent pricing</h3>
+
+                  <p>
+                    Coding sessions now use a pricing model based on model usage
+                    and sandbox runtime.
+                  </p>
+
+                  <div class="pricing-grid">
+                    <div class="pricing-card">
+                      <span class="pricing-icon">
+                        <i class="fa-solid fa-microchip" aria-hidden="true"></i>
+                      </span>
+
+                      <h4>Model usage</h4>
+
+                      <p>
+                        Tokens are charged according to the provider's published
+                        rates.
+                      </p>
+                    </div>
+
+                    <div class="pricing-card">
+                      <span class="pricing-icon">
+                        <i class="fa-solid fa-clock" aria-hidden="true"></i>
+                      </span>
+
+                      <h4>Sandbox runtime</h4>
+
+                      <p>
+                        Runtime usage is calculated separately from model usage.
+                      </p>
+                    </div>
+                  </div>
+
+                  <p>
+                    Together, model usage and runtime determine the AI credit
+                    cost of a session. The usage dashboard provides a breakdown
+                    of token usage and cost by model.
+                  </p>
+
+                  <p>
+                    Administrators can also configure workspace-wide and
+                    per-user spending limits that reset daily, weekly, or
+                    monthly.
+                  </p>
+                </section>
+              </div>
+
+              <section class="release-notes">
+                <h3 class="release-heading">
+                  <i class="fa-solid fa-wrench" aria-hidden="true"></i>
+
+                  Fixes
+                </h3>
+
+                <ul class="release-list">
+                  <li>
+                    <strong>Agents</strong>
+                    Improved future-cycle lookup behavior.
+                  </li>
+
+                  <li>
+                    <strong>Android</strong>
+                    Fixed bold conversation states.
+                  </li>
+
+                  <li>
+                    <strong>Desktop</strong>
+                    Fixed search and create controls at narrow widths.
+                  </li>
+
+                  <li>
+                    <strong>Diffs</strong>
+                    Fixed merge queue and guide scrolling issues.
+                  </li>
+
+                  <li>
+                    <strong>GitHub</strong>
+                    Improved guest access handling for diffs.
+                  </li>
+                </ul>
+              </section>
+
+              <section class="release-notes">
+                <h3 class="release-heading">
+                  <i
+                    class="fa-solid fa-wand-magic-sparkles"
+                    aria-hidden="true"
+                  ></i>
+
+                  Improvements
+                </h3>
+
+                <ul class="release-list">
+                  <li>
+                    <strong>Asks</strong>
+                    Added per-channel assignment notifications.
+                  </li>
+
+                  <li>
+                    <strong>Authentication</strong>
+                    Improved pending SAML domain verification.
+                  </li>
+
+                  <li>
+                    <strong>Issues</strong>
+                    Expanded issue-copy actions.
+                  </li>
+
+                  <li>
+                    <strong>Team Home</strong>
+                    Improved visibility of initiative documents.
+                  </li>
+
+                  <li>
+                    <strong>Views</strong>
+                    Added event subscriptions for project views.
+                  </li>
+                </ul>
+              </section>
+            </div>
+          </article>
+
+          <!-- =====================================================
+                     AUGUST 13, 2026
+                ====================================================== -->
+
+          <article
+            class="changelog-entry"
+            id="team-initiatives"
+            data-category="product-launches"
+          >
+            <aside class="changelog-date">
+              <time datetime="2026-08-13"> August 13, 2026 </time>
+            </aside>
+
+            <div class="changelog-entry-content">
+              <header class="entry-header">
+                <span class="entry-category"> Product update </span>
+
+                <h2>Team initiatives</h2>
+              </header>
+
+              <figure class="entry-media">
+                <img
+                  src="../../assets/images/changelog/team-initiatives.png"
+                  alt="Nexora team initiatives dashboard"
+                  loading="lazy"
+                />
+              </figure>
+
+              <div class="entry-body">
+                <p class="entry-lead">
+                  Initiatives define company-level goals and organize the
+                  projects that contribute to them. Teams can now be assigned to
+                  lead initiatives, making ownership and responsibility clearer.
+                </p>
+
+                <p>
+                  Strategy may begin at the company level, but teams carry that
+                  strategy forward. Team-led initiatives provide a clearer
+                  connection between high-level objectives and the work being
+                  delivered.
+                </p>
+
+                <p>
+                  For work that requires tighter access, initiatives led by
+                  private teams can be restricted to team members.
+                </p>
+
+                <section class="entry-section">
+                  <h3>Clear initiative ownership</h3>
+
+                  <p>
+                    Assigning a lead team gives every initiative a clear group
+                    responsible for driving the work and connecting it back to
+                    broader company objectives.
+                  </p>
+                </section>
+
+                <section class="entry-section">
+                  <h3>Private initiatives</h3>
+
+                  <p>
+                    Initiatives led by private teams can remain visible only to
+                    the appropriate team members, creating a more controlled
+                    environment for confidential planning, audits, regulated
+                    work, and restricted projects.
+                  </p>
+                </section>
+
+                <section class="entry-section">
+                  <h3>Enterprise-managed authorization for MCP</h3>
+
+                  <p>
+                    Enterprise workspaces can manage employee access through
+                    supported identity-management systems.
+                  </p>
+
+                  <p>
+                    Administrators can manage access centrally while applying
+                    existing workspace permissions.
+                  </p>
+                </section>
+
+                <figure class="entry-media entry-media-small">
+                  <img
+                    src="../../assets/images/changelog/mcp-authorization.png"
+                    alt="Enterprise authorization settings"
+                    loading="lazy"
+                  />
+                </figure>
+              </div>
+
+              <section class="release-notes">
+                <h3 class="release-heading">
+                  <i class="fa-solid fa-wrench" aria-hidden="true"></i>
+
+                  Fixes
+                </h3>
+
+                <ul class="release-list">
+                  <li>
+                    <strong>Agent</strong>
+                    Fixed progress indicators and synchronization states.
+                  </li>
+
+                  <li>
+                    <strong>Comments</strong>
+                    Improved document comment positioning.
+                  </li>
+
+                  <li>
+                    <strong>Cycles</strong>
+                    Fixed cycle naming and fast issue creation behavior.
+                  </li>
+
+                  <li>
+                    <strong>Diffs</strong>
+                    Improved code-review discussion handling.
+                  </li>
+
+                  <li>
+                    <strong>GitHub</strong>
+                    Improved pull-request synchronization.
+                  </li>
+
+                  <li>
+                    <strong>Projects</strong>
+                    Fixed initiative and project reminder behavior.
+                  </li>
+
+                  <li>
+                    <strong>Search</strong>
+                    Improved exact-name matching.
+                  </li>
+                </ul>
+              </section>
+
+              <section class="release-notes">
+                <h3 class="release-heading">
+                  <i
+                    class="fa-solid fa-wand-magic-sparkles"
+                    aria-hidden="true"
+                  ></i>
+
+                  Improvements
+                </h3>
+
+                <ul class="release-list">
+                  <li>
+                    <strong>Agent</strong>
+                    Agents can now update releases.
+                  </li>
+
+                  <li>
+                    <strong>Coding sessions</strong>
+                    Added additional model options.
+                  </li>
+
+                  <li>
+                    <strong>Diffs</strong>
+                    Added branch status information.
+                  </li>
+
+                  <li>
+                    <strong>Editor</strong>
+                    Added pull-request mentions.
+                  </li>
+
+                  <li>
+                    <strong>Loops</strong>
+                    Improved disabled-loop controls.
+                  </li>
+
+                  <li>
+                    <strong>Projects</strong>
+                    Added project milestone widgets.
+                  </li>
+                </ul>
+              </section>
+            </div>
+          </article>
+
+          <!-- =====================================================
+                     JULY 30, 2026
+                ====================================================== -->
+
+          <article
+            class="changelog-entry"
+            id="coding-sessions-mobile"
+            data-category="changelog"
+          >
+            <aside class="changelog-date">
+              <time datetime="2026-07-30"> July 30, 2026 </time>
+            </aside>
+
+            <div class="changelog-entry-content">
+              <header class="entry-header">
+                <span class="entry-category"> Mobile </span>
+
+                <h2>Coding sessions on mobile</h2>
+              </header>
+
+              <!-- ==========================================
+                             VIDEO
+                        =========================================== -->
+
+              <figure class="entry-media entry-video">
+                <video
+                  class="changelog-video"
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                  preload="auto"
+                  poster="../../assets/images/changelog/coding-sessions-environments.png"
+                  controls
+                >
+                  <source
+                    src="../../assets/images/changelog/coding-sessions-environments.mp4"
+                    type="video/mp4"
+                  />
+                  Your browser does not support the HTML5 video element.
+                </video>
+              </figure>
+
+              <div class="entry-body">
+                <p class="entry-lead">
+                  Your coding session does not have to stop when you leave your
+                  desk. Use the Nexora mobile experience to review code changes,
+                  comment on specific lines, and iterate with the coding agent.
+                </p>
+
+                <p>
+                  Open any diff and switch to the Changes tab to inspect the
+                  code. When you spot something that needs changing, tap the
+                  relevant line to add it to your message and guide the coding
+                  session.
+                </p>
+
+                <p>
+                  A new Assigned section also provides visibility into delegated
+                  coding sessions and their current status.
+                </p>
+
+                <section class="entry-section">
+                  <h3>Guided Reviews are now generally available</h3>
+
+                  <p>
+                    Guided Reviews break diffs into focused sections with
+                    explainers that help reviewers understand what changed and
+                    why.
+                  </p>
+
+                  <p>
+                    Larger pull requests can now receive guided review sections
+                    with expanded context and improved latency.
+                  </p>
+                </section>
+
+                <figure class="entry-media">
+                  <img
+                    src="../../assets/images/changelog/guided-reviews.png"
+                    alt="Guided code review interface"
+                    loading="lazy"
+                  />
+                </figure>
+
+                <section class="entry-section">
+                  <h3>Support for GitHub teams in reviews</h3>
+
+                  <p>
+                    Reviews can now be assigned to GitHub teams. Review requests
+                    assigned to a team appear in a dedicated section of the
+                    review inbox.
+                  </p>
+                </section>
+
+                <section class="entry-section">
+                  <h3>Signed commits for coding sessions</h3>
+
+                  <p>
+                    Coding sessions now support signed commits. Developers can
+                    configure an SSH or GPG key to enable commit signing.
+                  </p>
+
+                  <p>
+                    Workspace administrators can also require signing keys
+                    before coding sessions can be used.
+                  </p>
+                </section>
+
+                <section class="entry-section">
+                  <h3>GitHub Copilot for Nexora</h3>
+
+                  <p>
+                    Teams using GitHub Copilot can assign issues directly to
+                    Copilot's cloud agent and continue coordinating development
+                    work from the workspace.
+                  </p>
+
+                  <p>
+                    Model and agent settings can be configured while comments
+                    and issue context remain available throughout the
+                    development process.
+                  </p>
+                </section>
+
+                <figure class="entry-media">
+                  <img
+                    src="../../assets/images/changelog/github-copilot-linear.png"
+                    alt="GitHub Copilot integration"
+                    loading="lazy"
+                  />
+                </figure>
+              </div>
+
+              <section class="release-notes">
+                <h3 class="release-heading">
+                  <i class="fa-solid fa-wrench" aria-hidden="true"></i>
+
+                  Fixes
+                </h3>
+
+                <ul class="release-list">
+                  <li>
+                    <strong>Agents</strong>
+                    Improved queued-agent message previews.
+                  </li>
+
+                  <li>
+                    <strong>API</strong>
+                    Improved SLA sorting behavior.
+                  </li>
+
+                  <li>
+                    <strong>Comments</strong>
+                    Improved inline image sizing.
+                  </li>
+
+                  <li>
+                    <strong>Diffs</strong>
+                    Improved pull-request review behavior.
+                  </li>
+
+                  <li>
+                    <strong>GitHub</strong>
+                    Improved pull-request event synchronization.
+                  </li>
+
+                  <li>
+                    <strong>Inbox</strong>
+                    Fixed duplicate update notifications.
+                  </li>
+
+                  <li>
+                    <strong>Search</strong>
+                    GitHub URLs now surface related issues more reliably.
+                  </li>
+
+                  <li>
+                    <strong>Slack</strong>
+                    Improved review request and milestone previews.
+                  </li>
+                </ul>
+              </section>
+
+              <section class="release-notes">
+                <h3 class="release-heading">
+                  <i
+                    class="fa-solid fa-wand-magic-sparkles"
+                    aria-hidden="true"
+                  ></i>
+
+                  Improvements
+                </h3>
+
+                <ul class="release-list">
+                  <li>
+                    <strong>Diffs</strong>
+                    Improved related-diff behavior.
+                  </li>
+
+                  <li>
+                    <strong>Diffs</strong>
+                    AI can suggest existing issues for pull requests.
+                  </li>
+
+                  <li>
+                    <strong>Diffs</strong>
+                    Inline feedback can be sent directly to the agent.
+                  </li>
+
+                  <li>
+                    <strong>Diffs</strong>
+                    New agent sessions can be started from pull requests.
+                  </li>
+
+                  <li>
+                    <strong>Editor</strong>
+                    Updated checklist keyboard shortcuts.
+                  </li>
+
+                  <li>
+                    <strong>Issues</strong>
+                    Added mobile restore support for archived issues.
+                  </li>
+
+                  <li>
+                    <strong>Loops</strong>
+                    Improved trusted-source and notification behavior.
+                  </li>
+                </ul>
+              </section>
+            </div>
+          </article>
+
+          <!-- ==========================================
+                     END OF CHANGELOG
+                =========================================== -->
+
+          <div class="changelog-end">
+            <span class="end-line"></span>
+
+            <div class="end-icon">
+              <i class="fa-solid fa-check" aria-hidden="true"></i>
+            </div>
+
+            <p>You're all caught up.</p>
+
+            <span class="end-line"></span>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <div id="footer-container"></div>
+    <!-- ==========================================
+         FOOTER
+    =========================================== -->
+
+    <footer class="site-footer">
+      <div id="footer-container"></div>
+    </footer>
+
+    <!-- ==========================================
+         JAVASCRIPT
+    =========================================== -->
 
     <script src="../../assets/js/navbar.js"></script>
+
     <script src="../../assets/js/app.js"></script>
 
     <script src="../../assets/js/slider.js"></script>
+
     <script src="../../assets/js/counter.js"></script>
+
     <script src="../../assets/js/dropdown.js"></script>
+
     <script src="../../assets/js/form.js"></script>
+
     <script src="../../assets/js/animations.js"></script>
+
+    <!-- ==========================================
+         CHANGELOG SEARCH
+    =========================================== -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const searchInput = document.getElementById("changelog-search-input");
+
+        const entries = document.querySelectorAll(".changelog-entry");
+
+        if (!searchInput || !entries.length) {
+          return;
+        }
+
+        searchInput.addEventListener("input", () => {
+          const searchTerm = searchInput.value.trim().toLowerCase();
+
+          entries.forEach((entry) => {
+            const content = entry.textContent.toLowerCase();
+
+            if (content.includes(searchTerm)) {
+              entry.style.display = "";
+            } else {
+              entry.style.display = "none";
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>

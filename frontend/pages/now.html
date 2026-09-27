@@ -1,41 +1,894 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
+    <title>Now | Nexora Technologies</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- =====================================================
+                            MAIN CSS
+    ====================================================== -->
 
-<title>What's New | Nexora Technologies</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
 
-<link rel="stylesheet" href="../assets/css/style.css">
+    <!-- =====================================================
+                        FONT AWESOME
+    ====================================================== -->
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
 
-</head>
+  <body class="now-page">
+    <!-- =========================================================
+                            NAVBAR
+========================================================= -->
 
-<body>
+    <div id="navbar-container"></div>
 
-<div id="navbar-container"></div>
+    <!-- =========================================================
+                            MAIN
+========================================================= -->
 
-<main>
+    <main class="now-main">
+      <!-- =====================================================
+                            NOW HEADER
+    ====================================================== -->
 
-<!-- What's New page content goes here -->
+      <section class="now-header">
+        <div class="now-header-inner">
+          <div class="now-heading">
+            <h1>Now</h1>
 
-</main>
+            <nav class="now-navigation">
+              <a href="#" class="active"> All </a>
 
-<div id="footer-container"></div>
+              <a href="#changelog"> Changelog </a>
 
-<script src="../assets/js/navbar.js"></script>
-<script src="../assets/js/app.js"></script>
+              <a href="#product-launches"> Product launches </a>
 
-<script src="../assets/js/slider.js"></script>
-<script src="../assets/js/counter.js"></script>
-<script src="../assets/js/dropdown.js"></script>
-<script src="../assets/js/form.js"></script>
-<script src="../assets/js/animations.js"></script>
+              <a href="#team"> From the team </a>
 
-</body>
+              <a href="#community"> From the community </a>
 
+              <a href="#press"> Press </a>
+            </nav>
+          </div>
+
+          <!-- SEARCH -->
+
+          <div class="now-search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+              type="search"
+              placeholder="Search..."
+              aria-label="Search articles"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+                        FEATURED ARTICLES
+    ====================================================== -->
+
+      <section class="now-featured">
+        <div class="now-grid now-grid-three">
+          <!-- =================================================
+                            ARTICLE 01
+            ================================================== -->
+
+          <article class="now-article">
+            <a href="#" class="now-article-image">
+              <img
+                src="../assets/images/ai-automations.png"
+                alt="AI coding and automation"
+                loading="lazy"
+              />
+            </a>
+
+            <div class="now-article-body">
+              <h2>
+                AI coding has made CI a bottleneck, so we reworked ours to keep
+                up
+              </h2>
+
+              <p>
+                We rebuilt our development workflow to help engineering teams
+                move from code to production faster.
+              </p>
+
+              <div class="now-meta">
+                <span> From the team </span>
+
+                <span> Sep 2, 2026 </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- =================================================
+                            ARTICLE 02
+            ================================================== -->
+
+          <article class="now-article">
+            <a href="#" class="now-article-image">
+              <img
+                src="../assets/images/ramp.png"
+                alt="Nexora coding agent"
+                loading="lazy"
+              />
+            </a>
+
+            <div class="now-article-body">
+              <h2>The coding agent behind 75% of Ramp's merged PRs</h2>
+
+              <p>
+                How modern engineering teams are using intelligent coding agents
+                to accelerate everyday development.
+              </p>
+
+              <div class="now-meta">
+                <span> From the team </span>
+
+                <span> Aug 31, 2026 </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- =================================================
+                            ARTICLE 03
+            ================================================== -->
+
+          <article class="now-article">
+            <a href="#" class="now-article-image">
+              <img
+                src="../assets/images/ui-refresh-dashboard.png"
+                alt="Nexora interface design"
+                loading="lazy"
+              />
+            </a>
+
+            <div class="now-article-body">
+              <h2>Styling Nexora for the future with StyleX</h2>
+
+              <p>
+                Creating a faster and more consistent interface system for the
+                next generation of product teams.
+              </p>
+
+              <div class="now-meta">
+                <span> Engineering </span>
+
+                <span> Aug 26, 2026 </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- =================================================
+                            ARTICLE 04
+            ================================================== -->
+
+          <article class="now-article">
+            <a href="#" class="now-article-image">
+              <img
+                src="../assets/images/cycle-time-analytics.png"
+                alt="Nexora growth analytics"
+                loading="lazy"
+              />
+            </a>
+
+            <div class="now-article-body">
+              <h2>Sharing Nexora's growth with the people building it</h2>
+
+              <p>
+                How we share company progress, product insights, and important
+                metrics across our organization.
+              </p>
+
+              <div class="now-meta">
+                <span> From the team </span>
+
+                <span> Aug 20, 2026 </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- =================================================
+                            ARTICLE 05
+            ================================================== -->
+
+          <article class="now-article">
+            <a href="#" class="now-article-image">
+              <img
+                src="../assets/images/pulse-updates.png"
+                alt="Nexora data synchronization"
+                loading="lazy"
+              />
+            </a>
+
+            <div class="now-article-body">
+              <h2>Rebuilding Nexora's data sync read path</h2>
+
+              <p>
+                A technical look at improving data synchronization and making
+                critical product information available faster.
+              </p>
+
+              <div class="now-meta">
+                <span> Engineering </span>
+
+                <span> Aug 18, 2026 </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- =================================================
+                            ARTICLE 06
+            ================================================== -->
+
+          <article class="now-article">
+            <a href="#" class="now-article-image">
+              <img
+                src="../assets/images/planning-monitoring.png"
+                alt="Nexora product planning"
+                loading="lazy"
+              />
+            </a>
+
+            <div class="now-article-body">
+              <h2>How teams build</h2>
+
+              <p>
+                The systems and workflows that help modern teams plan, build,
+                and deliver better products.
+              </p>
+
+              <div class="now-meta">
+                <span> Product </span>
+
+                <span> Aug 17, 2026 </span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- =====================================================
+                            CHANGELOG
+    ====================================================== -->
+
+      <section class="now-changelog" id="changelog">
+        <div class="now-section-heading">
+          <h2>Changelog</h2>
+        </div>
+
+        <div class="now-changelog-line">
+          <!-- CHANGELOG 01 -->
+
+          <article class="now-changelog-item">
+            <span class="now-changelog-dot"></span>
+
+            <div class="now-changelog-content">
+              <h3>Loops for product management</h3>
+
+              <p>
+                Connect planning, execution, feedback, and product management in
+                one continuous workflow.
+              </p>
+
+              <div class="now-meta">
+                <span> Version 4.8 </span>
+
+                <span> Sep 10, 2026 </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- CHANGELOG 02 -->
+
+          <article class="now-changelog-item">
+            <span class="now-changelog-dot"></span>
+
+            <div class="now-changelog-content">
+              <h3>Priority inbox</h3>
+
+              <p>
+                Focus your attention on the work that matters most with a
+                smarter inbox.
+              </p>
+
+              <div class="now-meta">
+                <span> Version 4.7 </span>
+
+                <span> Sep 5, 2026 </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- CHANGELOG 03 -->
+
+          <article class="now-changelog-item">
+            <span class="now-changelog-dot"></span>
+
+            <div class="now-changelog-content">
+              <h3>Quick actions</h3>
+
+              <p>
+                Complete common project actions faster with quick commands and
+                keyboard shortcuts.
+              </p>
+
+              <div class="now-meta">
+                <span> Version 4.6 </span>
+
+                <span> Aug 29, 2026 </span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <a href="#" class="now-view-more"> View all → </a>
+      </section>
+
+      <!-- =====================================================
+                    PRODUCT / COMMUNITY STORIES
+    ====================================================== -->
+
+      <section class="now-stories" id="product-launches">
+        <div class="now-grid now-grid-three">
+          <!-- STORY 01 -->
+
+          <article class="now-article">
+            <a href="#" class="now-article-image">
+              <img
+                src="../assets/images/coinbase.png"
+                alt="Coinbase engineering"
+                loading="lazy"
+              />
+            </a>
+
+            <div class="now-article-body">
+              <h2>Coinbase's bet on agent-first development</h2>
+
+              <p>
+                How an engineering organization is adapting its development
+                workflow around intelligent agents.
+              </p>
+
+              <div class="now-meta">
+                <span> Customers </span>
+
+                <span> Aug 15, 2026 </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- STORY 02 -->
+
+          <article class="now-article">
+            <a href="#" class="now-article-image">
+              <img
+                src="../assets/images/linear-agent.png"
+                alt="Nexora Agent"
+                loading="lazy"
+              />
+            </a>
+
+            <div class="now-article-body">
+              <h2>How we built Nexora Agent</h2>
+
+              <p>
+                Inside the systems, workflows, and ideas behind our intelligent
+                product assistant.
+              </p>
+
+              <div class="now-meta">
+                <span> From the team </span>
+
+                <span> Aug 10, 2026 </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- STORY 03 -->
+
+          <article class="now-article">
+            <a href="#" class="now-article-image">
+              <img
+                src="../assets/images/changelog/loops-product-management.png"
+                alt="Product management loops"
+                loading="lazy"
+              />
+            </a>
+
+            <div class="now-article-body">
+              <h2>Introducing Loops</h2>
+
+              <p>
+                A new way to connect product strategy, customer feedback,
+                development, and continuous improvement.
+              </p>
+
+              <div class="now-meta">
+                <span> Product </span>
+
+                <span> Aug 10, 2026 </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- STORY 04 -->
+
+          <article class="now-article">
+            <a href="#" class="now-article-image">
+              <img
+                src="../assets/images/automate-overhead.png"
+                alt="Nexora automation"
+                loading="lazy"
+              />
+            </a>
+
+            <div class="now-article-body">
+              <h2>Boom, superbuild pulls as fast as it flies</h2>
+
+              <p>
+                How automation helps high-performing teams reduce overhead and
+                keep projects moving.
+              </p>
+
+              <div class="now-meta">
+                <span> Customers </span>
+
+                <span> Aug 5, 2026 </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- STORY 05 -->
+
+          <article class="now-article">
+            <a href="#" class="now-article-image">
+              <img
+                src="../assets/images/guided-reviews.png"
+                alt="AI guided reviews"
+                loading="lazy"
+              />
+            </a>
+
+            <div class="now-article-body">
+              <h2>Teaching an agent to auto-fix bugs</h2>
+
+              <p>
+                Exploring how intelligent systems can understand issues and help
+                developers resolve them faster.
+              </p>
+
+              <div class="now-meta">
+                <span> Engineering </span>
+
+                <span> Aug 2, 2026 </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- STORY 06 -->
+
+          <article class="now-article">
+            <a href="#" class="now-article-image">
+              <img
+                src="../assets/images/code-review-diffs.png"
+                alt="AI code generation"
+                loading="lazy"
+              />
+            </a>
+
+            <div class="now-article-body">
+              <h2>Now Nexora writes the code, too</h2>
+
+              <p>
+                How AI-assisted development is changing the way modern
+                engineering teams write, review, and ship software.
+              </p>
+
+              <div class="now-meta">
+                <span> Engineering </span>
+
+                <span> Jul 28, 2026 </span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- =====================================================
+                            PRESS
+    ====================================================== -->
+
+      <section class="now-press" id="press">
+        <div class="now-section-heading">
+          <h2>Press</h2>
+        </div>
+
+        <div class="now-press-grid">
+          <!-- PRESS 01 -->
+
+          <article class="now-press-card">
+            <a href="#" class="now-press-image">
+              <img
+                src="../assets/images/Blog-1.png"
+                alt="Nexora in the press"
+                loading="lazy"
+              />
+            </a>
+
+            <h3>Protecting the team behind Nexora's product</h3>
+
+            <div class="now-meta">
+              <span> Press </span>
+
+              <span> Jul 18, 2026 </span>
+            </div>
+          </article>
+
+          <!-- PRESS 02 -->
+
+          <article class="now-press-card">
+            <a href="#" class="now-press-image">
+              <img
+                src="../assets/images/Blog-2.png"
+                alt="Nexora product story"
+                loading="lazy"
+              />
+            </a>
+
+            <h3>The new standard for modern product teams</h3>
+
+            <div class="now-meta">
+              <span> Press </span>
+
+              <span> Jul 12, 2026 </span>
+            </div>
+          </article>
+
+          <!-- PRESS 03 -->
+
+          <article class="now-press-card">
+            <a href="#" class="now-press-image">
+              <img
+                src="../assets/images/Blog-3.png"
+                alt="Nexora technology interview"
+                loading="lazy"
+              />
+            </a>
+
+            <h3>AI agents and the future of software development</h3>
+
+            <div class="now-meta">
+              <span> Press </span>
+
+              <span> Jul 8, 2026 </span>
+            </div>
+          </article>
+
+          <!-- PRESS 04 -->
+
+          <article class="now-press-card">
+            <a href="#" class="now-press-image">
+              <img
+                src="../assets/images/japan-launch.png"
+                alt="Nexora company interview"
+                loading="lazy"
+              />
+            </a>
+
+            <h3>How modern teams build better products</h3>
+
+            <div class="now-meta">
+              <span> Press </span>
+
+              <span> Jul 4, 2026 </span>
+            </div>
+          </article>
+        </div>
+
+        <a href="#" class="now-view-more"> View all → </a>
+      </section>
+
+      <!-- =====================================================
+                    MORE ARTICLES
+    ====================================================== -->
+
+      <section class="now-more-stories" id="community">
+        <div class="now-grid now-grid-three">
+          <!-- ARTICLE 01 -->
+
+          <article class="now-article">
+            <a href="#" class="now-article-image">
+              <img
+                src="../assets/images/rich-diff-previews.png"
+                alt="Code review in the agent era"
+                loading="lazy"
+              />
+            </a>
+
+            <div class="now-article-body">
+              <h2>Reviewing code in the agent era</h2>
+
+              <p>
+                Rethinking code review as intelligent development tools become
+                part of the engineering process.
+              </p>
+
+              <div class="now-meta">
+                <span> Engineering </span>
+
+                <span> Jun 30, 2026 </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- ARTICLE 02 -->
+
+          <article class="now-article">
+            <a href="#" class="now-article-image">
+              <img
+                src="../assets/images/code-review-diffs.png"
+                alt="Code review"
+                loading="lazy"
+              />
+            </a>
+
+            <div class="now-article-body">
+              <h2>Code review should be fast</h2>
+
+              <p>
+                Building a review workflow that helps developers move quickly
+                while maintaining high quality.
+              </p>
+
+              <div class="now-meta">
+                <span> Engineering </span>
+
+                <span> Jun 26, 2026 </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- ARTICLE 03 -->
+
+          <article class="now-article">
+            <a href="#" class="now-article-image">
+              <img
+                src="../assets/images/linear-agent.png"
+                alt="Code intelligence"
+                loading="lazy"
+              />
+            </a>
+
+            <div class="now-article-body">
+              <h2>Code intelligence for Nexora Agent</h2>
+
+              <p>
+                Giving intelligent systems the context they need to understand
+                complex codebases.
+              </p>
+
+              <div class="now-meta">
+                <span> AI </span>
+
+                <span> Jun 22, 2026 </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- ARTICLE 04 -->
+
+          <article class="now-article">
+            <a href="#" class="now-article-image">
+              <img
+                src="../assets/images/cursor.png"
+                alt="AI native development"
+                loading="lazy"
+              />
+            </a>
+
+            <div class="now-article-body">
+              <h2>Can modern teams become truly AI-native?</h2>
+
+              <p>
+                Exploring how AI changes the tools, workflows, and culture of
+                software teams.
+              </p>
+
+              <div class="now-meta">
+                <span> From the team </span>
+
+                <span> Jun 18, 2026 </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- ARTICLE 05 -->
+
+          <article class="now-article">
+            <a href="#" class="now-article-image">
+              <img
+                src="../assets/images/team-member-01.jpg"
+                alt="Nexora team"
+                loading="lazy"
+              />
+            </a>
+
+            <div class="now-article-body">
+              <h2>How we hire at Nexora</h2>
+
+              <p>
+                A look at how we approach building a thoughtful and
+                high-performing team.
+              </p>
+
+              <div class="now-meta">
+                <span> From the team </span>
+
+                <span> Jun 15, 2026 </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- ARTICLE 06 -->
+
+          <article class="now-article">
+            <a href="#" class="now-article-image">
+              <img
+                src="../assets/images/product-roadmap.png"
+                alt="Product design"
+                loading="lazy"
+              />
+            </a>
+
+            <div class="now-article-body">
+              <h2>Output isn't design</h2>
+
+              <p>
+                Why great product teams focus on outcomes, clarity, and customer
+                value rather than simply shipping more work.
+              </p>
+
+              <div class="now-meta">
+                <span> Design </span>
+
+                <span> Jun 12, 2026 </span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- =====================================================
+                            ARCHIVE
+    ====================================================== -->
+
+      <section class="now-archive">
+        <div class="now-section-heading">
+          <h2>Archive</h2>
+        </div>
+
+        <div class="now-archive-list">
+          <a href="#" class="now-archive-row">
+            <span> How we use Nexora Agent at Nexora </span>
+
+            <small> From the team · Jun 10, 2026 </small>
+          </a>
+
+          <a href="#" class="now-archive-row">
+            <span> How we think about security at Nexora </span>
+
+            <small> Engineering · Jun 7, 2026 </small>
+          </a>
+
+          <a href="#" class="now-archive-row">
+            <span> Introducing product initiatives </span>
+
+            <small> Product · Jun 3, 2026 </small>
+          </a>
+
+          <a href="#" class="now-archive-row">
+            <span> How Nexora works with teams </span>
+
+            <small> From the team · May 30, 2026 </small>
+          </a>
+
+          <a href="#" class="now-archive-row">
+            <span> Building a better product roadmap </span>
+
+            <small> Product · May 25, 2026 </small>
+          </a>
+
+          <a href="#" class="now-archive-row">
+            <span> From coordination to execution </span>
+
+            <small> Product · May 21, 2026 </small>
+          </a>
+
+          <a href="#" class="now-archive-row">
+            <span> Designing the next generation of tools </span>
+
+            <small> Design · May 17, 2026 </small>
+          </a>
+
+          <a href="#" class="now-archive-row">
+            <span> How our engineering organization works </span>
+
+            <small> Engineering · May 12, 2026 </small>
+          </a>
+
+          <a href="#" class="now-archive-row">
+            <span> Continuous learning at Nexora </span>
+
+            <small> From the team · May 8, 2026 </small>
+          </a>
+
+          <a href="#" class="now-archive-row">
+            <span> Building systems that scale </span>
+
+            <small> Engineering · May 4, 2026 </small>
+          </a>
+
+          <a href="#" class="now-archive-row">
+            <span> Self-hosting Nexora infrastructure </span>
+
+            <small> Engineering · Apr 29, 2026 </small>
+          </a>
+
+          <a href="#" class="now-archive-row">
+            <span> A better path for product teams </span>
+
+            <small> Product · Apr 24, 2026 </small>
+          </a>
+
+          <a href="#" class="now-archive-row">
+            <span> Building better developer experiences </span>
+
+            <small> Engineering · Apr 18, 2026 </small>
+          </a>
+
+          <a href="#" class="now-archive-row">
+            <span> Why we continue investing in product quality </span>
+
+            <small> From the team · Apr 12, 2026 </small>
+          </a>
+
+          <a href="#" class="now-archive-row">
+            <span> From idea to production with Nexora </span>
+
+            <small> Product · Apr 5, 2026 </small>
+          </a>
+        </div>
+
+        <button type="button" class="now-load-more">Load more</button>
+      </section>
+    </main>
+
+    <!-- =========================================================
+                    FOOTER / CTA
+========================================================= -->
+
+    <div id="footer-container"></div>
+
+    <!-- =========================================================
+                            SCRIPTS
+========================================================= -->
+
+    <script src="../assets/js/navbar.js"></script>
+    <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/slider.js"></script>
+    <script src="../assets/js/counter.js"></script>
+    <script src="../assets/js/dropdown.js"></script>
+    <script src="../assets/js/form.js"></script>
+    <script src="../assets/js/animations.js"></script>
+  </body>
 </html>

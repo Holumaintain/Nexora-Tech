@@ -1,41 +1,826 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <!-- =========================================
+         META
+    ========================================== -->
+    <meta charset="UTF-8" />
 
-<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="Nexora Enterprise gives large organizations the visibility, security, automation, and collaboration tools they need to manage work at scale."
+    />
 
-<title>Enterprise | Nexora Technologies</title>
+    <meta name="theme-color" content="#08090b" />
 
-<link rel="stylesheet" href="../../assets/css/style.css">
+    <title>Enterprise | Nexora Technologies</title>
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- =========================================
+         MAIN STYLES
+    ========================================== -->
+    <link rel="stylesheet" href="../../assets/css/style.css" />
 
-</head>
+    <!-- =========================================
+         FONT AWESOME
+    ========================================== -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
 
-<body>
+  <body class="enterprise-page">
+    <!-- =========================================
+         NAVBAR
+    ========================================== -->
+    <div id="navbar-container"></div>
 
-<div id="navbar-container"></div>
+    <!-- =========================================
+         MAIN CONTENT
+    ========================================== -->
+    <main>
+      <!-- =========================================
+           HERO
+      ========================================== -->
+      <section class="enterprise-hero">
+        <div class="container enterprise-hero-grid">
+          <div class="enterprise-hero-content">
+            <span class="section-badge">
+              <i class="fa-solid fa-building"></i>
+              Enterprise
+            </span>
 
-<main>
+            <h1>
+              The system of record for
+              <span>modern organizations.</span>
+            </h1>
 
-<!-- Enterprise page content goes here -->
+            <p>
+              Bring product, engineering, operations, and leadership together in
+              one connected workspace built for organizations operating at
+              scale.
+            </p>
 
-</main>
+            <div class="hero-buttons">
+              <a href="../contact.html" class="btn btn-primary">
+                Talk to our team
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
 
-<div id="footer-container"></div>
+              <a href="../pricing.html" class="btn btn-secondary">
+                Explore pricing
+              </a>
+            </div>
 
-<script src="../../assets/js/navbar.js"></script>
-<script src="../../assets/js/app.js"></script>
+            <div class="enterprise-hero-meta">
+              <div class="hero-meta-item">
+                <i class="fa-solid fa-shield-halved"></i>
 
-<script src="../../assets/js/slider.js"></script>
-<script src="../../assets/js/counter.js"></script>
-<script src="../../assets/js/dropdown.js"></script>
-<script src="../../assets/js/form.js"></script>
-<script src="../../assets/js/animations.js"></script>
+                <div>
+                  <strong>Enterprise security</strong>
+                  <span>Built for sensitive workflows</span>
+                </div>
+              </div>
 
-</body>
+              <div class="hero-meta-item">
+                <i class="fa-solid fa-users"></i>
 
+                <div>
+                  <strong>Organization-wide visibility</strong>
+                  <span>Connect teams and projects</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="enterprise-hero-visual">
+            <div class="hero-visual-glow"></div>
+
+            <div class="enterprise-dashboard">
+              <div class="dashboard-topbar">
+                <div class="dashboard-brand">
+                  <span class="dashboard-dot"></span>
+                  Nexora
+                </div>
+
+                <div class="dashboard-actions">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+
+              <div class="dashboard-body">
+                <aside class="dashboard-sidebar">
+                  <div class="sidebar-label">Workspace</div>
+
+                  <div class="sidebar-item active">
+                    <i class="fa-solid fa-chart-line"></i>
+                    Overview
+                  </div>
+
+                  <div class="sidebar-item">
+                    <i class="fa-solid fa-layer-group"></i>
+                    Projects
+                  </div>
+
+                  <div class="sidebar-item">
+                    <i class="fa-solid fa-users"></i>
+                    Teams
+                  </div>
+
+                  <div class="sidebar-item">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    Security
+                  </div>
+                </aside>
+
+                <div class="dashboard-main">
+                  <div class="dashboard-heading">
+                    <div>
+                      <span>Organization overview</span>
+                      <h3>Work at a glance</h3>
+                    </div>
+
+                    <span class="dashboard-status">
+                      <i class="fa-solid fa-circle"></i>
+                      Operational
+                    </span>
+                  </div>
+
+                  <div class="dashboard-stats">
+                    <div class="dashboard-stat">
+                      <span>Active projects</span>
+                      <strong>24</strong>
+                      <small>
+                        <i class="fa-solid fa-arrow-up"></i>
+                        12% this month
+                      </small>
+                    </div>
+
+                    <div class="dashboard-stat">
+                      <span>Teams</span>
+                      <strong>18</strong>
+                      <small> Across the organization </small>
+                    </div>
+
+                    <div class="dashboard-stat">
+                      <span>Open work</span>
+                      <strong>286</strong>
+                      <small> Prioritized across teams </small>
+                    </div>
+                  </div>
+
+                  <div class="dashboard-chart">
+                    <div class="chart-header">
+                      <span>Delivery progress</span>
+                      <span>Last 30 days</span>
+                    </div>
+
+                    <div class="chart-lines">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+
+                    <div class="chart-bars">
+                      <i></i>
+                      <i></i>
+                      <i></i>
+                      <i></i>
+                      <i></i>
+                      <i></i>
+                      <i></i>
+                      <i></i>
+                      <i></i>
+                      <i></i>
+                      <i></i>
+                      <i></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================
+           TRUST
+      ========================================== -->
+      <section class="enterprise-trust">
+        <div class="container">
+          <p class="enterprise-trust-label">
+            Built for organizations that take execution seriously
+          </p>
+
+          <div class="enterprise-logo-grid">
+            <div class="enterprise-logo">
+              <img src="../../assets/images/openai.png" alt="OpenAI" />
+            </div>
+
+            <div class="enterprise-logo">
+              <img src="../../assets/images/vercel.png" alt="Vercel" />
+            </div>
+
+            <div class="enterprise-logo">
+              <img src="../../assets/images/salesforce.png" alt="Salesforce" />
+            </div>
+
+            <div class="enterprise-logo">
+              <img src="../../assets/images/figma.png" alt="Figma" />
+            </div>
+
+            <div class="enterprise-logo">
+              <img src="../../assets/images/coinbase.png" alt="Coinbase" />
+            </div>
+
+            <div class="enterprise-logo">
+              <img src="../../assets/images/ramp.png" alt="Ramp" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================
+           INTRO
+      ========================================== -->
+      <section class="enterprise-intro">
+        <div class="container">
+          <div class="section-heading enterprise-centered">
+            <span class="section-badge"> Built to scale </span>
+
+            <h2>
+              One workspace.
+              <br />
+              Every team.
+            </h2>
+
+            <p>
+              Nexora gives organizations a shared operating layer for planning,
+              building, reviewing, monitoring, and improving products and
+              workflows.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================
+           ENTERPRISE CAPABILITIES
+      ========================================== -->
+      <section class="enterprise-capabilities">
+        <div class="container">
+          <div class="enterprise-feature-grid">
+            <!-- FEATURE 1 -->
+            <article class="enterprise-feature">
+              <div class="feature-icon">
+                <i class="fa-solid fa-layer-group"></i>
+              </div>
+
+              <span class="feature-number"> 01 </span>
+
+              <h3>Connect the entire organization</h3>
+
+              <p>
+                Give product, engineering, design, operations, and leadership a
+                shared view of the work that matters.
+              </p>
+
+              <ul>
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  Cross-functional projects
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  Centralized workflows
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  Organization-wide visibility
+                </li>
+              </ul>
+            </article>
+
+            <!-- FEATURE 2 -->
+            <article class="enterprise-feature">
+              <div class="feature-icon">
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+
+              <span class="feature-number"> 02 </span>
+
+              <h3>Security built into the workflow</h3>
+
+              <p>
+                Keep access, permissions, identity, and organizational controls
+                aligned with the way your teams work.
+              </p>
+
+              <ul>
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  Role-based access
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  Secure authentication
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  Centralized administration
+                </li>
+              </ul>
+            </article>
+
+            <!-- FEATURE 3 -->
+            <article class="enterprise-feature">
+              <div class="feature-icon">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+              </div>
+
+              <span class="feature-number"> 03 </span>
+
+              <h3>Automate repetitive work</h3>
+
+              <p>
+                Replace manual coordination with connected workflows,
+                intelligent automation, and AI-powered assistance.
+              </p>
+
+              <ul>
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  Workflow automation
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  AI-assisted workflows
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  Connected systems
+                </li>
+              </ul>
+            </article>
+
+            <!-- FEATURE 4 -->
+            <article class="enterprise-feature">
+              <div class="feature-icon">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+
+              <span class="feature-number"> 04 </span>
+
+              <h3>Understand progress at scale</h3>
+
+              <p>
+                Turn activity across teams and projects into clear insights for
+                the people responsible for execution.
+              </p>
+
+              <ul>
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  Product analytics
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  Project health
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  Executive visibility
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================
+           VISIBILITY
+      ========================================== -->
+      <section class="enterprise-visibility">
+        <div class="container enterprise-split">
+          <div class="enterprise-copy">
+            <span class="section-badge"> Organization visibility </span>
+
+            <h2>See what is happening across every team.</h2>
+
+            <p>
+              Bring project health, delivery activity, milestones, blockers, and
+              important updates into one shared view. Teams stay focused while
+              leadership gets the context they need.
+            </p>
+
+            <a href="../contact.html" class="text-link">
+              Talk to our team
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="enterprise-image-card">
+            <img
+              src="../../assets/images/modular-dashboards.png"
+              alt="Nexora modular dashboards"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================
+           AUTOMATION
+      ========================================== -->
+      <section class="enterprise-automation">
+        <div class="container enterprise-split reverse">
+          <div class="enterprise-image-card">
+            <img
+              src="../../assets/images/ai-automations.png"
+              alt="Nexora AI automations"
+            />
+          </div>
+
+          <div class="enterprise-copy">
+            <span class="section-badge"> AI &amp; Automation </span>
+
+            <h2>Let your teams spend more time building.</h2>
+
+            <p>
+              Connect actions across your workflow and use intelligent
+              automation to reduce repetitive coordination, surface important
+              information, and keep work moving.
+            </p>
+
+            <div class="enterprise-check-list">
+              <div>
+                <i class="fa-solid fa-circle-check"></i>
+                Automated workflows
+              </div>
+
+              <div>
+                <i class="fa-solid fa-circle-check"></i>
+                AI-powered assistance
+              </div>
+
+              <div>
+                <i class="fa-solid fa-circle-check"></i>
+                Connected integrations
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================
+           PRODUCT LIFECYCLE
+      ========================================== -->
+      <section class="enterprise-lifecycle">
+        <div class="container">
+          <div class="section-heading enterprise-centered">
+            <span class="section-badge"> Product lifecycle </span>
+
+            <h2>From idea to delivery, connected.</h2>
+
+            <p>
+              Give every stage of product development a shared place to live
+              while keeping teams aligned around outcomes.
+            </p>
+          </div>
+
+          <div class="lifecycle-grid">
+            <article class="lifecycle-card">
+              <div class="lifecycle-icon">
+                <i class="fa-solid fa-inbox"></i>
+              </div>
+
+              <span>01</span>
+
+              <h3>Intake</h3>
+
+              <p>
+                Capture requests, feedback, ideas, and incoming work before they
+                become disconnected tasks.
+              </p>
+            </article>
+
+            <article class="lifecycle-card">
+              <div class="lifecycle-icon">
+                <i class="fa-solid fa-map"></i>
+              </div>
+
+              <span>02</span>
+
+              <h3>Plan</h3>
+
+              <p>
+                Align teams around roadmaps, initiatives, priorities,
+                milestones, and strategic objectives.
+              </p>
+            </article>
+
+            <article class="lifecycle-card">
+              <div class="lifecycle-icon">
+                <i class="fa-solid fa-code"></i>
+              </div>
+
+              <span>03</span>
+
+              <h3>Build</h3>
+
+              <p>
+                Coordinate engineering work, AI agents, cycles, development
+                workflows, and delivery.
+              </p>
+            </article>
+
+            <article class="lifecycle-card">
+              <div class="lifecycle-icon">
+                <i class="fa-solid fa-code-compare"></i>
+              </div>
+
+              <span>04</span>
+
+              <h3>Review</h3>
+
+              <p>
+                Keep code changes, reviews, pull requests, and deployment
+                workflows connected.
+              </p>
+            </article>
+
+            <article class="lifecycle-card">
+              <div class="lifecycle-icon">
+                <i class="fa-solid fa-chart-column"></i>
+              </div>
+
+              <span>05</span>
+
+              <h3>Monitor</h3>
+
+              <p>
+                Understand delivery performance, project health, and
+                organizational progress.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================
+           ADMINISTRATION
+      ========================================== -->
+      <section class="enterprise-administration">
+        <div class="container">
+          <div class="admin-panel">
+            <div class="admin-content">
+              <span class="section-badge">
+                <i class="fa-solid fa-user-gear"></i>
+                Administration
+              </span>
+
+              <h2>Give administrators the control they need.</h2>
+
+              <p>
+                Manage your organization's workspace, users, teams, permissions,
+                integrations, and security policies from a centralized
+                environment.
+              </p>
+
+              <div class="admin-features">
+                <div class="admin-feature">
+                  <i class="fa-solid fa-users-gear"></i>
+
+                  <div>
+                    <strong>Centralized management</strong>
+                    <span>
+                      Manage users, teams, and workspace configuration.
+                    </span>
+                  </div>
+                </div>
+
+                <div class="admin-feature">
+                  <i class="fa-solid fa-lock"></i>
+
+                  <div>
+                    <strong>Access controls</strong>
+                    <span>
+                      Keep permissions aligned with organizational roles.
+                    </span>
+                  </div>
+                </div>
+
+                <div class="admin-feature">
+                  <i class="fa-solid fa-plug"></i>
+
+                  <div>
+                    <strong>Connected tools</strong>
+                    <span> Manage the integrations your teams depend on. </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="admin-visual">
+              <div class="admin-window">
+                <div class="admin-window-header">
+                  <span>Organization settings</span>
+
+                  <i class="fa-solid fa-ellipsis"></i>
+                </div>
+
+                <div class="admin-window-body">
+                  <div class="admin-row">
+                    <div>
+                      <strong>Workspace access</strong>
+                      <span>18 teams connected</span>
+                    </div>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </div>
+
+                  <div class="admin-row">
+                    <div>
+                      <strong>Authentication</strong>
+                      <span>Managed securely</span>
+                    </div>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </div>
+
+                  <div class="admin-row">
+                    <div>
+                      <strong>Integrations</strong>
+                      <span>24 connected services</span>
+                    </div>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </div>
+
+                  <div class="admin-row">
+                    <div>
+                      <strong>Security controls</strong>
+                      <span>All policies active</span>
+                    </div>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================
+           CUSTOMER EXPERIENCE
+      ========================================== -->
+      <section class="enterprise-customer">
+        <div class="container enterprise-split">
+          <div class="enterprise-copy">
+            <span class="section-badge"> Customer operations </span>
+
+            <h2>Turn customer feedback into product action.</h2>
+
+            <p>
+              Connect customer conversations, requests, feedback, and product
+              work so teams can understand what customers need and respond with
+              greater context.
+            </p>
+
+            <a href="../contact.html" class="text-link">
+              Learn more
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="enterprise-image-card">
+            <img
+              src="../../assets/images/customer/customer-dashboard.png"
+              alt="Nexora customer operations dashboard"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================
+           ENTERPRISE BENEFITS
+      ========================================== -->
+      <section class="enterprise-benefits">
+        <div class="container">
+          <div class="section-heading enterprise-centered">
+            <span class="section-badge"> Why Nexora </span>
+
+            <h2>Designed around how organizations actually work.</h2>
+          </div>
+
+          <div class="benefits-grid">
+            <article class="benefit-card">
+              <i class="fa-solid fa-bolt"></i>
+
+              <h3>Faster execution</h3>
+
+              <p>
+                Reduce coordination overhead and keep important work moving
+                across teams.
+              </p>
+            </article>
+
+            <article class="benefit-card">
+              <i class="fa-solid fa-eye"></i>
+
+              <h3>Better visibility</h3>
+
+              <p>
+                Give teams and leadership the context they need without relying
+                on disconnected reports.
+              </p>
+            </article>
+
+            <article class="benefit-card">
+              <i class="fa-solid fa-shield-halved"></i>
+
+              <h3>Greater control</h3>
+
+              <p>
+                Keep organizational access, workflows, and connected systems
+                under centralized management.
+              </p>
+            </article>
+
+            <article class="benefit-card">
+              <i class="fa-solid fa-arrows-to-circle"></i>
+
+              <h3>One connected system</h3>
+
+              <p>
+                Bring planning, development, collaboration, automation, and
+                monitoring into a unified workspace.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================
+           FINAL CTA
+      ========================================== -->
+      <section class="enterprise-cta">
+        <div class="container">
+          <div class="enterprise-cta-card">
+            <div class="cta-glow"></div>
+
+            <div class="enterprise-cta-content">
+              <span class="section-badge"> Nexora Enterprise </span>
+
+              <h2>Build a better operating system for your organization.</h2>
+
+              <p>
+                Talk with the Nexora team about your organization's workflows,
+                security requirements, integrations, and deployment needs.
+              </p>
+
+              <div class="cta-buttons">
+                <a href="../contact.html" class="btn btn-primary">
+                  Talk to our team
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <a href="../pricing.html" class="btn btn-secondary">
+                  Explore pricing
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+    <div id="footer-container"></div>
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+    <script src="../../assets/js/navbar.js"></script>
+    <script src="../../assets/js/app.js"></script>
+    <script src="../../assets/js/slider.js"></script>
+    <script src="../../assets/js/counter.js"></script>
+    <script src="../../assets/js/dropdown.js"></script>
+    <script src="../../assets/js/form.js"></script>
+    <script src="../../assets/js/animations.js"></script>
+  </body>
 </html>

@@ -1,0 +1,480 @@
+/*======================================
+            DIFFS PAGE
+======================================*/
+
+.diffs-page{
+    --diffs-bg:#ffffff;
+    --diffs-surface:#f8fafc;
+    --diffs-surface-alt:#f1f5f9;
+    --diffs-border:rgba(15,23,42,.10);
+    --diffs-text:#0f172a;
+    --diffs-muted:#64748b;
+    --diffs-primary:#5b5ce2;
+    --diffs-primary-dark:#4546c7;
+    --diffs-shadow:0 20px 60px rgba(15,23,42,.10);
+    background:var(--diffs-bg);
+    color:var(--diffs-text);
+}
+
+/*======================================
+            HERO
+======================================*/
+
+.diffs-page .hero{
+    position:relative;
+    min-height:88vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    isolation:isolate;
+    padding:140px 24px 100px;
+    background:#0b1020;
+}
+
+.diffs-page .hero-video{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    z-index:0;
+}
+
+.diffs-page .hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(5,10,25,.88) 0%,
+            rgba(10,16,35,.78) 45%,
+            rgba(20,25,55,.70) 100%
+        );
+    z-index:1;
+    pointer-events:none;
+}
+
+.diffs-page .hero::after{
+    content:"";
+    position:absolute;
+    width:700px;
+    height:700px;
+    top:-350px;
+    right:-200px;
+    border-radius:50%;
+    background:rgba(91,92,226,.18);
+    filter:blur(100px);
+    z-index:2;
+    pointer-events:none;
+}
+
+.diffs-page .hero-overlay{
+    position:relative;
+    z-index:3;
+    width:min(900px,100%);
+    margin:0 auto;
+    text-align:center;
+}
+
+.diffs-page .hero-overlay h1{
+    margin:0 auto 24px;
+    color:#fff;
+    font-size:clamp(2.5rem,6vw,5rem);
+    line-height:1.05;
+    font-weight:800;
+    letter-spacing:-.04em;
+}
+
+.diffs-page .hero-overlay p{
+    max-width:760px;
+    margin:0 auto;
+    color:rgba(255,255,255,.88);
+    font-size:clamp(1rem,2vw,1.25rem);
+    line-height:1.75;
+}
+
+/*======================================
+            GENERAL SECTIONS
+======================================*/
+
+.diffs-page main > section:not(.hero){
+    position:relative;
+    padding:110px 24px;
+    overflow:hidden;
+}
+
+.diffs-page main > section:nth-child(even):not(.hero){
+    background:var(--diffs-surface);
+}
+
+.diffs-page main > section:nth-child(odd):not(.hero){
+    background:#fff;
+}
+
+.diffs-page .container{
+    width:min(1180px,100%);
+    margin:0 auto;
+}
+
+.diffs-page main > section:not(.hero) .container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+}
+
+/*======================================
+            SECTION HEADINGS
+======================================*/
+
+.diffs-page main > section:not(.hero) h2{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    margin:0 0 18px;
+    color:var(--diffs-text);
+    font-size:clamp(1.8rem,3vw,2.7rem);
+    line-height:1.15;
+    font-weight:800;
+    letter-spacing:-.03em;
+}
+
+.diffs-page main > section:not(.hero) h2 i{
+    color:var(--diffs-primary);
+    font-size:.8em;
+}
+
+.diffs-page main > section:not(.hero) p{
+    width:min(760px,100%);
+    margin:0 auto 45px;
+    color:var(--diffs-muted);
+    font-size:1.05rem;
+    line-height:1.8;
+}
+
+/*======================================
+            FEATURE IMAGES
+======================================*/
+
+.diffs-page main > section:not(.hero) img{
+    display:block;
+    width:100%;
+    max-width:1100px;
+    height:auto;
+    margin:0 auto;
+    border:1px solid var(--diffs-border);
+    border-radius:20px;
+    box-shadow:var(--diffs-shadow);
+    background:#fff;
+}
+
+.diffs-page .ai-automations img,
+.diffs-page .linear-agent img,
+.diffs-page .slack-integration img,
+.diffs-page .draft-updates img,
+.diffs-page .workflow-automation img,
+.diffs-page .triage-flow img,
+.diffs-page .recurring-work img,
+.diffs-page .automate-overhead img,
+.diffs-page .code-review img,
+.diffs-page .issue-management img,
+.diffs-page .background-automation img,
+.diffs-page .guided-reviews img,
+.diffs-page .task-dashboard img,
+.diffs-page .work-motion img,
+.diffs-page .integrations img{
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+}
+
+.diffs-page .ai-automations img:hover,
+.diffs-page .linear-agent img:hover,
+.diffs-page .slack-integration img:hover,
+.diffs-page .draft-updates img:hover,
+.diffs-page .workflow-automation img:hover,
+.diffs-page .triage-flow img:hover,
+.diffs-page .recurring-work img:hover,
+.diffs-page .automate-overhead img:hover,
+.diffs-page .code-review img:hover,
+.diffs-page .issue-management img:hover,
+.diffs-page .background-automation img:hover,
+.diffs-page .guided-reviews img:hover,
+.diffs-page .task-dashboard img:hover,
+.diffs-page .work-motion img:hover,
+.diffs-page .integrations img:hover{
+    transform:translateY(-5px);
+    box-shadow:0 28px 70px rgba(15,23,42,.14);
+}
+
+/*======================================
+            TESTIMONIALS
+======================================*/
+
+.diffs-page .testimonials{
+    background:var(--diffs-surface);
+}
+
+.diffs-page .testimonial-grid{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:28px;
+    width:100%;
+    max-width:1100px;
+    margin:0 auto;
+}
+
+.diffs-page .testimonial-grid img{
+    width:100%;
+    max-width:none;
+    height:auto;
+    margin:0;
+}
+
+/*======================================
+            CTA
+======================================*/
+
+.diffs-page .cta{
+    position:relative;
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(91,92,226,.25),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #10152b 0%,
+            #171c38 50%,
+            #0b1020 100%
+        ) !important;
+    color:#fff;
+}
+
+.diffs-page .cta::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.03) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            rgba(255,255,255,.03) 1px,
+            transparent 1px
+        );
+    background-size:45px 45px;
+    mask-image:linear-gradient(to bottom,black,transparent);
+    pointer-events:none;
+}
+
+.diffs-page .cta .container{
+    position:relative;
+    z-index:1;
+}
+
+.diffs-page .cta h2{
+    color:#fff !important;
+    max-width:800px;
+    margin-bottom:20px !important;
+}
+
+.diffs-page .cta p{
+    color:rgba(255,255,255,.75) !important;
+    max-width:680px !important;
+    margin-bottom:35px !important;
+}
+
+.diffs-page .cta-buttons{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:14px;
+    flex-wrap:wrap;
+}
+
+.diffs-page .cta-buttons .btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-width:150px;
+    min-height:50px;
+    padding:13px 24px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:700;
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        background .25s ease;
+}
+
+.diffs-page .cta-buttons .btn:hover{
+    transform:translateY(-3px);
+}
+
+.diffs-page .cta-buttons .btn-light{
+    background:#fff;
+    color:#111827;
+    box-shadow:0 12px 30px rgba(0,0,0,.18);
+}
+
+.diffs-page .cta-buttons .btn-light:hover{
+    box-shadow:0 18px 40px rgba(0,0,0,.25);
+}
+
+.diffs-page .cta-buttons .btn-dark{
+    background:rgba(255,255,255,.08);
+    color:#fff;
+    border:1px solid rgba(255,255,255,.25);
+}
+
+.diffs-page .cta-buttons .btn-dark:hover{
+    background:rgba(255,255,255,.14);
+}
+
+/*======================================
+            SECTION ACCENTS
+======================================*/
+
+.diffs-page .ai-automations::before,
+.diffs-page .workflow-automation::before,
+.diffs-page .integrations::before{
+    content:"";
+    position:absolute;
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    background:rgba(91,92,226,.07);
+    filter:blur(70px);
+    pointer-events:none;
+}
+
+.diffs-page .ai-automations::before{
+    top:-100px;
+    left:-100px;
+}
+
+.diffs-page .workflow-automation::before{
+    bottom:-100px;
+    right:-100px;
+}
+
+.diffs-page .integrations::before{
+    top:50%;
+    left:-150px;
+}
+
+/*======================================
+            RESPONSIVE
+======================================*/
+
+@media (max-width:992px){
+    .diffs-page .hero{
+        min-height:78vh;
+        padding:120px 20px 80px;
+    }
+
+    .diffs-page main > section:not(.hero){
+        padding:85px 20px;
+    }
+
+    .diffs-page .testimonial-grid{
+        gap:20px;
+    }
+}
+
+@media (max-width:768px){
+    .diffs-page .hero{
+        min-height:70vh;
+        padding:110px 18px 70px;
+    }
+
+    .diffs-page .hero-overlay h1{
+        font-size:clamp(2.25rem,10vw,3.5rem);
+    }
+
+    .diffs-page .hero-overlay p{
+        font-size:1rem;
+        line-height:1.7;
+    }
+
+    .diffs-page main > section:not(.hero){
+        padding:70px 18px;
+    }
+
+    .diffs-page main > section:not(.hero) h2{
+        font-size:1.8rem;
+    }
+
+    .diffs-page main > section:not(.hero) p{
+        margin-bottom:32px;
+        font-size:.98rem;
+    }
+
+    .diffs-page main > section:not(.hero) img{
+        border-radius:14px;
+    }
+
+    .diffs-page .testimonial-grid{
+        grid-template-columns:1fr;
+    }
+
+    .diffs-page .cta-buttons{
+        width:100%;
+        flex-direction:column;
+    }
+
+    .diffs-page .cta-buttons .btn{
+        width:min(280px,100%);
+    }
+}
+
+@media (max-width:480px){
+    .diffs-page .hero{
+        min-height:65vh;
+        padding:100px 15px 60px;
+    }
+
+    .diffs-page main > section:not(.hero){
+        padding:60px 15px;
+    }
+
+    .diffs-page main > section:not(.hero) h2{
+        flex-direction:column;
+        gap:10px;
+        font-size:1.6rem;
+    }
+
+    .diffs-page main > section:not(.hero) p{
+        font-size:.95rem;
+    }
+
+    .diffs-page .cta{
+        padding-top:70px !important;
+        padding-bottom:70px !important;
+    }
+}
+
+@media (prefers-reduced-motion:reduce){
+    .diffs-page .hero-video{
+        display:none;
+    }
+
+    .diffs-page main > section:not(.hero) img,
+    .diffs-page .cta-buttons .btn{
+        transition:none;
+    }
+
+    .diffs-page main > section:not(.hero) img:hover,
+    .diffs-page .cta-buttons .btn:hover{
+        transform:none;
+    }
+}

@@ -1,41 +1,820 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <!-- ======================================
+              META
+  ======================================= -->
 
-<head>
+    <meta charset="UTF-8" />
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>Developers | Nexora Technologies</title>
+    <meta
+      name="description"
+      content="Build powerful integrations, automations, and developer workflows with Nexora Technologies."
+    />
 
-<link rel="stylesheet" href="../../assets/css/style.css">
+    <meta
+      name="keywords"
+      content="Nexora developers, Nexora API, developer tools, integrations, webhooks, automation, SDK"
+    />
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <meta name="theme-color" content="#ffffff" />
 
-</head>
+    <title>Developers | Nexora Technologies</title>
 
-<body>
+    <!-- ======================================
+              MAIN STYLES
+  ======================================= -->
 
-<div id="navbar-container"></div>
+    <link rel="stylesheet" href="../../assets/css/style.css" />
 
-<main>
+    <!-- ======================================
+              PAGE STYLES
+  ======================================= -->
 
-<!-- Developers page content goes here -->
+    <link rel="stylesheet" href="../../assets/css/pages/developers.css" />
 
-</main>
+    <!-- ======================================
+              FONT AWESOME
+  ======================================= -->
 
-<div id="footer-container"></div>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
 
-<script src="../../assets/js/navbar.js"></script>
-<script src="../../assets/js/app.js"></script>
+  <body class="developers-page">
+    <!-- ======================================
+              NAVBAR
+    ======================================= -->
 
-<script src="../../assets/js/slider.js"></script>
-<script src="../../assets/js/counter.js"></script>
-<script src="../../assets/js/dropdown.js"></script>
-<script src="../../assets/js/form.js"></script>
-<script src="../../assets/js/animations.js"></script>
+    <div id="navbar-container"></div>
 
-</body>
+    <!-- ======================================
+              MAIN CONTENT
+    ======================================= -->
 
+    <main>
+      <!-- ======================================
+                HERO
+      ======================================= -->
+
+      <section class="developers-hero">
+        <div class="container">
+          <div class="developers-hero-content">
+            <span class="section-badge">
+              <i class="fa-solid fa-code"></i>
+              Developers
+            </span>
+
+            <h1>Build on Nexora.</h1>
+
+            <p>
+              Extend Nexora with powerful APIs, integrations, automations, and
+              developer tools. Connect your team's work with the systems and
+              services you already use.
+            </p>
+
+            <div class="hero-buttons">
+              <a href="api.html" class="btn btn-primary">
+                Explore the API
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+              <a href="docs.html" class="btn btn-secondary"> Read the docs </a>
+            </div>
+          </div>
+
+          <!-- HERO IMAGE -->
+
+          <div class="developers-hero-media">
+            <div class="developer-visual-card">
+              <img
+                src="../../assets/images/build/build-agents.png"
+                alt="Nexora developer and AI workflow"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================
+                DEVELOPER PLATFORM
+      ======================================= -->
+
+      <section class="developers-platform">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-badge"> Developer Platform </span>
+
+            <h2>Everything you need to build with Nexora.</h2>
+
+            <p>
+              Connect Nexora to your applications, automate repetitive work, and
+              create custom workflows around the way your organization operates.
+            </p>
+          </div>
+
+          <div class="developer-tools-grid">
+            <!-- API -->
+
+            <article class="developer-tool-card">
+              <div class="developer-tool-icon">
+                <i class="fa-solid fa-terminal"></i>
+              </div>
+
+              <h3>API</h3>
+
+              <p>
+                Access issues, projects, teams, users, and workspace data
+                programmatically through the Nexora API.
+              </p>
+
+              <a href="api.html" class="developer-tool-link">
+                Explore the API
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </article>
+
+            <!-- WEBHOOKS -->
+
+            <article class="developer-tool-card">
+              <div class="developer-tool-icon">
+                <i class="fa-solid fa-bolt"></i>
+              </div>
+
+              <h3>Webhooks</h3>
+
+              <p>
+                Receive real-time events from Nexora and keep your external
+                systems synchronized with product activity.
+              </p>
+
+              <a href="api.html" class="developer-tool-link">
+                Learn about webhooks
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </article>
+
+            <!-- INTEGRATIONS -->
+
+            <article class="developer-tool-card">
+              <div class="developer-tool-icon">
+                <i class="fa-solid fa-plug"></i>
+              </div>
+
+              <h3>Integrations</h3>
+
+              <p>
+                Connect Nexora with communication, development, productivity,
+                analytics, cloud, and automation platforms.
+              </p>
+
+              <a
+                href="../product/integrations.html"
+                class="developer-tool-link"
+              >
+                Explore integrations
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </article>
+
+            <!-- AUTOMATIONS -->
+
+            <article class="developer-tool-card">
+              <div class="developer-tool-icon">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+              </div>
+
+              <h3>Automations</h3>
+
+              <p>
+                Trigger actions automatically when issues, projects, releases,
+                or other important events change.
+              </p>
+
+              <a href="../product/build.html" class="developer-tool-link">
+                Explore automations
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </article>
+
+            <!-- DEVELOPMENT -->
+
+            <article class="developer-tool-card">
+              <div class="developer-tool-icon">
+                <i class="fa-solid fa-code-branch"></i>
+              </div>
+
+              <h3>Development Workflows</h3>
+
+              <p>
+                Connect repositories, pull requests, code reviews, and
+                deployments with the rest of your product workflow.
+              </p>
+
+              <a href="../product/diffs.html" class="developer-tool-link">
+                Explore Diffs
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </article>
+
+            <!-- SECURITY -->
+
+            <article class="developer-tool-card">
+              <div class="developer-tool-icon">
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+
+              <h3>Secure Access</h3>
+
+              <p>
+                Build secure integrations while keeping authentication,
+                permissions, and workspace access under control.
+              </p>
+
+              <a href="security.html" class="developer-tool-link">
+                Explore security
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================
+                API FEATURE
+      ======================================= -->
+
+      <section class="developers-api">
+        <div class="container">
+          <div class="developers-feature-grid">
+            <!-- TEXT -->
+
+            <div class="developers-feature-content">
+              <span class="section-badge">
+                <i class="fa-solid fa-terminal"></i>
+                API
+              </span>
+
+              <h2>Programmatically manage your work.</h2>
+
+              <p>
+                Create issues, update projects, manage teams, retrieve workspace
+                information, and connect Nexora with the applications your
+                organization depends on.
+              </p>
+
+              <ul class="feature-list">
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  Create and update issues
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  Manage projects and teams
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  Retrieve workspace data
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  Connect external applications
+                </li>
+              </ul>
+
+              <a href="api.html" class="text-link">
+                Read the API documentation
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+
+            <!-- API VISUAL -->
+
+            <div class="developers-feature-media">
+              <div class="developer-image-card">
+                <img
+                  src="../../assets/images/build/build-mcp.png"
+                  alt="Nexora developer tooling and MCP workflow"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================
+                GIT & CODE
+      ======================================= -->
+
+      <section class="developers-code">
+        <div class="container">
+          <div class="developers-feature-grid reverse">
+            <!-- IMAGE -->
+
+            <div class="developers-feature-media">
+              <div class="developer-image-card">
+                <img
+                  src="../../assets/images/build/build-git.png"
+                  alt="Nexora Git development workflow"
+                />
+              </div>
+            </div>
+
+            <!-- CONTENT -->
+
+            <div class="developers-feature-content">
+              <span class="section-badge">
+                <i class="fa-solid fa-code-branch"></i>
+                Development
+              </span>
+
+              <h2>Keep code and product work connected.</h2>
+
+              <p>
+                Bring engineering activity into the same workflow as product
+                planning. Connect code changes, issues, reviews, and releases
+                without losing context.
+              </p>
+
+              <ul class="feature-list">
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  Connect Git workflows
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  Track development activity
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  Link work to issues
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  Improve release visibility
+                </li>
+              </ul>
+
+              <a href="../product/diffs.html" class="text-link">
+                Explore development workflows
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================
+                CODE REVIEW
+      ======================================= -->
+
+      <section class="developers-code-review">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-badge"> Code Review </span>
+
+            <h2>Make every code change easier to understand.</h2>
+
+            <p>
+              Give engineers the context they need to review changes, understand
+              progress, and move work from development to completion.
+            </p>
+          </div>
+
+          <div class="developer-showcase">
+            <img
+              src="../../assets/images/code-review-diffs.png"
+              alt="Nexora code review and diffs"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================
+                INTEGRATIONS
+      ======================================= -->
+
+      <section class="developers-integrations">
+        <div class="container">
+          <div class="developers-feature-grid">
+            <div class="developers-feature-content">
+              <span class="section-badge">
+                <i class="fa-solid fa-plug"></i>
+                Integrations
+              </span>
+
+              <h2>Connect the tools your developers already use.</h2>
+
+              <p>
+                Build connected workflows across development, communication,
+                design, cloud infrastructure, analytics, and automation.
+              </p>
+
+              <a href="../product/integrations.html" class="text-link">
+                View all integrations
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+
+            <div class="developers-feature-media">
+              <div class="developer-image-card">
+                <img
+                  src="../../assets/images/build/build-integrations.png"
+                  alt="Nexora integrations"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================
+                AUTOMATION
+      ======================================= -->
+
+      <section class="developers-automation">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-badge">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+              Automation
+            </span>
+
+            <h2>Turn repetitive developer work into automated workflows.</h2>
+
+            <p>
+              Connect events, actions, and systems so your team can spend more
+              time building and less time moving information between tools.
+            </p>
+          </div>
+
+          <div class="developer-showcase">
+            <img
+              src="../../assets/images/ai-automations.png"
+              alt="Nexora AI automations"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================
+                DASHBOARDS
+      ======================================= -->
+
+      <section class="developers-dashboards">
+        <div class="container">
+          <div class="developers-feature-grid reverse">
+            <div class="developers-feature-media">
+              <div class="developer-image-card">
+                <img
+                  src="../../assets/images/modular-dashboards.png"
+                  alt="Nexora modular dashboards"
+                />
+              </div>
+            </div>
+
+            <div class="developers-feature-content">
+              <span class="section-badge">
+                <i class="fa-solid fa-chart-line"></i>
+                Custom Dashboards
+              </span>
+
+              <h2>Build the developer dashboards your team needs.</h2>
+
+              <p>
+                Combine engineering activity, product progress, delivery
+                metrics, and operational information into dashboards designed
+                around your team's workflow.
+              </p>
+
+              <a href="../product/monitor.html" class="text-link">
+                Explore Monitor
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================
+                DEVELOPER WORKFLOWS
+      ======================================= -->
+
+      <section class="developer-workflows">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-badge"> Developer Workflows </span>
+
+            <h2>From idea to deployed product.</h2>
+
+            <p>
+              Nexora brings planning, engineering, code review, automation, and
+              product intelligence into one connected workflow.
+            </p>
+          </div>
+
+          <div class="workflow-grid">
+            <article class="workflow-card">
+              <div class="workflow-number">01</div>
+
+              <div class="workflow-icon">
+                <i class="fa-solid fa-lightbulb"></i>
+              </div>
+
+              <h3>Plan</h3>
+
+              <p>
+                Turn ideas into structured projects, roadmaps, and engineering
+                priorities.
+              </p>
+
+              <a href="../product/plan.html">
+                Explore Plan
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </article>
+
+            <article class="workflow-card">
+              <div class="workflow-number">02</div>
+
+              <div class="workflow-icon">
+                <i class="fa-solid fa-code"></i>
+              </div>
+
+              <h3>Build</h3>
+
+              <p>
+                Coordinate engineering work, AI agents, Git workflows, cycles,
+                and development activity.
+              </p>
+
+              <a href="../product/build.html">
+                Explore Build
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </article>
+
+            <article class="workflow-card">
+              <div class="workflow-number">03</div>
+
+              <div class="workflow-icon">
+                <i class="fa-solid fa-code-compare"></i>
+              </div>
+
+              <h3>Review</h3>
+
+              <p>
+                Connect code changes, pull requests, reviews, and product
+                context.
+              </p>
+
+              <a href="../product/diffs.html">
+                Explore Diffs
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </article>
+
+            <article class="workflow-card">
+              <div class="workflow-number">04</div>
+
+              <div class="workflow-icon">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+
+              <h3>Monitor</h3>
+
+              <p>
+                Understand delivery performance and product progress with
+                real-time intelligence.
+              </p>
+
+              <a href="../product/monitor.html">
+                Explore Monitor
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================
+                ECOSYSTEM
+      ======================================= -->
+
+      <section class="developers-ecosystem">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-badge"> Ecosystem </span>
+
+            <h2>Built to work with modern technology teams.</h2>
+
+            <p>
+              Connect the platforms your team already depends on and create
+              workflows that move with your organization.
+            </p>
+          </div>
+
+          <div class="ecosystem-logos">
+            <div class="ecosystem-logo">
+              <img src="../../assets/images/openai.png" alt="OpenAI" />
+            </div>
+
+            <div class="ecosystem-logo">
+              <img src="../../assets/images/cursor.png" alt="Cursor" />
+            </div>
+
+            <div class="ecosystem-logo">
+              <img src="../../assets/images/vercel.png" alt="Vercel" />
+            </div>
+
+            <div class="ecosystem-logo">
+              <img src="../../assets/images/figma.png" alt="Figma" />
+            </div>
+
+            <div class="ecosystem-logo">
+              <img
+                src="../../assets/images/slack-integration.png"
+                alt="Slack integration"
+              />
+            </div>
+
+            <div class="ecosystem-logo">
+              <img src="../../assets/images/salesforce.png" alt="Salesforce" />
+            </div>
+
+            <div class="ecosystem-logo">
+              <img src="../../assets/images/coinbase.png" alt="Coinbase" />
+            </div>
+
+            <div class="ecosystem-logo">
+              <img src="../../assets/images/ramp.png" alt="Ramp" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================
+                RESOURCES
+      ======================================= -->
+
+      <section class="developer-resources">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-badge"> Developer Resources </span>
+
+            <h2>Start building with Nexora.</h2>
+
+            <p>
+              Explore the resources you need to understand the platform, connect
+              your tools, and build custom workflows.
+            </p>
+          </div>
+
+          <div class="resources-grid">
+            <!-- DOCUMENTATION -->
+
+            <a href="docs.html" class="resource-card">
+              <div class="resource-card-icon">
+                <i class="fa-solid fa-book-open"></i>
+              </div>
+
+              <div class="resource-card-content">
+                <h3>Documentation</h3>
+
+                <p>
+                  Explore guides and technical resources for working with
+                  Nexora.
+                </p>
+
+                <span>
+                  Read documentation
+                  <i class="fa-solid fa-arrow-right"></i>
+                </span>
+              </div>
+            </a>
+
+            <!-- API -->
+
+            <a href="api.html" class="resource-card">
+              <div class="resource-card-icon">
+                <i class="fa-solid fa-terminal"></i>
+              </div>
+
+              <div class="resource-card-content">
+                <h3>API Reference</h3>
+
+                <p>Learn how to connect your applications to Nexora.</p>
+
+                <span>
+                  Explore API
+                  <i class="fa-solid fa-arrow-right"></i>
+                </span>
+              </div>
+            </a>
+
+            <!-- INTEGRATIONS -->
+
+            <a href="../product/integrations.html" class="resource-card">
+              <div class="resource-card-icon">
+                <i class="fa-solid fa-plug"></i>
+              </div>
+
+              <div class="resource-card-content">
+                <h3>Integrations</h3>
+
+                <p>Discover ways to connect Nexora with your existing tools.</p>
+
+                <span>
+                  Explore integrations
+                  <i class="fa-solid fa-arrow-right"></i>
+                </span>
+              </div>
+            </a>
+
+            <!-- SECURITY -->
+
+            <a href="security.html" class="resource-card">
+              <div class="resource-card-icon">
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+
+              <div class="resource-card-content">
+                <h3>Security</h3>
+
+                <p>
+                  Learn about security, access, and protection across Nexora.
+                </p>
+
+                <span>
+                  Explore security
+                  <i class="fa-solid fa-arrow-right"></i>
+                </span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================
+                CTA
+      ======================================= -->
+
+      <section class="developers-cta">
+        <div class="container">
+          <div class="developers-cta-content">
+            <span class="section-badge">
+              <i class="fa-solid fa-code"></i>
+              Build with Nexora
+            </span>
+
+            <h2>Your workflow. Your integrations. Your platform.</h2>
+
+            <p>
+              Connect Nexora with the systems your team relies on and build
+              workflows that keep everyone moving together.
+            </p>
+
+            <div class="cta-buttons">
+              <a href="api.html" class="btn btn-primary">
+                Explore the API
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+              <a href="../contact.html" class="btn btn-secondary">
+                Talk to our team
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ======================================
+              FOOTER
+    ======================================= -->
+
+    <div id="footer-container"></div>
+
+    <!-- ======================================
+              JAVASCRIPT
+    ======================================= -->
+
+    <script src="../../assets/js/navbar.js"></script>
+    <script src="../../assets/js/app.js"></script>
+    <script src="../../assets/js/slider.js"></script>
+    <script src="../../assets/js/counter.js"></script>
+    <script src="../../assets/js/dropdown.js"></script>
+    <script src="../../assets/js/form.js"></script>
+    <script src="../../assets/js/animations.js"></script>
+  </body>
 </html>

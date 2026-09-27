@@ -1,0 +1,1267 @@
+/* =========================================================
+   NEXORA TECHNOLOGIES
+   PAGES NAVBAR
+   =========================================================
+
+   IMPORTANT:
+   All selectors are scoped under .navbar-pages.
+
+   This stylesheet is ONLY for:
+   navbar-pages.html
+
+   It intentionally does NOT globally style:
+   .navbar
+   .mega-menu
+   .mega-card
+   .nav
+   .nav-actions
+   .logo
+   etc.
+
+   Therefore it will not interfere with:
+   navbar-product.html
+   navbar-resources.html
+   navbar-root.html
+   or other navbar variants.
+   ========================================================= */
+
+/* =========================================================
+   01. NAVBAR
+   ========================================================= */
+
+.navbar.navbar-pages {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 9999;
+
+  width: 100%;
+
+  height: 76px;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  border-bottom: 1px solid rgba(15, 23, 42, 0.07);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.035);
+
+  transition:
+    background 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+/* =========================================================
+   02. CONTAINER
+   ========================================================= */
+
+.navbar.navbar-pages .nav-container {
+  width: min(1440px, calc(100% - 48px));
+
+  height: 100%;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  position: relative;
+}
+
+/* =========================================================
+   03. LOGO
+   ========================================================= */
+
+.navbar.navbar-pages .logo {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  flex-shrink: 0;
+
+  text-decoration: none;
+
+  color: #111827;
+
+  cursor: pointer;
+}
+
+/* Logo icon */
+
+.navbar.navbar-pages .logo-icon {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  color: #ffffff;
+
+  background: linear-gradient(135deg, #6366f1 0%, #7c3aed 100%);
+
+  box-shadow: 0 7px 18px rgba(99, 102, 241, 0.2);
+
+  flex-shrink: 0;
+}
+
+.navbar.navbar-pages .logo-icon i {
+  font-size: 17px;
+
+  line-height: 1;
+}
+
+/* Logo text */
+
+.navbar.navbar-pages .logo-text {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  line-height: 1;
+}
+
+.navbar.navbar-pages .logo-text h2 {
+  margin: 0;
+
+  padding: 0;
+
+  font-size: 17px;
+
+  font-weight: 800;
+
+  letter-spacing: -0.04em;
+
+  line-height: 1.05;
+
+  color: #111827;
+}
+
+.navbar.navbar-pages .logo-text span {
+  display: block;
+
+  margin-top: 4px;
+
+  font-size: 7.5px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+
+  color: #64748b;
+}
+
+/* =========================================================
+   04. MAIN NAV
+   ========================================================= */
+
+.navbar.navbar-pages .nav {
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navbar.navbar-pages .nav-links {
+  display: flex;
+
+  align-items: center;
+
+  gap: 4px;
+
+  height: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.navbar.navbar-pages .nav-links > li {
+  position: relative;
+
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+}
+
+/* =========================================================
+   05. NORMAL NAV PLACEHOLDERS
+   ========================================================= */
+
+.navbar.navbar-pages .nav-placeholder {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 38px;
+
+  padding: 0 12px;
+
+  border-radius: 9px;
+
+  color: #475569;
+
+  font-size: 13px;
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  white-space: nowrap;
+
+  user-select: none;
+
+  cursor: default;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+/* Slight visual hover only.
+   These remain NON-CLICKABLE. */
+
+.navbar.navbar-pages .nav-links > li > .nav-placeholder:hover {
+  color: #334155;
+
+  background: rgba(15, 23, 42, 0.045);
+}
+
+/* =========================================================
+   06. DROPDOWN TRIGGER
+   ========================================================= */
+
+.navbar.navbar-pages .dropdown-trigger {
+  appearance: none;
+
+  -webkit-appearance: none;
+
+  border: 0;
+
+  outline: none;
+
+  background: transparent;
+
+  min-height: 38px;
+
+  padding: 0 12px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  border-radius: 9px;
+
+  color: #475569;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+.navbar.navbar-pages .dropdown-trigger:hover {
+  color: #111827;
+
+  background: rgba(15, 23, 42, 0.045);
+}
+
+.navbar.navbar-pages .dropdown-trigger:focus-visible {
+  outline: 2px solid rgba(99, 102, 241, 0.35);
+
+  outline-offset: 2px;
+}
+
+/* Chevron */
+
+.navbar.navbar-pages .dropdown-trigger i {
+  font-size: 9px;
+
+  color: #94a3b8;
+
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
+}
+
+.navbar.navbar-pages .dropdown:hover > .dropdown-trigger i,
+.navbar.navbar-pages .dropdown:focus-within > .dropdown-trigger i,
+.navbar.navbar-pages .dropdown.open > .dropdown-trigger i,
+.navbar.navbar-pages .dropdown > .dropdown-trigger[aria-expanded="true"] i {
+  color: #6366f1;
+
+  transform: rotate(180deg);
+}
+
+/* =========================================================
+   07. DROPDOWN BASE
+   ========================================================= */
+
+.navbar.navbar-pages .mega-menu {
+  position: absolute;
+
+  top: calc(100% + 12px);
+
+  left: 50%;
+
+  transform: translateX(-50%) translateY(8px);
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  pointer-events: none;
+
+  padding: 14px;
+
+  background: rgba(255, 255, 255, 0.98);
+
+  border: 1px solid rgba(15, 23, 42, 0.08);
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 24px 60px rgba(15, 23, 42, 0.12),
+    0 6px 18px rgba(15, 23, 42, 0.05);
+
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease,
+    visibility 0.2s ease;
+
+  z-index: 10001;
+}
+
+/* Small arrow above dropdown */
+
+.navbar.navbar-pages .mega-menu::before {
+  content: "";
+
+  position: absolute;
+
+  top: -6px;
+
+  left: 50%;
+
+  width: 12px;
+  height: 12px;
+
+  transform: translateX(-50%) rotate(45deg);
+
+  background: #ffffff;
+
+  border-left: 1px solid rgba(15, 23, 42, 0.08);
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+/* =========================================================
+   08. DROPDOWN OPEN STATES
+   ========================================================= */
+
+.navbar.navbar-pages .dropdown:hover > .mega-menu,
+.navbar.navbar-pages .dropdown:focus-within > .mega-menu,
+.navbar.navbar-pages .dropdown.open > .mega-menu,
+.navbar.navbar-pages
+  .dropdown
+  > .dropdown-trigger[aria-expanded="true"]
+  + .mega-menu {
+  opacity: 1;
+
+  visibility: visible;
+
+  pointer-events: auto;
+
+  transform: translateX(-50%) translateY(0);
+}
+
+/* =========================================================
+   09. PRODUCT MENU
+   ========================================================= */
+
+.navbar.navbar-pages .product-menu {
+  width: 760px;
+
+  max-width: calc(100vw - 32px);
+}
+
+/* Product two-column layout */
+
+.navbar.navbar-pages .product-menu .mega-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 8px;
+}
+
+/* =========================================================
+   10. RESOURCES MENU
+   ========================================================= */
+
+.navbar.navbar-pages .resources-menu {
+  width: 1000px;
+
+  max-width: calc(100vw - 32px);
+}
+
+/* Resources three-column layout */
+
+.navbar.navbar-pages .resources-menu .mega-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 8px;
+}
+
+/* =========================================================
+   11. MEGA COLUMNS
+   ========================================================= */
+
+.navbar.navbar-pages .mega-column {
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+/* =========================================================
+   12. MEGA CARDS
+   ========================================================= */
+
+.navbar.navbar-pages .mega-card {
+  position: relative;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 12px;
+
+  width: 100%;
+
+  min-height: 68px;
+
+  padding: 12px;
+
+  border-radius: 12px;
+
+  text-decoration: none;
+
+  color: #0f172a;
+
+  background: transparent;
+
+  border: 1px solid transparent;
+
+  box-sizing: border-box;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.navbar.navbar-pages .mega-card:hover {
+  background: #f8fafc;
+
+  border-color: rgba(99, 102, 241, 0.1);
+
+  transform: translateY(-1px);
+
+  box-shadow: 0 7px 18px rgba(15, 23, 42, 0.045);
+}
+
+/* =========================================================
+   13. MEGA ICON
+   ========================================================= */
+
+.navbar.navbar-pages .mega-icon {
+  width: 38px;
+  height: 38px;
+
+  min-width: 38px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #f1f5f9;
+
+  color: #6366f1;
+
+  border: 1px solid rgba(99, 102, 241, 0.08);
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.navbar.navbar-pages .mega-card:hover .mega-icon {
+  color: #ffffff;
+
+  background: linear-gradient(135deg, #6366f1, #7c3aed);
+
+  transform: translateY(-1px);
+}
+
+.navbar.navbar-pages .mega-icon i {
+  font-size: 15px;
+
+  line-height: 1;
+}
+
+/* =========================================================
+   14. MEGA CONTENT
+   ========================================================= */
+
+.navbar.navbar-pages .mega-content {
+  min-width: 0;
+
+  flex: 1;
+}
+
+.navbar.navbar-pages .mega-content h4 {
+  margin: 0;
+
+  padding: 0;
+
+  color: #0f172a;
+
+  font-size: 13px;
+
+  font-weight: 650;
+
+  line-height: 1.35;
+
+  letter-spacing: -0.01em;
+}
+
+.navbar.navbar-pages .mega-content p {
+  margin: 4px 0 0;
+
+  padding: 0;
+
+  color: #64748b;
+
+  font-size: 11px;
+
+  font-weight: 400;
+
+  line-height: 1.5;
+}
+
+/* =========================================================
+   15. RESOURCE ITEMS
+   ========================================================= */
+
+/*
+   Resource items are intentionally DIV elements rather than
+   anchors because they are currently display-only.
+
+   They still receive a polished hover effect, but cannot
+   navigate anywhere.
+*/
+
+.navbar.navbar-pages .mega-card.resource-item {
+  cursor: default;
+
+  user-select: none;
+}
+
+.navbar.navbar-pages .mega-card.resource-item:hover {
+  transform: none;
+
+  background: #f8fafc;
+
+  box-shadow: none;
+
+  border-color: rgba(99, 102, 241, 0.08);
+}
+
+/* Keep resource icons visually stable */
+
+.navbar.navbar-pages .mega-card.resource-item:hover .mega-icon {
+  transform: none;
+
+  color: #6366f1;
+
+  background: #f1f5f9;
+}
+
+/* =========================================================
+   16. MEGA FOOTER
+   ========================================================= */
+
+.navbar.navbar-pages .mega-footer {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 8px;
+
+  margin-top: 10px;
+
+  padding-top: 10px;
+
+  border-top: 1px solid rgba(15, 23, 42, 0.07);
+}
+
+/* =========================================================
+   17. FOOTER CARDS
+   ========================================================= */
+
+.navbar.navbar-pages .footer-card {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  min-height: 60px;
+
+  padding: 12px;
+
+  border-radius: 12px;
+
+  text-decoration: none;
+
+  background: #f8fafc;
+
+  border: 1px solid rgba(15, 23, 42, 0.05);
+
+  color: #0f172a;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.navbar.navbar-pages .footer-card:hover {
+  background: #ffffff;
+
+  border-color: rgba(99, 102, 241, 0.16);
+
+  transform: translateY(-1px);
+
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.055);
+}
+
+/* Footer icon */
+
+.navbar.navbar-pages .footer-card > i {
+  width: 36px;
+  height: 36px;
+
+  min-width: 36px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: #eef2ff;
+
+  color: #6366f1;
+
+  font-size: 14px;
+}
+
+/* Footer text */
+
+.navbar.navbar-pages .footer-card > div {
+  min-width: 0;
+}
+
+.navbar.navbar-pages .footer-card h5 {
+  margin: 0;
+
+  color: #0f172a;
+
+  font-size: 12px;
+
+  font-weight: 650;
+
+  line-height: 1.3;
+}
+
+.navbar.navbar-pages .footer-card p {
+  margin: 3px 0 0;
+
+  color: #64748b;
+
+  font-size: 10.5px;
+
+  line-height: 1.45;
+}
+
+/* =========================================================
+   18. NEW BADGE
+   ========================================================= */
+
+.navbar.navbar-pages .badge {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  min-width: 34px;
+
+  height: 20px;
+
+  padding: 0 7px;
+
+  border-radius: 999px;
+
+  background: linear-gradient(135deg, #6366f1, #7c3aed);
+
+  color: #ffffff;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+
+  line-height: 1;
+}
+
+/* =========================================================
+   19. NAV ACTIONS
+   ========================================================= */
+
+.navbar.navbar-pages .nav-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  flex-shrink: 0;
+
+  margin-left: 20px;
+}
+
+/* Login */
+
+.navbar.navbar-pages .nav-login {
+  min-height: 36px;
+
+  padding: 0 10px;
+
+  color: #475569;
+
+  font-size: 12.5px;
+
+  font-weight: 500;
+}
+
+.navbar.navbar-pages .nav-login:hover {
+  color: #334155;
+
+  background: transparent;
+}
+
+/* Start Free */
+
+.navbar.navbar-pages .nav-btn {
+  min-height: 36px;
+
+  padding: 0 15px;
+
+  border-radius: 9px;
+
+  color: #ffffff;
+
+  background: linear-gradient(135deg, #6366f1, #7c3aed);
+
+  font-size: 12px;
+
+  font-weight: 650;
+
+  box-shadow: 0 5px 14px rgba(99, 102, 241, 0.18);
+}
+
+.navbar.navbar-pages .nav-btn:hover {
+  color: #ffffff;
+
+  background: linear-gradient(135deg, #585cf0, #6d28d9);
+}
+
+/* =========================================================
+   20. HOME BUTTON
+   ========================================================= */
+
+.navbar.navbar-pages .nav-home {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  min-height: 36px;
+
+  padding: 0 11px;
+
+  border-radius: 9px;
+
+  text-decoration: none;
+
+  color: #64748b;
+
+  background: transparent;
+
+  border: 1px solid rgba(15, 23, 42, 0.08);
+
+  font-size: 12px;
+
+  font-weight: 500;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.navbar.navbar-pages .nav-home i {
+  font-size: 10px;
+
+  transition: transform 0.2s ease;
+}
+
+.navbar.navbar-pages .nav-home:hover {
+  color: #4f46e5;
+
+  background: #f8fafc;
+
+  border-color: rgba(99, 102, 241, 0.18);
+
+  transform: translateY(-1px);
+}
+
+.navbar.navbar-pages .nav-home:hover i {
+  transform: translateX(-2px);
+}
+
+/* =========================================================
+   21. MOBILE TOGGLE
+   ========================================================= */
+
+.navbar.navbar-pages .mobile-toggle {
+  display: none;
+
+  width: 42px;
+  height: 42px;
+
+  padding: 0;
+
+  border: 1px solid rgba(15, 23, 42, 0.08);
+
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+
+  gap: 5px;
+
+  cursor: pointer;
+}
+
+.navbar.navbar-pages .mobile-toggle span {
+  display: block;
+
+  width: 18px;
+  height: 2px;
+
+  border-radius: 999px;
+
+  background: #334155;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+/* Mobile toggle active state */
+
+.navbar.navbar-pages .mobile-toggle.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.navbar.navbar-pages .mobile-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar.navbar-pages .mobile-toggle.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* =========================================================
+   22. TABLET
+   ========================================================= */
+
+@media (max-width: 1180px) {
+  .navbar.navbar-pages .nav-container {
+    width: min(100%, calc(100% - 32px));
+  }
+
+  .navbar.navbar-pages .nav-links {
+    gap: 1px;
+  }
+
+  .navbar.navbar-pages .dropdown-trigger,
+  .navbar.navbar-pages .nav-placeholder {
+    padding-left: 9px;
+    padding-right: 9px;
+
+    font-size: 12px;
+  }
+
+  .navbar.navbar-pages .nav-actions {
+    margin-left: 10px;
+
+    gap: 5px;
+  }
+
+  .navbar.navbar-pages .nav-login {
+    display: none;
+  }
+
+  .navbar.navbar-pages .product-menu {
+    width: 700px;
+  }
+
+  .navbar.navbar-pages .resources-menu {
+    width: 850px;
+  }
+}
+
+/* =========================================================
+   23. SMALL TABLET / LARGE MOBILE
+   ========================================================= */
+
+@media (max-width: 960px) {
+  .navbar.navbar-pages {
+    height: 70px;
+  }
+
+  .navbar.navbar-pages .nav-container {
+    width: calc(100% - 28px);
+  }
+
+  /* Hide desktop navigation */
+
+  .navbar.navbar-pages .nav {
+    display: none;
+  }
+
+  .navbar.navbar-pages .nav-actions {
+    display: none;
+  }
+
+  /* Show mobile toggle */
+
+  .navbar.navbar-pages .mobile-toggle {
+    display: flex;
+  }
+
+  /* Mobile navigation when active */
+
+  .navbar.navbar-pages .nav.mobile-open {
+    position: absolute;
+
+    display: block;
+
+    top: calc(100% + 1px);
+
+    left: 0;
+    right: 0;
+
+    height: auto;
+
+    margin: 0;
+
+    padding: 12px;
+
+    background: rgba(255, 255, 255, 0.98);
+
+    border: 1px solid rgba(15, 23, 42, 0.08);
+
+    border-top: 0;
+
+    border-radius: 0 0 16px 16px;
+
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.1);
+
+    backdrop-filter: blur(18px);
+
+    -webkit-backdrop-filter: blur(18px);
+
+    overflow-y: auto;
+
+    max-height: calc(100vh - 70px);
+  }
+
+  .navbar.navbar-pages .nav.mobile-open .nav-links {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    height: auto;
+
+    gap: 4px;
+  }
+
+  .navbar.navbar-pages .nav.mobile-open .nav-links > li {
+    display: block;
+
+    height: auto;
+
+    width: 100%;
+  }
+
+  .navbar.navbar-pages .nav.mobile-open .dropdown-trigger,
+  .navbar.navbar-pages .nav.mobile-open .nav-placeholder {
+    width: 100%;
+
+    min-height: 46px;
+
+    justify-content: space-between;
+
+    padding: 0 13px;
+
+    border-radius: 9px;
+
+    font-size: 13px;
+  }
+
+  .navbar.navbar-pages .nav.mobile-open .dropdown-trigger {
+    background: #f8fafc;
+  }
+
+  /* Mobile dropdowns */
+
+  .navbar.navbar-pages .nav.mobile-open .mega-menu {
+    position: static;
+
+    width: 100%;
+
+    max-width: none;
+
+    margin-top: 5px;
+
+    padding: 8px;
+
+    transform: none;
+
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+    display: none;
+
+    border-radius: 12px;
+
+    box-shadow: none;
+
+    background: #f8fafc;
+
+    border-color: rgba(15, 23, 42, 0.06);
+  }
+
+  .navbar.navbar-pages .nav.mobile-open .dropdown.open > .mega-menu,
+  .navbar.navbar-pages .nav.mobile-open .dropdown:focus-within > .mega-menu {
+    display: block;
+  }
+
+  .navbar.navbar-pages .nav.mobile-open .mega-menu::before {
+    display: none;
+  }
+
+  .navbar.navbar-pages .nav.mobile-open .product-menu .mega-grid,
+  .navbar.navbar-pages .nav.mobile-open .resources-menu .mega-grid {
+    grid-template-columns: 1fr;
+
+    gap: 3px;
+  }
+
+  .navbar.navbar-pages .nav.mobile-open .mega-card {
+    min-height: 58px;
+
+    padding: 9px;
+  }
+
+  .navbar.navbar-pages .nav.mobile-open .mega-footer {
+    grid-template-columns: 1fr;
+
+    margin-top: 6px;
+
+    padding-top: 7px;
+  }
+}
+
+/* =========================================================
+   24. MOBILE
+   ========================================================= */
+
+@media (max-width: 640px) {
+  .navbar.navbar-pages {
+    height: 66px;
+  }
+
+  .navbar.navbar-pages .nav-container {
+    width: calc(100% - 20px);
+  }
+
+  .navbar.navbar-pages .logo {
+    gap: 8px;
+  }
+
+  .navbar.navbar-pages .logo-icon {
+    width: 34px;
+    height: 34px;
+
+    border-radius: 9px;
+  }
+
+  .navbar.navbar-pages .logo-icon i {
+    font-size: 15px;
+  }
+
+  .navbar.navbar-pages .logo-text h2 {
+    font-size: 15px;
+  }
+
+  .navbar.navbar-pages .logo-text span {
+    font-size: 6.5px;
+
+    letter-spacing: 0.15em;
+  }
+
+  .navbar.navbar-pages .mobile-toggle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .navbar.navbar-pages .nav.mobile-open {
+    max-height: calc(100vh - 66px);
+  }
+}
+
+/* =========================================================
+   25. VERY SMALL SCREENS
+   ========================================================= */
+
+@media (max-width: 400px) {
+  .navbar.navbar-pages .nav-container {
+    width: calc(100% - 16px);
+  }
+
+  .navbar.navbar-pages .logo-text span {
+    display: none;
+  }
+
+  .navbar.navbar-pages .logo-text h2 {
+    font-size: 14px;
+  }
+
+  .navbar.navbar-pages .logo-icon {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* =========================================================
+   26. ACCESSIBILITY
+   ========================================================= */
+
+.navbar.navbar-pages a:focus-visible,
+.navbar.navbar-pages button:focus-visible {
+  outline: 2px solid rgba(99, 102, 241, 0.55);
+
+  outline-offset: 3px;
+}
+
+/* =========================================================
+   27. REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar.navbar-pages *,
+  .navbar.navbar-pages *::before,
+  .navbar.navbar-pages *::after {
+    transition: none !important;
+
+    animation: none !important;
+
+    scroll-behavior: auto !important;
+  }
+}

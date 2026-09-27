@@ -1,61 +1,57 @@
 /*======================================
-            FORMS
+FORMS
 ======================================*/
 
 document.addEventListener("DOMContentLoaded", () => {
+  const forms = document.querySelectorAll("form");
 
-    const forms = document.querySelectorAll("form");
+  if (!forms.length) return;
 
-    forms.forEach(form => {
+  forms.forEach((form) => {
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
 
-        form.addEventListener("submit", (e) => {
+      /*======================================
+                EMAIL VALIDATION
+        ======================================*/
 
-            e.preventDefault();
+      const email = form.querySelector('input[type="email"]');
 
-            const email = form.querySelector('input[type="email"]');
+      if (email) {
+        const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-            if (email) {
+        if (!pattern.test(email.value.trim())) {
+          alert("Please enter a valid email address.");
 
-                const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          email.focus();
 
-                if (!pattern.test(email.value.trim())) {
+          return;
+        }
+      }
 
-                    alert("Please enter a valid email address.");
+      /*======================================
+                SUBMIT BUTTON
+        ======================================*/
 
-                    email.focus();
+      const submitButton = form.querySelector('button[type="submit"]');
 
-                    return;
+      if (submitButton) {
+        const originalText = submitButton.innerHTML;
 
-                }
+        submitButton.disabled = true;
 
-            }
+        submitButton.innerHTML = "Please wait...";
 
-            const submitButton = form.querySelector('button[type="submit"]');
+        setTimeout(() => {
+          submitButton.disabled = false;
 
-            if (submitButton) {
+          submitButton.innerHTML = originalText;
 
-                const originalText = submitButton.innerHTML;
+          alert("Form submitted successfully!");
 
-                submitButton.disabled = true;
-
-                submitButton.innerHTML = "Please wait...";
-
-                setTimeout(() => {
-
-                    submitButton.disabled = false;
-
-                    submitButton.innerHTML = originalText;
-
-                    alert("Form submitted successfully!");
-
-                    form.reset();
-
-                }, 1200);
-
-            }
-
-        });
-
+          form.reset();
+        }, 1200);
+      }
     });
-
+  });
 });

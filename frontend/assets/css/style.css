@@ -12,7 +12,19 @@
 ======================================*/
 
 @import url("./layout/grid.css");
+
+/*=====================================
+        NAVIGATION
+======================================*/
+
+/* Shared/root navbar foundation */
 @import url("./layout/navbar.css");
+
+/* Page-specific navbar variants */
+@import url("./layout/navbar-pages.css");
+@import url("./layout/navbar-product.css");
+@import url("./layout/navbar-resources.css");
+
 @import url("./layout/footer.css");
 
 
@@ -33,6 +45,7 @@
 @import url("./pages/home.css");
 @import url("./pages/services.css");
 @import url("./pages/contact.css");
+@import url("./pages/testimonials.css");
 
 @import url("./pages/intake.css");
 @import url("./pages/plan.css");
@@ -40,3 +53,23 @@
 @import url("./pages/monitor.css");
 @import url("./pages/diffs.css");
 @import url("./pages/integrations.css");
+@import url("./pages/pricing.css");
+@import url("./pages/initiative.css");
+@import url("./pages/changelog.css");
+@import url("./pages/customers.css");
+@import url("./pages/now.css");  
+@import url("./pages/login.css");
+@import url("./pages/contact.css");
+@import url("./pages/about.css");
+@import url("./pages/docs.css");
+@import url("./pages/enterprice.css");
+@import url("./pages/hiring.css");
+@import url("./pages/migration.css");
+@import url("./pages/mobile.css");
+@import url("./pages/privacy.css");
+@import url("./pages/security.css");
+@import url("./pages/switch.css");
+@import url("./pages/team.css");
+@import url("./pages/careers.css");
+@import url("./pages/api.css");
+@import url("./pages/developers.css");

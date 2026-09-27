@@ -1,41 +1,211 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Plan | Nexora Technologies</title>
-
-<link rel="stylesheet" href="../../assets/css/style.css">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
-</head>
-
-<body>
-
-<div id="navbar-container"></div>
-
-<main>
-
-<!-- Plan page content goes here -->
-
-</main>
-
-<div id="footer-container"></div>
-
-<script src="../../assets/js/navbar.js"></script>
-<script src="../../assets/js/app.js"></script>
-
-<script src="../../assets/js/slider.js"></script>
-<script src="../../assets/js/counter.js"></script>
-<script src="../../assets/js/dropdown.js"></script>
-<script src="../../assets/js/form.js"></script>
-<script src="../../assets/js/animations.js"></script>
-
-</body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Plan | Nexora Technologies</title>
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body class="plan-page">
+    <div id="navbar-container"></div>
+    <main>
+      <section class="hero" aria-labelledby="plan-hero-title">
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          class="hero-video"
+          aria-hidden="true"
+        >
+          <source
+            src="../../assets/images/monitor/monitor-hero.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+        <div class="hero-overlay">
+          <h1 id="plan-hero-title">Monitor Progress Seamlessly</h1>
+          <p>
+            Close the gap between planning and building with Nexora’s monitoring
+            tools.
+          </p>
+        </div>
+      </section>
+      <section class="planning" aria-labelledby="planning-title">
+        <div class="container">
+          <h2 id="planning-title">
+            <i class="fa-solid fa-diagram-project" aria-hidden="true"></i>
+            Planning and Monitoring
+          </h2>
+          <p>
+            Plan and navigate from idea to launch. Coordinate larger pieces of
+            work across multiple people and teams.
+          </p>
+          <img
+            src="../../assets/images/planning-monitoring.png"
+            alt="Planning and Monitoring Dashboard"
+            loading="lazy"
+          />
+        </div>
+      </section>
+      <section class="dashboard" aria-labelledby="dashboard-title">
+        <div class="container">
+          <h2 id="dashboard-title">
+            <i class="fa-solid fa-chart-line" aria-hidden="true"></i> Project
+            Dashboard
+          </h2>
+          <p>
+            Manage projects end-to-end. Move seamlessly between ideation and
+            execution.
+          </p>
+          <img
+            src="../../assets/images/ui-refresh-dashboard.png"
+            alt="UI Refresh Project Dashboard"
+            loading="lazy"
+          />
+        </div>
+      </section>
+      <section class="initiatives" aria-labelledby="initiatives-title">
+        <div class="container">
+          <h2 id="initiatives-title">
+            <i class="fa-solid fa-bullseye" aria-hidden="true"></i> Strategic
+            Initiatives
+          </h2>
+          <p>
+            Align projects into larger, strategic product efforts. Express the
+            most important streams of work in your company and track their
+            progress.
+          </p>
+          <div class="image-grid">
+            <img
+              src="../../assets/images/initiatives-tracking.png"
+              alt="Initiatives Tracking Dashboard"
+              loading="lazy"
+            />
+            <img
+              src="../../assets/images/japan-launch.png"
+              alt="Japan Launch Initiative"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="roadmap" aria-labelledby="roadmap-title">
+        <div class="container">
+          <h2 id="roadmap-title">
+            <i class="fa-solid fa-road" aria-hidden="true"></i> Product Roadmap
+          </h2>
+          <p>
+            Map out your product journey with quarterly planning, timelines, and
+            resource allocation.
+          </p>
+          <img
+            src="../../assets/images/product-roadmap.png"
+            alt="Quarterly Product Roadmap"
+            loading="lazy"
+          />
+        </div>
+      </section>
+      <section class="pulse" aria-labelledby="pulse-title">
+        <div class="container">
+          <h2 id="pulse-title">
+            <i class="fa-solid fa-bell" aria-hidden="true"></i> Pulse Updates
+          </h2>
+          <p>
+            Keep a pulse on product progress. Stay up to date with personalized
+            feeds of updates and discussions.
+          </p>
+          <div class="image-grid">
+            <img
+              src="../../assets/images/pulse-updates.png"
+              alt="Pulse Updates Feed"
+              loading="lazy"
+            />
+            <img
+              src="../../assets/images/pulse-critical.png"
+              alt="Critical Pulse Feed"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="analytics" aria-labelledby="analytics-title">
+        <div class="container">
+          <h2 id="analytics-title">
+            <i class="fa-solid fa-chart-pie" aria-hidden="true"></i> Analytics
+            &amp; Insights
+          </h2>
+          <p>
+            Take the guesswork out of product planning with purpose-built
+            analytics, reporting, and dashboards.
+          </p>
+          <div class="image-grid">
+            <img
+              src="../../assets/images/cycle-time-analytics.png"
+              alt="Cycle Time Analytics Dashboard"
+              loading="lazy"
+            />
+            <img
+              src="../../assets/images/instant-analytics.png"
+              alt="Instant Analytics Dashboard"
+              loading="lazy"
+            />
+            <img
+              src="../../assets/images/modular-dashboards.png"
+              alt="Modular Dashboards and Reporting"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="testimonials" aria-labelledby="testimonials-title">
+        <div class="container">
+          <h2 id="testimonials-title">
+            <i class="fa-solid fa-users" aria-hidden="true"></i> Customer
+            Testimonials
+          </h2>
+          <div class="testimonial-grid">
+            <img
+              src="../../assets/images/testimonial-jonathan.png"
+              alt="Jonathan Biddle customer testimonial"
+              loading="lazy"
+            />
+            <img
+              src="../../assets/images/testimonial-lance.png"
+              alt="Lance Willett customer testimonial"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="cta" aria-labelledby="cta-title">
+        <div class="container">
+          <h2 id="cta-title">Built for the Future. Available Today.</h2>
+          <p>
+            Nexora powers modern product teams with the tools they need to plan,
+            monitor, and deliver great work.
+          </p>
+          <div class="cta-buttons">
+            <a href="../pricing.html" class="btn btn-light">Get Started</a>
+            <a href="../contact.html" class="btn btn-dark">Contact Sales</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div id="footer-container"></div>
+    <script src="../../assets/js/navbar.js"></script>
+    <script src="../../assets/js/app.js"></script>
+    <script src="../../assets/js/slider.js"></script>
+    <script src="../../assets/js/counter.js"></script>
+    <script src="../../assets/js/dropdown.js"></script>
+    <script src="../../assets/js/form.js"></script>
+    <script src="../../assets/js/animations.js"></script>
+  </body>
 </html>

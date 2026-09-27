@@ -1,0 +1,2129 @@
+
+/*======================================
+        NEXORA TECHNOLOGIES
+        INITIATIVE / MOBILE PAGE
+======================================*/
+
+
+/*======================================
+        PAGE FOUNDATION
+======================================*/
+
+.initiative-page{
+
+    --initiative-bg:#000000;
+
+    --initiative-surface:#080808;
+
+    --initiative-surface-soft:#0d0d0d;
+
+    --initiative-border:rgba(255,255,255,.10);
+
+    --initiative-border-soft:rgba(255,255,255,.06);
+
+    --initiative-text:#f5f5f5;
+
+    --initiative-muted:#929292;
+
+    --initiative-gray:#6f6f6f;
+
+    --initiative-white:#ffffff;
+
+    background:var(--initiative-bg);
+
+    color:var(--initiative-text);
+
+    overflow-x:hidden;
+
+}
+
+
+.initiative-page main{
+
+    width:100%;
+
+    overflow:hidden;
+
+}
+
+
+.initiative-page img{
+
+    max-width:100%;
+
+}
+
+
+.initiative-page h1,
+.initiative-page h2,
+.initiative-page h3,
+.initiative-page p{
+
+    margin-top:0;
+
+}
+
+
+.initiative-page a{
+
+    text-decoration:none;
+
+}
+
+
+/*======================================
+                HERO
+======================================*/
+
+.initiative-hero{
+
+    width:min(1180px,calc(100% - 48px));
+
+    margin:0 auto;
+
+    padding:70px 0 0;
+
+}
+
+
+/*==============================
+        Hero Image
+===============================*/
+
+.initiative-hero-media{
+
+    position:relative;
+
+    width:100%;
+
+    min-height:680px;
+
+    display:flex;
+
+    align-items:flex-end;
+
+    justify-content:center;
+
+    overflow:hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(255,255,255,.07),
+            transparent 38%
+        ),
+        #050505;
+
+    border-radius:4px;
+
+}
+
+
+.initiative-hero-media::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:2;
+
+    pointer-events:none;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent 50%,
+            rgba(0,0,0,.92) 100%
+        );
+
+}
+
+
+.initiative-hero-media img{
+
+    position:relative;
+
+    z-index:1;
+
+    display:block;
+
+    width:100%;
+
+    height:680px;
+
+    object-fit:cover;
+
+    object-position:center;
+
+}
+
+
+/*==============================
+        Hero Bottom
+===============================*/
+
+.initiative-hero-bottom{
+
+    display:flex;
+
+    align-items:flex-end;
+
+    justify-content:space-between;
+
+    gap:60px;
+
+    padding:22px 4px 55px;
+
+    border-bottom:1px solid var(--initiative-border);
+
+}
+
+
+.initiative-hero-copy{
+
+    max-width:560px;
+
+}
+
+
+.initiative-eyebrow{
+
+    display:block;
+
+    margin-bottom:14px;
+
+    color:#8d8d8d;
+
+    font-size:10px;
+
+    font-weight:600;
+
+    line-height:1.4;
+
+    letter-spacing:.13em;
+
+    text-transform:uppercase;
+
+}
+
+
+.initiative-hero-copy h1{
+
+    max-width:620px;
+
+    margin-bottom:16px;
+
+    color:var(--initiative-white);
+
+    font-size:clamp(32px,4vw,54px);
+
+    font-weight:500;
+
+    line-height:1.03;
+
+    letter-spacing:-.045em;
+
+}
+
+
+.initiative-hero-copy p{
+
+    max-width:450px;
+
+    margin:0;
+
+    color:var(--initiative-muted);
+
+    font-size:13px;
+
+    line-height:1.7;
+
+}
+
+
+/*======================================
+        DOWNLOAD CARD
+======================================*/
+
+.initiative-download-card{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:14px;
+
+    flex-shrink:0;
+
+}
+
+
+.initiative-qr{
+
+    width:64px;
+
+    height:64px;
+
+    padding:5px;
+
+    background:var(--initiative-white);
+
+    border-radius:2px;
+
+}
+
+
+.initiative-qr img{
+
+    display:block;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:contain;
+
+}
+
+
+.initiative-download-stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    min-width:130px;
+
+    border:1px solid var(--initiative-border);
+
+}
+
+
+.initiative-download-stats div{
+
+    padding:10px 12px;
+
+    border-right:1px solid var(--initiative-border);
+
+}
+
+
+.initiative-download-stats div:last-child{
+
+    border-right:0;
+
+}
+
+
+.initiative-download-stats span,
+.initiative-download-stats strong{
+
+    display:block;
+
+}
+
+
+.initiative-download-stats span{
+
+    margin-bottom:4px;
+
+    color:#777;
+
+    font-size:8px;
+
+    letter-spacing:.08em;
+
+}
+
+
+.initiative-download-stats strong{
+
+    color:#ddd;
+
+    font-size:10px;
+
+    font-weight:500;
+
+}
+
+
+/*======================================
+        FEATURED MOBILE EXPERIENCE
+======================================*/
+
+.initiative-feature{
+
+    width:min(920px,calc(100% - 48px));
+
+    margin:0 auto;
+
+    padding:72px 0 120px;
+
+}
+
+
+/*==============================
+        Featured Image
+===============================*/
+
+.initiative-feature-media{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:var(--initiative-surface);
+
+    border:1px solid var(--initiative-border-soft);
+
+}
+
+
+.initiative-feature-media>img{
+
+    display:block;
+
+    width:100%;
+
+    height:620px;
+
+    object-fit:cover;
+
+    object-position:center;
+
+    transition:transform .6s ease;
+
+}
+
+
+.initiative-feature-media:hover>img{
+
+    transform:scale(1.015);
+
+}
+
+
+/*==============================
+        Image Caption
+===============================*/
+
+.initiative-image-caption{
+
+    position:absolute;
+
+    left:32px;
+
+    bottom:30px;
+
+    z-index:3;
+
+    max-width:350px;
+
+}
+
+
+.initiative-image-caption::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-120px -180px -50px -40px;
+
+    z-index:-1;
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(0,0,0,.88),
+            transparent 65%
+        );
+
+}
+
+
+.caption-pill{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    min-height:23px;
+
+    margin-bottom:12px;
+
+    padding:0 9px;
+
+    border:1px solid rgba(255,255,255,.18);
+
+    border-radius:999px;
+
+    color:#aaa;
+
+    font-size:8px;
+
+    letter-spacing:.08em;
+
+}
+
+
+.initiative-image-caption h2{
+
+    margin-bottom:8px;
+
+    color:var(--initiative-white);
+
+    font-size:24px;
+
+    font-weight:500;
+
+    line-height:1.1;
+
+    letter-spacing:-.025em;
+
+}
+
+
+.initiative-image-caption p{
+
+    max-width:320px;
+
+    margin:0;
+
+    color:#999;
+
+    font-size:11px;
+
+    line-height:1.6;
+
+}
+
+
+/*======================================
+        FEATURE MINI GRID
+======================================*/
+
+.initiative-feature-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,minmax(0,1fr));
+
+    border-left:1px solid var(--initiative-border);
+
+    border-bottom:1px solid var(--initiative-border);
+
+}
+
+
+.initiative-mini-card{
+
+    min-width:0;
+
+    overflow:hidden;
+
+    background:#030303;
+
+    border-right:1px solid var(--initiative-border);
+
+    transition:var(--transition);
+
+}
+
+
+.initiative-mini-card:hover{
+
+    background:#070707;
+
+}
+
+
+/*==============================
+        Mini Image
+===============================*/
+
+.initiative-mini-media{
+
+    height:330px;
+
+    overflow:hidden;
+
+    background:#050505;
+
+}
+
+
+.initiative-mini-media img{
+
+    display:block;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:transform .6s ease;
+
+}
+
+
+.initiative-mini-card:hover
+.initiative-mini-media img{
+
+    transform:scale(1.035);
+
+}
+
+
+/*==============================
+        Mini Content
+===============================*/
+
+.initiative-mini-content{
+
+    padding:22px 24px 28px;
+
+}
+
+
+.initiative-card-label{
+
+    display:block;
+
+    margin-bottom:10px;
+
+    color:#777;
+
+    font-size:8px;
+
+    font-weight:600;
+
+    letter-spacing:.11em;
+
+    text-transform:uppercase;
+
+}
+
+
+.initiative-mini-content h3{
+
+    margin-bottom:9px;
+
+    color:#eee;
+
+    font-size:16px;
+
+    font-weight:500;
+
+    line-height:1.2;
+
+    letter-spacing:-.015em;
+
+}
+
+
+.initiative-mini-content p{
+
+    max-width:290px;
+
+    margin:0;
+
+    color:#777;
+
+    font-size:10px;
+
+    line-height:1.7;
+
+}
+
+
+/*======================================
+        TECHNOLOGY CARD
+======================================*/
+
+.initiative-tech-card{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-end;
+
+    min-height:430px;
+
+}
+
+
+.initiative-tech-logos{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:35px 24px 0;
+
+}
+
+
+.initiative-tech-logo{
+
+    width:56px;
+
+    height:56px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:12px;
+
+    background:#111;
+
+    border:1px solid var(--initiative-border);
+
+    border-radius:10px;
+
+    transition:var(--transition);
+
+}
+
+
+.initiative-tech-logo:hover{
+
+    border-color:rgba(255,255,255,.25);
+
+    transform:translateY(-3px);
+
+}
+
+
+.initiative-tech-logo img{
+
+    display:block;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:contain;
+
+}
+
+
+/*======================================
+        GENERAL SECTIONS
+======================================*/
+
+.initiative-section{
+
+    width:min(920px,calc(100% - 48px));
+
+    margin:0 auto;
+
+    padding:100px 0 130px;
+
+}
+
+
+.initiative-section-heading{
+
+    max-width:650px;
+
+    margin:0 auto 70px;
+
+    text-align:center;
+
+}
+
+
+.initiative-section-heading h2{
+
+    margin-bottom:17px;
+
+    color:#f4f4f4;
+
+    font-size:clamp(30px,4vw,46px);
+
+    font-weight:500;
+
+    line-height:1.06;
+
+    letter-spacing:-.045em;
+
+}
+
+
+.initiative-section-heading p{
+
+    max-width:480px;
+
+    margin:0 auto;
+
+    color:#777;
+
+    font-size:12px;
+
+    line-height:1.7;
+
+}
+
+
+/*======================================
+        LARGE PHONE SECTIONS
+======================================*/
+
+.initiative-large-phone{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:flex-end;
+
+    justify-content:center;
+
+    min-height:620px;
+
+    margin-bottom:1px;
+
+    overflow:hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 60%,
+            rgba(255,255,255,.045),
+            transparent 45%
+        ),
+        #030303;
+
+    border:1px solid var(--initiative-border-soft);
+
+}
+
+
+.initiative-large-phone img{
+
+    display:block;
+
+    width:100%;
+
+    height:620px;
+
+    object-fit:cover;
+
+    object-position:center;
+
+    transition:transform .7s ease;
+
+}
+
+
+.initiative-large-phone:hover img{
+
+    transform:scale(1.015);
+
+}
+
+
+/*======================================
+        IMAGE NOTES
+======================================*/
+
+.image-note{
+
+    position:absolute;
+
+    z-index:3;
+
+    color:#696969;
+
+    font-size:8px;
+
+    letter-spacing:.08em;
+
+    text-transform:uppercase;
+
+}
+
+
+.image-note::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:50%;
+
+    width:80px;
+
+    height:1px;
+
+    background:rgba(255,255,255,.14);
+
+}
+
+
+.image-note-left{
+
+    left:7%;
+
+}
+
+
+.image-note-left::after{
+
+    left:calc(100% + 10px);
+
+}
+
+
+.image-note-right{
+
+    right:7%;
+
+}
+
+
+.image-note-right::after{
+
+    right:calc(100% + 10px);
+
+}
+
+
+/*======================================
+        TWO COLUMN CARDS
+======================================*/
+
+.initiative-two-column-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,minmax(0,1fr));
+
+    border-left:1px solid var(--initiative-border);
+
+}
+
+
+.initiative-content-card{
+
+    min-width:0;
+
+    overflow:hidden;
+
+    background:#020202;
+
+    border-right:1px solid var(--initiative-border);
+
+}
+
+
+.initiative-card-copy{
+
+    min-height:190px;
+
+    padding:26px 24px;
+
+}
+
+
+.initiative-card-copy h3{
+
+    margin-bottom:10px;
+
+    color:#eee;
+
+    font-size:17px;
+
+    font-weight:500;
+
+    line-height:1.25;
+
+    letter-spacing:-.02em;
+
+}
+
+
+.initiative-card-copy p{
+
+    max-width:290px;
+
+    margin:0;
+
+    color:#777;
+
+    font-size:10px;
+
+    line-height:1.7;
+
+}
+
+
+/*==============================
+        Card Image
+===============================*/
+
+.initiative-card-image{
+
+    height:390px;
+
+    overflow:hidden;
+
+    background:#050505;
+
+}
+
+
+.initiative-card-image img{
+
+    display:block;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    object-position:center;
+
+    transition:transform .65s ease;
+
+}
+
+
+.initiative-content-card:hover
+.initiative-card-image img{
+
+    transform:scale(1.035);
+
+}
+
+
+/*======================================
+        FOUR CARD GRID
+======================================*/
+
+.initiative-four-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,minmax(0,1fr));
+
+    border-left:1px solid var(--initiative-border);
+
+}
+
+
+.initiative-four-grid .initiative-content-card{
+
+    border-bottom:1px solid var(--initiative-border);
+
+}
+
+
+.initiative-four-grid .initiative-card-image{
+
+    height:420px;
+
+}
+
+
+/*======================================
+        STAY ON TOP SECTION
+======================================*/
+
+.initiative-streams{
+
+    background:#000;
+
+}
+
+
+/*======================================
+        MOVE PRODUCT WORK SECTION
+======================================*/
+
+.initiative-work{
+
+    background:#000;
+
+}
+
+
+.initiative-work-phone{
+
+    margin-bottom:0;
+
+}
+
+
+/*======================================
+        24/7 AVAILABILITY
+======================================*/
+
+.initiative-availability{
+
+    width:min(920px,calc(100% - 48px));
+
+    margin:0 auto;
+
+    padding:0 0 130px;
+
+}
+
+
+.initiative-availability-inner{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    min-height:620px;
+
+    background:#030303;
+
+    border:1px solid var(--initiative-border-soft);
+
+}
+
+
+.initiative-availability-phone{
+
+    min-width:0;
+
+    min-height:620px;
+
+    overflow:hidden;
+
+    background:#050505;
+
+}
+
+
+.initiative-availability-phone img{
+
+    display:block;
+
+    width:100%;
+
+    height:620px;
+
+    object-fit:cover;
+
+    object-position:center;
+
+    transition:transform .7s ease;
+
+}
+
+
+.initiative-availability-phone:hover img{
+
+    transform:scale(1.02);
+
+}
+
+
+/*==============================
+        Availability Content
+===============================*/
+
+.initiative-availability-copy{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    min-height:620px;
+
+    padding:60px 45px;
+
+    border-left:1px solid var(--initiative-border);
+
+}
+
+
+.initiative-availability-copy h2{
+
+    margin-bottom:18px;
+
+    color:#f4f4f4;
+
+    font-size:clamp(32px,4vw,48px);
+
+    font-weight:500;
+
+    line-height:1.04;
+
+    letter-spacing:-.045em;
+
+}
+
+
+.initiative-availability-copy>p{
+
+    max-width:390px;
+
+    margin-bottom:38px;
+
+    color:#777;
+
+    font-size:12px;
+
+    line-height:1.75;
+
+}
+
+
+/*======================================
+        BENEFITS
+======================================*/
+
+.initiative-benefits{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+
+}
+
+
+.initiative-benefit{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:14px;
+
+}
+
+
+.benefit-icon{
+
+    width:36px;
+
+    height:36px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-shrink:0;
+
+    background:#111;
+
+    border:1px solid var(--initiative-border);
+
+    border-radius:8px;
+
+    color:#ddd;
+
+    font-size:12px;
+
+}
+
+
+.initiative-benefit h3{
+
+    margin-bottom:5px;
+
+    color:#ddd;
+
+    font-size:13px;
+
+    font-weight:500;
+
+}
+
+
+.initiative-benefit p{
+
+    max-width:280px;
+
+    margin:0;
+
+    color:#666;
+
+    font-size:10px;
+
+    line-height:1.6;
+
+}
+
+
+/*======================================
+        DOWNLOAD CTA
+======================================*/
+
+.initiative-download{
+
+    width:min(920px,calc(100% - 48px));
+
+    margin:0 auto;
+
+    padding:0 0 100px;
+
+}
+
+
+.initiative-download-content{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:50px;
+
+    overflow:hidden;
+
+    padding:55px 50px;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(255,255,255,.07),
+            transparent 35%
+        ),
+        #080808;
+
+    border:1px solid var(--initiative-border);
+
+}
+
+
+.initiative-download-content::after{
+
+    content:"";
+
+    position:absolute;
+
+    right:-120px;
+
+    bottom:-180px;
+
+    width:360px;
+
+    height:360px;
+
+    border:1px solid rgba(255,255,255,.07);
+
+    border-radius:50%;
+
+    box-shadow:
+        0 0 0 50px rgba(255,255,255,.018),
+        0 0 0 100px rgba(255,255,255,.012);
+
+    pointer-events:none;
+
+}
+
+
+.initiative-download-title{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+.initiative-download-title h2{
+
+    margin:0;
+
+    color:#fff;
+
+    font-size:clamp(30px,4vw,46px);
+
+    font-weight:500;
+
+    line-height:1.03;
+
+    letter-spacing:-.045em;
+
+}
+
+
+/*======================================
+        DOWNLOAD ACTIONS
+======================================*/
+
+.initiative-download-actions{
+
+    position:relative;
+
+    z-index:2;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+
+.initiative-download-qr{
+
+    width:76px;
+
+    height:76px;
+
+    padding:5px;
+
+    flex-shrink:0;
+
+    background:#fff;
+
+    border-radius:3px;
+
+}
+
+
+.initiative-download-qr img{
+
+    display:block;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:contain;
+
+}
+
+
+.initiative-download-links{
+
+    display:flex;
+
+    gap:9px;
+
+}
+
+
+/*======================================
+        APP STORE BUTTONS
+======================================*/
+
+.initiative-store-link{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    min-width:145px;
+
+    min-height:52px;
+
+    padding:8px 13px;
+
+    background:#111;
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:8px;
+
+    color:#fff;
+
+    transition:var(--transition);
+
+}
+
+
+.initiative-store-link:hover{
+
+    background:#191919;
+
+    border-color:rgba(255,255,255,.28);
+
+    transform:translateY(-3px);
+
+}
+
+
+.store-icon{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:26px;
+
+    font-size:21px;
+
+}
+
+
+.initiative-store-link small,
+.initiative-store-link strong{
+
+    display:block;
+
+}
+
+
+.initiative-store-link small{
+
+    margin-bottom:3px;
+
+    color:#777;
+
+    font-size:7px;
+
+    line-height:1;
+
+    text-transform:uppercase;
+
+}
+
+
+.initiative-store-link strong{
+
+    color:#eee;
+
+    font-size:12px;
+
+    font-weight:500;
+
+    line-height:1.1;
+
+}
+
+
+/*======================================
+        FOOTER INTEGRATION
+======================================*/
+
+.initiative-page #footer-container{
+
+    background:#000;
+
+}
+
+
+/*======================================
+        TABLET
+======================================*/
+
+@media(max-width:1100px){
+
+    .initiative-hero{
+
+        width:min(1000px,calc(100% - 36px));
+
+    }
+
+    .initiative-hero-media,
+    .initiative-hero-media img{
+
+        min-height:600px;
+
+        height:600px;
+
+    }
+
+    .initiative-feature,
+    .initiative-section,
+    .initiative-availability,
+    .initiative-download{
+
+        width:min(920px,calc(100% - 36px));
+
+    }
+
+}
+
+
+/*======================================
+        SMALL TABLET
+======================================*/
+
+@media(max-width:1000px){
+
+    .initiative-hero{
+
+        padding-top:50px;
+
+    }
+
+    .initiative-hero-media,
+    .initiative-hero-media img{
+
+        height:560px;
+
+        min-height:560px;
+
+    }
+
+    .initiative-feature-media>img{
+
+        height:540px;
+
+    }
+
+    .initiative-large-phone,
+    .initiative-large-phone img{
+
+        height:540px;
+
+        min-height:540px;
+
+    }
+
+    .initiative-availability-inner{
+
+        grid-template-columns:1fr 1fr;
+
+    }
+
+    .initiative-availability-phone,
+    .initiative-availability-phone img{
+
+        height:540px;
+
+        min-height:540px;
+
+    }
+
+    .initiative-availability-copy{
+
+        padding:45px 30px;
+
+    }
+
+}
+
+
+/*======================================
+        TABLET / SMALL LAPTOP
+======================================*/
+
+@media(max-width:800px){
+
+    .initiative-hero-bottom{
+
+        align-items:flex-start;
+
+        flex-direction:column;
+
+        gap:30px;
+
+    }
+
+    .initiative-download-card{
+
+        width:100%;
+
+        justify-content:flex-start;
+
+    }
+
+    .initiative-section{
+
+        padding-top:80px;
+
+        padding-bottom:90px;
+
+    }
+
+    .initiative-section-heading{
+
+        margin-bottom:50px;
+
+    }
+
+    .initiative-feature{
+
+        padding-top:60px;
+
+        padding-bottom:90px;
+
+    }
+
+    .initiative-feature-media>img{
+
+        height:480px;
+
+    }
+
+    .initiative-mini-media{
+
+        height:280px;
+
+    }
+
+    .initiative-large-phone,
+    .initiative-large-phone img{
+
+        height:470px;
+
+        min-height:470px;
+
+    }
+
+    .initiative-availability-inner{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .initiative-availability-phone,
+    .initiative-availability-phone img{
+
+        height:480px;
+
+        min-height:480px;
+
+    }
+
+    .initiative-availability-copy{
+
+        min-height:420px;
+
+        border-top:1px solid var(--initiative-border);
+
+        border-left:0;
+
+    }
+
+    .initiative-download-content{
+
+        align-items:flex-start;
+
+        flex-direction:column;
+
+        padding:35px;
+
+    }
+
+}
+
+
+/*======================================
+                MOBILE
+======================================*/
+
+@media(max-width:600px){
+
+    .initiative-hero,
+    .initiative-feature,
+    .initiative-section,
+    .initiative-availability,
+    .initiative-download{
+
+        width:calc(100% - 24px);
+
+    }
+
+    .initiative-hero{
+
+        padding-top:30px;
+
+    }
+
+    .initiative-hero-media,
+    .initiative-hero-media img{
+
+        height:430px;
+
+        min-height:430px;
+
+    }
+
+    .initiative-hero-bottom{
+
+        padding:20px 2px 40px;
+
+    }
+
+    .initiative-hero-copy h1{
+
+        font-size:34px;
+
+    }
+
+    .initiative-hero-copy p{
+
+        font-size:11px;
+
+    }
+
+    .initiative-download-card{
+
+        gap:9px;
+
+    }
+
+    .initiative-download-stats{
+
+        min-width:110px;
+
+    }
+
+    .initiative-download-stats div{
+
+        padding:8px;
+
+    }
+
+    .initiative-qr{
+
+        width:55px;
+
+        height:55px;
+
+    }
+
+
+    /*==============================
+            Featured
+    ===============================*/
+
+    .initiative-feature{
+
+        padding-top:40px;
+
+        padding-bottom:65px;
+
+    }
+
+    .initiative-feature-media>img{
+
+        height:420px;
+
+    }
+
+    .initiative-image-caption{
+
+        left:20px;
+
+        right:20px;
+
+        bottom:20px;
+
+    }
+
+    .initiative-image-caption h2{
+
+        font-size:21px;
+
+    }
+
+    .initiative-image-caption p{
+
+        font-size:10px;
+
+    }
+
+
+    /*==============================
+            Single Column
+    ===============================*/
+
+    .initiative-feature-grid,
+    .initiative-two-column-grid,
+    .initiative-four-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .initiative-mini-card,
+    .initiative-content-card{
+
+        border-right:0;
+
+    }
+
+    .initiative-mini-media{
+
+        height:330px;
+
+    }
+
+    .initiative-tech-card{
+
+        min-height:350px;
+
+    }
+
+
+    /*==============================
+        Section Headings
+    ===============================*/
+
+    .initiative-section{
+
+        padding-top:65px;
+
+        padding-bottom:75px;
+
+    }
+
+    .initiative-section-heading{
+
+        margin-bottom:38px;
+
+    }
+
+    .initiative-section-heading h2{
+
+        font-size:30px;
+
+    }
+
+    .initiative-section-heading p{
+
+        font-size:11px;
+
+    }
+
+
+    /*==============================
+            Large Phones
+    ===============================*/
+
+    .initiative-large-phone,
+    .initiative-large-phone img{
+
+        height:430px;
+
+        min-height:430px;
+
+    }
+
+    .image-note{
+
+        display:none;
+
+    }
+
+
+    /*==============================
+            Content Cards
+    ===============================*/
+
+    .initiative-card-copy{
+
+        min-height:auto;
+
+        padding:21px 18px;
+
+    }
+
+    .initiative-card-copy h3{
+
+        font-size:14px;
+
+    }
+
+    .initiative-card-image{
+
+        height:340px;
+
+    }
+
+    .initiative-four-grid .initiative-card-image{
+
+        height:350px;
+
+    }
+
+
+    /*==============================
+            Availability
+    ===============================*/
+
+    .initiative-availability{
+
+        padding-top:55px;
+
+        padding-bottom:70px;
+
+    }
+
+    .initiative-availability-inner{
+
+        min-height:0;
+
+    }
+
+    .initiative-availability-phone,
+    .initiative-availability-phone img{
+
+        height:420px;
+
+        min-height:420px;
+
+    }
+
+    .initiative-availability-copy{
+
+        min-height:auto;
+
+        padding:40px 22px;
+
+    }
+
+    .initiative-availability-copy h2{
+
+        font-size:31px;
+
+    }
+
+
+    /*==============================
+            Download CTA
+    ===============================*/
+
+    .initiative-download{
+
+        padding-bottom:70px;
+
+    }
+
+    .initiative-download-content{
+
+        padding:30px 20px;
+
+    }
+
+    .initiative-download-title h2{
+
+        font-size:28px;
+
+    }
+
+    .initiative-download-actions{
+
+        width:100%;
+
+        align-items:flex-start;
+
+        flex-direction:column;
+
+    }
+
+    .initiative-download-links{
+
+        width:100%;
+
+        flex-direction:column;
+
+    }
+
+    .initiative-store-link{
+
+        width:100%;
+
+    }
+
+}
+
+
+/*======================================
+        VERY SMALL PHONES
+======================================*/
+
+@media(max-width:380px){
+
+    .initiative-hero-copy h1{
+
+        font-size:30px;
+
+    }
+
+    .initiative-section-heading h2{
+
+        font-size:27px;
+
+    }
+
+    .initiative-large-phone,
+    .initiative-large-phone img{
+
+        height:390px;
+
+        min-height:390px;
+
+    }
+
+    .initiative-card-image{
+
+        height:300px;
+
+    }
+
+    .initiative-availability-phone,
+    .initiative-availability-phone img{
+
+        height:380px;
+
+        min-height:380px;
+
+    }
+
+    .initiative-download-content{
+
+        padding:26px 16px;
+
+    }
+
+}
+
+
+/*======================================
+        REDUCED MOTION
+======================================*/
+
+@media(prefers-reduced-motion:reduce){
+
+    .initiative-feature-media>img,
+    .initiative-mini-media img,
+    .initiative-card-image img,
+    .initiative-large-phone img,
+    .initiative-availability-phone img,
+    .initiative-store-link,
+    .initiative-tech-logo{
+
+        transition:none;
+
+    }
+
+    .initiative-feature-media:hover>img,
+    .initiative-mini-card:hover .initiative-mini-media img,
+    .initiative-content-card:hover .initiative-card-image img,
+    .initiative-large-phone:hover img,
+    .initiative-availability-phone:hover img,
+    .initiative-store-link:hover,
+    .initiative-tech-logo:hover{
+
+        transform:none;
+
+    }
+
+}

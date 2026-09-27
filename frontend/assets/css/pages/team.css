@@ -1,0 +1,1511 @@
+/* =========================================================
+   NEXORA TECHNOLOGIES
+   TEAM PAGE
+   ========================================================= */
+
+/* =========================================================
+   PAGE FOUNDATION
+========================================================= */
+
+.team-page {
+  background: var(--color-bg, #08090b);
+  color: var(--color-text, #f5f5f7);
+  overflow-x: hidden;
+}
+
+.team-page main {
+  position: relative;
+}
+
+.team-page .container {
+  width: min(1180px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+.team-page *,
+.team-page *::before,
+.team-page *::after {
+  box-sizing: border-box;
+}
+
+.team-page img {
+  display: block;
+  max-width: 100%;
+}
+
+.team-page a {
+  text-decoration: none;
+}
+
+.team-page button,
+.team-page a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* =========================================================
+   SHARED TEAM ELEMENTS
+========================================================= */
+
+.team-page .team-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  width: fit-content;
+  margin-bottom: 22px;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.team-page .team-eyebrow-dot {
+  width: 7px;
+  height: 7px;
+  flex: 0 0 7px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow:
+    0 0 0 4px rgba(255, 255, 255, 0.04),
+    0 0 14px rgba(139, 124, 255, 0.28);
+}
+
+.team-page .team-section-heading {
+  max-width: 760px;
+  margin-bottom: 68px;
+}
+
+.team-page .team-section-heading-centered {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.team-page .team-section-heading-centered .team-eyebrow {
+  margin-inline: auto;
+}
+
+.team-page .team-section-heading h2,
+.team-page .team-intro-content h2,
+.team-page .team-collaboration-content h2,
+.team-page .team-careers-content h2,
+.team-page .team-final-cta-inner h2 {
+  margin: 0;
+  color: #f5f5f7;
+  font-size: clamp(38px, 5vw, 58px);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+}
+
+.team-page .team-section-heading h2 span,
+.team-page .team-intro-content h2 span,
+.team-page .team-collaboration-content h2 span,
+.team-page .team-careers-content h2 span,
+.team-page .team-final-cta-inner h2 span {
+  background: linear-gradient(135deg, #ffffff 0%, #d0caff 45%, #917fff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.team-page .team-section-heading p {
+  max-width: 680px;
+  margin: 22px auto 0;
+  color: rgba(255, 255, 255, 0.56);
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.team-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 128px 0 120px;
+  background:
+    radial-gradient(
+      circle at 14% 20%,
+      rgba(124, 92, 255, 0.13),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 86% 28%,
+      rgba(72, 110, 255, 0.08),
+      transparent 30%
+    );
+}
+
+.team-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background:
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 80px 80px;
+  mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    rgba(0, 0, 0, 0.6) 60%,
+    transparent 100%
+  );
+}
+
+.team-hero::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -280px;
+  width: 700px;
+  height: 700px;
+  z-index: -1;
+  pointer-events: none;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: rgba(108, 89, 255, 0.06);
+  filter: blur(100px);
+}
+
+.team-hero-container {
+  display: grid;
+  grid-template-columns: minmax(0, 0.94fr) minmax(460px, 1.06fr);
+  align-items: center;
+  gap: 80px;
+}
+
+.team-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 650px;
+}
+
+.team-hero-content h1 {
+  max-width: 680px;
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(54px, 6.5vw, 88px);
+  font-weight: 600;
+  line-height: 0.98;
+  letter-spacing: -0.06em;
+}
+
+.team-hero-content h1 span {
+  display: block;
+  background: linear-gradient(135deg, #ffffff 0%, #d2ccff 45%, #8f7cff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.team-hero-description {
+  max-width: 600px;
+  margin: 30px 0 0;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 18px;
+  line-height: 1.78;
+}
+
+.team-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 38px;
+}
+
+.team-hero-actions .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+}
+
+/* =========================================================
+   HERO VISUAL
+========================================================= */
+
+.team-hero-visual {
+  position: relative;
+  min-height: 510px;
+}
+
+.team-hero-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.12fr 0.88fr;
+  grid-template-rows: 300px 190px;
+  gap: 16px;
+  height: 100%;
+  z-index: 2;
+}
+
+.team-image-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.035);
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.42),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.team-image-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.08), transparent 38%),
+    linear-gradient(to top, rgba(0, 0, 0, 0.3), transparent 50%);
+}
+
+.team-image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition:
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.45s ease;
+}
+
+.team-image-card:hover img {
+  transform: scale(1.045);
+  filter: brightness(1.05);
+}
+
+.team-image-card-large {
+  grid-row: 1 / 3;
+}
+
+.team-image-card-small {
+  transform: translateX(28px);
+}
+
+.team-hero-orbit {
+  position: absolute;
+  border: 1px solid rgba(143, 124, 255, 0.15);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.team-hero-orbit.orbit-one {
+  top: -40px;
+  right: -80px;
+  width: 230px;
+  height: 230px;
+}
+
+.team-hero-orbit.orbit-two {
+  right: 10px;
+  bottom: -70px;
+  width: 150px;
+  height: 150px;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* =========================================================
+   INTRO / MISSION
+========================================================= */
+
+.team-intro {
+  position: relative;
+  padding: 130px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.team-intro-grid {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.38fr) minmax(0, 1fr);
+  gap: 90px;
+  align-items: start;
+}
+
+.team-section-label {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-top: 9px;
+  color: rgba(255, 255, 255, 0.46);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.team-section-label .section-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.035);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 10px;
+}
+
+.team-intro-content {
+  max-width: 780px;
+}
+
+.team-intro-content h2 {
+  max-width: 760px;
+}
+
+.team-intro-content p {
+  max-width: 740px;
+  margin: 28px 0 0;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.team-intro-content p + p {
+  margin-top: 18px;
+}
+
+/* =========================================================
+   VALUES
+========================================================= */
+
+.team-values {
+  position: relative;
+  padding: 135px 0;
+}
+
+.team-values::before {
+  content: "";
+  position: absolute;
+  top: 15%;
+  left: -200px;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: rgba(99, 81, 255, 0.055);
+  filter: blur(100px);
+  pointer-events: none;
+}
+
+.team-values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.team-value-card {
+  position: relative;
+  min-height: 310px;
+  padding: 28px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 18px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.055),
+    rgba(255, 255, 255, 0.018)
+  );
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.025);
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    background 0.35s ease;
+}
+
+.team-value-card::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: rgba(117, 96, 255, 0.07);
+  filter: blur(35px);
+  pointer-events: none;
+}
+
+.team-value-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(150, 135, 255, 0.23);
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.07),
+    rgba(255, 255, 255, 0.022)
+  );
+}
+
+.team-value-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 42px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.045);
+  color: #b8aeff;
+  font-size: 16px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.team-value-number {
+  position: absolute;
+  top: 29px;
+  right: 28px;
+  color: rgba(255, 255, 255, 0.24);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+.team-value-card h3 {
+  margin: 0;
+  color: #f5f5f7;
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+.team-value-card p {
+  margin: 14px 0 0;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   LEADERSHIP / TEAM MEMBERS
+========================================================= */
+
+.team-leadership {
+  position: relative;
+  padding: 135px 0 145px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  background: radial-gradient(
+    circle at 50% 15%,
+    rgba(100, 82, 255, 0.055),
+    transparent 34%
+  );
+}
+
+.team-members-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.team-member-card {
+  min-width: 0;
+}
+
+.team-member-image {
+  position: relative;
+  aspect-ratio: 0.92;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 20px;
+  background: #111216;
+  box-shadow:
+    0 25px 65px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.035);
+}
+
+.team-member-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent 48%);
+}
+
+.team-member-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition:
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.45s ease;
+}
+
+.team-member-card:hover .team-member-image img {
+  transform: scale(1.045);
+  filter: brightness(1.06);
+}
+
+.team-member-overlay {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  left: 18px;
+  z-index: 2;
+}
+
+.team-member-overlay span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 7px 11px;
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 999px;
+  background: rgba(8, 9, 11, 0.65);
+  backdrop-filter: blur(12px);
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.team-member-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 20px 3px 0;
+}
+
+.team-member-role {
+  display: block;
+  margin-bottom: 7px;
+  color: rgba(255, 255, 255, 0.42);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
+}
+
+.team-member-info h3 {
+  margin: 0;
+  color: #f5f5f7;
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+.team-member-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.035);
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 12px;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease,
+    background 0.3s ease;
+}
+
+.team-member-link:hover {
+  transform: translateY(-2px);
+  border-color: rgba(156, 143, 255, 0.35);
+  background: rgba(126, 107, 255, 0.1);
+  color: #c7c0ff;
+}
+
+/* =========================================================
+   COLLABORATION
+========================================================= */
+
+.team-collaboration {
+  padding: 40px 0 135px;
+}
+
+.team-collaboration-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(420px, 1.1fr);
+  align-items: center;
+  gap: 70px;
+  min-height: 510px;
+  padding: 70px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 28px;
+  background:
+    radial-gradient(
+      circle at 85% 50%,
+      rgba(108, 89, 255, 0.13),
+      transparent 35%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.055),
+      rgba(255, 255, 255, 0.018)
+    );
+  box-shadow:
+    0 35px 100px rgba(0, 0, 0, 0.32),
+    inset 0 1px 0 rgba(255, 255, 255, 0.035);
+}
+
+.team-collaboration-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.045),
+    transparent 35%
+  );
+}
+
+.team-collaboration-content {
+  position: relative;
+  z-index: 2;
+  max-width: 540px;
+}
+
+.team-collaboration-content h2 {
+  font-size: clamp(38px, 4.5vw, 58px);
+}
+
+.team-collaboration-content p {
+  max-width: 520px;
+  margin: 24px 0 0;
+  color: rgba(255, 255, 255, 0.56);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.team-page .text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 28px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 14px;
+  font-weight: 600;
+  transition:
+    color 0.25s ease,
+    gap 0.25s ease;
+}
+
+.team-page .text-link:hover {
+  gap: 13px;
+  color: #c5bdff;
+}
+
+/* =========================================================
+   COLLABORATION WINDOW
+========================================================= */
+
+.team-collaboration-visual {
+  position: relative;
+  min-height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-collaboration-visual::before {
+  content: "";
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  background: rgba(116, 94, 255, 0.1);
+  filter: blur(75px);
+}
+
+.collaboration-window {
+  position: relative;
+  width: min(100%, 490px);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 18px;
+  background: rgba(10, 11, 14, 0.92);
+  box-shadow:
+    0 35px 90px rgba(0, 0, 0, 0.5),
+    0 0 80px rgba(113, 91, 255, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  transform: perspective(1200px) rotateY(-4deg) rotateX(2deg);
+  transition:
+    transform 0.45s ease,
+    box-shadow 0.45s ease;
+}
+
+.collaboration-window:hover {
+  transform: perspective(1200px) rotateY(0) rotateX(0) translateY(-4px);
+  box-shadow:
+    0 42px 100px rgba(0, 0, 0, 0.56),
+    0 0 100px rgba(113, 91, 255, 0.11),
+    inset 0 1px 0 rgba(255, 255, 255, 0.045);
+}
+
+.collaboration-window-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 48px;
+  padding: 0 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.collaboration-window-header span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.collaboration-window-body {
+  padding: 38px 32px 34px;
+}
+
+.collaboration-avatar-stack {
+  display: flex;
+  align-items: center;
+  margin-bottom: 34px;
+}
+
+.collaboration-avatar-stack img,
+.collaboration-avatar-placeholder {
+  width: 48px;
+  height: 48px;
+  border: 2px solid #0b0c0f;
+  border-radius: 50%;
+}
+
+.collaboration-avatar-stack img + img,
+.collaboration-avatar-placeholder {
+  margin-left: -10px;
+}
+
+.collaboration-avatar-stack img {
+  object-fit: cover;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.collaboration-avatar-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 12px;
+}
+
+.collaboration-lines {
+  display: grid;
+  gap: 13px;
+}
+
+.collaboration-lines span {
+  display: block;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.collaboration-lines span:nth-child(1) {
+  width: 84%;
+}
+
+.collaboration-lines span:nth-child(2) {
+  width: 66%;
+}
+
+.collaboration-lines span:nth-child(3) {
+  width: 48%;
+}
+
+.collaboration-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 32px;
+  padding: 9px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.035);
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.collaboration-status i {
+  color: #9e91ff;
+  font-size: 10px;
+}
+
+/* =========================================================
+   CAREERS CTA
+========================================================= */
+
+.team-careers {
+  padding: 0 0 135px;
+}
+
+.team-careers-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  align-items: center;
+  gap: 45px;
+  min-height: 390px;
+  padding: 65px 70px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 25px;
+  background:
+    radial-gradient(
+      circle at 0% 100%,
+      rgba(113, 91, 255, 0.13),
+      transparent 36%
+    ),
+    rgba(255, 255, 255, 0.025);
+}
+
+.team-careers-card::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -140px;
+  width: 360px;
+  height: 360px;
+  transform: translateY(-50%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 55px rgba(255, 255, 255, 0.012),
+    0 0 0 110px rgba(255, 255, 255, 0.008);
+  pointer-events: none;
+}
+
+.team-careers-mark {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 105px;
+  height: 105px;
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 25px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.07),
+    rgba(255, 255, 255, 0.025)
+  );
+  box-shadow:
+    0 25px 55px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.team-careers-mark img {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+}
+
+.team-careers-content {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+}
+
+.team-careers-content h2 {
+  font-size: clamp(38px, 4.5vw, 58px);
+}
+
+.team-careers-content p {
+  max-width: 650px;
+  margin: 22px 0 0;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.team-careers-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.team-final-cta {
+  position: relative;
+  overflow: hidden;
+  padding: 145px 0 160px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  background: radial-gradient(
+    circle at 50% 100%,
+    rgba(108, 89, 255, 0.12),
+    transparent 42%
+  );
+}
+
+.team-final-cta::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 100%;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(255, 255, 255, 0.07) 35%,
+    rgba(255, 255, 255, 0.02) 70%,
+    transparent
+  );
+  pointer-events: none;
+}
+
+.team-final-cta-inner {
+  position: relative;
+  max-width: 820px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.team-final-cta-inner .team-eyebrow {
+  margin-inline: auto;
+}
+
+.team-final-cta-inner h2 {
+  font-size: clamp(44px, 6vw, 76px);
+}
+
+.team-final-cta-inner p {
+  max-width: 620px;
+  margin: 25px auto 0;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.team-final-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 35px;
+}
+
+.team-final-actions .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+}
+
+/* =========================================================
+   BUTTON SAFETY
+========================================================= */
+
+.team-page .btn {
+  min-height: 44px;
+}
+
+.team-page .btn i {
+  transition: transform 0.25s ease;
+}
+
+.team-page .btn:hover i {
+  transform: translateX(2px);
+}
+
+/* =========================================================
+   LARGE TABLETS
+========================================================= */
+
+@media (max-width: 1100px) {
+  .team-hero {
+    padding: 110px 0 105px;
+  }
+
+  .team-hero-container {
+    grid-template-columns: minmax(0, 0.95fr) minmax(380px, 1.05fr);
+    gap: 50px;
+  }
+
+  .team-hero-content h1 {
+    font-size: clamp(50px, 6.5vw, 74px);
+  }
+
+  .team-hero-visual {
+    min-height: 450px;
+  }
+
+  .team-hero-grid {
+    grid-template-rows: 265px 170px;
+  }
+
+  .team-values-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .team-collaboration-card {
+    gap: 45px;
+    padding: 55px;
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+  .team-page .container {
+    width: min(100% - 40px, 760px);
+  }
+
+  .team-hero {
+    padding: 95px 0 90px;
+  }
+
+  .team-hero-container {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .team-hero-content {
+    max-width: 720px;
+  }
+
+  .team-hero-content h1 {
+    max-width: 700px;
+  }
+
+  .team-hero-description {
+    max-width: 680px;
+  }
+
+  .team-hero-visual {
+    width: min(100%, 650px);
+    min-height: 480px;
+    margin-inline: auto;
+  }
+
+  .team-intro {
+    padding: 100px 0;
+  }
+
+  .team-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .team-section-label {
+    padding-top: 0;
+  }
+
+  .team-values {
+    padding: 105px 0;
+  }
+
+  .team-section-heading {
+    margin-bottom: 55px;
+  }
+
+  .team-leadership {
+    padding: 105px 0 115px;
+  }
+
+  .team-members-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .team-member-card:last-child {
+    grid-column: 1 / -1;
+    width: calc(50% - 9px);
+    margin-inline: auto;
+  }
+
+  .team-collaboration {
+    padding-bottom: 105px;
+  }
+
+  .team-collaboration-card {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    padding: 55px;
+  }
+
+  .team-collaboration-content {
+    max-width: 680px;
+  }
+
+  .team-collaboration-visual {
+    min-height: 330px;
+  }
+
+  .team-careers {
+    padding-bottom: 105px;
+  }
+
+  .team-careers-card {
+    grid-template-columns: 90px minmax(0, 1fr);
+    gap: 35px;
+    padding: 50px;
+  }
+
+  .team-careers-mark {
+    width: 90px;
+    height: 90px;
+  }
+
+  .team-final-cta {
+    padding: 110px 0 125px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 640px) {
+  .team-page .container {
+    width: min(100% - 32px, 520px);
+  }
+
+  .team-page .team-eyebrow {
+    margin-bottom: 18px;
+    font-size: 10px;
+  }
+
+  .team-hero {
+    padding: 80px 0 75px;
+  }
+
+  .team-hero-container {
+    gap: 45px;
+  }
+
+  .team-hero-content h1 {
+    font-size: clamp(46px, 14vw, 64px);
+    letter-spacing: -0.055em;
+  }
+
+  .team-hero-description {
+    margin-top: 22px;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .team-hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+
+  .team-hero-actions .btn {
+    width: 100%;
+  }
+
+  .team-hero-visual {
+    min-height: 430px;
+  }
+
+  .team-hero-grid {
+    grid-template-columns: 1fr 0.8fr;
+    grid-template-rows: 245px 160px;
+    gap: 10px;
+  }
+
+  .team-image-card {
+    border-radius: 16px;
+  }
+
+  .team-image-card-small {
+    transform: translateX(12px);
+  }
+
+  .team-hero-orbit.orbit-one {
+    top: -25px;
+    right: -50px;
+    width: 150px;
+    height: 150px;
+  }
+
+  .team-hero-orbit.orbit-two {
+    right: -5px;
+    bottom: -45px;
+    width: 110px;
+    height: 110px;
+  }
+
+  .team-intro {
+    padding: 80px 0;
+  }
+
+  .team-intro-grid {
+    gap: 30px;
+  }
+
+  .team-intro-content h2,
+  .team-section-heading h2,
+  .team-collaboration-content h2,
+  .team-careers-content h2 {
+    font-size: clamp(36px, 10vw, 48px);
+  }
+
+  .team-intro-content p {
+    margin-top: 22px;
+    font-size: 16px;
+    line-height: 1.75;
+  }
+
+  .team-values {
+    padding: 80px 0;
+  }
+
+  .team-section-heading {
+    margin-bottom: 42px;
+  }
+
+  .team-section-heading p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .team-values-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .team-value-card {
+    min-height: 0;
+    padding: 25px;
+  }
+
+  .team-value-icon {
+    margin-bottom: 38px;
+  }
+
+  .team-leadership {
+    padding: 80px 0 90px;
+  }
+
+  .team-members-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .team-member-card:last-child {
+    grid-column: auto;
+    width: auto;
+    margin-inline: 0;
+  }
+
+  .team-member-image {
+    aspect-ratio: 0.95;
+    border-radius: 17px;
+  }
+
+  .team-member-info {
+    padding-top: 16px;
+  }
+
+  .team-member-info h3 {
+    font-size: 17px;
+  }
+
+  .team-collaboration {
+    padding: 0 0 80px;
+  }
+
+  .team-collaboration-card {
+    gap: 38px;
+    min-height: 0;
+    padding: 35px 25px;
+    border-radius: 20px;
+  }
+
+  .team-collaboration-content h2 {
+    font-size: clamp(36px, 10vw, 48px);
+  }
+
+  .team-collaboration-content p {
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  .team-collaboration-visual {
+    min-height: 275px;
+  }
+
+  .collaboration-window {
+    width: 100%;
+  }
+
+  .collaboration-window-body {
+    padding: 30px 24px 28px;
+  }
+
+  .team-careers {
+    padding-bottom: 80px;
+  }
+
+  .team-careers-card {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 35px 25px;
+    border-radius: 20px;
+  }
+
+  .team-careers-mark {
+    width: 76px;
+    height: 76px;
+    border-radius: 19px;
+  }
+
+  .team-careers-mark img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .team-careers-content h2 {
+    font-size: clamp(36px, 10vw, 48px);
+  }
+
+  .team-careers-content p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .team-careers-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .team-careers-actions .btn {
+    width: 100%;
+  }
+
+  .team-final-cta {
+    padding: 85px 0 100px;
+  }
+
+  .team-final-cta-inner h2 {
+    font-size: clamp(40px, 11vw, 55px);
+  }
+
+  .team-final-cta-inner p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .team-final-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .team-final-actions .btn {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+  .team-page .container {
+    width: min(100% - 28px, 390px);
+  }
+
+  .team-hero {
+    padding-top: 70px;
+  }
+
+  .team-hero-content h1 {
+    font-size: 44px;
+  }
+
+  .team-hero-visual {
+    min-height: 350px;
+  }
+
+  .team-hero-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 245px 130px 130px;
+  }
+
+  .team-image-card-large {
+    grid-row: auto;
+  }
+
+  .team-image-card-small {
+    transform: none;
+  }
+
+  .team-image-card:nth-child(2) {
+    display: none;
+  }
+
+  .team-intro,
+  .team-values,
+  .team-leadership {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .team-value-card {
+    padding: 22px;
+  }
+
+  .team-member-image {
+    aspect-ratio: 0.9;
+  }
+
+  .team-collaboration-card,
+  .team-careers-card {
+    padding: 28px 21px;
+  }
+
+  .collaboration-window-body {
+    padding: 26px 20px;
+  }
+
+  .team-final-cta {
+    padding: 75px 0 85px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .team-page *,
+  .team-page *::before,
+  .team-page *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+
+  .team-image-card:hover img,
+  .team-member-card:hover .team-member-image img,
+  .team-value-card:hover,
+  .team-member-link:hover,
+  .team-page .text-link:hover {
+    transform: none;
+  }
+}

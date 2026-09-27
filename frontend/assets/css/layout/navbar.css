@@ -1,1057 +1,2621 @@
-/*======================================
-            NAVBAR
-======================================*/
+/* =========================================================
+   NEXORA TECHNOLOGIES
+   ROOT / MAIN NAVBAR
+   =========================================================
+
+   File:
+   frontend/assets/css/navbar.css
+
+   Used by:
+   - index.html
+   - customers.html
+   - now.html
+   - pricing.html
+   - login.html
+   - product pages
+   - resource pages
+
+   IMPORTANT:
+   All navbar styles are scoped under .navbar so this
+   stylesheet does not leak into normal page components.
+
+   ========================================================= */
+
+/* =========================================================
+   01. NAVBAR RESET / BASE
+   ========================================================= */
+
+.navbar,
+.navbar *,
+.navbar *::before,
+.navbar *::after {
+  box-sizing: border-box;
+}
+
 .navbar {
+  --nav-bg: rgba(255, 255, 255, 0.96);
+  --nav-bg-scrolled: rgba(255, 255, 255, 0.99);
+
+  --nav-text: #475569;
+  --nav-text-dark: #111827;
+  --nav-text-muted: #64748b;
+
+  --nav-border: rgba(15, 23, 42, 0.08);
+
+  --nav-primary: #6366f1;
+  --nav-primary-dark: #4f46e5;
+  --nav-purple: #7c3aed;
+
   position: fixed;
+
   top: 0;
   left: 0;
+  right: 0;
+
+  z-index: 9999;
+
   width: 100%;
-  z-index: 1000;
-  background: rgba(255, 255, 255, 0.92);
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border);
-  transition: 0.35s ease;
+  height: 76px;
+
+  background: var(--nav-bg);
+
+  border-bottom: 1px solid var(--nav-border);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.035);
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+
+  overflow: visible;
 }
+
 .navbar.scrolled {
-  background: #fff;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  background: var(--nav-bg-scrolled);
+
+  border-bottom-color: rgba(15, 23, 42, 0.06);
+
+  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.08);
+
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
 }
-.nav-container {
+
+/* =========================================================
+   02. NAV CONTAINER
+   ========================================================= */
+
+.navbar .nav-container {
+  width: min(1440px, calc(100% - 48px));
+
+  height: 100%;
+
+  margin-inline: auto;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 82px;
+
   position: relative;
+
+  overflow: visible;
 }
 
-/*======================================
-            LOGO
-======================================*/
-.logo {
-  display: flex;
+/* =========================================================
+   03. LOGO
+   ========================================================= */
+
+.navbar .logo {
+  display: inline-flex;
   align-items: center;
-  gap: 0.85rem;
-  text-decoration: none;
+
+  gap: 11px;
+
   flex-shrink: 0;
+
+  color: var(--nav-text-dark);
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
 }
-.logo-icon {
-  width: 46px;
-  height: 46px;
+
+.navbar .logo:hover {
+  transform: translateY(-1px);
+}
+
+/* ---------------------------------------------------------
+   Logo Icon
+   --------------------------------------------------------- */
+
+.navbar .logo-icon {
+  width: 38px;
+  height: 38px;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 14px;
-  background: linear-gradient(135deg, var(--primary), #4f46e5);
-  color: #fff;
-  font-size: 1.2rem;
-  box-shadow: 0 12px 24px rgba(79, 70, 229, 0.25);
-  transition: 0.3s;
+
+  flex-shrink: 0;
+
+  border-radius: 10px;
+
+  color: #ffffff;
+
+  background: linear-gradient(
+    135deg,
+    var(--nav-primary) 0%,
+    var(--nav-purple) 100%
+  );
+
+  box-shadow: 0 7px 18px rgba(99, 102, 241, 0.2);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
-.logo:hover .logo-icon {
-  transform: rotate(-6deg) scale(1.05);
+
+.navbar .logo:hover .logo-icon {
+  transform: translateY(-1px);
+
+  box-shadow: 0 9px 22px rgba(99, 102, 241, 0.25);
 }
-.logo-text {
-  display: flex;
-  flex-direction: column;
+
+.navbar .logo-icon i {
+  font-size: 17px;
+
   line-height: 1;
 }
-.logo-text h2 {
-  margin: 0;
-  font-size: 1.25rem;
-  font-weight: 800;
-  letter-spacing: 0.04em;
-  color: var(--secondary);
-}
-.logo-text span {
-  margin-top: 4px;
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.22em;
-  color: var(--gray);
+
+/* ---------------------------------------------------------
+   Logo Text
+   --------------------------------------------------------- */
+
+.navbar .logo-text {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  min-width: 0;
+
+  line-height: 1;
 }
 
-/*======================================
-            NAVIGATION
-======================================*/
-.nav {
-  display: flex;
-  align-items: center;
-  height: 100%;
-  margin-left: auto;
-}
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  list-style: none;
+.navbar .logo-text h2 {
   margin: 0;
   padding: 0;
-  height: 100%;
-}
-.nav-links > li {
-  display: flex;
-  align-items: center;
-  position: relative;
-  height: 100%;
-}
-.nav-links > li > a {
-  display: flex;
-  align-items: center;
-  height: 100%;
-  font-size: 0.95rem;
-  font-weight: 600;
-  text-decoration: none;
-  color: var(--secondary);
-  transition: 0.3s;
-}
-.nav-links > li > a:hover {
-  color: var(--primary);
+
+  color: var(--nav-text-dark);
+
+  font-size: 17px;
+
+  font-weight: 800;
+
+  letter-spacing: -0.04em;
+
+  line-height: 1.05;
 }
 
-/*======================================
-        DROPDOWN BUTTON
-======================================*/
-.dropdown {
-  position: relative;
+.navbar .logo-text span {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #64748b;
+
+  font-size: 7.5px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+
+  line-height: 1;
+}
+
+/* =========================================================
+   04. MAIN NAVIGATION
+   ========================================================= */
+
+.navbar .nav {
   height: 100%;
+
   display: flex;
   align-items: center;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  overflow: visible;
 }
-.dropdown-trigger {
+
+.navbar .nav-links {
   display: flex;
+  align-items: center;
+
+  gap: 4px;
+
+  height: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  overflow: visible;
+}
+
+.navbar .nav-links > li {
+  position: relative;
+
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+
+  flex-shrink: 0;
+}
+
+/* =========================================================
+   05. STANDARD NAVIGATION LINKS
+   ========================================================= */
+
+.navbar .nav-links > li > a,
+.navbar .nav-links > li > .nav-placeholder {
+  display: inline-flex;
+
   align-items: center;
   justify-content: center;
-  gap: 0.45rem;
+
+  min-height: 38px;
+
+  padding: 0 12px;
+
+  border-radius: 9px;
+
+  color: var(--nav-text);
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+.navbar .nav-links > li > a:hover,
+.navbar .nav-links > li > .nav-placeholder:hover {
+  color: var(--nav-text-dark);
+
+  background: rgba(15, 23, 42, 0.045);
+}
+
+.navbar .nav-links > li > a.active,
+.navbar .nav-links > li > .nav-placeholder.active {
+  color: var(--nav-primary);
+
+  font-weight: 650;
+}
+
+/* =========================================================
+   06. DROPDOWN
+   ========================================================= */
+
+.navbar .dropdown {
+  position: relative;
+
   height: 100%;
-  padding: 0;
-  background: none;
-  border: none;
-  font: inherit;
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--secondary);
+
+  display: flex;
+  align-items: center;
+}
+
+.navbar .dropdown-trigger {
+  appearance: none;
+  -webkit-appearance: none;
+
+  border: 0;
+  outline: none;
+
+  min-height: 38px;
+
+  padding: 0 12px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  border-radius: 9px;
+
+  background: transparent;
+
+  color: var(--nav-text);
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  font-weight: 500;
+
+  line-height: 1;
+
   cursor: pointer;
-  transition: 1s;
+
+  -webkit-tap-highlight-color: transparent;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
 }
-.dropdown-trigger:hover {
-  color: var(--primary);
+
+.navbar .dropdown-trigger:hover,
+.navbar .dropdown.open > .dropdown-trigger,
+.navbar .dropdown:focus-within > .dropdown-trigger {
+  color: var(--nav-text-dark);
+
+  background: rgba(15, 23, 42, 0.045);
 }
-.dropdown-trigger i {
-  font-size: 0.72rem;
-  transition: 1s ease;
+
+.navbar .dropdown-trigger:focus-visible {
+  outline: 2px solid rgba(99, 102, 241, 0.4);
+
+  outline-offset: 2px;
 }
-.dropdown:hover > .dropdown-trigger i,
-.dropdown.open > .dropdown-trigger i {
+
+/* ---------------------------------------------------------
+   Dropdown Chevron
+   --------------------------------------------------------- */
+
+.navbar .dropdown-trigger i {
+  color: #94a3b8;
+
+  font-size: 9px;
+
+  line-height: 1;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.navbar .dropdown:hover > .dropdown-trigger i,
+.navbar .dropdown:focus-within > .dropdown-trigger i,
+.navbar .dropdown.open > .dropdown-trigger i,
+.navbar .dropdown > .dropdown-trigger[aria-expanded="true"] i {
+  color: var(--nav-primary);
+
   transform: rotate(180deg);
 }
 
-/*======================================
-            MEGA MENU
-======================================*/
-.mega-menu {
+/* =========================================================
+   07. DROPDOWN HOVER BRIDGE
+   ========================================================= */
+
+.navbar .dropdown::after {
+  content: "";
+
   position: absolute;
+
   top: 100%;
-  left: 50%;
-  transform: translateX(-50%) translateY(12px);
-  background: #111827;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 20px;
-  padding: 2rem;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: 0.3s ease;
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
-  z-index: 999;
+
+  left: -12px;
+  right: -12px;
+
+  height: 18px;
+
+  background: transparent;
 }
-.dropdown:hover > .mega-menu,
-.dropdown.open > .mega-menu {
+
+/* =========================================================
+   08. MEGA MENU BASE
+   ========================================================= */
+
+.navbar .mega-menu {
+  position: absolute;
+
+  top: calc(100% + 10px);
+
+  left: 50%;
+
+  width: 920px;
+
+  max-width: calc(100vw - 32px);
+
+  padding: 14px;
+
+  background: rgba(255, 255, 255, 0.985);
+
+  border: 1px solid rgba(15, 23, 42, 0.08);
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 24px 70px rgba(15, 23, 42, 0.14),
+    0 8px 24px rgba(15, 23, 42, 0.06);
+
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  pointer-events: none;
+
+  transform: translateX(-50%) translateY(10px);
+
+  transition:
+    opacity 0.2s ease,
+    visibility 0.2s ease,
+    transform 0.2s ease;
+
+  z-index: 10001;
+}
+
+/* =========================================================
+   09. MEGA MENU ARROW
+   ========================================================= */
+
+.navbar .mega-menu::before {
+  content: "";
+
+  position: absolute;
+
+  top: -6px;
+
+  left: 50%;
+
+  width: 12px;
+  height: 12px;
+
+  background: #ffffff;
+
+  border-left: 1px solid rgba(15, 23, 42, 0.08);
+
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
+
+  transform: translateX(-50%) rotate(45deg);
+
+  z-index: -1;
+}
+
+/* =========================================================
+   10. MEGA MENU OPEN STATE
+   ========================================================= */
+
+.navbar .dropdown:hover > .mega-menu,
+.navbar .dropdown:focus-within > .mega-menu,
+.navbar .dropdown.open > .mega-menu,
+.navbar .dropdown > .dropdown-trigger[aria-expanded="true"] + .mega-menu {
   opacity: 1;
+
   visibility: visible;
+
   pointer-events: auto;
+
   transform: translateX(-50%) translateY(0);
 }
 
-.dropdown::after{
-    content:"";
-    position:absolute;
-    left:0;
-    right:0;
-    top:100%;
-    height:18px;
+/* =========================================================
+   11. PRODUCT MEGA MENU
+   ========================================================= */
+
+.navbar .product-menu {
+  width: 760px;
+
+  max-width: calc(100vw - 32px);
 }
 
-/*======================================
-        PRODUCT / RESOURCES
-======================================*/
-.product-menu {
-  width: min(780px, 94vw);
+.navbar .root-product-menu {
+  width: 800px;
+
+  max-width: calc(100vw - 32px);
 }
-.resources-menu {
-  width: min(760px, 94vw);
-}
-.mega-grid {
+
+/* =========================================================
+   12. PRODUCT GRID
+   ========================================================= */
+
+.navbar .product-menu .mega-grid,
+.navbar .root-product-menu .mega-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.25rem;
-}
-.mega-column {
-  display: flex;
-  flex-direction: column;
-  gap: 0.85rem;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 8px;
 }
 
-/*======================================
-            MEGA CARDS
-======================================*/
-.mega-card {
+.navbar .product-menu .mega-column,
+.navbar .root-product-menu .mega-column {
+  min-width: 0;
+
   display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+/* =========================================================
+   13. PRODUCT MENU INNER
+   ========================================================= */
+
+.navbar .product-menu-inner {
+  padding: 12px;
+}
+
+/* =========================================================
+   14. MEGA HEADER
+   ========================================================= */
+
+.navbar .mega-header {
+  display: flex;
+
   align-items: flex-start;
-  gap: 1rem;
-  padding: 1rem;
-  border-radius: 16px;
+
+  justify-content: space-between;
+
+  gap: 24px;
+
+  padding: 4px 4px 18px;
+
+  margin-bottom: 8px;
+
+  border-bottom: 1px solid rgba(15, 23, 42, 0.07);
+}
+
+.navbar .mega-header-copy {
+  min-width: 0;
+}
+
+.navbar .mega-eyebrow {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #8b5cf6;
+
+  font-size: 0.68rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+}
+
+.navbar .mega-header h3 {
+  margin: 0;
+
+  color: #111827;
+
+  font-size: 1.05rem;
+
+  font-weight: 700;
+
+  line-height: 1.4;
+
+  letter-spacing: -0.02em;
+}
+
+.navbar .mega-header-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  margin-top: 5px;
+
+  flex-shrink: 0;
+
+  color: #64748b;
+
+  font-size: 0.78rem;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+
   text-decoration: none;
-  transition: 0.3s ease;
-  background: transparent;
+
+  transition: color 0.2s ease;
 }
-.mega-card:hover {
-  background: rgba(255, 255, 255, 0.05);
-  transform: translateY(-3px);
+
+.navbar .mega-header-link:hover {
+  color: var(--nav-primary);
 }
-.mega-icon {
-  width: 46px;
-  height: 46px;
+
+.navbar .mega-header-link i {
+  font-size: 0.65rem;
+
+  transition: transform 0.2s ease;
+}
+
+.navbar .mega-header-link:hover i {
+  transform: translate(2px, -2px);
+}
+
+/* =========================================================
+   15. MEGA CARDS
+   ========================================================= */
+
+.navbar .mega-card {
+  position: relative;
+
   display: flex;
+
+  align-items: flex-start;
+
+  gap: 12px;
+
+  width: 100%;
+
+  min-height: 68px;
+
+  padding: 12px;
+
+  border: 1px solid transparent;
+
+  border-radius: 12px;
+
+  background: transparent;
+
+  color: #0f172a;
+
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.navbar .mega-card:hover {
+  background: #f8fafc;
+
+  border-color: rgba(99, 102, 241, 0.1);
+
+  transform: translateY(-1px);
+
+  box-shadow: 0 7px 18px rgba(15, 23, 42, 0.045);
+}
+
+/* =========================================================
+   16. MEGA ICON
+   ========================================================= */
+
+.navbar .mega-icon {
+  width: 38px;
+  height: 38px;
+
+  min-width: 38px;
+
+  display: flex;
+
   align-items: center;
   justify-content: center;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.08);
-  color: #60a5fa;
-  font-size: 1rem;
+
   flex-shrink: 0;
-  transition: 0.3s;
+
+  border-radius: 10px;
+
+  background: #f1f5f9;
+
+  border: 1px solid rgba(99, 102, 241, 0.08);
+
+  color: var(--nav-primary);
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
 }
-.mega-card:hover .mega-icon {
-  background: var(--primary);
-  color: #fff;
+
+.navbar .mega-card:hover .mega-icon {
+  color: #ffffff;
+
+  background: linear-gradient(135deg, var(--nav-primary), var(--nav-purple));
+
+  transform: translateY(-1px);
+}
+
+.navbar .mega-icon i {
+  font-size: 15px;
+
+  line-height: 1;
+}
+
+/* =========================================================
+   17. MEGA CONTENT
+   ========================================================= */
+
+.navbar .mega-content {
+  min-width: 0;
+
+  flex: 1;
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+.navbar .mega-content h4 {
+  margin: 0;
+
+  color: #0f172a;
+
+  font-size: 13px;
+
+  font-weight: 650;
+
+  line-height: 1.35;
+
+  letter-spacing: -0.01em;
+
+  transition: color 0.2s ease;
+}
+
+.navbar .mega-content p {
+  margin: 4px 0 0;
+
+  color: #64748b;
+
+  font-size: 11px;
+
+  font-weight: 400;
+
+  line-height: 1.5;
+}
+
+.navbar .mega-card:hover .mega-content h4 {
+  color: var(--nav-primary);
+}
+
+/* =========================================================
+   18. PRODUCT LINKS
+   ========================================================= */
+
+.navbar .product-link {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  width: 100%;
+
+  gap: 10px;
+
+  padding: 10px 8px;
+
+  margin-bottom: 3px;
+
+  border-radius: 10px;
+
+  color: inherit;
+
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.navbar .product-link:hover {
+  background: #f8fafc;
+
+  transform: translateX(2px);
+}
+
+.navbar .product-link-icon {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 9px;
+
+  background: #f8fafc;
+
+  border: 1px solid rgba(15, 23, 42, 0.06);
+
+  color: #64748b;
+
+  font-size: 0.75rem;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.navbar .product-link:hover .product-link-icon {
+  background: #f1efff;
+
+  border-color: rgba(99, 102, 241, 0.12);
+
+  color: var(--nav-primary);
+}
+
+.navbar .product-link-content {
+  display: flex;
+
+  flex-direction: column;
+
+  min-width: 0;
+
+  gap: 2px;
+}
+
+.navbar .product-link-content strong {
+  color: #1e293b;
+
+  font-size: 0.82rem;
+
+  font-weight: 650;
+
+  line-height: 1.3;
+
+  transition: color 0.2s ease;
+}
+
+.navbar .product-link-content small {
+  color: #94a3b8;
+
+  font-size: 0.69rem;
+
+  line-height: 1.45;
+}
+
+.navbar .product-link:hover .product-link-content strong {
+  color: var(--nav-primary);
+}
+
+.navbar .product-link-arrow {
+  margin-left: auto;
+
+  flex-shrink: 0;
+
+  color: var(--nav-primary);
+
+  font-size: 0.65rem;
+
+  opacity: 0;
+
+  transform: translateX(-4px);
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.navbar .product-link:hover .product-link-arrow {
+  opacity: 1;
+
+  transform: translateX(0);
+}
+
+/* =========================================================
+   19. PRODUCT GROUPS
+   ========================================================= */
+
+.navbar .product-groups {
+  display: flex;
+
+  gap: 0;
+
+  padding: 18px 0;
+}
+
+.navbar .product-group {
+  flex: 1;
+
+  min-width: 0;
+
+  padding: 0 20px;
+
+  border-right: 1px solid rgba(15, 23, 42, 0.07);
+}
+
+.navbar .product-group:first-child {
+  padding-left: 4px;
+}
+
+.navbar .product-group:last-child {
+  padding-right: 4px;
+
+  border-right: none;
+}
+
+/* =========================================================
+   20. GROUP HEADING
+   ========================================================= */
+
+.navbar .group-heading {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 10px;
+
+  margin-bottom: 14px;
+}
+
+.navbar .group-icon {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 8px;
+
+  background: #f1efff;
+
+  color: var(--nav-primary);
+
+  font-size: 0.75rem;
+}
+
+.navbar .group-label {
+  display: block;
+
+  margin-top: 1px;
+
+  color: #111827;
+
+  font-size: 0.68rem;
+
+  font-weight: 750;
+
+  letter-spacing: 0.06em;
+}
+
+.navbar .group-heading p {
+  margin: 3px 0 0;
+
+  color: #94a3b8;
+
+  font-size: 0.72rem;
+
+  line-height: 1.4;
+}
+
+/* =========================================================
+   21. PRODUCT FEATURE BAR
+   ========================================================= */
+
+.navbar .product-feature-bar {
+  display: grid;
+
+  grid-template-columns: 1fr auto 1fr;
+
+  align-items: center;
+
+  gap: 18px;
+
+  padding: 16px 4px 4px;
+
+  border-top: 1px solid rgba(15, 23, 42, 0.07);
+}
+
+.navbar .product-feature {
+  display: flex;
+
+  align-items: center;
+
+  min-width: 0;
+
+  gap: 11px;
+
+  padding: 10px;
+
+  border-radius: 10px;
+
+  color: inherit;
+
+  text-decoration: none;
+
+  transition: background 0.2s ease;
+}
+
+.navbar .product-feature:hover {
+  background: #f8fafc;
+}
+
+.navbar .feature-new {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  padding: 4px 7px;
+
+  border-radius: 999px;
+
+  background: #eef2ff;
+
+  color: var(--nav-primary);
+
+  font-size: 0.58rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.04em;
+}
+
+.navbar .feature-icon {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 8px;
+
+  background: #f1f5f9;
+
+  color: #64748b;
+
+  font-size: 0.72rem;
+}
+
+.navbar .feature-content {
+  display: flex;
+
+  flex-direction: column;
+
+  min-width: 0;
+
+  gap: 2px;
+}
+
+.navbar .feature-content strong {
+  color: #1e293b;
+
+  font-size: 0.77rem;
+
+  font-weight: 650;
+}
+
+.navbar .feature-content small {
+  color: #94a3b8;
+
+  font-size: 0.67rem;
+
+  line-height: 1.4;
+}
+
+.navbar .feature-arrow {
+  margin-left: auto;
+
+  flex-shrink: 0;
+
+  color: #94a3b8;
+
+  font-size: 0.65rem;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.navbar .product-feature:hover .feature-arrow {
+  color: var(--nav-primary);
+
+  transform: translateX(3px);
+}
+
+.navbar .feature-divider {
+  width: 1px;
+
+  height: 34px;
+
+  background: rgba(15, 23, 42, 0.08);
+}
+
+/* =========================================================
+   22. ROOT PRODUCT MENU
+   ========================================================= */
+
+.navbar .root-product-menu .mega-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 16px;
+}
+
+.navbar .root-product-menu .mega-card {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 16px;
+
+  width: 100%;
+
+  min-height: auto;
+
+  padding: 16px;
+
+  border-radius: 16px;
+
+  background: transparent;
+
+  border: 1px solid transparent;
+
+  color: inherit;
+
+  text-decoration: none;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.navbar .root-product-menu .mega-card:hover {
+  background: #f8fafc;
+
+  border-color: rgba(99, 102, 241, 0.1);
+
+  transform: translateY(-2px);
+}
+
+.navbar .root-product-menu .mega-icon {
+  width: 44px;
+  height: 44px;
+
+  min-width: 44px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 12px;
+
+  background: rgba(79, 70, 229, 0.08);
+
+  color: var(--nav-primary);
+
+  font-size: 1rem;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.navbar .root-product-menu .mega-card:hover .mega-icon {
+  background: var(--nav-primary);
+
+  color: #ffffff;
+
   transform: scale(1.05);
 }
-.mega-content {
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-}
-.mega-content h4 {
+
+.navbar .root-product-menu .mega-content h4 {
   margin: 0;
-  font-size: 0.96rem;
+
+  color: #111827;
+
+  font-size: 0.95rem;
+
   font-weight: 700;
-  color: #fff;
+
   line-height: 1.3;
 }
-.mega-content p {
-  margin: 0;
-  font-size: 0.84rem;
-  line-height: 1.6;
-  color: #9ca3af;
-}
-.mega-card:hover h4 {
-  color: #fff;
-}
-.mega-card:hover p {
-  color: #d1d5db;
+
+.navbar .root-product-menu .mega-card:hover .mega-content h4 {
+  color: var(--nav-primary);
 }
 
-/*======================================
-            MEGA FOOTER
-======================================*/
-.mega-footer {
-  margin-top: 1.75rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-}
-.footer-card {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1rem;
-  border-radius: 14px;
-  text-decoration: none;
-  background: rgba(255, 255, 255, 0.04);
-  transition: 0.3s;
-}
-.footer-card:hover {
-  background: rgba(255, 255, 255, 0.08);
-  transform: translateY(-2px);
-}
-.footer-card i {
-  font-size: 1.2rem;
-  color: #60a5fa;
-  flex-shrink: 0;
-}
-.footer-card h5 {
-  margin: 0;
-  font-size: 0.92rem;
-  font-weight: 700;
-  color: #fff;
-}
-.footer-card p {
-  margin: 0.3rem 0 0;
+.navbar .root-product-menu .mega-content p {
+  margin: 4px 0 0;
+
+  color: #64748b;
+
   font-size: 0.82rem;
-  line-height: 1.5;
-  color: #9ca3af;
-}
-.badge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.3rem 0.65rem;
-  border-radius: 999px;
-  background: #22c55e;
-  color: #fff;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  flex-shrink: 0;
+
+  line-height: 1.55;
 }
 
-/*======================================
-            NAV ACTIONS
-======================================*/
-.nav-actions {
+/* =========================================================
+   23. RESOURCES MENU
+   ========================================================= */
+
+.navbar .resources-menu {
+  width: 1000px;
+
+  max-width: calc(100vw - 32px);
+
+  overflow: hidden;
+}
+
+.navbar .resources-menu .mega-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 0;
+}
+
+.navbar .resources-menu .mega-column {
   display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-left: 2rem;
-}
-.nav-login {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.95rem;
-  font-weight: 600;
-  text-decoration: none;
-  color: var(--secondary);
-  transition: 0.3s;
-}
-.nav-login:hover {
-  color: var(--primary);
-}
-.nav-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.85rem 1.45rem;
-  border-radius: 12px;
-  background: var(--primary);
-  color: #fff;
-  font-size: 0.92rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: 0.3s;
-  box-shadow: 0 12px 24px rgba(79, 70, 229, 0.18);
-}
-.nav-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 18px 36px rgba(79, 70, 229, 0.28);
-}
 
-.nav-home{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:.5rem;
-
-    padding:.85rem 1.35rem;
-
-    border:2px solid var(--primary);
-
-    border-radius:12px;
-
-    background:transparent;
-
-    color:var(--primary);
-
-    text-decoration:none;
-
-    font-size:.92rem;
-
-    font-weight:600;
-
-    transition:.35s ease;
-}
-
-.nav-home:hover{
-
-    background:var(--primary);
-
-    color:#fff;
-
-    transform:translateY(-2px);
-
-    box-shadow:0 18px 36px rgba(79,70,229,.18);
-
-}
-
-.nav-home i{
-
-    font-size:.9rem;
-
-}
-
-
-/*======================================
-        MOBILE TOGGLE
-======================================*/
-.mobile-toggle {
-  display: none;
-  width: 34px;
-  height: 28px;
-  padding: 0;
-  border: none;
-  background: none;
-  cursor: pointer;
-  position: relative;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 1100;
+
+  gap: 3px;
+
+  min-width: 0;
+
+  padding: 0 18px;
+
+  border-right: 1px solid rgba(15, 23, 42, 0.07);
 }
-.mobile-toggle span {
-  display: block;
+
+.navbar .resources-menu .mega-column:first-child {
+  padding-left: 0;
+}
+
+.navbar .resources-menu .mega-column:last-child {
+  padding-right: 0;
+
+  border-right: none;
+}
+
+/* =========================================================
+   24. RESOURCE CARDS
+   ========================================================= */
+
+.navbar .resources-menu .mega-card {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 11px;
+
   width: 100%;
-  height: 3px;
+
+  min-height: auto;
+
+  padding: 10px 8px;
+
+  border-radius: 10px;
+
+  background: transparent;
+
+  border: 1px solid transparent;
+
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.navbar .resources-menu .mega-card:hover {
+  background: #f8fafc;
+
+  border-color: rgba(99, 102, 241, 0.08);
+
+  transform: translateX(2px);
+}
+
+.navbar .resources-menu .mega-icon {
+  width: 34px;
+  height: 34px;
+
+  min-width: 34px;
+
+  border-radius: 9px;
+
+  background: #f8fafc;
+
+  border: 1px solid rgba(15, 23, 42, 0.06);
+
+  color: #64748b;
+
+  font-size: 0.75rem;
+}
+
+.navbar .resources-menu .mega-card:hover .mega-icon {
+  background: #f1efff;
+
+  border-color: rgba(99, 102, 241, 0.12);
+
+  color: var(--nav-primary);
+
+  transform: none;
+}
+
+.navbar .resources-menu .mega-content h4 {
+  margin: 0;
+
+  color: #1e293b;
+
+  font-size: 0.82rem;
+
+  font-weight: 650;
+
+  line-height: 1.3;
+}
+
+.navbar .resources-menu .mega-content p {
+  margin: 0;
+
+  color: #94a3b8;
+
+  font-size: 0.69rem;
+
+  line-height: 1.45;
+}
+
+.navbar .resources-menu .mega-card:hover .mega-content h4 {
+  color: var(--nav-primary);
+}
+
+/* =========================================================
+   25. RESOURCE FOOTER
+   ========================================================= */
+
+.navbar .resources-menu .mega-footer,
+.navbar .root-product-menu .mega-footer {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 12px;
+
+  margin-top: 22px;
+
+  padding-top: 18px;
+
+  border-top: 1px solid rgba(15, 23, 42, 0.07);
+}
+
+.navbar .resources-menu .footer-card,
+.navbar .root-product-menu .footer-card {
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  min-width: 0;
+
+  min-height: 56px;
+
+  padding: 10px;
+
+  border-radius: 10px;
+
+  background: transparent;
+
+  border: 1px solid transparent;
+
+  color: inherit;
+
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.navbar .resources-menu .footer-card:hover,
+.navbar .root-product-menu .footer-card:hover {
+  background: #f8fafc;
+
+  border-color: rgba(99, 102, 241, 0.08);
+
+  transform: translateY(-1px);
+}
+
+.navbar .resources-menu .footer-card i,
+.navbar .root-product-menu .footer-card > i {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 8px;
+
+  background: #eef2ff;
+
+  color: var(--nav-primary);
+
+  font-size: 0.82rem;
+}
+
+.navbar .resources-menu .footer-card h5,
+.navbar .root-product-menu .footer-card h5 {
+  margin: 0;
+
+  color: #1e293b;
+
+  font-size: 0.77rem;
+
+  font-weight: 650;
+}
+
+.navbar .resources-menu .footer-card p,
+.navbar .root-product-menu .footer-card p {
+  margin: 2px 0 0;
+
+  color: #94a3b8;
+
+  font-size: 0.67rem;
+
+  line-height: 1.4;
+}
+
+/* =========================================================
+   26. RESOURCE ITEM
+   ========================================================= */
+
+/*
+   Resource items are allowed to be either:
+   - <a class="mega-card resource-item">
+   - <div class="mega-card resource-item">
+
+   Anchors remain fully clickable.
+*/
+
+.navbar .mega-card.resource-item {
+  cursor: pointer;
+
+  user-select: none;
+}
+
+.navbar .mega-card.resource-item:hover {
+  background: #f8fafc;
+
+  border-color: rgba(99, 102, 241, 0.08);
+
+  box-shadow: none;
+}
+
+/* =========================================================
+   27. BADGE
+   ========================================================= */
+
+.navbar .badge {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  min-width: 34px;
+
+  height: 20px;
+
+  padding: 0 7px;
+
   border-radius: 999px;
-  background: var(--secondary);
-  transition: 0.35s ease;
+
+  background: linear-gradient(135deg, var(--nav-primary), var(--nav-purple));
+
+  color: #ffffff;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+
+  line-height: 1;
 }
-.mobile-toggle.active span:nth-child(1) {
-  transform: translateY(12px) rotate(45deg);
+
+/* =========================================================
+   28. NAV ACTIONS
+   ========================================================= */
+
+.navbar .nav-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  flex-shrink: 0;
+
+  margin-left: 20px;
 }
-.mobile-toggle.active span:nth-child(2) {
+
+/* =========================================================
+   29. LOGIN
+   ========================================================= */
+
+.navbar .nav-login {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 36px;
+
+  padding: 0 11px;
+
+  border-radius: 9px;
+
+  color: #475569;
+
+  font-size: 12.5px;
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+.navbar .nav-login:hover {
+  color: #334155;
+
+  background: rgba(15, 23, 42, 0.045);
+}
+
+/* =========================================================
+   30. START FREE BUTTON
+   ========================================================= */
+
+.navbar .nav-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 36px;
+
+  padding: 0 15px;
+
+  border: 0;
+
+  border-radius: 9px;
+
+  color: #ffffff;
+
+  background: linear-gradient(135deg, var(--nav-primary), var(--nav-purple));
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  font-weight: 650;
+
+  line-height: 1;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  box-shadow: 0 5px 14px rgba(99, 102, 241, 0.18);
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.navbar .nav-btn:hover {
+  color: #ffffff;
+
+  background: linear-gradient(135deg, #585cf0, #6d28d9);
+
+  transform: translateY(-1px);
+
+  box-shadow: 0 7px 18px rgba(99, 102, 241, 0.23);
+}
+
+/* =========================================================
+   31. HOME BUTTON
+   ========================================================= */
+
+.navbar .nav-home {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  min-height: 36px;
+
+  padding: 0 11px;
+
+  border: 1px solid rgba(15, 23, 42, 0.08);
+
+  border-radius: 9px;
+
+  color: #64748b;
+
+  background: transparent;
+
+  font-size: 12px;
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.navbar .nav-home i {
+  font-size: 10px;
+
+  transition: transform 0.2s ease;
+}
+
+.navbar .nav-home:hover {
+  color: var(--nav-primary-dark);
+
+  background: #f8fafc;
+
+  border-color: rgba(99, 102, 241, 0.18);
+
+  transform: translateY(-1px);
+}
+
+.navbar .nav-home:hover i {
+  transform: translateX(-2px);
+}
+
+/* =========================================================
+   32. MOBILE TOGGLE
+   ========================================================= */
+
+.navbar .mobile-toggle {
+  display: none;
+
+  width: 42px;
+  height: 42px;
+
+  padding: 0;
+
+  border: 1px solid rgba(15, 23, 42, 0.08);
+
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+
+  gap: 5px;
+
+  cursor: pointer;
+
+  z-index: 10002;
+
+  -webkit-tap-highlight-color: transparent;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.navbar .mobile-toggle:hover {
+  background: #f8fafc;
+
+  border-color: rgba(99, 102, 241, 0.15);
+}
+
+.navbar .mobile-toggle span {
+  display: block;
+
+  width: 18px;
+
+  height: 2px;
+
+  border-radius: 999px;
+
+  background: #334155;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+/* =========================================================
+   33. MOBILE TOGGLE ACTIVE
+   ========================================================= */
+
+.navbar .mobile-toggle.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.navbar .mobile-toggle.active span:nth-child(2) {
   opacity: 0;
 }
-.mobile-toggle.active span:nth-child(3) {
-  transform: translateY(-12px) rotate(-45deg);
+
+.navbar .mobile-toggle.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
 }
 
-/*======================================
-        DESKTOP EFFECTS
-======================================*/
-.dropdown:hover > .mega-menu {
-  animation: megaFade 0.25s ease;
-}
-.logo,
-.nav-links a,
-.dropdown-trigger,
-.nav-btn,
-.nav-login,
-.mega-card,
-.footer-card {
-  transition: all 0.3s ease;
-}
-.nav-links > li > a.active {
-  color: var(--primary);
-  font-weight: 700;
-}
-.dropdown-trigger:focus,
-.nav-links a:focus,
-.nav-btn:focus,
-.nav-login:focus {
-  outline: 2px solid var(--primary);
-  outline-offset: 4px;
-  border-radius: 8px;
-}
-@keyframes megaFade {
-  from {
-    opacity: 0;
-    transform: translateX(-50%) translateY(12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
-  }
-}
+/* =========================================================
+   34. DESKTOP NAVIGATION
+   ========================================================= */
 
-/*======================================
-            TABLET
-======================================*/
-@media (max-width: 1100px) {
-  .nav-links {
-    gap: 1.35rem;
-  }
+@media (min-width: 961px) {
+  .navbar .nav {
+    display: flex !important;
 
-  .nav-actions {
-    margin-left: 1rem;
-  }
-
-  .mega-menu {
-    width: min(94vw, 720px);
-  }
-}
-
-/*======================================
-        MOBILE NAVIGATION
-======================================*/
-@media (max-width: 992px) {
-  .nav-container {
-    height: 78px;
-  }
-
-  .mobile-toggle {
-    display: flex;
-  }
-
-  .nav-actions {
-    display: none;
-  }
-
-  .nav {
-    position: absolute;
-    top: 78px;
-    left: 0;
-    width: 100%;
-    height: calc(100vh - 78px);
-    background: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    overflow-y: auto;
-    transform: translateX(-100%);
-    transition: 0.35s ease;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-    z-index: 999;
-  }
-
-  .nav.active {
-    transform: translateX(0);
-  }
-
-  .nav-links {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0;
-    width: 100%;
-    height: auto;
-    padding: 1rem 0;
-  }
-
-  .nav-links > li {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-  }
-
-  .nav-links > li > a {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 1.5rem;
-    height: auto;
-    width: 100%;
-  }
-
-  .dropdown {
-    display: block;
-    height: auto;
-  }
-
-  .dropdown-trigger {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 1.5rem;
-    height: auto;
-    font-size: 1rem;
-  }
-
-  .dropdown-trigger i {
-    transition: 0.3s;
-  }
-
-  .dropdown.open > .dropdown-trigger i {
-    transform: rotate(180deg);
-  }
-
-  /*======================================
-        MOBILE MEGA MENU
-======================================*/
-  .mega-menu {
     position: static;
-    width: 100% !important;
-    transform: none !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    pointer-events: auto !important;
-    display: none;
-    background: #f8fafc;
-    border: none;
-    border-top: 1px solid rgba(0, 0, 0, 0.06);
-    border-radius: 0;
-    box-shadow: none;
-    padding: 0;
-    animation: none;
-  }
 
-  .dropdown.open > .mega-menu {
-    display: block;
-  }
+    height: 100%;
 
-  .mega-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
+    margin-left: auto;
+    margin-right: auto;
 
-  .mega-column {
-    gap: 0;
-  }
-
-  .mega-card {
-    padding: 1rem 1.5rem;
-    border-radius: 0;
     background: transparent;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  }
 
-  .mega-card:hover {
-    background: #eef2ff;
+    box-shadow: none;
+
+    overflow: visible;
+
     transform: none;
   }
 
-  .mega-icon {
-    width: 42px;
-    height: 42px;
-    background: #eef2ff;
-    color: var(--primary);
+  .navbar .nav-links {
+    display: flex;
+
+    flex-direction: row;
+
+    align-items: center;
+
+    height: 100%;
   }
 
-  .mega-content h4 {
-    color: var(--secondary);
+  .navbar .nav-links > li {
+    display: flex;
+
+    align-items: center;
+
+    height: 100%;
   }
 
-  .mega-content p {
-    color: var(--gray);
+  .navbar .dropdown {
+    display: flex;
+
+    align-items: center;
+
+    height: 100%;
   }
 
-  .mega-footer {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0;
-    margin: 0;
-    padding: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.06);
-  }
-
-  .footer-card {
-    border-radius: 0;
-    background: #fff;
-    padding: 1rem 1.5rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  }
-
-  .footer-card:hover {
-    background: #eef2ff;
-    transform: none;
-  }
-
-  .footer-card h5 {
-    color: var(--secondary);
-  }
-
-  .footer-card p {
-    color: var(--gray);
+  .navbar .dropdown-trigger {
+    height: 100%;
   }
 }
 
-/*======================================
-        SMALL TABLETS
-======================================*/
-@media (max-width: 768px) {
-  .nav-container {
-    height: 74px;
+/* =========================================================
+   35. TABLET
+   ========================================================= */
+
+@media (max-width: 1180px) {
+  .navbar .nav-container {
+    width: min(100%, calc(100% - 32px));
   }
 
-  .nav {
-    top: 74px;
-    height: calc(100vh - 74px);
+  .navbar .nav-links {
+    gap: 1px;
   }
 
-  .logo-icon {
-    width: 42px;
-    height: 42px;
-    font-size: 1.1rem;
+  .navbar .nav-links > li > a,
+  .navbar .dropdown-trigger,
+  .navbar .nav-placeholder {
+    padding-left: 9px;
+    padding-right: 9px;
+
+    font-size: 12px;
   }
 
-  .logo-text h2 {
-    font-size: 1.1rem;
+  .navbar .nav-actions {
+    margin-left: 10px;
+
+    gap: 5px;
   }
 
-  .logo-text span {
-    font-size: 0.65rem;
+  .navbar .nav-login {
+    display: none;
   }
 
-  .dropdown-trigger {
-    padding: 1rem 1.25rem;
+  .navbar .product-menu {
+    width: 700px;
   }
 
-  .mega-card {
-    padding: 1rem 1.25rem;
+  .navbar .root-product-menu {
+    width: 720px;
   }
 
-  .footer-card {
-    padding: 1rem 1.25rem;
+  .navbar .resources-menu {
+    width: 850px;
   }
 }
 
-/*======================================
-        PHONES
-======================================*/
-@media (max-width: 576px) {
-  .nav-container {
+/* =========================================================
+   36. MOBILE / TABLET NAVIGATION
+   ========================================================= */
+
+@media (max-width: 960px) {
+  .navbar {
     height: 70px;
   }
 
-  .nav {
-    top: 70px;
-    height: calc(100vh - 70px);
+  .navbar .nav-container {
+    width: calc(100% - 28px);
   }
 
-  .logo {
-    gap: 0.65rem;
+  /* -------------------------------------------------------
+     Hide desktop actions
+     ------------------------------------------------------- */
+
+  .navbar .nav-actions {
+    display: none;
   }
 
-  .logo-icon {
+  /* -------------------------------------------------------
+     Mobile toggle
+     ------------------------------------------------------- */
+
+  .navbar .mobile-toggle {
+    display: flex;
+  }
+
+  /* -------------------------------------------------------
+     Closed navigation
+     ------------------------------------------------------- */
+
+  .navbar .nav {
+    display: none;
+  }
+
+  /* -------------------------------------------------------
+     Open mobile navigation
+     ------------------------------------------------------- */
+
+  .navbar .nav.mobile-open {
+    position: absolute;
+
+    display: block;
+
+    top: calc(100% + 1px);
+
+    left: 0;
+    right: 0;
+
+    width: auto;
+
+    height: auto;
+
+    margin: 0;
+
+    padding: 12px;
+
+    background: rgba(255, 255, 255, 0.985);
+
+    border: 1px solid rgba(15, 23, 42, 0.08);
+
+    border-top: 0;
+
+    border-radius: 0 0 16px 16px;
+
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.1);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    overflow-x: hidden;
+
+    overflow-y: auto;
+
+    max-height: calc(100vh - 70px);
+
+    z-index: 10000;
+  }
+
+  /* -------------------------------------------------------
+     Mobile links
+     ------------------------------------------------------- */
+
+  .navbar .nav.mobile-open .nav-links {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    width: 100%;
+
+    height: auto;
+
+    gap: 4px;
+  }
+
+  .navbar .nav.mobile-open .nav-links > li {
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+  }
+
+  .navbar .nav.mobile-open .nav-links > li > a,
+  .navbar .nav.mobile-open .nav-placeholder,
+  .navbar .nav.mobile-open .dropdown-trigger {
+    width: 100%;
+
+    min-height: 46px;
+
+    justify-content: space-between;
+
+    padding: 0 13px;
+
+    border-radius: 9px;
+
+    font-size: 13px;
+  }
+
+  .navbar .nav.mobile-open .nav-links > li > a:hover,
+  .navbar .nav.mobile-open .nav-placeholder:hover {
+    background: #f8fafc;
+  }
+
+  /* -------------------------------------------------------
+     Mobile dropdown
+     ------------------------------------------------------- */
+
+  .navbar .nav.mobile-open .dropdown-trigger {
+    background: #f8fafc;
+  }
+
+  .navbar .nav.mobile-open .dropdown::after {
+    display: none;
+  }
+
+  /* -------------------------------------------------------
+     Mobile mega menu
+     ------------------------------------------------------- */
+
+  .navbar .nav.mobile-open .mega-menu {
+    position: static;
+
+    width: 100% !important;
+
+    max-width: none;
+
+    margin-top: 5px;
+
+    padding: 8px;
+
+    display: none;
+
+    opacity: 1 !important;
+
+    visibility: visible !important;
+
+    pointer-events: auto !important;
+
+    transform: none !important;
+
+    background: #f8fafc;
+
+    border-color: rgba(15, 23, 42, 0.06);
+
+    border-radius: 12px;
+
+    box-shadow: none;
+
+    backdrop-filter: none;
+
+    -webkit-backdrop-filter: none;
+  }
+
+  .navbar .nav.mobile-open .dropdown.open > .mega-menu,
+  .navbar .nav.mobile-open .dropdown:focus-within > .mega-menu {
+    display: block;
+  }
+
+  .navbar .nav.mobile-open .mega-menu::before {
+    display: none;
+  }
+
+  /* -------------------------------------------------------
+     Mobile grids
+     ------------------------------------------------------- */
+
+  .navbar .nav.mobile-open .product-menu .mega-grid,
+  .navbar .nav.mobile-open .root-product-menu .mega-grid,
+  .navbar .nav.mobile-open .resources-menu .mega-grid {
+    grid-template-columns: 1fr;
+
+    gap: 3px;
+  }
+
+  /* -------------------------------------------------------
+     Mobile product menu
+     ------------------------------------------------------- */
+
+  .navbar .nav.mobile-open .product-menu-inner {
+    padding: 0;
+  }
+
+  .navbar .nav.mobile-open .mega-header {
+    display: none;
+  }
+
+  .navbar .nav.mobile-open .product-groups {
+    display: block;
+
+    padding: 0;
+  }
+
+  .navbar .nav.mobile-open .product-group {
+    padding: 0;
+
+    border-right: none;
+
+    border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+  }
+
+  .navbar .nav.mobile-open .product-group:last-child {
+    border-bottom: none;
+  }
+
+  /* -------------------------------------------------------
+     Mobile group heading
+     ------------------------------------------------------- */
+
+  .navbar .nav.mobile-open .group-heading {
+    display: flex;
+
+    padding: 14px 13px 8px;
+
+    margin: 0;
+  }
+
+  .navbar .nav.mobile-open .group-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  /* -------------------------------------------------------
+     Mobile product links
+     ------------------------------------------------------- */
+
+  .navbar .nav.mobile-open .product-link {
+    padding: 11px 13px;
+
+    margin: 0;
+
+    border-radius: 0;
+  }
+
+  .navbar .nav.mobile-open .product-link:hover {
+    background: #f1f5f9;
+
+    transform: none;
+  }
+
+  .navbar .nav.mobile-open .product-link-arrow {
+    opacity: 1;
+
+    transform: none;
+
+    color: #94a3b8;
+  }
+
+  /* -------------------------------------------------------
+     Mobile feature bar
+     ------------------------------------------------------- */
+
+  .navbar .nav.mobile-open .product-feature-bar {
+    display: block;
+
+    padding: 0;
+
+    border-top: 1px solid rgba(15, 23, 42, 0.06);
+  }
+
+  .navbar .nav.mobile-open .product-feature {
+    padding: 13px;
+
+    border-radius: 0;
+
+    border-bottom: 1px solid rgba(15, 23, 42, 0.05);
+  }
+
+  .navbar .nav.mobile-open .feature-divider {
+    display: none;
+  }
+
+  /* -------------------------------------------------------
+     Mobile mega cards
+     ------------------------------------------------------- */
+
+  .navbar .nav.mobile-open .mega-card {
+    min-height: 58px;
+
+    padding: 9px;
+  }
+
+  .navbar .nav.mobile-open .mega-card:hover {
+    transform: none;
+
+    box-shadow: none;
+  }
+
+  /* -------------------------------------------------------
+     Mobile resources
+     ------------------------------------------------------- */
+
+  .navbar .nav.mobile-open .resources-menu .mega-column {
+    padding: 0;
+
+    border-right: none;
+
+    border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+  }
+
+  .navbar .nav.mobile-open .resources-menu .mega-column:last-child {
+    border-bottom: none;
+  }
+
+  .navbar .nav.mobile-open .resources-menu .mega-card {
+    padding: 11px 13px;
+
+    border-radius: 0;
+  }
+
+  .navbar .nav.mobile-open .resources-menu .mega-card:hover {
+    background: #f1f5f9;
+
+    transform: none;
+  }
+
+  .navbar .nav.mobile-open .resources-menu .mega-icon {
+    width: 36px;
+    height: 36px;
+
+    min-width: 36px;
+  }
+
+  /* -------------------------------------------------------
+     Mobile footer
+     ------------------------------------------------------- */
+
+  .navbar .nav.mobile-open .mega-footer {
+    display: block;
+
+    margin: 0;
+
+    padding: 0;
+
+    border-top: 1px solid rgba(15, 23, 42, 0.06);
+  }
+
+  .navbar .nav.mobile-open .resources-menu .footer-card,
+  .navbar .nav.mobile-open .root-product-menu .footer-card {
+    padding: 13px;
+
+    border-radius: 0;
+
+    border-bottom: 1px solid rgba(15, 23, 42, 0.05);
+  }
+
+  .navbar .nav.mobile-open .resources-menu .footer-card:hover,
+  .navbar .nav.mobile-open .root-product-menu .footer-card:hover {
+    background: #f1f5f9;
+
+    transform: none;
+  }
+
+  /* -------------------------------------------------------
+     Mobile root product cards
+     ------------------------------------------------------- */
+
+  .navbar .nav.mobile-open .root-product-menu .mega-card {
+    padding: 11px 13px;
+
+    border-radius: 0;
+  }
+
+  .navbar .nav.mobile-open .root-product-menu .mega-footer {
+    grid-template-columns: 1fr;
+
+    margin-top: 6px;
+
+    padding-top: 7px;
+  }
+}
+
+/* =========================================================
+   37. MOBILE
+   ========================================================= */
+
+@media (max-width: 640px) {
+  .navbar {
+    height: 66px;
+  }
+
+  .navbar .nav-container {
+    width: calc(100% - 20px);
+  }
+
+  /* -------------------------------------------------------
+     Logo
+     ------------------------------------------------------- */
+
+  .navbar .logo {
+    gap: 8px;
+  }
+
+  .navbar .logo-icon {
+    width: 34px;
+    height: 34px;
+
+    border-radius: 9px;
+  }
+
+  .navbar .logo-icon i {
+    font-size: 15px;
+  }
+
+  .navbar .logo-text h2 {
+    font-size: 15px;
+  }
+
+  .navbar .logo-text span {
+    font-size: 6.5px;
+
+    letter-spacing: 0.15em;
+  }
+
+  /* -------------------------------------------------------
+     Mobile toggle
+     ------------------------------------------------------- */
+
+  .navbar .mobile-toggle {
     width: 40px;
     height: 40px;
   }
 
-  .logo-text h2 {
-    font-size: 1rem;
+  /* -------------------------------------------------------
+     Mobile menu
+     ------------------------------------------------------- */
+
+  .navbar .nav.mobile-open {
+    max-height: calc(100vh - 66px);
   }
 
-  .logo-text span {
+  /* -------------------------------------------------------
+     Mobile mega content
+     ------------------------------------------------------- */
+
+  .navbar .nav.mobile-open .mega-content h4 {
+    font-size: 12px;
+  }
+
+  .navbar .nav.mobile-open .mega-content p {
+    font-size: 10.5px;
+  }
+
+  .navbar .nav.mobile-open .mega-icon {
+    width: 34px;
+    height: 34px;
+
+    min-width: 34px;
+  }
+}
+
+/* =========================================================
+   38. VERY SMALL SCREENS
+   ========================================================= */
+
+@media (max-width: 400px) {
+  .navbar .nav-container {
+    width: calc(100% - 16px);
+  }
+
+  .navbar .logo-text span {
     display: none;
   }
 
-  .mobile-toggle {
-    width: 30px;
-    height: 24px;
+  .navbar .logo-text h2 {
+    font-size: 14px;
   }
 
-  .mobile-toggle span {
-    height: 2.5px;
+  .navbar .logo-icon {
+    width: 32px;
+    height: 32px;
   }
 
-  .dropdown-trigger {
-    padding: 0.95rem 1rem;
-    font-size: 0.95rem;
-  }
-
-  .mega-card {
-    padding: 0.95rem 1rem;
-  }
-
-  .footer-card {
-    padding: 0.95rem 1rem;
+  .navbar .nav.mobile-open {
+    padding: 8px;
   }
 }
 
-/*======================================
-        DESKTOP RESPONSIVE
-======================================*/
-@media (min-width: 993px) {
-  .nav {
-    display: flex !important;
-    transform: none !important;
-    position: static;
-    height: 100%;
-    background: transparent;
-    box-shadow: none;
-    overflow: visible;
+/* =========================================================
+   39. ROOT PRODUCT RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 992px) {
+  .navbar .root-product-menu .mega-grid {
+    grid-template-columns: 1fr;
   }
 
-  .nav-links {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 100%;
-  }
-
-  .nav-links > li {
-    height: 100%;
-    display: flex;
-    align-items: center;
-  }
-
-  .dropdown {
-    height: 100%;
-    display: flex;
-    align-items: center;
-  }
-
-  .dropdown-trigger {
-    height: 100%;
-    padding: 0;
-  }
-
-  .mega-menu {
-    display: block;
+  .navbar .root-product-menu .mega-footer {
+    grid-template-columns: 1fr;
   }
 }
 
-/*======================================
-        NAVBAR SCROLL EFFECT
-======================================*/
-.navbar.scrolled {
-  background: rgba(255, 255, 255, 0.98);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.08);
+@media (max-width: 576px) {
+  .navbar .root-product-menu .mega-card {
+    padding: 0.85rem;
+  }
+
+  .navbar .root-product-menu .mega-icon {
+    width: 40px;
+    height: 40px;
+
+    min-width: 40px;
+
+    border-radius: 10px;
+  }
+
+  .navbar .root-product-menu .mega-content h4 {
+    font-size: 0.9rem;
+  }
+
+  .navbar .root-product-menu .mega-content p {
+    font-size: 0.78rem;
+  }
 }
 
-/*======================================
-        HOVER ANIMATIONS
-======================================*/
-.nav-links > li > a:hover,
-.dropdown-trigger:hover {
-  color: var(--primary);
-}
+/* =========================================================
+   40. ACCESSIBILITY
+   ========================================================= */
 
-.mega-card:hover {
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-}
+.navbar a:focus-visible,
+.navbar button:focus-visible {
+  outline: 2px solid rgba(99, 102, 241, 0.55);
 
-.footer-card:hover {
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
-}
-
-.nav-btn:hover {
-  background: #4338ca;
-}
-
-.nav-login:hover {
-  opacity: 0.8;
-}
-
-.logo {
-  transition: transform 0.3s ease;
-}
-
-.logo:hover {
-  transform: translateY(-2px);
-}
-
-.logo-icon {
-  transition: transform 0.35s ease;
-}
-
-.logo:hover .logo-icon {
-  transform: rotate(-8deg) scale(1.08);
-}
-
-/*======================================
-        ACTIVE STATES
-======================================*/
-.nav-links > li > a.active,
-.dropdown-trigger.active {
-  color: var(--primary);
-  font-weight: 700;
-}
-
-.dropdown.open > .dropdown-trigger {
-  color: var(--primary);
-}
-
-/*======================================
-        FOCUS STATES
-======================================*/
-a:focus-visible,
-button:focus-visible {
-  outline: 2px solid var(--primary);
   outline-offset: 3px;
-  border-radius: 8px;
 }
 
-/*======================================
-        SMOOTH TRANSITIONS
-======================================*/
-.navbar,
-.nav,
-.nav-links,
-.dropdown,
-.dropdown-trigger,
-.mega-menu,
-.mega-card,
-.footer-card,
-.nav-btn,
-.nav-login,
-.mobile-toggle span {
-  transition: all 0.3s ease;
+.navbar .product-link:focus-visible,
+.navbar .mega-card:focus-visible,
+.navbar .footer-card:focus-visible {
+  outline: 2px solid rgba(99, 102, 241, 0.55);
+
+  outline-offset: 2px;
 }
 
-/*======================================
-        CUSTOM SCROLLBAR
-======================================*/
-.nav::-webkit-scrollbar {
-  width: 8px;
+/* =========================================================
+   41. CLICKABLE ELEMENTS
+   ========================================================= */
+
+.navbar .product-link,
+.navbar .product-feature,
+.navbar .resources-menu .mega-card,
+.navbar .resources-menu .footer-card,
+.navbar .root-product-menu .mega-card,
+.navbar .root-product-menu .footer-card,
+.navbar .nav-btn,
+.navbar .nav-login,
+.navbar .nav-home {
+  cursor: pointer;
 }
 
-.nav::-webkit-scrollbar-thumb {
+/* =========================================================
+   42. USER SELECTION
+   ========================================================= */
+
+.navbar .nav-links a,
+.navbar .nav-placeholder,
+.navbar .dropdown-trigger,
+.navbar .nav-btn,
+.navbar .nav-login,
+.navbar .nav-home {
+  -webkit-user-select: none;
+
+  user-select: none;
+}
+
+/* =========================================================
+   43. SCROLL OFFSET
+   ========================================================= */
+
+html {
+  scroll-padding-top: 82px;
+}
+
+/* =========================================================
+   44. REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar,
+  .navbar *,
+  .navbar *::before,
+  .navbar *::after {
+    transition: none !important;
+
+    animation: none !important;
+
+    scroll-behavior: auto !important;
+  }
+}
+
+/* =========================================================
+   45. HIGH CONTRAST
+   ========================================================= */
+
+@media (prefers-contrast: more) {
+  .navbar .mega-menu {
+    border-color: rgba(15, 23, 42, 0.25);
+  }
+
+  .navbar .product-group,
+  .navbar .resources-menu .mega-column {
+    border-color: rgba(15, 23, 42, 0.15);
+  }
+
+  .navbar .mega-content h4,
+  .navbar .product-link-content strong,
+  .navbar .resources-menu .mega-content h4 {
+    color: #0f172a;
+  }
+}
+
+/* =========================================================
+   46. SCROLLBAR
+   ========================================================= */
+
+.navbar .nav.mobile-open::-webkit-scrollbar {
+  width: 7px;
+}
+
+.navbar .nav.mobile-open::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.navbar .nav.mobile-open::-webkit-scrollbar-thumb {
   background: #cbd5e1;
+
   border-radius: 999px;
 }
 
-.nav::-webkit-scrollbar-thumb:hover {
+.navbar .nav.mobile-open::-webkit-scrollbar-thumb:hover {
   background: #94a3b8;
 }
 
-.nav::-webkit-scrollbar-track {
-  background: transparent;
-}
+/* =========================================================
+   47. NAVBAR ENTRY ANIMATION
+   ========================================================= */
 
-.mega-menu::-webkit-scrollbar {
-  width: 8px;
-}
-
-.mega-menu::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.18);
-  border-radius: 999px;
-}
-
-.mega-menu::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-/*======================================
-        ANIMATIONS
-======================================*/
 @keyframes navbarFade {
   from {
     opacity: 0;
+
     transform: translateY(-10px);
   }
 
   to {
     opacity: 1;
-    transform: translateY(0);
-  }
-}
 
-@keyframes megaMenuFade {
-  from {
-    opacity: 0;
-    transform: translateX(-50%) translateY(12px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
-  }
-}
-
-@keyframes mobileSlide {
-  from {
-    transform: translateX(-100%);
-  }
-
-  to {
-    transform: translateX(0);
-  }
-}
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-
-  to {
-    opacity: 1;
     transform: translateY(0);
   }
 }
 
 .navbar {
   animation: navbarFade 0.45s ease;
-}
 
-.dropdown:hover > .mega-menu {
-  animation: megaMenuFade 0.25s ease;
-}
-
-.nav.active {
-  animation: mobileSlide 0.3s ease;
-}
-
-.mega-card {
-  animation: fadeUp 0.35s ease;
-}
-
-/*======================================
-        REDUCED MOTION
-======================================*/
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation: none !important;
-    transition: none !important;
-    scroll-behavior: auto !important;
-  }
-}
-
-/*======================================
-        PRINT
-======================================*/
-@media print {
-  .navbar {
-    display: none;
-  }
-}
-
-/*======================================
-        FINAL POLISH
-======================================*/
-.navbar {
   will-change: transform;
 }
 
-.mobile-toggle {
-  -webkit-tap-highlight-color: transparent;
+/* =========================================================
+   48. MEGA MENU ANIMATION
+   ========================================================= */
+
+@keyframes megaMenuFade {
+  from {
+    opacity: 0;
+
+    transform: translateX(-50%) translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateX(-50%) translateY(0);
+  }
 }
 
-.dropdown-trigger {
-  -webkit-tap-highlight-color: transparent;
+/* =========================================================
+   49. DESKTOP MEGA MENU ANIMATION
+   ========================================================= */
+
+@media (min-width: 961px) {
+  .navbar .dropdown:hover > .mega-menu {
+    animation: megaMenuFade 0.2s ease;
+  }
 }
 
-.nav-links a,
-.dropdown-trigger,
-.nav-btn,
-.nav-login {
-  -webkit-user-select: none;
-  user-select: none;
-}
+/* =========================================================
+   50. PRINT
+   ========================================================= */
 
-.mega-card,
-.footer-card {
-  cursor: pointer;
-}
-
-.mega-menu {
-  overflow: hidden;
-}
-
-.nav {
-  scroll-behavior: smooth;
-}
-
-html {
-  scroll-padding-top: 82px;
+@media print {
+  .navbar {
+    display: none !important;
+  }
 }

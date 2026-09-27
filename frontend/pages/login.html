@@ -1,41 +1,183 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html lang="en">
+  <head>
+    <!--==================================================
+                        META
+==================================================-->
 
-<head>
+    <meta charset="UTF-8" />
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>Log In | Nexora Technologies</title>
+    <meta
+      name="description"
+      content="Log in to Nexora Technologies to access your workspace, projects, and product tools."
+    />
 
-<link rel="stylesheet" href="../assets/css/style.css">
+    <meta name="theme-color" content="#050505" />
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Log In | Nexora Technologies</title>
 
-</head>
+    <!--==================================================
+                    MAIN STYLES
+==================================================-->
 
-<body>
+    <link rel="stylesheet" href="../assets/css/style.css" />
 
-<div id="navbar-container"></div>
+    <!--==================================================
+                LOGIN PAGE STYLES
+==================================================-->
 
-<main>
+    <link rel="stylesheet" href="../assets/css/pages/login.css" />
 
-<!-- Login page content goes here -->
+    <!--==================================================
+                    FONT AWESOME
+==================================================-->
 
-</main>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
 
-<div id="footer-container"></div>
+  <body class="login-page">
+    <!--==================================================
+                    LOGIN MAIN
+==================================================-->
 
-<script src="../assets/js/navbar.js"></script>
-<script src="../assets/js/app.js"></script>
+    <main class="login-main">
+      <section class="login-container" aria-labelledby="login-title">
+        <!--==================================================
+                        NEXORA LOGO
+        ==================================================-->
 
-<script src="../assets/js/slider.js"></script>
-<script src="../assets/js/counter.js"></script>
-<script src="../assets/js/dropdown.js"></script>
-<script src="../assets/js/form.js"></script>
-<script src="../assets/js/animations.js"></script>
+        <a
+          href="../index.html"
+          class="login-logo"
+          aria-label="Nexora Technologies home"
+        >
+          <img
+            src="../assets/images/nexora-mark.png"
+            alt="Nexora Technologies"
+          />
+        </a>
 
-</body>
+        <!--==================================================
+                        LOGIN TITLE
+        ==================================================-->
 
+        <h1 class="login-title" id="login-title">Log in to Nexora</h1>
+
+        <!--==================================================
+                    LOGIN DESCRIPTION
+        ==================================================-->
+
+        <p class="login-description">
+          Access your Nexora workspace and continue where you left off.
+        </p>
+
+        <!--==================================================
+                    LOGIN OPTIONS
+        ==================================================-->
+
+        <div class="login-options">
+          <!--==================================================
+                        GOOGLE LOGIN
+            ==================================================-->
+
+          <button
+            type="button"
+            class="login-button login-google"
+            id="googleLoginButton"
+            aria-label="Continue with Google"
+          >
+            <span class="login-button-icon" aria-hidden="true">
+              <i class="fa-brands fa-google"></i>
+            </span>
+
+            <span class="login-button-text"> Continue with Google </span>
+          </button>
+
+          <!--==================================================
+                        EMAIL LOGIN
+            ==================================================-->
+
+          <button
+            type="button"
+            class="login-button login-email"
+            id="emailLoginButton"
+            aria-label="Continue with email"
+          >
+            <span class="login-button-icon" aria-hidden="true">
+              <i class="fa-regular fa-envelope"></i>
+            </span>
+
+            <span class="login-button-text"> Continue with email </span>
+          </button>
+
+          <!--==================================================
+                        SAML SSO
+            ==================================================-->
+
+          <button
+            type="button"
+            class="login-button login-sso"
+            id="samlLoginButton"
+            aria-label="Continue with SAML SSO"
+          >
+            <span class="login-button-icon" aria-hidden="true">
+              <i class="fa-solid fa-building"></i>
+            </span>
+
+            <span class="login-button-text"> Continue with SAML SSO </span>
+          </button>
+
+          <!--==================================================
+                        PASSKEY
+            ==================================================-->
+
+          <button
+            type="button"
+            class="login-button login-passkey"
+            id="passkeyLoginButton"
+            aria-label="Log in with passkey"
+          >
+            <span class="login-button-icon" aria-hidden="true">
+              <i class="fa-solid fa-key"></i>
+            </span>
+
+            <span class="login-button-text"> Log in with passkey </span>
+          </button>
+        </div>
+
+        <!--==================================================
+                    ACCOUNT MESSAGE
+        ==================================================-->
+
+        <p class="login-account">
+          <span> Don't have an account? </span>
+
+          <a href="signup.html"> Sign up </a>
+
+          <span> or </span>
+
+          <a href="resources/about.html"> learn more </a>
+        </p>
+      </section>
+    </main>
+
+    <!--==================================================
+                        JAVASCRIPT
+==================================================-->
+
+    <!-- Generic form functionality -->
+    <script src="../assets/js/form.js"></script>
+
+    <!-- Page animations -->
+    <script src="../assets/js/animations.js"></script>
+
+    <!-- Login button functionality -->
+    <script src="../assets/js/login.js"></script>
+  </body>
 </html>

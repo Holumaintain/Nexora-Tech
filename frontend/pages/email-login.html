@@ -1,0 +1,256 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <!--==================================================
+                        META
+==================================================-->
+
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Log in to Nexora Technologies using your email address and password."
+    />
+
+    <meta name="theme-color" content="#050505" />
+
+    <title>Log In With Email | Nexora Technologies</title>
+
+    <!--==================================================
+                    MAIN STYLES
+==================================================-->
+
+    <link rel="stylesheet" href="../assets/css/style.css" />
+
+    <!--==================================================
+                LOGIN PAGE STYLES
+==================================================-->
+
+    <link rel="stylesheet" href="../assets/css/pages/login.css" />
+
+    <!--==================================================
+                    FONT AWESOME
+==================================================-->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+
+  <body class="login-page">
+    <!--==================================================
+                    LOGIN MAIN
+==================================================-->
+
+    <main class="login-main">
+      <section
+        class="login-container email-login-container"
+        aria-labelledby="email-login-title"
+      >
+        <!--==================================================
+                        NEXORA LOGO
+        ==================================================-->
+
+        <a
+          href="../index.html"
+          class="login-logo"
+          aria-label="Nexora Technologies home"
+        >
+          <img
+            src="../assets/images/nexora-mark.png"
+            alt="Nexora Technologies"
+          />
+        </a>
+
+        <!--==================================================
+                        LOGIN TITLE
+        ==================================================-->
+
+        <h1 class="login-title" id="email-login-title">Log in with email</h1>
+
+        <!--==================================================
+                    LOGIN DESCRIPTION
+        ==================================================-->
+
+        <p class="login-description">
+          Enter your email and password to access your Nexora workspace.
+        </p>
+
+        <!--==================================================
+                        EMAIL LOGIN FORM
+        ==================================================-->
+
+        <form class="login-form" id="emailLoginForm" novalidate>
+          <!--==================================================
+                        EMAIL FIELD
+            ==================================================-->
+
+          <div class="login-field">
+            <label for="email" class="login-label"> Email address </label>
+
+            <div class="login-input-wrapper">
+              <span class="login-input-icon" aria-hidden="true">
+                <i class="fa-regular fa-envelope"></i>
+              </span>
+
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="login-input"
+                placeholder="you@example.com"
+                autocomplete="email"
+                required
+              />
+            </div>
+          </div>
+
+          <!--==================================================
+                        PASSWORD FIELD
+            ==================================================-->
+
+          <div class="login-field">
+            <div class="login-label-row">
+              <label for="password" class="login-label"> Password </label>
+
+              <a href="#" class="login-forgot" id="forgotPasswordLink">
+                Forgot password?
+              </a>
+            </div>
+
+            <div class="login-input-wrapper">
+              <span class="login-input-icon" aria-hidden="true">
+                <i class="fa-solid fa-lock"></i>
+              </span>
+
+              <input
+                type="password"
+                id="password"
+                name="password"
+                class="login-input"
+                placeholder="Enter your password"
+                autocomplete="current-password"
+                minlength="8"
+                required
+              />
+
+              <button
+                type="button"
+                class="login-password-toggle"
+                id="passwordToggle"
+                aria-label="Show password"
+                aria-pressed="false"
+              >
+                <i class="fa-regular fa-eye" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+
+          <!--==================================================
+                        REMEMBER ME
+            ==================================================-->
+
+          <div class="login-remember">
+            <label class="login-checkbox">
+              <input type="checkbox" id="rememberMe" name="rememberMe" />
+
+              <span> Remember me </span>
+            </label>
+          </div>
+
+          <!--==================================================
+                        SUBMIT BUTTON
+            ==================================================-->
+
+          <button
+            type="submit"
+            class="login-button login-submit"
+            id="emailSubmitButton"
+          >
+            <span class="login-button-icon" aria-hidden="true">
+              <i class="fa-solid fa-arrow-right-to-bracket"></i>
+            </span>
+
+            <span class="login-button-text"> Log in </span>
+          </button>
+        </form>
+
+        <!--==================================================
+                    BACK TO LOGIN OPTIONS
+        ==================================================-->
+
+        <div class="login-back">
+          <a href="login.html">
+            <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+
+            <span> Back to login options </span>
+          </a>
+        </div>
+
+        <!--==================================================
+                    ACCOUNT MESSAGE
+        ==================================================-->
+
+        <p class="login-account">
+          <span> Don't have an account? </span>
+
+          <a href="signup.html"> Sign up </a>
+        </p>
+      </section>
+    </main>
+
+    <!--==================================================
+                        JAVASCRIPT
+==================================================-->
+
+    <!-- Generic form validation and submission handling -->
+    <script src="../assets/js/form.js"></script>
+
+    <!-- Page animations -->
+    <script src="../assets/js/animations.js"></script>
+
+    <!-- Login functionality -->
+    <script src="../assets/js/login.js"></script>
+
+    <!--==================================================
+                    PASSWORD TOGGLE
+==================================================-->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const passwordInput = document.getElementById("password");
+
+        const passwordToggle = document.getElementById("passwordToggle");
+
+        if (!passwordInput || !passwordToggle) {
+          return;
+        }
+
+        passwordToggle.addEventListener("click", () => {
+          const isPassword = passwordInput.type === "password";
+
+          passwordInput.type = isPassword ? "text" : "password";
+
+          passwordToggle.setAttribute(
+            "aria-label",
+            isPassword ? "Hide password" : "Show password",
+          );
+
+          passwordToggle.setAttribute("aria-pressed", String(isPassword));
+
+          const icon = passwordToggle.querySelector("i");
+
+          if (icon) {
+            icon.classList.toggle("fa-eye", !isPassword);
+
+            icon.classList.toggle("fa-eye-slash", isPassword);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

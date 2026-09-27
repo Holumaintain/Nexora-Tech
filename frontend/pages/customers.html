@@ -1,41 +1,1200 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
+    <title>Customers | Nexora Technologies</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/style.css" />
 
-<title>Customers | Nexora Technologies</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
 
-<link rel="stylesheet" href="../assets/css/style.css">
+  <body class="customers-page">
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <div id="navbar-container"></div>
 
-</head>
+    <main>
+      <!-- =================================================
+             CUSTOMERS HERO
+        ================================================== -->
 
-<body>
+      <section class="customers-header">
+        <div class="customers-header-inner">
+          <span class="customers-eyebrow"> Customers </span>
 
-<div id="navbar-container"></div>
+          <h1>Built with Nexora.</h1>
 
-<main>
+          <p class="customers-intro">
+            From fast-moving startups to complex global teams, organizations use
+            Nexora to plan better, build faster, and keep their most important
+            work moving.
+          </p>
 
-<!-- Customers page content goes here -->
+          <!-- =========================================
+                     CATEGORY NAVIGATION
+                ========================================== -->
 
-</main>
+          <nav class="category-nav" aria-label="Customer categories">
+            <a href="#featured" class="active"> Featured </a>
 
-<div id="footer-container"></div>
+            <a href="#technology"> Technology </a>
 
-<script src="../assets/js/navbar.js"></script>
-<script src="../assets/js/app.js"></script>
+            <a href="#operations"> Operations </a>
 
-<script src="../assets/js/slider.js"></script>
-<script src="../assets/js/counter.js"></script>
-<script src="../assets/js/dropdown.js"></script>
-<script src="../assets/js/form.js"></script>
-<script src="../assets/js/animations.js"></script>
+            <a href="#product"> Product </a>
 
-</body>
+            <a href="#engineering"> Engineering </a>
 
+            <a href="#all-customers"> All customers </a>
+          </nav>
+        </div>
+      </section>
+
+      <!-- =================================================
+             FEATURED CUSTOMER STORIES
+        ================================================== -->
+
+      <section class="case-studies" id="featured">
+        <div class="section-container">
+          <div class="section-heading">
+            <span class="section-kicker"> Customer stories </span>
+
+            <h2>Teams doing their best work with Nexora.</h2>
+          </div>
+
+          <div class="card-grid">
+            <!-- =====================================
+                         AEROPEAK
+                    ====================================== -->
+
+            <article class="case-card case-card-featured">
+              <a
+                href="#"
+                class="case-image"
+                aria-label="Read Aeropeak Engineering customer story"
+              >
+                <img
+                  src="../assets/images/customers/aeropeak-engineering.png"
+                  alt="Aeropeak Engineering workspace"
+                  loading="eager"
+                />
+
+                <span class="image-overlay"></span>
+              </a>
+
+              <div class="case-card-content">
+                <span class="case-category"> Engineering </span>
+
+                <h3>
+                  How Aeropeak Engineering coordinates complex engineering work
+                  with Nexora.
+                </h3>
+
+                <a href="#" class="story-link">
+                  Read customer story
+                  <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </article>
+
+            <!-- =====================================
+                         ATLAS
+                    ====================================== -->
+
+            <article class="case-card">
+              <a
+                href="#"
+                class="case-image"
+                aria-label="Read Atlas customer story"
+              >
+                <img
+                  src="../assets/images/customers/atlas-product-teams.png"
+                  alt="Atlas product teams workspace"
+                  loading="lazy"
+                />
+
+                <span class="image-overlay"></span>
+              </a>
+
+              <div class="case-card-content">
+                <span class="case-category"> Product </span>
+
+                <h3>
+                  Atlas brings product teams together around one source of
+                  truth.
+                </h3>
+
+                <a href="#" class="story-link">
+                  Read story
+                  <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </article>
+
+            <!-- =====================================
+                         AUTOFLOW
+                    ====================================== -->
+
+            <article class="case-card">
+              <a
+                href="#"
+                class="case-image"
+                aria-label="Read Autoflow customer story"
+              >
+                <img
+                  src="../assets/images/customers/autoflow-ai-native.png"
+                  alt="Autoflow AI-native development workspace"
+                  loading="lazy"
+                />
+
+                <span class="image-overlay"></span>
+              </a>
+
+              <div class="case-card-content">
+                <span class="case-category"> Technology </span>
+
+                <h3>
+                  Autoflow gives an AI-native team a faster way to move from
+                  ideas to execution.
+                </h3>
+
+                <a href="#" class="story-link">
+                  Read story
+                  <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </article>
+
+            <!-- =====================================
+                         CODECRAFT
+                    ====================================== -->
+
+            <article class="case-card">
+              <a
+                href="#"
+                class="case-image"
+                aria-label="Read CodeCraft customer story"
+              >
+                <img
+                  src="../assets/images/customers/codecraft-development.png"
+                  alt="CodeCraft development workspace"
+                  loading="lazy"
+                />
+
+                <span class="image-overlay"></span>
+              </a>
+
+              <div class="case-card-content">
+                <span class="case-category"> Engineering </span>
+
+                <h3>
+                  CodeCraft connects development work, planning, and delivery.
+                </h3>
+
+                <a href="#" class="story-link">
+                  Read story
+                  <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </article>
+
+            <!-- =====================================
+                         EMBER CRAFT
+                    ====================================== -->
+
+            <article class="case-card">
+              <a
+                href="#"
+                class="case-image"
+                aria-label="Read Ember Craft customer story"
+              >
+                <img
+                  src="../assets/images/customers/ember-craft-operations.png"
+                  alt="Ember Craft operations workspace"
+                  loading="lazy"
+                />
+
+                <span class="image-overlay"></span>
+              </a>
+
+              <div class="case-card-content">
+                <span class="case-category"> Operations </span>
+
+                <h3>
+                  Ember Craft turns operational complexity into a coordinated
+                  workflow.
+                </h3>
+
+                <a href="#" class="story-link">
+                  Read story
+                  <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </article>
+
+            <!-- =====================================
+                         HAVEN
+                    ====================================== -->
+
+            <article class="case-card">
+              <a
+                href="#"
+                class="case-image"
+                aria-label="Read Haven customer story"
+              >
+                <img
+                  src="../assets/images/customers/haven-product-culture.png"
+                  alt="Haven product culture workspace"
+                  loading="lazy"
+                />
+
+                <span class="image-overlay"></span>
+              </a>
+
+              <div class="case-card-content">
+                <span class="case-category"> Product </span>
+
+                <h3>
+                  Haven creates a product culture built around clarity and
+                  shared context.
+                </h3>
+
+                <a href="#" class="story-link">
+                  Read story
+                  <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </article>
+
+            <!-- =====================================
+                         MERIDIAN
+                    ====================================== -->
+
+            <article class="case-card">
+              <a
+                href="#"
+                class="case-image"
+                aria-label="Read Meridian customer story"
+              >
+                <img
+                  src="../assets/images/customers/meridian-data-pilot.png"
+                  alt="Meridian data pilot workspace"
+                  loading="lazy"
+                />
+
+                <span class="image-overlay"></span>
+              </a>
+
+              <div class="case-card-content">
+                <span class="case-category"> Data </span>
+
+                <h3>
+                  Meridian turns data initiatives into visible, measurable
+                  progress.
+                </h3>
+
+                <a href="#" class="story-link">
+                  Read story
+                  <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </article>
+
+            <!-- =====================================
+                         NEURALFORGE
+                    ====================================== -->
+
+            <article class="case-card">
+              <a
+                href="#"
+                class="case-image"
+                aria-label="Read NeuralForge customer story"
+              >
+                <img
+                  src="../assets/images/customers/neuralforge-agent-development.png"
+                  alt="NeuralForge agent development workspace"
+                  loading="lazy"
+                />
+
+                <span class="image-overlay"></span>
+              </a>
+
+              <div class="case-card-content">
+                <span class="case-category"> AI Engineering </span>
+
+                <h3>
+                  NeuralForge keeps agent development aligned from research
+                  through release.
+                </h3>
+
+                <a href="#" class="story-link">
+                  Read story
+                  <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </article>
+
+            <!-- =====================================
+                         NORTHSTAR
+                    ====================================== -->
+
+            <article class="case-card">
+              <a
+                href="#"
+                class="case-image"
+                aria-label="Read Northstar customer story"
+              >
+                <img
+                  src="../assets/images/customers/northstar-product-operations.png"
+                  alt="Northstar product operations workspace"
+                  loading="lazy"
+                />
+
+                <span class="image-overlay"></span>
+              </a>
+
+              <div class="case-card-content">
+                <span class="case-category"> Operations </span>
+
+                <h3>
+                  Northstar simplifies product operations across a growing
+                  organization.
+                </h3>
+
+                <a href="#" class="story-link">
+                  Read story
+                  <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </article>
+
+            <!-- =====================================
+                         ORBITLABS
+                    ====================================== -->
+
+            <article class="case-card">
+              <a
+                href="#"
+                class="case-image"
+                aria-label="Read OrbitLabs customer story"
+              >
+                <img
+                  src="../assets/images/customers/orbitlabs-scale.png"
+                  alt="OrbitLabs scale workspace"
+                  loading="lazy"
+                />
+
+                <span class="image-overlay"></span>
+              </a>
+
+              <div class="case-card-content">
+                <span class="case-category"> Technology </span>
+
+                <h3>
+                  OrbitLabs scales collaboration without adding unnecessary
+                  process.
+                </h3>
+
+                <a href="#" class="story-link">
+                  Read story
+                  <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </article>
+
+            <!-- =====================================
+                         SCALEWORKS
+                    ====================================== -->
+
+            <article class="case-card">
+              <a
+                href="#"
+                class="case-image"
+                aria-label="Read ScaleWorks customer story"
+              >
+                <img
+                  src="../assets/images/customers/scaleworks-bug-resolution.png"
+                  alt="ScaleWorks bug resolution workspace"
+                  loading="lazy"
+                />
+
+                <span class="image-overlay"></span>
+              </a>
+
+              <div class="case-card-content">
+                <span class="case-category"> Engineering </span>
+
+                <h3>
+                  ScaleWorks gives engineering teams a clearer path from issue
+                  to resolution.
+                </h3>
+
+                <a href="#" class="story-link">
+                  Read story
+                  <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </article>
+
+            <!-- =====================================
+                         SWITCH TO NEXORA
+                    ====================================== -->
+
+            <article class="case-card">
+              <a
+                href="#"
+                class="case-image"
+                aria-label="Read Switch to Nexora customer story"
+              >
+                <img
+                  src="../assets/images/customers/switch-to-nexora.png"
+                  alt="Team switching to Nexora"
+                  loading="lazy"
+                />
+
+                <span class="image-overlay"></span>
+              </a>
+
+              <div class="case-card-content">
+                <span class="case-category"> Migration </span>
+
+                <h3>
+                  Why teams are moving their planning and execution workflows to
+                  Nexora.
+                </h3>
+
+                <a href="#" class="story-link">
+                  Read story
+                  <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </article>
+
+            <!-- =====================================
+                         VERTEXPAY
+                    ====================================== -->
+
+            <article class="case-card">
+              <a
+                href="#"
+                class="case-image"
+                aria-label="Read VertexPay customer story"
+              >
+                <img
+                  src="../assets/images/customers/vertexpay-ai-agent.png"
+                  alt="VertexPay AI agent workspace"
+                  loading="lazy"
+                />
+
+                <span class="image-overlay"></span>
+              </a>
+
+              <div class="case-card-content">
+                <span class="case-category"> Fintech </span>
+
+                <h3>
+                  VertexPay brings AI-assisted workflows into everyday product
+                  development.
+                </h3>
+
+                <a href="#" class="story-link">
+                  Read story
+                  <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================
+             CUSTOMER STATS
+        ================================================== -->
+
+      <section class="stats-banner">
+        <div class="stats-inner">
+          <div class="stat-item">
+            <span class="stat-number"> 13+ </span>
+
+            <span class="stat-label"> Customer stories </span>
+          </div>
+
+          <div class="stat-item">
+            <span class="stat-number"> 6 </span>
+
+            <span class="stat-label"> Core industries </span>
+          </div>
+
+          <div class="stat-item">
+            <span class="stat-number"> 1 </span>
+
+            <span class="stat-label"> Connected workspace </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================
+             CUSTOMER DIRECTORY
+        ================================================== -->
+
+      <section class="customers-table-section" id="all-customers">
+        <div class="section-container">
+          <div class="customer-directory-header">
+            <span class="section-kicker"> Our customers </span>
+
+            <h2>Built for teams of every kind.</h2>
+
+            <p>
+              Nexora brings product, engineering, operations, and business teams
+              into one connected workspace.
+            </p>
+          </div>
+
+          <div class="table-container">
+            <div class="customer-list">
+              <!-- CAREGRID -->
+
+              <article class="customer-row">
+                <div class="customer-logo">
+                  <img
+                    src="../assets/images/customers/logos/caregrid-logo.png"
+                    alt="CareGrid logo"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="customer-info">
+                  <h3>CareGrid</h3>
+
+                  <p>
+                    Coordinating healthcare workflows with shared visibility.
+                  </p>
+                </div>
+
+                <div class="customer-category">Healthcare</div>
+
+                <a href="#" class="customer-story-link">
+                  Read story
+                  <span aria-hidden="true">→</span>
+                </a>
+              </article>
+
+              <!-- CLARITY -->
+
+              <article class="customer-row">
+                <div class="customer-logo">
+                  <img
+                    src="../assets/images/customers/logos/clarity-logo.png"
+                    alt="Clarity logo"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="customer-info">
+                  <h3>Clarity</h3>
+
+                  <p>
+                    Giving distributed product teams a clearer way to
+                    collaborate.
+                  </p>
+                </div>
+
+                <div class="customer-category">Product</div>
+
+                <a href="#" class="customer-story-link">
+                  Read story
+                  <span aria-hidden="true">→</span>
+                </a>
+              </article>
+
+              <!-- CLAYMORE -->
+
+              <article class="customer-row">
+                <div class="customer-logo">
+                  <img
+                    src="../assets/images/customers/logos/claymore-logo.png"
+                    alt="Claymore logo"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="customer-info">
+                  <h3>Claymore</h3>
+
+                  <p>
+                    Connecting strategic initiatives with day-to-day execution.
+                  </p>
+                </div>
+
+                <div class="customer-category">Operations</div>
+
+                <a href="#" class="customer-story-link">
+                  Read story
+                  <span aria-hidden="true">→</span>
+                </a>
+              </article>
+
+              <!-- CODESEC -->
+
+              <article class="customer-row">
+                <div class="customer-logo">
+                  <img
+                    src="../assets/images/customers/logos/codesec-logo.png"
+                    alt="CodeSec logo"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="customer-info">
+                  <h3>CodeSec</h3>
+
+                  <p>
+                    Keeping security and engineering work aligned across teams.
+                  </p>
+                </div>
+
+                <div class="customer-category">Security</div>
+
+                <a href="#" class="customer-story-link">
+                  Read story
+                  <span aria-hidden="true">→</span>
+                </a>
+              </article>
+
+              <!-- COGNITIVE -->
+
+              <article class="customer-row">
+                <div class="customer-logo">
+                  <img
+                    src="../assets/images/customers/logos/cognitive-logo.png"
+                    alt="Cognitive logo"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="customer-info">
+                  <h3>Cognitive</h3>
+
+                  <p>
+                    Turning complex AI initiatives into visible and manageable
+                    work.
+                  </p>
+                </div>
+
+                <div class="customer-category">AI</div>
+
+                <a href="#" class="customer-story-link">
+                  Read story
+                  <span aria-hidden="true">→</span>
+                </a>
+              </article>
+
+              <!-- FLOW -->
+
+              <article class="customer-row">
+                <div class="customer-logo">
+                  <img
+                    src="../assets/images/customers/logos/flow-logo.png"
+                    alt="Flow logo"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="customer-info">
+                  <h3>Flow</h3>
+
+                  <p>
+                    Building smoother workflows across a growing organization.
+                  </p>
+                </div>
+
+                <div class="customer-category">Technology</div>
+
+                <a href="#" class="customer-story-link">
+                  Read story
+                  <span aria-hidden="true">→</span>
+                </a>
+              </article>
+
+              <!-- FOUNDRY -->
+
+              <article class="customer-row">
+                <div class="customer-logo">
+                  <img
+                    src="../assets/images/customers/logos/foundry-logo.png"
+                    alt="Foundry logo"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="customer-info">
+                  <h3>Foundry</h3>
+
+                  <p>
+                    Helping engineering teams ship complex projects with
+                    confidence.
+                  </p>
+                </div>
+
+                <div class="customer-category">Engineering</div>
+
+                <a href="#" class="customer-story-link">
+                  Read story
+                  <span aria-hidden="true">→</span>
+                </a>
+              </article>
+
+              <!-- FRAME -->
+
+              <article class="customer-row">
+                <div class="customer-logo">
+                  <img
+                    src="../assets/images/customers/logos/frame-logo.png"
+                    alt="Frame logo"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="customer-info">
+                  <h3>Frame</h3>
+
+                  <p>
+                    Bringing design and product execution together in one place.
+                  </p>
+                </div>
+
+                <div class="customer-category">Design</div>
+
+                <a href="#" class="customer-story-link">
+                  Read story
+                  <span aria-hidden="true">→</span>
+                </a>
+              </article>
+
+              <!-- KINETIQ -->
+
+              <article class="customer-row">
+                <div class="customer-logo">
+                  <img
+                    src="../assets/images/customers/logos/kinetiq-logo.png"
+                    alt="Kinetiq logo"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="customer-info">
+                  <h3>Kinetiq</h3>
+
+                  <p>
+                    Managing high-velocity product work without losing context.
+                  </p>
+                </div>
+
+                <div class="customer-category">Product</div>
+
+                <a href="#" class="customer-story-link">
+                  Read story
+                  <span aria-hidden="true">→</span>
+                </a>
+              </article>
+
+              <!-- LUMINA -->
+
+              <article class="customer-row">
+                <div class="customer-logo">
+                  <img
+                    src="../assets/images/customers/logos/lumina-logo.png"
+                    alt="Lumina logo"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="customer-info">
+                  <h3>Lumina</h3>
+
+                  <p>Aligning product strategy with measurable execution.</p>
+                </div>
+
+                <div class="customer-category">Technology</div>
+
+                <a href="#" class="customer-story-link">
+                  Read story
+                  <span aria-hidden="true">→</span>
+                </a>
+              </article>
+
+              <!-- MERIDIAN -->
+
+              <article class="customer-row">
+                <div class="customer-logo">
+                  <img
+                    src="../assets/images/customers/logos/meridian-logo.png"
+                    alt="Meridian logo"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="customer-info">
+                  <h3>Meridian</h3>
+
+                  <p>
+                    Making data initiatives easier to plan, track, and deliver.
+                  </p>
+                </div>
+
+                <div class="customer-category">Data</div>
+
+                <a href="#" class="customer-story-link">
+                  Read story
+                  <span aria-hidden="true">→</span>
+                </a>
+              </article>
+
+              <!-- NOVA -->
+
+              <article class="customer-row">
+                <div class="customer-logo">
+                  <img
+                    src="../assets/images/customers/logos/nova-logo.png"
+                    alt="Nova logo"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="customer-info">
+                  <h3>Nova</h3>
+
+                  <p>Creating a shared operating rhythm for product teams.</p>
+                </div>
+
+                <div class="customer-category">Product</div>
+
+                <a href="#" class="customer-story-link">
+                  Read story
+                  <span aria-hidden="true">→</span>
+                </a>
+              </article>
+
+              <!-- PULSE -->
+
+              <article class="customer-row">
+                <div class="customer-logo">
+                  <img
+                    src="../assets/images/customers/logos/pulse-logo.png"
+                    alt="Pulse logo"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="customer-info">
+                  <h3>Pulse</h3>
+
+                  <p>
+                    Helping teams identify important work and act on it faster.
+                  </p>
+                </div>
+
+                <div class="customer-category">Operations</div>
+
+                <a href="#" class="customer-story-link">
+                  Read story
+                  <span aria-hidden="true">→</span>
+                </a>
+              </article>
+
+              <!-- RAY -->
+
+              <article class="customer-row">
+                <div class="customer-logo">
+                  <img
+                    src="../assets/images/customers/logos/ray-logo.png"
+                    alt="Ray logo"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="customer-info">
+                  <h3>Ray</h3>
+
+                  <p>
+                    Connecting teams and initiatives across a distributed
+                    organization.
+                  </p>
+                </div>
+
+                <div class="customer-category">Technology</div>
+
+                <a href="#" class="customer-story-link">
+                  Read story
+                  <span aria-hidden="true">→</span>
+                </a>
+              </article>
+
+              <!-- REACTOR -->
+
+              <article class="customer-row">
+                <div class="customer-logo">
+                  <img
+                    src="../assets/images/customers/logos/reactor-logo.png"
+                    alt="Reactor logo"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="customer-info">
+                  <h3>Reactor</h3>
+
+                  <p>
+                    Giving engineering leaders a unified view of development
+                    progress.
+                  </p>
+                </div>
+
+                <div class="customer-category">Engineering</div>
+
+                <a href="#" class="customer-story-link">
+                  Read story
+                  <span aria-hidden="true">→</span>
+                </a>
+              </article>
+
+              <!-- REMOTECORE -->
+
+              <article class="customer-row">
+                <div class="customer-logo">
+                  <img
+                    src="../assets/images/customers/logos/remotecore-logo.png"
+                    alt="RemoteCore logo"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="customer-info">
+                  <h3>RemoteCore</h3>
+
+                  <p>
+                    Keeping distributed teams connected around the work that
+                    matters.
+                  </p>
+                </div>
+
+                <div class="customer-category">Remote Teams</div>
+
+                <a href="#" class="customer-story-link">
+                  Read story
+                  <span aria-hidden="true">→</span>
+                </a>
+              </article>
+
+              <!-- TERRAFLOW -->
+
+              <article class="customer-row">
+                <div class="customer-logo">
+                  <img
+                    src="../assets/images/customers/logos/terraflow-logo.png"
+                    alt="TerraFlow logo"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="customer-info">
+                  <h3>TerraFlow</h3>
+
+                  <p>
+                    Managing large operational programs through connected
+                    workflows.
+                  </p>
+                </div>
+
+                <div class="customer-category">Operations</div>
+
+                <a href="#" class="customer-story-link">
+                  Read story
+                  <span aria-hidden="true">→</span>
+                </a>
+              </article>
+
+              <!-- TUNNEL -->
+
+              <article class="customer-row">
+                <div class="customer-logo">
+                  <img
+                    src="../assets/images/customers/logos/tunnel-logo.png"
+                    alt="Tunnel logo"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="customer-info">
+                  <h3>Tunnel</h3>
+
+                  <p>
+                    Bringing technical and business priorities into alignment.
+                  </p>
+                </div>
+
+                <div class="customer-category">Technology</div>
+
+                <a href="#" class="customer-story-link">
+                  Read story
+                  <span aria-hidden="true">→</span>
+                </a>
+              </article>
+
+              <!-- VITA -->
+
+              <article class="customer-row">
+                <div class="customer-logo">
+                  <img
+                    src="../assets/images/customers/logos/vita-logo.png"
+                    alt="Vita logo"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="customer-info">
+                  <h3>Vita</h3>
+
+                  <p>
+                    Creating a more transparent workflow from planning to
+                    delivery.
+                  </p>
+                </div>
+
+                <div class="customer-category">Healthcare</div>
+
+                <a href="#" class="customer-story-link">
+                  Read story
+                  <span aria-hidden="true">→</span>
+                </a>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================
+             YOUR COMPANY
+        ================================================== -->
+
+      <section class="your-company">
+        <div class="your-company-inner">
+          <!-- =========================================
+                     VISUAL
+                ========================================== -->
+
+          <div class="your-company-visual" aria-hidden="true">
+            <div class="your-company-grid"></div>
+
+            <div class="floating-card card-one">
+              <i class="fa-solid fa-bolt"></i>
+
+              <span> Faster execution </span>
+            </div>
+
+            <div class="floating-card card-two">
+              <i class="fa-solid fa-chart-line"></i>
+
+              <span> Better visibility </span>
+            </div>
+
+            <div class="floating-card card-three">
+              <i class="fa-solid fa-users"></i>
+
+              <span> One connected team </span>
+            </div>
+          </div>
+
+          <!-- =========================================
+                     CONTENT
+                ========================================== -->
+
+          <div class="your-company-content">
+            <span class="section-kicker"> Your company </span>
+
+            <h2>
+              Your team<br />
+              belongs here.
+            </h2>
+
+            <p>
+              Bring your product, engineering, and business teams into one
+              workspace built to turn ideas into outcomes.
+            </p>
+
+            <div class="your-company-actions">
+              <a href="#" class="btn-primary">
+                Get started
+                <span aria-hidden="true">→</span>
+              </a>
+
+              <a href="#" class="btn-secondary">
+                Talk to sales
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================
+             FINAL CTA
+        ================================================== -->
+
+      <section class="cta-section">
+        <div class="cta-inner">
+          <span class="section-kicker"> Build together </span>
+
+          <h2>
+            Make your next<br />
+            great thing.
+          </h2>
+
+          <p>
+            Nexora gives ambitious teams the clarity, context, and tools they
+            need to move from planning to execution.
+          </p>
+
+          <div class="cta-buttons">
+            <a href="#" class="btn-primary">
+              Start building
+              <span aria-hidden="true">→</span>
+            </a>
+
+            <a href="#" class="btn-secondary">
+              Explore Nexora
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <div id="footer-container"></div>
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="../assets/js/navbar.js"></script>
+    <script src="../assets/js/app.js"></script>
+
+    <script src="../assets/js/slider.js"></script>
+    <script src="../assets/js/counter.js"></script>
+    <script src="../assets/js/dropdown.js"></script>
+    <script src="../assets/js/form.js"></script>
+    <script src="../assets/js/animations.js"></script>
+  </body>
 </html>

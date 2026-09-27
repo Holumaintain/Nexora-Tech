@@ -1,0 +1,711 @@
+/* =========================================================
+NEXORA TECHNOLOGIES
+INTEGRATIONS PAGE
+========================================================= */
+
+/* =========================================================
+PAGE FOUNDATION
+========================================================= */
+
+.integrations {
+  position: relative;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 120px 24px 100px;
+  color: #111827;
+}
+
+.integrations *,
+.integrations *::before,
+.integrations *::after {
+  box-sizing: border-box;
+}
+
+/* =========================================================
+INTEGRATIONS HERO
+========================================================= */
+
+.integrations-hero {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 30px 0 105px;
+  text-align: center;
+}
+
+.integrations-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 22px;
+  padding: 7px 12px;
+  border: 1px solid rgba(17, 24, 39, 0.1);
+  border-radius: 999px;
+  background: rgba(17, 24, 39, 0.035);
+  color: #4b5563;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.integrations-eyebrow i {
+  font-size: 0.75rem;
+}
+
+.integrations-hero h1 {
+  max-width: 900px;
+  margin: 0 auto 26px;
+  color: #111827;
+  font-size: clamp(2.75rem, 6vw, 5.25rem);
+  font-weight: 700;
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+}
+
+.integrations-hero p {
+  max-width: 680px;
+  margin: 0 auto;
+  color: #6b7280;
+  font-size: 1.08rem;
+  line-height: 1.8;
+}
+
+/* =========================================================
+CATEGORY
+========================================================= */
+
+.integration-category {
+  margin-bottom: 90px;
+}
+
+.category-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 28px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.category-header > div {
+  min-width: 0;
+}
+
+.category-eyebrow {
+  display: block;
+  margin-bottom: 7px;
+  color: #8b5cf6;
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.category-header h2 {
+  margin: 0;
+  color: #111827;
+  font-size: clamp(1.55rem, 3vw, 2rem);
+  font-weight: 650;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+}
+
+.category-header > p {
+  max-width: 390px;
+  margin: 0;
+  color: #6b7280;
+  font-size: 0.92rem;
+  line-height: 1.65;
+  text-align: right;
+}
+
+/* =========================================================
+INTEGRATION GRID
+========================================================= */
+
+.integration-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+/* =========================================================
+INTEGRATION CARD
+========================================================= */
+
+.integration-card {
+  position: relative;
+  min-height: 245px;
+  padding: 26px 24px 24px;
+  overflow: hidden;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  transition:
+    transform 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease,
+    background-color 220ms ease;
+}
+
+.integration-card::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  content: "";
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(139, 92, 246, 0.65),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 220ms ease;
+}
+
+.integration-card:hover {
+  transform: translateY(-4px);
+  border-color: #d1d5db;
+  background: #ffffff;
+  box-shadow:
+    0 16px 40px rgba(17, 24, 39, 0.08),
+    0 3px 10px rgba(17, 24, 39, 0.04);
+}
+
+.integration-card:hover::before {
+  opacity: 1;
+}
+
+/* =========================================================
+INTEGRATION ICON
+========================================================= */
+
+.integration-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+  margin-bottom: 25px;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+
+  background: #f9fafb;
+
+  color: #111827;
+
+  font-size: 1.25rem;
+
+  transition:
+    background-color 220ms ease,
+    border-color 220ms ease,
+    color 220ms ease,
+    transform 220ms ease;
+}
+
+.integration-card:hover .integration-icon {
+  border-color: rgba(139, 92, 246, 0.25);
+  background: rgba(139, 92, 246, 0.08);
+  color: #7c3aed;
+  transform: translateY(-2px);
+}
+
+/* Individual brand icon colors */
+
+.integration-card .fa-google-drive {
+  color: #4285f4;
+}
+
+.integration-card .fa-dropbox {
+  color: #0061ff;
+}
+
+.integration-card .fa-slack {
+  color: #611f69;
+}
+
+.integration-card .fa-discord {
+  color: #5865f2;
+}
+
+.integration-card .fa-github {
+  color: #111827;
+}
+
+.integration-card .fa-figma {
+  color: #f24e1e;
+}
+
+.integration-card .fa-aws {
+  color: #ff9900;
+}
+
+/* =========================================================
+CARD TYPOGRAPHY
+========================================================= */
+
+.integration-card h3 {
+  margin: 0 0 10px;
+
+  color: #111827;
+
+  font-size: 1rem;
+  font-weight: 650;
+  line-height: 1.35;
+  letter-spacing: -0.015em;
+}
+
+.integration-card p {
+  max-width: 255px;
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 0.88rem;
+  line-height: 1.65;
+}
+
+/* =========================================================
+INTEGRATION CTA
+========================================================= */
+
+.integration-cta {
+  position: relative;
+
+  margin: 110px 0 100px;
+  padding: 75px 40px;
+
+  overflow: hidden;
+
+  border-radius: 24px;
+
+  background:
+    radial-gradient(
+      circle at 15% 15%,
+      rgba(139, 92, 246, 0.25),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 85% 85%,
+      rgba(59, 130, 246, 0.2),
+      transparent 35%
+    ),
+    #111827;
+
+  color: #ffffff;
+}
+
+.integration-cta::before {
+  position: absolute;
+  inset: 1px;
+  content: "";
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 23px;
+  pointer-events: none;
+}
+
+.integration-cta::after {
+  position: absolute;
+  right: -120px;
+  bottom: -160px;
+
+  width: 360px;
+  height: 360px;
+
+  content: "";
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 0 45px rgba(255, 255, 255, 0.025),
+    0 0 0 90px rgba(255, 255, 255, 0.018);
+
+  pointer-events: none;
+}
+
+.integration-cta-content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 760px;
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+.integration-cta .integrations-eyebrow {
+  margin-bottom: 22px;
+
+  border-color: rgba(255, 255, 255, 0.14);
+
+  background: rgba(255, 255, 255, 0.07);
+
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.integration-cta h2 {
+  max-width: 700px;
+  margin: 0 auto 20px;
+
+  color: #ffffff;
+
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+}
+
+.integration-cta p {
+  max-width: 620px;
+  margin: 0 auto;
+
+  color: rgba(255, 255, 255, 0.68);
+
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+/* =========================================================
+CTA BUTTONS
+========================================================= */
+
+.integration-cta .cta-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  margin-top: 32px;
+}
+
+.integration-cta .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  min-height: 46px;
+  padding: 0 19px;
+
+  border: 1px solid transparent;
+  border-radius: 8px;
+
+  font-size: 0.9rem;
+  font-weight: 650;
+  line-height: 1;
+  text-decoration: none;
+
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.integration-cta .btn:hover {
+  transform: translateY(-2px);
+}
+
+.integration-cta .btn-primary {
+  background: #ffffff;
+  border-color: #ffffff;
+  color: #111827;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.integration-cta .btn-primary:hover {
+  background: #f3f4f6;
+  border-color: #f3f4f6;
+}
+
+.integration-cta .btn-secondary {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+}
+
+.integration-cta .btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* =========================================================
+TRUSTED LOGOS
+========================================================= */
+
+.trusted-logos {
+  padding: 20px 0 30px;
+
+  text-align: center;
+}
+
+.trusted-logos > p {
+  margin: 0 0 30px;
+
+  color: #9ca3af;
+
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.logos-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 72px;
+  padding: 16px;
+
+  border: 1px solid #eeeeee;
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  transition:
+    border-color 200ms ease,
+    box-shadow 200ms ease,
+    transform 200ms ease;
+}
+
+.logo-item:hover {
+  transform: translateY(-2px);
+  border-color: #d9dce1;
+  box-shadow: 0 8px 24px rgba(17, 24, 39, 0.06);
+}
+
+.logo-item img {
+  display: block;
+
+  width: auto;
+  max-width: 100%;
+  max-height: 28px;
+
+  object-fit: contain;
+
+  opacity: 0.62;
+  filter: grayscale(100%);
+
+  transition:
+    opacity 200ms ease,
+    filter 200ms ease;
+}
+
+.logo-item:hover img {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+/* =========================================================
+RESPONSIVE — LARGE TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+  .integrations {
+    padding-top: 100px;
+  }
+
+  .integration-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .logos-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* =========================================================
+RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 800px) {
+  .integrations {
+    padding: 80px 20px 80px;
+  }
+
+  .integrations-hero {
+    padding: 20px 0 80px;
+  }
+
+  .integrations-hero h1 {
+    font-size: clamp(2.5rem, 9vw, 4rem);
+  }
+
+  .integrations-hero p {
+    font-size: 1rem;
+  }
+
+  .category-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .category-header > p {
+    max-width: 600px;
+    text-align: left;
+  }
+
+  .integration-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .integration-category {
+    margin-bottom: 75px;
+  }
+
+  .integration-cta {
+    margin: 80px 0;
+    padding: 60px 28px;
+    border-radius: 20px;
+  }
+
+  .logos-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* =========================================================
+RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 560px) {
+  .integrations {
+    padding: 65px 16px 65px;
+  }
+
+  .integrations-hero {
+    padding: 15px 0 65px;
+  }
+
+  .integrations-eyebrow {
+    font-size: 0.68rem;
+  }
+
+  .integrations-hero h1 {
+    margin-bottom: 20px;
+    font-size: clamp(2.25rem, 12vw, 3.2rem);
+    letter-spacing: -0.05em;
+  }
+
+  .integrations-hero p {
+    font-size: 0.94rem;
+    line-height: 1.7;
+  }
+
+  .integration-category {
+    margin-bottom: 65px;
+  }
+
+  .category-header {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+  }
+
+  .category-header h2 {
+    font-size: 1.45rem;
+  }
+
+  .category-header > p {
+    font-size: 0.86rem;
+  }
+
+  .integration-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .integration-card {
+    min-height: auto;
+    padding: 22px;
+  }
+
+  .integration-icon {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 20px;
+  }
+
+  .integration-card h3 {
+    font-size: 0.98rem;
+  }
+
+  .integration-card p {
+    max-width: none;
+    font-size: 0.84rem;
+  }
+
+  .integration-cta {
+    margin: 60px 0 70px;
+    padding: 48px 20px;
+    border-radius: 18px;
+  }
+
+  .integration-cta h2 {
+    font-size: 2rem;
+  }
+
+  .integration-cta p {
+    font-size: 0.9rem;
+  }
+
+  .integration-cta .cta-buttons {
+    flex-direction: column;
+  }
+
+  .integration-cta .btn {
+    width: 100%;
+  }
+
+  .logos-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .logo-item {
+    min-height: 64px;
+  }
+}
+
+/* =========================================================
+REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .integration-card,
+  .integration-icon,
+  .integration-cta .btn,
+  .logo-item,
+  .logo-item img {
+    transition: none;
+  }
+
+  .integration-card:hover,
+  .integration-cta .btn:hover,
+  .logo-item:hover {
+    transform: none;
+  }
+}
