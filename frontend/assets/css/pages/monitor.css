@@ -25,10 +25,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        rgba(15, 23, 42, 0.72),
-        rgba(15, 23, 42, 0.58)
-    );
+    background: linear-gradient(rgba(15, 23, 42, 0.72), rgba(15, 23, 42, 0.58));
     z-index: 1;
 }
 
@@ -653,11 +650,7 @@
 
 .cta-section {
     text-align: center;
-    background: linear-gradient(
-        135deg,
-        var(--primary),
-        var(--secondary)
-    );
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
     color: #fff;
 }
 
@@ -723,7 +716,6 @@
 }
 
 @keyframes fadeUp {
-
     0% {
         opacity: 0;
         transform: translateY(40px);
@@ -736,7 +728,6 @@
 }
 
 @keyframes float {
-
     0%,
     100% {
         transform: translateY(0);
@@ -781,7 +772,6 @@
 ------------------------------*/
 
 @media (max-width: 1200px) {
-
     .workflow-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -804,7 +794,6 @@
 ------------------------------*/
 
 @media (max-width: 992px) {
-
     .monitor-hero {
         min-height: 90vh;
     }
@@ -829,7 +818,6 @@
 ------------------------------*/
 
 @media (max-width: 768px) {
-
     .monitor-hero {
         min-height: 80vh;
     }
@@ -883,7 +871,6 @@
 ------------------------------*/
 
 @media (max-width: 576px) {
-
     .monitor-hero-overlay {
         width: 92%;
     }

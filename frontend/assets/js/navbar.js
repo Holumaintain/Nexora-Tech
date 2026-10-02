@@ -28,65 +28,81 @@ let navbarInitialized = false;
    ========================================================= */
 
 function initNavbar() {
-  /* Prevent duplicate event listeners */
+  /* ---------------------------------------------------------
+     PREVENT DUPLICATE INITIALIZATION
+     --------------------------------------------------------- */
+
   if (navbarInitialized) {
     return;
   }
 
   /* ---------------------------------------------------------
-       ELEMENTS
-       --------------------------------------------------------- */
+     ELEMENTS
+     --------------------------------------------------------- */
 
   const navbar = document.querySelector(".navbar");
   const nav = document.querySelector(".nav");
-  const mobileToggle = document.querySelector(".mobile-toggle");
-  const dropdowns = document.querySelectorAll(".dropdown");
+  const mobileToggle =
+    document.querySelector(".mobile-toggle");
+  const dropdowns =
+    document.querySelectorAll(".dropdown");
 
   /* ---------------------------------------------------------
-       SAFETY CHECK
-       --------------------------------------------------------- */
+     SAFETY CHECK
+     --------------------------------------------------------- */
 
   if (!navbar || !nav || !mobileToggle) {
     return;
   }
 
   /* ---------------------------------------------------------
-       MARK AS INITIALIZED
-       --------------------------------------------------------- */
+     MARK AS INITIALIZED
+     --------------------------------------------------------- */
 
   navbarInitialized = true;
 
   /* =========================================================
-       MOBILE MENU
-       ========================================================= */
+     MOBILE MENU
+     ========================================================= */
 
   function openMobileMenu() {
     nav.classList.add("mobile-open");
     mobileToggle.classList.add("active");
 
-    mobileToggle.setAttribute("aria-expanded", "true");
+    mobileToggle.setAttribute(
+      "aria-expanded",
+      "true"
+    );
   }
 
   function closeMobileMenu() {
     nav.classList.remove("mobile-open");
     mobileToggle.classList.remove("active");
 
-    mobileToggle.setAttribute("aria-expanded", "false");
+    mobileToggle.setAttribute(
+      "aria-expanded",
+      "false"
+    );
 
     /* Close all mobile dropdowns */
     dropdowns.forEach((dropdown) => {
       dropdown.classList.remove("open");
 
-      const trigger = dropdown.querySelector(".dropdown-trigger");
+      const trigger =
+        dropdown.querySelector(".dropdown-trigger");
 
       if (trigger) {
-        trigger.setAttribute("aria-expanded", "false");
+        trigger.setAttribute(
+          "aria-expanded",
+          "false"
+        );
       }
     });
   }
 
   function toggleMobileMenu() {
-    const isOpen = nav.classList.contains("mobile-open");
+    const isOpen =
+      nav.classList.contains("mobile-open");
 
     if (isOpen) {
       closeMobileMenu();
@@ -95,125 +111,149 @@ function initNavbar() {
     }
   }
 
-  /* ---------------------------------------------------------
-       MOBILE TOGGLE CLICK
-       --------------------------------------------------------- */
+  /* =========================================================
+     MOBILE TOGGLE
+     ========================================================= */
 
-  mobileToggle.addEventListener("click", function (event) {
-    event.preventDefault();
-    event.stopPropagation();
+  mobileToggle.addEventListener(
+    "click",
+    function (event) {
+      event.preventDefault();
+      event.stopPropagation();
 
-    toggleMobileMenu();
-  });
+      toggleMobileMenu();
+    }
+  );
 
   /* =========================================================
-       DROPDOWNS
-       ========================================================= */
+     DROPDOWNS
+     ========================================================= */
 
   dropdowns.forEach((dropdown) => {
-    const trigger = dropdown.querySelector(".dropdown-trigger");
+    const trigger =
+      dropdown.querySelector(".dropdown-trigger");
 
     if (!trigger) {
       return;
     }
 
-    trigger.addEventListener("click", function (event) {
-      /*
-       * Desktop:
-       * Allow the CSS hover/focus behavior to work.
-       */
-      if (window.innerWidth > 960) {
+    trigger.addEventListener(
+      "click",
+      function (event) {
+        /* ---------------------------------------------------
+           DESKTOP
+           --------------------------------------------------- */
+
+        if (window.innerWidth > 960) {
+          return;
+        }
+
+        /* ---------------------------------------------------
+           MOBILE
+           --------------------------------------------------- */
+
+        event.preventDefault();
+        event.stopPropagation();
+
+        /* Close other dropdowns */
+        dropdowns.forEach((item) => {
+          if (item !== dropdown) {
+            item.classList.remove("open");
+
+            const otherTrigger =
+              item.querySelector(
+                ".dropdown-trigger"
+              );
+
+            if (otherTrigger) {
+              otherTrigger.setAttribute(
+                "aria-expanded",
+                "false"
+              );
+            }
+          }
+        });
+
+        /* Toggle current dropdown */
+        const isOpen =
+          dropdown.classList.contains("open");
+
+        if (isOpen) {
+          dropdown.classList.remove("open");
+
+          trigger.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+        } else {
+          dropdown.classList.add("open");
+
+          trigger.setAttribute(
+            "aria-expanded",
+            "true"
+          );
+        }
+      }
+    );
+  });
+
+  /* =========================================================
+     CLOSE WHEN CLICKING OUTSIDE
+     ========================================================= */
+
+  document.addEventListener(
+    "click",
+    function (event) {
+      if (
+        event.target.closest(".navbar")
+      ) {
         return;
       }
 
-      /*
-       * Mobile:
-       * Prevent normal button behavior and manually
-       * control the dropdown.
-       */
-      event.preventDefault();
-      event.stopPropagation();
+      closeMobileMenu();
+    }
+  );
 
-      /* Close other dropdowns */
-      dropdowns.forEach((item) => {
-        if (item !== dropdown) {
-          item.classList.remove("open");
+  /* =========================================================
+     ESCAPE KEY
+     ========================================================= */
 
-          const otherTrigger = item.querySelector(".dropdown-trigger");
-
-          if (otherTrigger) {
-            otherTrigger.setAttribute("aria-expanded", "false");
-          }
-        }
-      });
-
-      /* Toggle current dropdown */
-      const isOpen = dropdown.classList.contains("open");
-
-      if (isOpen) {
-        dropdown.classList.remove("open");
-
-        trigger.setAttribute("aria-expanded", "false");
-      } else {
-        dropdown.classList.add("open");
-
-        trigger.setAttribute("aria-expanded", "true");
+  document.addEventListener(
+    "keydown",
+    function (event) {
+      if (event.key !== "Escape") {
+        return;
       }
-    });
-  });
 
-  /* =========================================================
-       CLOSE WHEN CLICKING OUTSIDE
-       ========================================================= */
-
-  document.addEventListener("click", function (event) {
-    /*
-     * If the click happened inside the navbar,
-     * do nothing.
-     */
-    if (event.target.closest(".navbar")) {
-      return;
+      closeMobileMenu();
     }
-
-    closeMobileMenu();
-  });
+  );
 
   /* =========================================================
-       ESCAPE KEY
-       ========================================================= */
-
-  document.addEventListener("keydown", function (event) {
-    if (event.key !== "Escape") {
-      return;
-    }
-
-    closeMobileMenu();
-  });
-
-  /* =========================================================
-       RESIZE HANDLER
-       ========================================================= */
+     RESIZE HANDLER
+     ========================================================= */
 
   let resizeTimer;
 
-  window.addEventListener("resize", function () {
-    clearTimeout(resizeTimer);
+  window.addEventListener(
+    "resize",
+    function () {
+      clearTimeout(resizeTimer);
 
-    resizeTimer = setTimeout(function () {
-      /*
-       * CSS desktop breakpoint:
-       * 961px and above
-       */
-
-      if (window.innerWidth > 960) {
-        closeMobileMenu();
-      }
-    }, 100);
-  });
+      resizeTimer = setTimeout(
+        function () {
+          if (window.innerWidth > 960) {
+            closeMobileMenu();
+          }
+        },
+        100
+      );
+    }
+  );
 
   /* =========================================================
-       SCROLL EFFECT
-       ========================================================= */
+     SCROLL EFFECT
+     ========================================================= */
 
   function updateNavbar() {
     if (window.scrollY > 20) {
@@ -223,36 +263,39 @@ function initNavbar() {
     }
   }
 
-  /* Run once immediately */
   updateNavbar();
 
-  /* Listen for scrolling */
-  window.addEventListener("scroll", updateNavbar, {
-    passive: true,
-  });
+  window.addEventListener(
+    "scroll",
+    updateNavbar,
+    {
+      passive: true,
+    }
+  );
 }
 
 /* =========================================================
-   AUTO INITIALIZATION
+   NORMAL PAGE INITIALIZATION
    ========================================================= */
 
-/*
- * Normal pages:
- * navbar already exists when DOMContentLoaded fires.
- */
+document.addEventListener(
+  "DOMContentLoaded",
+  function () {
+    initNavbar();
+  }
+);
 
-document.addEventListener("DOMContentLoaded", function () {
-  initNavbar();
-});
+/* =========================================================
+   DYNAMIC NAVBAR INITIALIZATION
+   =========================================================
 
-/*
- * Dynamic navbar loading:
- * Your app.js loads navbar HTML using fetch().
- *
- * If the navbar is injected after DOMContentLoaded,
- * listen for the custom event and initialize again.
- */
+   app.js injects the navbar using fetch().
+   It dispatches this event after injection.
+   ========================================================= */
 
-document.addEventListener("nexora:navbar-loaded", function () {
-  initNavbar();
-});
+document.addEventListener(
+  "nexora:navbar-loaded",
+  function () {
+    initNavbar();
+  }
+);

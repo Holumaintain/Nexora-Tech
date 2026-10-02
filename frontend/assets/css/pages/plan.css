@@ -7,7 +7,6 @@
     color: #111827;
 }
 
-
 /*======================================
         HERO
 ======================================*/
@@ -24,7 +23,6 @@
     isolation: isolate;
 }
 
-
 /*======================================
         HERO VIDEO
 ======================================*/
@@ -38,7 +36,6 @@
     z-index: -3;
 }
 
-
 /*======================================
         HERO DARK OVERLAY
 ======================================*/
@@ -47,15 +44,13 @@
     content: "";
     position: absolute;
     inset: 0;
-    background:
-        linear-gradient(
-            135deg,
-            rgba(15, 23, 42, 0.90),
-            rgba(30, 41, 59, 0.72)
-        );
+    background: linear-gradient(
+        135deg,
+        rgba(15, 23, 42, 0.9),
+        rgba(30, 41, 59, 0.72)
+    );
     z-index: -2;
 }
-
 
 /*======================================
         HERO COLOR GLOW
@@ -80,7 +75,6 @@
     pointer-events: none;
 }
 
-
 /*======================================
         HERO CONTENT
 ======================================*/
@@ -95,7 +89,6 @@
     padding: 2rem;
 }
 
-
 /*======================================
         HERO HEADING
 ======================================*/
@@ -107,10 +100,8 @@
     font-weight: 800;
     line-height: 1.05;
     letter-spacing: -0.045em;
-    text-shadow:
-        0 4px 20px rgba(0, 0, 0, 0.45);
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
 }
-
 
 /*======================================
         HERO PARAGRAPH
@@ -119,13 +110,11 @@
 .plan-page .hero-overlay p {
     max-width: 760px;
     margin: 0 auto;
-    color: rgba(255, 255, 255, 0.90);
+    color: rgba(255, 255, 255, 0.9);
     font-size: clamp(1rem, 2vw, 1.25rem);
     line-height: 1.8;
-    text-shadow:
-        0 2px 10px rgba(0, 0, 0, 0.45);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
 }
-
 
 /*======================================
         GENERAL PRODUCT SECTIONS
@@ -138,16 +127,13 @@
     overflow: hidden;
 }
 
-
 .plan-page main > section:not(.hero):not(.cta):nth-child(even) {
     background: #f8fafc;
 }
 
-
 .plan-page main > section:not(.hero):not(.cta):nth-child(odd) {
     background: #ffffff;
 }
-
 
 /*======================================
         SECTION HEADINGS
@@ -163,13 +149,11 @@
     letter-spacing: -0.03em;
 }
 
-
 .plan-page main > section:not(.hero):not(.cta) h2 i {
     margin-right: 0.55rem;
     color: var(--primary, #4f46e5);
     font-size: 0.8em;
 }
-
 
 /*======================================
         SECTION DESCRIPTION
@@ -183,7 +167,6 @@
     line-height: 1.8;
 }
 
-
 /*======================================
         SECTION IMAGES
 ======================================*/
@@ -192,14 +175,16 @@
 .plan-page .planning > img,
 .plan-page .dashboard > img {
     display: block;
-    margin: 0 auto;              /* centers horizontally */
-    width: min(1400px, 95%);     /* increases max width */
+    margin: 0 auto; /* centers horizontally */
+    width: min(1400px, 95%); /* increases max width */
     height: auto;
     border-radius: 20px;
     border: 1px solid #e2e8f0;
     background: #ffffff;
-    box-shadow: 0 25px 70px rgba(15, 23, 42, 0.10);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 25px 70px rgba(15, 23, 42, 0.1);
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
 }
 
 .plan-page .planning > img:hover,
@@ -223,10 +208,11 @@
     border-radius: 20px;
     border: 1px solid #e2e8f0;
     background: #ffffff;
-    box-shadow: 0 25px 70px rgba(15, 23, 42, 0.10);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 25px 70px rgba(15, 23, 42, 0.1);
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
 }
-
 
 .plan-page main > section:not(.hero):not(.cta) > img {
     display: block;
@@ -236,20 +222,16 @@
     border-radius: 20px;
     border: 1px solid #e2e8f0;
     background: #ffffff;
-    box-shadow:
-        0 25px 70px rgba(15, 23, 42, 0.10);
+    box-shadow: 0 25px 70px rgba(15, 23, 42, 0.1);
     transition:
         transform 0.4s ease,
         box-shadow 0.4s ease;
 }
 
-
 .plan-page main > section:not(.hero):not(.cta) > img:hover {
     transform: translateY(-6px);
-    box-shadow:
-        0 35px 85px rgba(15, 23, 42, 0.15);
+    box-shadow: 0 35px 85px rgba(15, 23, 42, 0.15);
 }
-
 
 /*======================================
         MULTIPLE IMAGE SECTIONS
@@ -261,13 +243,11 @@
     margin-top: 1.5rem;
 }
 
-
 .plan-page .initiatives,
 .plan-page .pulse,
 .plan-page .analytics {
     display: flow-root;
 }
-
 
 /*======================================
         TESTIMONIALS
@@ -277,7 +257,6 @@
     background: #f8fafc;
 }
 
-
 .plan-page .testimonial-grid {
     width: min(1150px, 100%);
     margin: 0 auto;
@@ -286,7 +265,6 @@
     gap: 2rem;
 }
 
-
 .plan-page .testimonial-grid img {
     display: block;
     width: 100%;
@@ -294,20 +272,16 @@
     border-radius: 20px;
     border: 1px solid #e2e8f0;
     background: #ffffff;
-    box-shadow:
-        0 20px 55px rgba(15, 23, 42, 0.09);
+    box-shadow: 0 20px 55px rgba(15, 23, 42, 0.09);
     transition:
         transform 0.35s ease,
         box-shadow 0.35s ease;
 }
 
-
 .plan-page .testimonial-grid img:hover {
     transform: translateY(-5px);
-    box-shadow:
-        0 30px 70px rgba(15, 23, 42, 0.14);
+    box-shadow: 0 30px 70px rgba(15, 23, 42, 0.14);
 }
-
 
 /*======================================
         CTA
@@ -321,7 +295,7 @@
     background:
         radial-gradient(
             circle at top left,
-            rgba(79, 70, 229, 0.40),
+            rgba(79, 70, 229, 0.4),
             transparent 40%
         ),
         radial-gradient(
@@ -332,7 +306,6 @@
         #111827;
     color: #ffffff;
 }
-
 
 .plan-page .cta h2 {
     position: relative;
@@ -345,7 +318,6 @@
     letter-spacing: -0.035em;
 }
 
-
 .plan-page .cta p {
     position: relative;
     z-index: 1;
@@ -355,7 +327,6 @@
     font-size: 1.05rem;
     line-height: 1.7;
 }
-
 
 /*======================================
         CTA BUTTONS
@@ -370,7 +341,6 @@
     gap: 1rem;
     flex-wrap: wrap;
 }
-
 
 .plan-page .cta-buttons .btn {
     display: inline-flex;
@@ -387,25 +357,19 @@
         background 0.3s ease;
 }
 
-
 .plan-page .cta-buttons .btn:hover {
     transform: translateY(-3px);
 }
 
-
 .plan-page .btn-light {
     background: #ffffff;
     color: #111827;
-    box-shadow:
-        0 12px 30px rgba(0, 0, 0, 0.18);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
 }
-
 
 .plan-page .btn-light:hover {
-    box-shadow:
-        0 18px 40px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
 }
-
 
 .plan-page .btn-dark {
     background: rgba(255, 255, 255, 0.08);
@@ -413,18 +377,15 @@
     border: 1px solid rgba(255, 255, 255, 0.22);
 }
 
-
 .plan-page .btn-dark:hover {
     background: rgba(255, 255, 255, 0.15);
 }
-
 
 /*======================================
         TABLETS
 ======================================*/
 
 @media (max-width: 992px) {
-
     .plan-page .hero {
         min-height: 78vh;
         padding: 110px 20px 80px;
@@ -437,16 +398,13 @@
     .plan-page .testimonial-grid {
         grid-template-columns: 1fr;
     }
-
 }
-
 
 /*======================================
         MOBILE
 ======================================*/
 
 @media (max-width: 768px) {
-
     .plan-page .hero {
         min-height: 72vh;
         padding: 100px 18px 70px;
@@ -475,16 +433,13 @@
     .plan-page .cta {
         padding: 80px 18px;
     }
-
 }
-
 
 /*======================================
         SMALL PHONES
 ======================================*/
 
 @media (max-width: 576px) {
-
     .plan-page .hero {
         min-height: 68vh;
     }
@@ -510,21 +465,17 @@
     .plan-page .cta-buttons .btn {
         width: min(100%, 300px);
     }
-
 }
-
 
 /*======================================
         REDUCED MOTION
 ======================================*/
 
 @media (prefers-reduced-motion: reduce) {
-
     .plan-page *,
     .plan-page *::before,
     .plan-page *::after {
         animation: none !important;
         transition: none !important;
     }
-
 }

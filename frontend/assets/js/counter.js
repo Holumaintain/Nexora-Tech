@@ -3,55 +3,47 @@
 ======================================*/
 
 document.addEventListener("DOMContentLoaded", () => {
+  const counters = document.querySelectorAll(".counter");
 
-    const counters = document.querySelectorAll(".counter");
+  if (!counters.length) return;
 
-    if (!counters.length) return;
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
 
-    const observer = new IntersectionObserver((entries) => {
+        const counter = entry.target;
 
-        entries.forEach(entry => {
+        const target =
+          Number(counter.dataset.target) || Number(counter.textContent);
 
-            if (!entry.isIntersecting) return;
+        let current = 0;
 
-            const counter = entry.target;
+        const increment = Math.ceil(target / 100);
 
-            const target = Number(counter.dataset.target) || Number(counter.textContent);
+        const updateCounter = () => {
+          current += increment;
 
-            let current = 0;
+          if (current >= target) {
+            counter.textContent = target;
+          } else {
+            counter.textContent = current;
 
-            const increment = Math.ceil(target / 100);
+            requestAnimationFrame(updateCounter);
+          }
+        };
 
-            const updateCounter = () => {
+        updateCounter();
 
-                current += increment;
+        observer.unobserve(counter);
+      });
+    },
+    {
+      threshold: 0.3,
+    }
+  );
 
-                if (current >= target) {
-
-                    counter.textContent = target;
-
-                } else {
-
-                    counter.textContent = current;
-
-                    requestAnimationFrame(updateCounter);
-
-                }
-
-            };
-
-            updateCounter();
-
-            observer.unobserve(counter);
-
-        });
-
-    }, {
-        threshold: 0.3
-    });
-
-    counters.forEach(counter => {
-        observer.observe(counter);
-    });
-
+  counters.forEach((counter) => {
+    observer.observe(counter);
+  });
 });

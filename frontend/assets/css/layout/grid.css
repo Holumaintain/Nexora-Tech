@@ -207,7 +207,6 @@ section {
 ===============================*/
 
 @media (max-width: 992px) {
-
     .grid-4 {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -219,11 +218,9 @@ section {
     .grid-2 {
         grid-template-columns: 1fr;
     }
-
 }
 
 @media (max-width: 768px) {
-
     section {
         padding: 80px 0;
     }
@@ -237,14 +234,11 @@ section {
     .section-heading {
         margin-bottom: 3rem;
     }
-
 }
 
 @media (max-width: 576px) {
-
     .container,
     .section {
         width: min(100% - 1.5rem, var(--container));
     }
-
 }
