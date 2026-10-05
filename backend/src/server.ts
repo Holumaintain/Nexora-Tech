@@ -1,3 +1,4 @@
+import dns from "node:dns";
 import app from "./app.js";
 import { env } from "./config/env.js";
 import { connectDB } from "./config/db.js";

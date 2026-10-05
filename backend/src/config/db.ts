@@ -1,20 +1,24 @@
+import dns from "node:dns";
 import mongoose from "mongoose";
 
-import { env } from "../config/env.js";
+dns.setServers(["8.8.8.8", "1.1.1.1"]);
 
-const connectDB = async (): Promise<void> => {
-  await mongoose.connect(env.MONGODB_URI);
+export async function connectDB() {
+  try {
+    await mongoose.connect(process.env.MONGODB_URI as string);
 
-  console.log("MongoDB connected successfully");
-};
+    console.log("MongoDB connected");
+  } catch (error) {
+    console.error("MongoDB connection failed:", error);
+    throw error;
+  }
+}
 
-const disconnectDB = async (): Promise<void> => {
-  await mongoose.disconnect();
-
-  console.log("MongoDB disconnected");
-};
-
-export {
-  connectDB,
-  disconnectDB,
-};
+export async function disconnectDB() {
+  try {
+    await mongoose.disconnect();
+    console.log("MongoDB disconnected");
+  } catch (error) {
+    console.error("MongoDB disconnect failed:", error);
+  }
+}
