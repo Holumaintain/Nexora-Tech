@@ -1,0 +1,6 @@
+.netlify
+.git
+.gitignore
+Dockerfile
+.dockerignore
+README.md
