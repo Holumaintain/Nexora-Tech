@@ -43,8 +43,8 @@ pipeline {
 
         stage('Build Docker Images') {
             steps {
-                bat 'docker build -t %ECR_REGISTRY%/%BACKEND_IMAGE%:%BUILD_NUMBER% -f backend\\Dockerfile backend'
-                bat 'docker build -t %ECR_REGISTRY%/%FRONTEND_IMAGE%:%BUILD_NUMBER% -f frontend\\Dockerfile frontend'
+                bat 'docker build -t %ECR_REGISTRY%/%BACKEND_IMAGE%:ci-%BUILD_NUMBER% -f backend\\Dockerfile backend'
+                bat 'docker build -t %ECR_REGISTRY%/%FRONTEND_IMAGE%:ci-%BUILD_NUMBER% -f frontend\\Dockerfile frontend'
             }
         }
 
@@ -61,9 +61,32 @@ pipeline {
                     )
                 ]) {
                     bat 'aws sts get-caller-identity --query Account --output text'
+                    powershell '''
+                        $ErrorActionPreference = 'Stop'
+                        $tag = "ci-$env:BUILD_NUMBER"
+
+                        foreach ($repository in @($env:BACKEND_IMAGE, $env:FRONTEND_IMAGE)) {
+                            $existingTag = aws ecr list-images `
+                                --region $env:AWS_DEFAULT_REGION `
+                                --repository-name $repository `
+                                --filter tagStatus=TAGGED `
+                                --query "imageIds[?imageTag=='$tag'].imageTag" `
+                                --output text
+
+                            if ($LASTEXITCODE -ne 0) {
+                                throw "Unable to check ECR tags for $repository."
+                            }
+
+                            if (-not [string]::IsNullOrWhiteSpace($existingTag) -and $existingTag -ne 'None') {
+                                throw "Tag $tag already exists in $repository. Refusing to overwrite it."
+                            }
+                        }
+
+                        Write-Host "Tag $tag is unused in both ECR repositories."
+                    '''
                     bat 'aws ecr get-login-password --region %AWS_DEFAULT_REGION% | docker login --username AWS --password-stdin %ECR_REGISTRY%'
-                    bat 'docker push %ECR_REGISTRY%/%BACKEND_IMAGE%:%BUILD_NUMBER%'
-                    bat 'docker push %ECR_REGISTRY%/%FRONTEND_IMAGE%:%BUILD_NUMBER%'
+                    bat 'docker push %ECR_REGISTRY%/%BACKEND_IMAGE%:ci-%BUILD_NUMBER%'
+                    bat 'docker push %ECR_REGISTRY%/%FRONTEND_IMAGE%:ci-%BUILD_NUMBER%'
                 }
             }
             post {
