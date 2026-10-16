@@ -11,3 +11,9 @@ Thumbs.db
 
 # Local Netlify CLI files
 frontend/.netlify/
+
+# Kubernetes local secrets and credentials
+/k8s/backend.env
+/k8s/secret.yaml
+/k8s/*.secret.yaml
+/ansible/inventory/hosts.ini

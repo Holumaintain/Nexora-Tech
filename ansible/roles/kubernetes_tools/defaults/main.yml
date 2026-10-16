@@ -1,0 +1,6 @@
+---
+# Match this minor version to the target Kubernetes/EKS cluster.
+kubernetes_minor_version: v1.35
+kubernetes_apt_arch: amd64
+eksctl_arch: amd64
+helm_apt_arch: amd64

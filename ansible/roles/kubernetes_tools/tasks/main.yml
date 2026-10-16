@@ -1,0 +1,109 @@
+---
+- name: Install Kubernetes tooling prerequisites
+  ansible.builtin.apt:
+    name:
+      - ca-certificates
+      - curl
+      - gnupg
+    state: present
+    update_cache: true
+    cache_valid_time: 3600
+
+- name: Create APT keyrings directory
+  ansible.builtin.file:
+    path: /etc/apt/keyrings
+    state: directory
+    mode: "0755"
+
+- name: Download Kubernetes package signing key
+  ansible.builtin.get_url:
+    url: "https://pkgs.k8s.io/core:/stable:/{{ kubernetes_minor_version }}/deb/Release.key"
+    dest: /tmp/kubernetes-release.key
+    mode: "0644"
+
+- name: Dearmor Kubernetes package signing key
+  ansible.builtin.command:
+    cmd: "gpg --dearmor --yes --output /etc/apt/keyrings/kubernetes-apt-keyring.gpg /tmp/kubernetes-release.key"
+    creates: /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+
+- name: Set Kubernetes keyring permissions
+  ansible.builtin.file:
+    path: /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+    owner: root
+    group: root
+    mode: "0644"
+
+- name: Configure Kubernetes APT repository
+  ansible.builtin.apt_repository:
+    repo: "deb [arch={{ kubernetes_apt_arch }} signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/{{ kubernetes_minor_version }}/deb/ /"
+    filename: kubernetes
+    state: present
+    update_cache: true
+
+- name: Install kubectl
+  ansible.builtin.apt:
+    name: kubectl
+    state: present
+    update_cache: true
+
+- name: Download official eksctl release archive
+  ansible.builtin.get_url:
+    url: "https://github.com/eksctl-io/eksctl/releases/latest/download/eksctl_Linux_{{ eksctl_arch }}.tar.gz"
+    dest: /tmp/eksctl.tar.gz
+    mode: "0644"
+
+- name: Extract eksctl binary
+  ansible.builtin.unarchive:
+    src: /tmp/eksctl.tar.gz
+    dest: /usr/local/bin
+    remote_src: true
+    include:
+      - eksctl
+    creates: /usr/local/bin/eksctl
+
+- name: Set eksctl binary permissions
+  ansible.builtin.file:
+    path: /usr/local/bin/eksctl
+    owner: root
+    group: root
+    mode: "0755"
+
+- name: Download Helm package signing key
+  ansible.builtin.get_url:
+    url: https://packages.buildkite.com/helm-linux/helm-debian/gpgkey
+    dest: /tmp/helm.asc
+    mode: "0644"
+
+- name: Dearmor Helm package signing key
+  ansible.builtin.command:
+    cmd: "gpg --dearmor --yes --output /etc/apt/keyrings/helm.gpg /tmp/helm.asc"
+    creates: /etc/apt/keyrings/helm.gpg
+
+- name: Set Helm keyring permissions
+  ansible.builtin.file:
+    path: /etc/apt/keyrings/helm.gpg
+    owner: root
+    group: root
+    mode: "0644"
+
+- name: Configure Helm APT repository
+  ansible.builtin.apt_repository:
+    repo: "deb [arch={{ helm_apt_arch }} signed-by=/etc/apt/keyrings/helm.gpg] https://packages.buildkite.com/helm-linux/helm-debian/any/ any main"
+    filename: helm-stable-debian
+    state: present
+    update_cache: true
+
+- name: Install Helm
+  ansible.builtin.apt:
+    name: helm
+    state: present
+    update_cache: true
+
+- name: Remove temporary Kubernetes tooling downloads
+  ansible.builtin.file:
+    path: "{{ item }}"
+    state: absent
+  loop:
+    - /tmp/kubernetes-release.key
+    - /tmp/eksctl.tar.gz
+    - /tmp/helm.asc

@@ -1,0 +1,52 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nexora-backend
+  namespace: nexora
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nexora-backend
+  template:
+    metadata:
+      labels:
+        app: nexora-backend
+    spec:
+      imagePullSecrets:
+        - name: ecr-registry-secret
+      containers:
+        - name: backend
+          image: 148598146690.dkr.ecr.eu-west-1.amazonaws.com/nexora-backend:ci-6
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 10000
+          envFrom:
+            - configMapRef:
+                name: nexora-backend-config
+            - secretRef:
+                name: nexora-backend-secrets
+          readinessProbe:
+            httpGet:
+              path: /
+              port: http
+            initialDelaySeconds: 10
+            periodSeconds: 10
+            timeoutSeconds: 3
+            failureThreshold: 6
+          livenessProbe:
+            httpGet:
+              path: /
+              port: http
+            initialDelaySeconds: 30
+            periodSeconds: 20
+            timeoutSeconds: 3
+            failureThreshold: 3
+          resources:
+            requests:
+              cpu: 100m
+              memory: 128Mi
+            limits:
+              cpu: 500m
+              memory: 512Mi

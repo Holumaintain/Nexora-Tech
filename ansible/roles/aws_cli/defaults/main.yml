@@ -1,0 +1,3 @@
+---
+# AWS CLI installer architecture: x86_64 or aarch64.
+aws_cli_arch: x86_64

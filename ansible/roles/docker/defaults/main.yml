@@ -1,0 +1,3 @@
+---
+# Override this for ARM-based Ubuntu hosts.
+docker_apt_arch: amd64

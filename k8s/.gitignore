@@ -1,0 +1,3 @@
+backend.env
+secret.yaml
+*.secret.yaml

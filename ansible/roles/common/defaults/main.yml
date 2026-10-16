@@ -1,0 +1,9 @@
+---
+# Base packages for Nexora-Tech Ubuntu hosts.
+base_packages:
+  - ca-certificates
+  - curl
+  - gnupg
+  - unzip
+  - jq
+  - vim

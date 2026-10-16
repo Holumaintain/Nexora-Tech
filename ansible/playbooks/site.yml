@@ -1,0 +1,10 @@
+---
+- name: Configure Nexora-Tech Ubuntu servers
+  hosts: webservers
+  become: true
+  roles:
+    - common
+    - git
+    - docker
+    - aws_cli
+    - kubernetes_tools

@@ -1,0 +1,3 @@
+---
+# Shared settings for Nexora-Tech Ansible-managed hosts.
+timezone: Africa/Lagos
