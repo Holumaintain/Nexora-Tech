@@ -226,7 +226,7 @@ pipeline {
             echo 'Pipeline failed. Review the stage logs before retrying.'
         }
         always {
-            echo 'Deployment is skipped unless both PUSH_TO_ECR and DEPLOY_TO_MINIKUBE are enabled.'
+            echo 'Review the Deploy to Minikube stage above for the deployment result.'
         }
     }
 }
